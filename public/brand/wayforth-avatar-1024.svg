@@ -1,0 +1,23 @@
+<svg width="1024" height="1024" viewBox="0 0 1024 1024" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Deep Academic Navy Background -->
+  <rect width="1024" height="1024" rx="160" fill="#12324E"/>
+  
+  <!-- Subtle Architectural Hairline Inset Frame -->
+  <rect x="72" y="72" width="880" height="880" rx="120" stroke="#224A70" stroke-width="4" stroke-opacity="0.6"/>
+
+  <!-- Monogram Mark "W" Group Centered -->
+  <g transform="translate(192, 192) scale(20)">
+    <!-- Left Pillar -->
+    <path d="M4 6L11 26H13.5L8.5 6H4Z" fill="#FFFFFF" fill-opacity="0.96"/>
+    <!-- Middle Upward Arrow Vertex (Progress / Forth) -->
+    <path d="M11.5 22L16 9L20.5 22H18L16 14.5L14 22H11.5Z" fill="#38BDF8"/>
+    <!-- Right Pillar -->
+    <path d="M23.5 6L18.5 26H21L28 6H23.5Z" fill="#FFFFFF" fill-opacity="0.96"/>
+    <!-- Precision Top Folio Accent Rule -->
+    <circle cx="16" cy="5.5" r="1.5" fill="#38BDF8"/>
+  </g>
+
+  <!-- Subtitle Text for WhatsApp / Social Avatar -->
+  <text x="512" y="840" font-family="'Times New Roman', Georgia, serif" font-size="46" font-weight="normal" fill="#FFFFFF" text-anchor="middle" letter-spacing="4">WAYFORTH</text>
+  <text x="512" y="885" font-family="'Courier New', monospace" font-size="20" font-weight="600" fill="#9BB3C9" text-anchor="middle" letter-spacing="8">ACADEMIC &amp; RESEARCH</text>
+</svg>

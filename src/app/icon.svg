@@ -1,0 +1,10 @@
+<svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="32" height="32" rx="6" fill="#000000"/>
+  <!-- Top Cantilever F & Roof Apex -->
+  <path d="M16 4L26 14H21.5L16 8.5L10.5 14H6L16 4Z" fill="#FFFFFF"/>
+  <path d="M16 11L21 16H18L16 14L14 16H11L16 11Z" fill="#38BDF8"/>
+  
+  <!-- Central Aperture Gap -->
+  <!-- Bottom W Foundation -->
+  <path d="M6 16.5L11 27.5H13.5L16 20.5L18.5 27.5H21L26 16.5H21.5L18.5 24L16 17.5L13.5 24L10.5 16.5H6Z" fill="#FFFFFF"/>
+</svg>

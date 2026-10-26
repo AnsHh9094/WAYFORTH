@@ -1,0 +1,19 @@
+<svg width="240" height="48" viewBox="0 0 240 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Monogram Mark Container -->
+  <rect x="2" y="4" width="40" height="40" rx="2" fill="#12324E" stroke="#12324E" stroke-width="1"/>
+  <!-- Left Pillar -->
+  <path d="M10 13L16 33H18.5L14 13H10Z" fill="#FFFFFF" fill-opacity="0.95"/>
+  <!-- Middle Upward Arrow Vertex (Progress / Forth) -->
+  <path d="M17 29L22 17L27 29H24.5L22 22L19.5 29H17Z" fill="#1D5382"/>
+  <!-- Right Pillar -->
+  <path d="M29.5 13L25 33H27.5L33.5 13H29.5Z" fill="#FFFFFF" fill-opacity="0.95"/>
+  <!-- Top Folio Accent Rule -->
+  <circle cx="22" cy="12.5" r="1.5" fill="#1D5382"/>
+
+  <!-- Wordmark "Wayforth" -->
+  <text x="54" y="29" font-family="Georgia, 'Times New Roman', serif" font-size="24" font-weight="normal" fill="#12324E" letter-spacing="-0.03em">Wayforth</text>
+  <text x="148" y="29" font-family="Georgia, 'Times New Roman', serif" font-size="24" font-weight="bold" fill="#1D5382">.in</text>
+  
+  <!-- Subline -->
+  <text x="55" y="40" font-family="monospace, Courier" font-size="7.5" font-weight="500" fill="#738A9E" letter-spacing="0.2em">ACADEMIC &amp; RESEARCH ADVISORY</text>
+</svg>

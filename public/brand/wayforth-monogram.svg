@@ -1,0 +1,11 @@
+<svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect x="4" y="4" width="40" height="40" rx="3" fill="#12324E" stroke="#12324E" stroke-width="1.5"/>
+  <!-- Left Pillar -->
+  <path d="M11 13L17 33H19.5L15 13H11Z" fill="#FFFFFF" fill-opacity="0.95"/>
+  <!-- Middle Upward Arrow Vertex (Progress / Forth) -->
+  <path d="M18 29L24 16L30 29H27L24 21.5L21 29H18Z" fill="#1D5382"/>
+  <!-- Right Pillar -->
+  <path d="M32.5 13L27.5 33H30L36.5 13H32.5Z" fill="#FFFFFF" fill-opacity="0.95"/>
+  <!-- Top Folio Accent Rule -->
+  <circle cx="24" cy="11.5" r="1.8" fill="#1D5382"/>
+</svg>

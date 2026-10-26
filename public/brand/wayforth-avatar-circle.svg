@@ -1,0 +1,33 @@
+<svg width="1024" height="1024" viewBox="0 0 1024 1024" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Circular Clipping Mask -->
+  <defs>
+    <clipPath id="circleClip">
+      <circle cx="512" cy="512" r="512"/>
+    </clipPath>
+  </defs>
+
+  <g clip-path="url(#circleClip)">
+    <!-- Deep Academic Navy Background -->
+    <rect width="1024" height="1024" fill="#12324E"/>
+    
+    <!-- Hairline Inset Ring -->
+    <circle cx="512" cy="512" r="460" stroke="#224A70" stroke-width="4" stroke-dasharray="8 8" stroke-opacity="0.7"/>
+    <circle cx="512" cy="512" r="440" stroke="#38BDF8" stroke-width="2" stroke-opacity="0.3"/>
+
+    <!-- Centered Monogram Mark "W" -->
+    <g transform="translate(182, 170) scale(20.5)">
+      <!-- Left Pillar -->
+      <path d="M4 6L11 26H13.5L8.5 6H4Z" fill="#FFFFFF" fill-opacity="0.96"/>
+      <!-- Middle Upward Arrow Vertex (Progress / Forth) -->
+      <path d="M11.5 22L16 9L20.5 22H18L16 14.5L14 22H11.5Z" fill="#38BDF8"/>
+      <!-- Right Pillar -->
+      <path d="M23.5 6L18.5 26H21L28 6H23.5Z" fill="#FFFFFF" fill-opacity="0.96"/>
+      <!-- Precision Top Folio Accent Rule -->
+      <circle cx="16" cy="5.5" r="1.5" fill="#38BDF8"/>
+    </g>
+
+    <!-- Subtitle Text inside circular safe zone -->
+    <text x="512" y="830" font-family="'Times New Roman', Georgia, serif" font-size="44" font-weight="normal" fill="#FFFFFF" text-anchor="middle" letter-spacing="4">WAYFORTH</text>
+    <text x="512" y="872" font-family="'Courier New', monospace" font-size="18" font-weight="600" fill="#9BB3C9" text-anchor="middle" letter-spacing="6">ACADEMIC ADVISORY</text>
+  </g>
+</svg>

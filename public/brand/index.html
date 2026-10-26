@@ -1,0 +1,471 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Wayforth // Official Brand Asset Package & Logo Suite</title>
+  <link rel="icon" href="/brand/wayforth-monogram.svg" type="image/svg+xml">
+  <style>
+    :root {
+      --navy-900: #12324E;
+      --navy-700: #1D5382;
+      --sky-400: #38BDF8;
+      --paper: #FFFFFF;
+      --surface: #F4F7FB;
+      --border: #D8E2EC;
+      --muted: #5A6B7C;
+      --dark-card: #0E253A;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      background: var(--surface);
+      color: var(--navy-900);
+      line-height: 1.5;
+      padding: 40px 20px 80px;
+    }
+    .container {
+      max-width: 1080px;
+      margin: 0 auto;
+    }
+    header {
+      background: var(--paper);
+      border: 1px solid var(--border);
+      padding: 36px 40px;
+      margin-bottom: 32px;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      align-items: center;
+      gap: 20px;
+    }
+    .brand-title {
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: 32px;
+      font-weight: normal;
+      color: var(--navy-900);
+      letter-spacing: -0.02em;
+    }
+    .brand-sub {
+      font-family: "Courier New", Courier, monospace;
+      font-size: 11px;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: var(--muted);
+      margin-top: 4px;
+    }
+    .meta-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 6px 14px;
+      background: var(--surface);
+      border: 1px solid var(--border);
+      font-family: "Courier New", monospace;
+      font-size: 11px;
+      text-transform: uppercase;
+      color: var(--navy-700);
+      font-weight: bold;
+    }
+    .section-title {
+      font-family: "Courier New", monospace;
+      font-size: 12px;
+      text-transform: uppercase;
+      letter-spacing: 0.15em;
+      color: var(--navy-700);
+      font-weight: bold;
+      margin-bottom: 16px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+    .section-title::before {
+      content: "";
+      display: inline-block;
+      width: 6px;
+      height: 6px;
+      background: var(--navy-700);
+    }
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+      gap: 24px;
+      margin-bottom: 36px;
+    }
+    .card {
+      background: var(--paper);
+      border: 1px solid var(--border);
+      padding: 24px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      transition: transform 0.2s, box-shadow 0.2s;
+    }
+    .card:hover {
+      box-shadow: 0 8px 24px rgba(18, 50, 78, 0.06);
+    }
+    .card-preview {
+      height: 180px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border: 1px solid var(--border);
+      margin-bottom: 18px;
+      padding: 16px;
+      background: var(--paper);
+    }
+    .card-preview.dark {
+      background: var(--navy-900);
+      border-color: #224A70;
+    }
+    .card-preview img {
+      max-width: 90%;
+      max-height: 85%;
+      object-fit: contain;
+    }
+    .card-info h3 {
+      font-family: Georgia, serif;
+      font-size: 18px;
+      font-weight: normal;
+      color: var(--navy-900);
+      margin-bottom: 4px;
+    }
+    .card-info p {
+      font-size: 12px;
+      color: var(--muted);
+      margin-bottom: 16px;
+    }
+    .btn-download {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      padding: 10px 18px;
+      background: var(--navy-900);
+      color: #FFFFFF;
+      text-decoration: none;
+      font-family: "Courier New", monospace;
+      font-size: 11px;
+      font-weight: bold;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      transition: background 0.2s;
+      border: none;
+      cursor: pointer;
+    }
+    .btn-download:hover {
+      background: var(--navy-700);
+    }
+    .palette-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+      gap: 16px;
+      margin-bottom: 36px;
+    }
+    .swatch {
+      background: var(--paper);
+      border: 1px solid var(--border);
+      padding: 16px;
+    }
+    .swatch-color {
+      height: 60px;
+      width: 100%;
+      margin-bottom: 12px;
+      border: 1px solid rgba(0,0,0,0.06);
+    }
+    .swatch-name {
+      font-size: 12px;
+      font-weight: bold;
+      color: var(--navy-900);
+    }
+    .swatch-hex {
+      font-family: "Courier New", monospace;
+      font-size: 11px;
+      color: var(--muted);
+    }
+    .whatsapp-demo {
+      background: #FFFFFF;
+      border: 1px solid var(--border);
+      padding: 32px;
+      margin-bottom: 36px;
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 32px;
+    }
+    .wa-phone {
+      width: 280px;
+      background: #FFFFFF;
+      border: 2px solid var(--navy-900);
+      border-radius: 24px;
+      overflow: hidden;
+      box-shadow: 0 12px 32px rgba(18, 50, 78, 0.12);
+    }
+    .wa-header {
+      background: #12324E;
+      color: #FFFFFF;
+      padding: 14px 16px;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+    .wa-avatar {
+      width: 44px;
+      height: 44px;
+      border-radius: 50%;
+      overflow: hidden;
+      background: #FFFFFF;
+      border: 1.5px solid #38BDF8;
+      flex-shrink: 0;
+    }
+    .wa-avatar img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+    .wa-title {
+      font-size: 14px;
+      font-weight: 600;
+      color: #FFFFFF;
+    }
+    .wa-sub {
+      font-size: 10px;
+      color: #9BB3C9;
+      font-family: monospace;
+    }
+    .wa-body {
+      padding: 20px 16px;
+      background: #EFEAE2;
+      min-height: 120px;
+      font-size: 11px;
+      color: #4A525A;
+    }
+    .wa-bubble {
+      background: #FFFFFF;
+      padding: 10px 12px;
+      border-radius: 8px;
+      max-width: 85%;
+      box-shadow: 0 1px 2px rgba(0,0,0,0.08);
+      line-height: 1.4;
+    }
+    footer {
+      border-top: 1px solid var(--border);
+      padding-top: 24px;
+      display: flex;
+      justify-content: space-between;
+      font-size: 11px;
+      color: var(--muted);
+      font-family: "Courier New", monospace;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <div>
+        <h1 class="brand-title">Wayforth.in</h1>
+        <p class="brand-sub">Official Brand Identity &amp; Logo Asset Handover Package</p>
+      </div>
+      <div class="meta-badge">
+        <span>Wayforth Brand Identity Suite // 2026</span>
+      </div>
+    </header>
+
+    <!-- SECTION 0: BESPOKE 3D MONOLITH -->
+    <div class="section-title">00 // 3D Architectural Monolith</div>
+    <div style="background: var(--paper); border: 1px solid var(--border); padding: 32px; margin-bottom: 36px; display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 32px; align-items: center;">
+      <!-- Left: Large 3D Render Preview -->
+      <div style="position: relative; background: #000000; border: 1px solid #224A70; border-radius: 4px; overflow: hidden; aspect-ratio: 1/1; display: flex; align-items: center; justify-content: center; box-shadow: 0 16px 40px rgba(0,0,0,0.3);">
+        <img src="/brand/wayforth-3d-monolith-unique.jpg" alt="Wayforth Proprietary 3D Monolith Render" style="width: 100%; height: 100%; object-fit: cover;">
+        <div style="position: absolute; bottom: 12px; left: 12px; background: rgba(18,50,78,0.85); backdrop-filter: blur(4px); padding: 4px 10px; border: 1px solid #38BDF8; font-family: monospace; font-size: 10px; color: #FFFFFF; text-transform: uppercase; letter-spacing: 0.1em;">
+          Bespoke 3D Monolith • 100% Unique
+        </div>
+      </div>
+
+      <!-- Right: Technical Breakdown & Downloads -->
+      <div style="display: flex; flex-direction: column; justify-content: space-between; height: 100%;">
+        <div>
+          <span style="font-family: monospace; font-size: 10px; text-transform: uppercase; letter-spacing: 0.15em; color: var(--navy-700); font-weight: bold; display: block; margin-bottom: 8px;">
+            Defeating Google Lens &amp; Reverse Image Search
+          </span>
+          <h2 style="font-family: Georgia, serif; font-size: 24px; font-weight: normal; color: var(--navy-900); margin-bottom: 12px; line-height: 1.3;">
+            Architectural 'W' + 'F' Foundation Sculpture
+          </h2>
+          <p style="font-size: 13px; color: var(--muted); margin-bottom: 18px; line-height: 1.6;">
+            While preserving the exact cinematic matte-stone chiaroscuro aesthetic on a dark reflective wet-concrete floor, the structure has been re-engineered with bespoke geometry that reverse-search algorithms will not match:
+          </p>
+          <ul style="font-size: 12px; color: #334155; margin-left: 18px; margin-bottom: 24px; line-height: 1.8;">
+            <li><strong>Interlocking W + F Monogram:</strong> The bottom anchors the foundational 'W' (Wayforth) while the top cantilevers an ascending 'F' (Forth / Forward momentum).</li>
+            <li><strong>Central Architectural Seam:</strong> A precision vertical laser incision divides the mass, breaking the standard symmetrical diamond silhouette.</li>
+            <li><strong>Sapphire/Cobalt Ambient Edge Glow:</strong> Subtle `#1D5382` and `#38BDF8` edge rim lighting that embeds Wayforth's official brand colors.</li>
+          </ul>
+        </div>
+
+        <div style="display: flex; flex-wrap: wrap; gap: 12px;">
+          <a href="/brand/wayforth-dp-3d-circle.png" download="wayforth-whatsapp-dp-circular.png" class="btn-download" style="background: #25D366; color: #FFFFFF;">
+            Download WhatsApp DP (Circular PNG)
+          </a>
+          <a href="/brand/wayforth-dp-3d-square.png" download="wayforth-social-dp-square.png" class="btn-download" style="background: var(--navy-900);">
+            Download Square Master (.PNG)
+          </a>
+          <a href="/brand/wayforth-3d-monolith-unique.jpg" download="wayforth-3d-monolith-master.jpg" class="btn-download" style="background: var(--navy-700);">
+            Download 3D Wallpaper (.JPG)
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <!-- SECTION 1: LOGO SUITE -->
+    <div class="section-title">01 // Primary Vector Logo Deliverables (SVG Format)</div>
+    <div class="grid">
+      <!-- Item 1: Dark Logo -->
+      <div class="card">
+        <div>
+          <div class="card-preview">
+            <img src="/brand/wayforth-logo-dark.svg" alt="Wayforth Dark Horizontal Logo">
+          </div>
+          <div class="card-info">
+            <h3>Primary Horizontal (Dark)</h3>
+            <p>For white backgrounds, official letterheads, PDF invoices, and website headers.</p>
+          </div>
+        </div>
+        <a href="/brand/wayforth-logo-dark.svg" download="wayforth-logo-dark.svg" class="btn-download">
+          Download Vector SVG
+        </a>
+      </div>
+
+      <!-- Item 2: Light Logo -->
+      <div class="card">
+        <div>
+          <div class="card-preview dark">
+            <img src="/brand/wayforth-logo-light.svg" alt="Wayforth Light Horizontal Logo">
+          </div>
+          <div class="card-info">
+            <h3>Primary Horizontal (Light)</h3>
+            <p>For dark navy surfaces, footer banners, pitch deck covers, and dark-mode displays.</p>
+          </div>
+        </div>
+        <a href="/brand/wayforth-logo-light.svg" download="wayforth-logo-light.svg" class="btn-download">
+          Download Vector SVG
+        </a>
+      </div>
+
+      <!-- Item 3: Standalone Monogram -->
+      <div class="card">
+        <div>
+          <div class="card-preview">
+            <img src="/brand/wayforth-monogram.svg" alt="Wayforth Monogram Icon" style="max-height: 80px;">
+          </div>
+          <div class="card-info">
+            <h3>Architectural Monogram Mark</h3>
+            <p>Pure "W" icon with upward progress vertex. For watermarks, seals, and app icons.</p>
+          </div>
+        </div>
+        <a href="/brand/wayforth-monogram.svg" download="wayforth-monogram.svg" class="btn-download">
+          Download Vector SVG
+        </a>
+      </div>
+    </div>
+
+    <!-- SECTION 2: SOCIAL & WHATSAPP AVATAR -->
+    <div class="section-title">02 // WhatsApp Business &amp; Social Profile Picture Assets</div>
+    <div class="grid">
+      <!-- Item 4: WhatsApp Square (1024x1024) -->
+      <div class="card">
+        <div>
+          <div class="card-preview dark">
+            <img src="/brand/wayforth-avatar-1024.svg" alt="Wayforth 1024x1024 Avatar" style="max-height: 120px;">
+          </div>
+          <div class="card-info">
+            <h3>Square Social Master (1024 × 1024)</h3>
+            <p>High-resolution master asset for LinkedIn Company page, Google Workspace, and YouTube.</p>
+          </div>
+        </div>
+        <a href="/brand/wayforth-avatar-1024.svg" download="wayforth-avatar-1024.svg" class="btn-download">
+          Download 1024px SVG
+        </a>
+      </div>
+
+      <!-- Item 5: Circular WhatsApp DP -->
+      <div class="card">
+        <div>
+          <div class="card-preview">
+            <img src="/brand/wayforth-avatar-circle.svg" alt="Wayforth Circular Avatar" style="max-height: 120px; border-radius: 50%;">
+          </div>
+          <div class="card-info">
+            <h3>Circular WhatsApp DP (Safe-Crop)</h3>
+            <p>Specifically engineered with circular margin buffer for zero cutoff in WhatsApp &amp; Instagram.</p>
+          </div>
+        </div>
+        <a href="/brand/wayforth-avatar-circle.svg" download="wayforth-avatar-circle.svg" class="btn-download">
+          Download Circular DP
+        </a>
+      </div>
+
+      <!-- Live Mockup Demonstration -->
+      <div class="card" style="justify-content: center; align-items: center; background: #F8FAFC;">
+        <div class="wa-phone">
+          <div class="wa-header">
+            <div class="wa-avatar">
+              <img src="/brand/wayforth-3d-monolith-unique.jpg" alt="Avatar" style="transform: scale(1.15);">
+            </div>
+            <div>
+              <div class="wa-title">Wayforth Academic</div>
+              <div class="wa-sub">Official Advisory • Active</div>
+            </div>
+          </div>
+          <div class="wa-body">
+            <div class="wa-bubble">
+              <strong>Wayforth Advisory:</strong><br>
+              Hello! We received your project brief. What is your submission deadline?
+            </div>
+          </div>
+        </div>
+        <span style="font-size: 11px; font-family: monospace; color: var(--muted); margin-top: 14px;">
+          Live WhatsApp UI Display Simulation
+        </span>
+      </div>
+    </div>
+
+    <!-- SECTION 3: OFFICIAL COLOR PALETTE -->
+    <div class="section-title">03 // Official Color Palette (Champoleon Valley Standard)</div>
+    <div class="palette-grid">
+      <div class="swatch">
+        <div class="swatch-color" style="background: #12324E;"></div>
+        <div class="swatch-name">Academic Navy</div>
+        <div class="swatch-hex">#12324E</div>
+      </div>
+      <div class="swatch">
+        <div class="swatch-color" style="background: #1D5382;"></div>
+        <div class="swatch-name">Cobalt Slate</div>
+        <div class="swatch-hex">#1D5382</div>
+      </div>
+      <div class="swatch">
+        <div class="swatch-color" style="background: #38BDF8;"></div>
+        <div class="swatch-name">Sky Blue Accent</div>
+        <div class="swatch-hex">#38BDF8</div>
+      </div>
+      <div class="swatch">
+        <div class="swatch-color" style="background: #D8E2EC;"></div>
+        <div class="swatch-name">Hairline Border</div>
+        <div class="swatch-hex">#D8E2EC</div>
+      </div>
+      <div class="swatch">
+        <div class="swatch-color" style="background: #F4F7FB;"></div>
+        <div class="swatch-name">Ice Tint Surface</div>
+        <div class="swatch-hex">#F4F7FB</div>
+      </div>
+      <div class="swatch">
+        <div class="swatch-color" style="background: #FFFFFF;"></div>
+        <div class="swatch-name">Paper White</div>
+        <div class="swatch-hex">#FFFFFF</div>
+      </div>
+    </div>
+
+    <footer>
+      <div>Wayforth.in • Academic &amp; Research Advisory</div>
+      <div>Official Brand &amp; Digital Assets • 2026</div>
+    </footer>
+  </div>
+</body>
+</html>

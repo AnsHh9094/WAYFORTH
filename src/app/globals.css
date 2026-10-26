@@ -1,0 +1,99 @@
+@import "tailwindcss";
+
+@theme {
+  --font-serif: var(--font-serif), Georgia, serif;
+  --font-sans: var(--font-sans), system-ui, sans-serif;
+  --font-mono: var(--font-mono), monospace;
+  --shadow-paper: 0 24px 48px -12px rgba(18, 50, 78, 0.08), 0 0 0 1px #D8E2EC;
+  --shadow-paper-elevated: 0 32px 64px -16px rgba(18, 50, 78, 0.16), 0 0 0 1px #B8C9D8;
+}
+
+@layer base {
+  :root {
+    /* Champoleon Valley Inspired Academic Navy & White Palette */
+    --paper-primary: #FFFFFF;
+    --paper-secondary: #F4F7FB;
+    --surface-elevated: #FFFFFF;
+    --surface-tint: #EDF2F7;
+    --ink-primary: #12324E;        /* Deep Academic Navy Blue */
+    --ink-secondary: #42586E;      /* Refined Steel Blue Slate */
+    --ink-muted: #738A9E;          /* Soft Subtext Slate */
+    --border-subtle: #D8E2EC;      /* Crisp Architectural Rule */
+    --border-strong: #B8C9D8;      /* Strong Section Rule */
+    --accent-oxford: #12324E;      /* Deep Midnight Academic Navy */
+    --accent-blue: #1D5382;        /* Vibrant Academic Cobalt */
+    --accent-ice: #E8F1F9;         /* Glacial Highlighting Tint */
+    --accent-cyan: #0284C7;        /* Clean Interactive Highlight */
+  }
+
+  body {
+    background-color: var(--paper-primary);
+    color: var(--ink-primary);
+    font-feature-settings: "cv02", "cv03", "cv04", "cv11";
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  ::selection {
+    background-color: #12324E;
+    color: #FFFFFF;
+  }
+}
+
+/* Custom Architectural Scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: #F4F7FB;
+}
+::-webkit-scrollbar-thumb {
+  background: #B8C9D8;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #12324E;
+}
+
+/* Watermark Pattern */
+.preview-watermark {
+  background-image: repeating-linear-gradient(
+    -45deg,
+    rgba(18, 50, 78, 0.04),
+    rgba(18, 50, 78, 0.04) 20px,
+    transparent 20px,
+    transparent 40px
+  );
+}
+
+/* Broadsheet Double Rule */
+.border-double-rule {
+  border-top: 1px solid #D8E2EC;
+  position: relative;
+}
+.border-double-rule::after {
+  content: "";
+  display: block;
+  margin-top: 3px;
+  border-top: 1px solid #D8E2EC;
+}
+
+/* 3D Specimen Perspective */
+.perspective-1000 {
+  perspective: 1000px;
+}
+.transform-style-3d {
+  transform-style: preserve-3d;
+}
+
+/* Tactile Analog Paper Grain Overlay */
+.paper-grain {
+  position: fixed;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 999;
+  opacity: 0.025;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
+}
