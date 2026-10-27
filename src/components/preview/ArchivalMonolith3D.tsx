@@ -62,23 +62,11 @@ export function ArchivalMonolith3D({ brandName, className = '' }: ArchivalMonoli
       ctx.fillStyle = isUV ? '#0E0C17' : '#FCFCF9';
       ctx.fillRect(0, 0, w, h);
 
-      // 2. Subtle Micro Paper Grain / Fiber simulation
-      const imgData = ctx.getImageData(0, 0, w, h);
-      const data = imgData.data;
-      const noiseAmp = isUV ? 5 : 7;
-      for (let i = 0; i < data.length; i += 4) {
-        const noise = (Math.random() - 0.5) * noiseAmp;
-        data[i] = Math.min(255, Math.max(0, data[i] + noise));
-        data[i + 1] = Math.min(255, Math.max(0, data[i + 1] + noise));
-        data[i + 2] = Math.min(255, Math.max(0, data[i + 2] + noise));
-      }
-      ctx.putImageData(imgData, 0, 0);
-
       // In UV mode: draw embedded fluorescent security fibers scattered across paper
       if (isUV) {
         ctx.lineWidth = 1.5;
         const fiberColors = ['#00FFA3', '#00E5FF', '#D500F9'];
-        for (let f = 0; f < 35; f++) {
+        for (let f = 0; f < 25; f++) {
           const fx = 40 + Math.random() * (w - 80);
           const fy = 40 + Math.random() * (h - 80);
           ctx.strokeStyle = fiberColors[f % fiberColors.length];
@@ -371,8 +359,8 @@ export function ArchivalMonolith3D({ brandName, className = '' }: ArchivalMonoli
 
     // 4. Create Procedural Texture Canvas
     const canvas = document.createElement('canvas');
-    canvas.width = 1024;
-    canvas.height = 1350;
+    canvas.width = 768;
+    canvas.height = 1012;
     textureCanvasRef.current = canvas;
     drawManuscriptTexture(canvas, isWatermarked, brandName, lightMode);
 
@@ -640,7 +628,7 @@ export function ArchivalMonolith3D({ brandName, className = '' }: ArchivalMonoli
         aria-label="Interactive 3D Archival Paper Specimen"
       >
         {/* Archival Coordinate HUD */}
-        <div className="absolute top-2 left-2 z-20 pointer-events-none flex items-center gap-2 text-[9px] font-mono tracking-widest uppercase px-2.5 py-1 border transition-colors duration-300 backdrop-blur-xs bg-[#FFFFFF]/90 text-[#5A6B7C] border-[#D8E2EC]">
+        <div className="absolute top-2 left-2 z-20 pointer-events-none flex items-center gap-2 text-[9px] font-mono tracking-widest uppercase px-2.5 py-1 border transition-colors duration-300 backdrop-blur-xs bg-[#FFFFFF]/90 text-[#12324E] border-[#D8E2EC] font-semibold">
           <span
             className={`w-1.5 h-1.5 rounded-full ${
               lightMode === 'uv' ? 'bg-[#00FFA3] animate-ping' : 'bg-[#1D5382] animate-pulse'
@@ -649,14 +637,14 @@ export function ArchivalMonolith3D({ brandName, className = '' }: ArchivalMonoli
           <span>{lightMode === 'uv' ? 'FORENSIC 365nm UV' : 'SPECIMEN // 300GSM COTTON'}</span>
         </div>
 
-        <div className="absolute top-2 right-2 z-20 pointer-events-none text-[9px] font-mono tracking-widest text-[#5A6B7C] uppercase bg-[#FFFFFF]/90 backdrop-blur-xs px-2.5 py-1 border border-[#D8E2EC]">
+        <div className="absolute top-2 right-2 z-20 pointer-events-none text-[9px] font-mono tracking-widest text-[#12324E] font-semibold uppercase bg-[#FFFFFF]/90 backdrop-blur-xs px-2.5 py-1 border border-[#D8E2EC]">
           <span>POS: [{coords.x}, {coords.y}]</span>
         </div>
 
         {/* Fallback if WebGL is disabled */}
         {!webglSupported && (
           <div className="absolute inset-0 flex items-center justify-center p-6 bg-[#FFFFFF] border border-[#D8E2EC] text-center">
-            <p className="text-xs font-mono text-[#5A6B7C]">
+            <p className="text-xs font-mono text-[#12324E] font-medium">
               WAYFORTH ARCHIVAL FOLIO // 300GSM COTTON SPECIMEN
             </p>
           </div>
@@ -670,12 +658,13 @@ export function ArchivalMonolith3D({ brandName, className = '' }: ArchivalMonoli
           onClick={handleToggleWatermark}
           className={`inline-flex items-center gap-1.5 px-3 py-1.5 rounded-[2px] border transition-all cursor-pointer ${
             isWatermarked
-              ? 'bg-[#12324E]/10 border-[#12324E]/30 text-[#12324E] font-semibold'
-              : 'bg-[#F4F7FB] border-[#D8E2EC] text-[#5A6B7C] hover:border-[#12324E]'
+              ? 'bg-[#12324E] border-[#224A70] text-[#38BDF8] font-semibold'
+              : 'bg-[#0E253A] border-[#224A70] text-[#CBD5E1] hover:border-[#38BDF8]'
           }`}
           title="Toggle preview watermark"
+          aria-label="Toggle preview watermark"
         >
-          <ShieldCheck className="w-3.5 h-3.5" />
+          <ShieldCheck className="w-3.5 h-3.5 text-[#38BDF8]" />
           <span>{isWatermarked ? 'WATERMARK ON' : 'CLEAN DRAFT'}</span>
         </button>
 
@@ -684,28 +673,30 @@ export function ArchivalMonolith3D({ brandName, className = '' }: ArchivalMonoli
           onClick={handleToggleLightMode}
           className={`inline-flex items-center gap-1.5 px-3 py-1.5 rounded-[2px] border transition-all cursor-pointer ${
             lightMode === 'uv'
-              ? 'bg-[#1D5382]/15 border-[#1D5382]/50 text-[#1D5382] font-bold shadow-xs'
-              : 'bg-[#FFFFFF] border-[#D8E2EC] hover:border-[#12324E] text-[#12324E]'
+              ? 'bg-[#1D5382] border-[#38BDF8] text-[#FFFFFF] font-bold shadow-xs'
+              : 'bg-[#0E253A] border-[#224A70] hover:border-[#38BDF8] text-[#CBD5E1]'
           }`}
           title="Toggle 365nm Forensic UV Light Mode"
+          aria-label="Toggle 365nm Forensic UV Light Mode"
         >
-          <Zap className={`w-3.5 h-3.5 ${lightMode === 'uv' ? 'text-[#00FFA3] fill-[#00FFA3]' : 'text-[#1D5382]'}`} />
+          <Zap className={`w-3.5 h-3.5 ${lightMode === 'uv' ? 'text-[#00FFA3] fill-[#00FFA3]' : 'text-[#38BDF8]'}`} />
           <span>{lightMode === 'uv' ? 'UV ACTIVE (365nm)' : 'UV FORENSIC'}</span>
         </button>
 
         {/* Right: Flip & Orbit Action */}
         <button
           onClick={handleInspectFlip}
-          className="inline-flex items-center gap-1.5 px-3 py-1.5 bg-[#FFFFFF] border border-[#D8E2EC] hover:border-[#12324E] text-[#12324E] transition-colors cursor-pointer rounded-[2px]"
+          className="inline-flex items-center gap-1.5 px-3 py-1.5 bg-[#0E253A] border border-[#224A70] hover:border-[#38BDF8] text-[#CBD5E1] transition-colors cursor-pointer rounded-[2px]"
           title="Inspect reverse archival folio"
+          aria-label="Inspect reverse archival folio"
         >
-          <RefreshCw className="w-3 h-3 text-[#5A6B7C]" />
+          <RefreshCw className="w-3 h-3 text-[#38BDF8]" />
           <span>FLIP FOLIO</span>
         </button>
       </div>
 
       {/* Micro Status Hint */}
-      <div className="mt-2 text-center text-[9px] font-mono text-[#5A6B7C] tracking-wider">
+      <div className="mt-2 text-center text-[9px] font-mono text-[#CBD5E1] tracking-wider">
         <span>CLICK & DRAG TO ROTATE • FORENSIC INSPECTION ACTIVE</span>
       </div>
     </div>
