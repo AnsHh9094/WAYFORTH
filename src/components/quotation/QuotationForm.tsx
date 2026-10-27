@@ -370,7 +370,7 @@ _Initiated via wayforth.in official quotation calculator_`;
                               ₹{tier.perPageRate}/pg
                             </span>
                           </div>
-                          <span className="text-[11px] text-[#738A9E] block leading-tight">
+                          <span className="text-[11px] text-[#4A607A] block leading-tight">
                             {tier.label}
                           </span>
                         </button>
@@ -382,14 +382,17 @@ _Initiated via wayforth.in official quotation calculator_`;
                 {/* 2. Page Volume Slider */}
                 <div>
                   <div className="flex justify-between items-center mb-2">
-                    <label className="text-xs font-mono uppercase tracking-wider text-[#12324E] font-semibold">
+                    <label htmlFor="page-volume-slider" className="text-xs font-mono uppercase tracking-wider text-[#12324E] font-semibold">
                       2. Required Volume: <strong>{pages} Content Pages</strong>
                     </label>
-                    <span className="text-xs font-mono text-[#1D5382] font-medium">
+                    <span className="text-xs font-mono text-[#1D5382] font-semibold">
                       (~{totalWords.toLocaleString()} Words at 275w/pg)
                     </span>
                   </div>
                   <input
+                    id="page-volume-slider"
+                    name="pages"
+                    aria-label="Required Content Pages Slider"
                     type="range"
                     min="3"
                     max="80"
@@ -397,7 +400,7 @@ _Initiated via wayforth.in official quotation calculator_`;
                     onChange={(e) => setPages(parseInt(e.target.value))}
                     className="w-full h-1.5 bg-[#D8E2EC] appearance-none cursor-pointer accent-[#12324E]"
                   />
-                  <div className="flex justify-between text-[10px] font-mono text-[#738A9E] mt-1.5">
+                  <div className="flex justify-between text-[10px] font-mono text-[#4A607A] mt-1.5">
                     <span>3 pgs (Short Essay)</span>
                     <span>15–20 pgs (Standard Term Project)</span>
                     <span>80+ pgs (Dissertation)</span>
@@ -410,7 +413,7 @@ _Initiated via wayforth.in official quotation calculator_`;
                     <label className="text-xs font-mono uppercase tracking-wider text-[#12324E] font-semibold">
                       3. Target Submission Deadline (Variable Urgency Rate) *
                     </label>
-                    <span className="text-[10px] font-mono text-[#738A9E] flex items-center gap-1">
+                    <span className="text-[10px] font-mono text-[#4A607A] flex items-center gap-1">
                       <Clock className="w-3 h-3 text-[#1D5382]" />
                       <span>Confirms specialist sprint allocation</span>
                     </span>
@@ -448,7 +451,7 @@ _Initiated via wayforth.in official quotation calculator_`;
                           </div>
                           <span
                             className={`text-[10px] block ${
-                              isSelected ? 'text-white/80' : 'text-[#738A9E]'
+                              isSelected ? 'text-white/80' : 'text-[#4A607A]'
                             }`}
                           >
                             {urg.sublabel}
@@ -499,7 +502,7 @@ _Initiated via wayforth.in official quotation calculator_`;
                                 +₹{addon.price}
                               </span>
                             </div>
-                            <p className="text-[11px] text-[#738A9E] leading-tight">
+                            <p className="text-[11px] text-[#4A607A] leading-tight">
                               {addon.description}
                             </p>
                           </div>
@@ -513,11 +516,14 @@ _Initiated via wayforth.in official quotation calculator_`;
                 <div className="pt-2 border-t border-[#D8E2EC] space-y-4">
                   <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                     <div>
-                      <label className="block text-xs font-mono uppercase tracking-wider text-[#12324E] mb-1.5 font-semibold">
+                      <label htmlFor="client-name" className="block text-xs font-mono uppercase tracking-wider text-[#12324E] mb-1.5 font-semibold">
                         Your Full Name *
                       </label>
                       <input
+                        id="client-name"
+                        name="name"
                         type="text"
+                        autoComplete="name"
                         required
                         value={name}
                         onChange={(e) => setName(e.target.value)}
@@ -527,11 +533,14 @@ _Initiated via wayforth.in official quotation calculator_`;
                     </div>
 
                     <div>
-                      <label className="block text-xs font-mono uppercase tracking-wider text-[#12324E] mb-1.5 font-semibold">
+                      <label htmlFor="client-contact" className="block text-xs font-mono uppercase tracking-wider text-[#12324E] mb-1.5 font-semibold">
                         WhatsApp Contact / Email *
                       </label>
                       <input
+                        id="client-contact"
+                        name="contact"
                         type="text"
+                        autoComplete="tel"
                         required
                         value={contact}
                         onChange={(e) => setContact(e.target.value)}
@@ -543,11 +552,14 @@ _Initiated via wayforth.in official quotation calculator_`;
 
                   <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                     <div>
-                      <label className="block text-xs font-mono uppercase tracking-wider text-[#12324E] mb-1.5 font-semibold">
+                      <label htmlFor="client-institution" className="block text-xs font-mono uppercase tracking-wider text-[#12324E] mb-1.5 font-semibold">
                         University / College / Board *
                       </label>
                       <input
+                        id="client-institution"
+                        name="institution"
                         type="text"
+                        autoComplete="organization"
                         required
                         value={institution}
                         onChange={(e) => setInstitution(e.target.value)}
@@ -557,11 +569,14 @@ _Initiated via wayforth.in official quotation calculator_`;
                     </div>
 
                     <div>
-                      <label className="block text-xs font-mono uppercase tracking-wider text-[#12324E] mb-1.5 font-semibold">
+                      <label htmlFor="client-discipline" className="block text-xs font-mono uppercase tracking-wider text-[#12324E] mb-1.5 font-semibold">
                         Subject / Discipline Area *
                       </label>
                       <input
+                        id="client-discipline"
+                        name="discipline"
                         type="text"
+                        autoComplete="off"
                         required
                         value={discipline}
                         onChange={(e) => setDiscipline(e.target.value)}
@@ -572,10 +587,12 @@ _Initiated via wayforth.in official quotation calculator_`;
                   </div>
 
                   <div>
-                    <label className="block text-xs font-mono uppercase tracking-wider text-[#12324E] mb-1.5 font-semibold">
+                    <label htmlFor="client-brief" className="block text-xs font-mono uppercase tracking-wider text-[#12324E] mb-1.5 font-semibold">
                       Project Topic, Rubric & Faculty Instructions *
                     </label>
                     <textarea
+                      id="client-brief"
+                      name="brief"
                       rows={3}
                       required
                       value={brief}
@@ -597,7 +614,7 @@ _Initiated via wayforth.in official quotation calculator_`;
                     <Send className="w-4 h-4 text-[#38BDF8]" />
                   </button>
 
-                  <p className="text-[10px] text-center font-mono text-[#738A9E]">
+                  <p className="text-[10px] text-center font-mono text-[#4A607A]">
                     Submitting automatically prepares your quotation brief and transmits it directly to our advisory WhatsApp. Zero upfront commitment.
                   </p>
                 </div>

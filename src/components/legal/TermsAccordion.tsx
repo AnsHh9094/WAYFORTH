@@ -23,7 +23,7 @@ export function TermsAccordion({ brandName }: TermsAccordionProps) {
       title: 'Cancellation and Refund Policy',
       category: 'Contractual Policy',
       content: (
-        <div className="space-y-4 text-xs text-[#42586E] leading-relaxed font-sans">
+        <div className="space-y-4 text-xs text-[#364B62] leading-relaxed font-sans">
           <p>
             A customer may request cancellation by communicating the request in writing. The applicable refund depends on how much of the agreed project timeline has elapsed when the cancellation request is received, the work completed, and any reasonable costs incurred:
           </p>
@@ -45,7 +45,7 @@ export function TermsAccordion({ brandName }: TermsAccordionProps) {
               </p>
             </div>
           </div>
-          <p className="text-[#738A9E]">
+          <p className="text-[#4A607A]">
             *Timeline is calculated from the confirmed start date to the agreed delivery deadline as specified in your written quotation. Refunds apply to advance payments received, not the total project quote.
           </p>
         </div>
@@ -55,7 +55,7 @@ export function TermsAccordion({ brandName }: TermsAccordionProps) {
       title: 'Academic Outcomes & Institutional Compliance Disclaimer',
       category: 'Ethics & Integrity',
       content: (
-        <div className="space-y-3 text-xs text-[#42586E] leading-relaxed font-sans">
+        <div className="space-y-3 text-xs text-[#364B62] leading-relaxed font-sans">
           <p>
             <strong>{brandName}</strong> provides academic research support, literature reviews, editorial structuring, formatting guidance, and analytical data modeling.
           </p>
@@ -72,7 +72,7 @@ export function TermsAccordion({ brandName }: TermsAccordionProps) {
       title: '100% Genuine Human Authorship Standard',
       category: 'Authenticity Guarantee',
       content: (
-        <div className="space-y-3 text-xs text-[#42586E] leading-relaxed font-sans">
+        <div className="space-y-3 text-xs text-[#364B62] leading-relaxed font-sans">
           <p>
             All deliverables are researched and written by human domain specialists from scratch. We do not use robotic AI regurgitation that hallucinates citations or outputs generic filler.
           </p>
@@ -86,7 +86,7 @@ export function TermsAccordion({ brandName }: TermsAccordionProps) {
       title: 'Included Revision Scope (24-Hour Review Window)',
       category: 'Revision Terms',
       content: (
-        <div className="space-y-3 text-xs text-[#42586E] leading-relaxed font-sans">
+        <div className="space-y-3 text-xs text-[#364B62] leading-relaxed font-sans">
           <p>
             One comprehensive revision round is included within the agreed scope. To ensure timely delivery, feedback must be consolidated into a single response within <strong>24 hours of receiving the watermarked sample preview</strong>.
           </p>
@@ -103,7 +103,7 @@ export function TermsAccordion({ brandName }: TermsAccordionProps) {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
         {/* Section Header */}
-        <div className="flex items-center justify-between border-b border-[#D8E2EC] pb-4 mb-16 text-xs font-mono text-[#738A9E]">
+        <div className="flex items-center justify-between border-b border-[#D8E2EC] pb-4 mb-16 text-xs font-mono text-[#4A607A]">
           <div className="flex items-center gap-2">
             <span className="w-1.5 h-1.5 bg-[#12324E]" />
             <span className="uppercase tracking-widest text-[#12324E] font-semibold">
@@ -120,7 +120,7 @@ export function TermsAccordion({ brandName }: TermsAccordionProps) {
           <h2 className="font-serif text-3xl sm:text-5xl font-normal text-[#12324E] leading-tight mb-4">
             Published policies. No ambiguous fine print.
           </h2>
-          <p className="text-[#42586E] text-base leading-relaxed">
+          <p className="text-[#364B62] text-base leading-relaxed">
             Every engagement with {brandName} is conducted under documented terms governing human authorship, milestone reviews, and cancellation procedures.
           </p>
         </div>
@@ -145,7 +145,7 @@ export function TermsAccordion({ brandName }: TermsAccordionProps) {
                       0{idx + 1}
                     </span>
                     <div>
-                      <span className="text-[10px] font-mono uppercase tracking-widest text-[#738A9E] block">
+                      <span className="text-[10px] font-mono uppercase tracking-widest text-[#4A607A] block font-semibold">
                         {policy.category}
                       </span>
                       <h3 className="font-serif text-lg text-[#12324E] font-medium">
@@ -158,7 +158,7 @@ export function TermsAccordion({ brandName }: TermsAccordionProps) {
                     transition={{ duration: 0.2, ease: editorial }}
                     className="text-[#12324E] shrink-0"
                   >
-                    <Plus className={`w-4 h-4 ${isOpen ? 'text-[#1D5382]' : 'text-[#738A9E]'}`} />
+                    <Plus className={`w-4 h-4 ${isOpen ? 'text-[#1D5382]' : 'text-[#4A607A]'}`} />
                   </motion.div>
                 </button>
 

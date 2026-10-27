@@ -30,12 +30,12 @@ export function Footer({ onRequestQuote }: FooterProps) {
               &ldquo;{BRAND_CONFIG.tagline}&rdquo;
             </p>
             
-            <p className="text-xs text-[#9BB3C9] leading-relaxed max-w-md font-sans">
+            <p className="text-xs text-[#CBD5E1] leading-relaxed max-w-md font-sans">
               Dedicated academic project, research, and report-writing advisory across undergraduate, postgraduate, and doctoral levels.
               100% genuine human research, mathematical pricing transparency, and milestone preview safeguards.
             </p>
 
-            <div className="pt-2 flex flex-col space-y-1.5 text-xs font-mono text-[#9BB3C9]">
+            <div className="pt-2 flex flex-col space-y-1.5 text-xs font-mono text-[#CBD5E1]">
               <div className="flex items-center gap-2">
                 <Mail className="w-3.5 h-3.5 text-[#38BDF8]" />
                 <a
@@ -61,10 +61,10 @@ export function Footer({ onRequestQuote }: FooterProps) {
 
           {/* Academic Scope Column */}
           <div className="lg:col-span-3 space-y-3">
-            <div className="text-xs font-mono uppercase tracking-widest text-[#789BB9]">
+            <div className="text-xs font-mono uppercase tracking-widest text-[#93C5FD] font-semibold">
               Active Scope
             </div>
-            <ul className="space-y-2 text-xs text-[#C5DCF0]">
+            <ul className="space-y-2 text-xs text-[#E2ECF5]">
               <li>Undergraduate Project Reports & Capstones</li>
               <li>MBA Management & Strategic Case Studies</li>
               <li>Data Analysis, Excel & Financial Modeling</li>
@@ -76,10 +76,10 @@ export function Footer({ onRequestQuote }: FooterProps) {
 
           {/* Institutional Trust & Policies */}
           <div className="lg:col-span-4 space-y-4">
-            <div className="text-xs font-mono uppercase tracking-widest text-[#789BB9]">
+            <div className="text-xs font-mono uppercase tracking-widest text-[#93C5FD] font-semibold">
               Contractual Assurance
             </div>
-            <div className="p-4 bg-[#0E253A] border border-[#224A70] text-xs text-[#9BB3C9] space-y-2 font-mono">
+            <div className="p-4 bg-[#0E253A] border border-[#224A70] text-xs text-[#CBD5E1] space-y-2 font-mono">
               <div className="flex items-center gap-2 text-[#FFFFFF]">
                 <ShieldCheck className="w-4 h-4 text-[#38BDF8] shrink-0" />
                 <span>Pay-As-You-Go Milestone Model</span>
@@ -99,7 +99,7 @@ export function Footer({ onRequestQuote }: FooterProps) {
         </div>
 
         {/* Legal Policies Quick Links in Smallest Letters */}
-        <div className="py-6 border-b border-[#224A70] flex flex-col md:flex-row items-start md:items-center justify-between gap-4 text-[11px] text-[#789BB9]">
+        <div className="py-6 border-b border-[#224A70] flex flex-col md:flex-row items-start md:items-center justify-between gap-4 text-[11px] text-[#CBD5E1]">
           <div className="flex flex-wrap items-center gap-x-6 gap-y-2 font-mono">
             <Link href="/terms" className="hover:text-white underline underline-offset-2 transition-colors">
               Terms & Conditions
@@ -114,14 +114,14 @@ export function Footer({ onRequestQuote }: FooterProps) {
               Human-Written Standard
             </Link>
           </div>
-          <span className="font-mono text-[10px] text-[#9BB3C9]">
+          <span className="font-mono text-[10px] text-[#CBD5E1]">
             DOMAIN: {BRAND_CONFIG.domain.toUpperCase()}
           </span>
         </div>
 
         {/* Ethical Notice Disclaimer */}
-        <div className="py-6 border-b border-[#224A70] text-[10.5px] text-[#8AA7C2] leading-relaxed font-sans">
-          <strong className="text-[#C5DCF0] block mb-1 font-mono uppercase text-[10px]">
+        <div className="py-6 border-b border-[#224A70] text-[10.5px] text-[#CBD5E1] leading-relaxed font-sans">
+          <strong className="text-[#FFFFFF] block mb-1 font-mono uppercase text-[10px]">
             Institutional Compliance & Academic Ethics Notice:
           </strong>
           {BRAND_CONFIG.name} provides research support, reference frameworks, editorial assistance, and quantitative models.
@@ -138,7 +138,7 @@ export function Footer({ onRequestQuote }: FooterProps) {
         </div>
 
         {/* Bottom Bar */}
-        <div className="pt-6 flex flex-col sm:flex-row items-center justify-between text-xs font-mono text-[#789BB9] gap-4">
+        <div className="pt-6 flex flex-col sm:flex-row items-center justify-between text-xs font-mono text-[#CBD5E1] gap-4">
           <div>
             © 2026 {BRAND_CONFIG.name} Advisory ({BRAND_CONFIG.domain}). All rights reserved.
           </div>

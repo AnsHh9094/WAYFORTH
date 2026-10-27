@@ -89,7 +89,7 @@ export function KineticStatsTicker() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
         {/* Top Ledger Strip */}
-        <div className="flex items-center justify-between pb-6 mb-10 border-b border-[#224A70] text-[10.5px] font-mono tracking-widest uppercase text-[#9BB3C9]">
+        <div className="flex items-center justify-between pb-6 mb-10 border-b border-[#224A70] text-[10.5px] font-mono tracking-widest uppercase text-[#CBD5E1]">
           <div className="flex items-center gap-2">
             <span className="w-2 h-2 rounded-full bg-[#00FFA3] animate-pulse" />
             <span className="text-[#FFFFFF] font-bold">OPERATIONAL METRICS // AUTUMN 2026</span>
@@ -112,7 +112,7 @@ export function KineticStatsTicker() {
                 <div className="p-2 bg-[#12324E] border border-[#224A70] rounded-[2px]">
                   {stat.icon}
                 </div>
-                <span className="text-[10px] font-mono text-[#5A7C9E] tracking-widest">
+                <span className="text-[10px] font-mono text-[#94A3B8] tracking-widest">
                   [0{idx + 1}]
                 </span>
               </div>
@@ -124,7 +124,7 @@ export function KineticStatsTicker() {
               <strong className="block text-sm font-sans text-[#E2ECF5] font-semibold mb-1">
                 {stat.label}
               </strong>
-              <p className="text-xs text-[#9BB3C9] leading-relaxed">
+              <p className="text-xs text-[#CBD5E1] leading-relaxed">
                 {stat.sublabel}
               </p>
             </motion.div>

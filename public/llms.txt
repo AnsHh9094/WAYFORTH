@@ -1,26 +1,17 @@
-# Wayforth — Academic & Research Advisory (wayforth.in)
+# Wayforth
 
-> "Make Room for More."
-> Accessible, dependable academic project, research report, and thesis advisory across undergraduate, postgraduate, and doctoral disciplines.
+> Dedicated academic project, research report, and thesis advisory across undergraduate, postgraduate, and doctoral disciplines. 100% genuine human research, zero AI hallucination, and pay-as-you-go milestone trust.
 
-## Organization & Brand Facts
-- Name: Wayforth Advisory
-- Canonical Domain: https://wayforth.in
-- Advisory Desk: info@wayforth.in | WhatsApp: +91 91571 88560
-- Operating Model: 100% Genuine Human Research, Zero AI Regurgitation, Transparent Mathematical Pricing, Pay-As-You-Go Milestone Safeguards.
+Wayforth provides accessible, dependable academic research and project documentation support for students balancing rigorous academics with internships, technical ventures, and life beyond deadlines.
 
-## Core Services & Academic Scope
-1. **Undergraduate Project Advisory**: Capstone projects, term papers, lab monographs, accredited citations (APA, Harvard, IEEE). Standard 250–300 words/page. Base starting at ₹1,200 + ₹280/page.
-2. **Postgraduate & MBA Consultancy**: Management capstones, corporate case studies, literature surveys, strategic framework synthesis. Base starting at ₹2,200 + ₹450/page.
-3. **Data Analysis & Excel Projects**: Dynamic financial modeling (DCF, LBO), statistical hypothesis testing, automated formulas, high-resolution charts and appendices. Base starting at ₹2,500 + ₹380/page.
-4. **Research Thesis & Doctoral Support**: Dissertations, MPhil/PhD proposals, systematic literature reviews (100+ peer sources), Zotero/Mendeley bibliographies, viva defense notes. Base starting at ₹4,200 + ₹620/page.
+## Core Documentation
 
-## Commercial Terms & Trust Safeguards
-- **Pay-As-You-Go Milestone Model**: Work commences with a milestone deposit. No 100% upfront payment required. Full trust.
-- **Watermarked Sample Preview**: Clients receive an authentic representative excerpt to inspect research caliber and formatting before settling the balance.
-- **Included Revision**: 1 comprehensive revision round included within the agreed rubric scope (24-hour review window).
-- **Zero Hidden Costs**: 15% introductory goodwill discount applied to transparent calculator estimates.
+- [Home & Service Dossier](https://wayforth.in/): Primary web experience, 4 academic tiers, interactive exemplar specimen reader, and live mathematical quotation calculator.
+- [Terms & Refund Policy](https://wayforth.in/terms): Official contractual governance, 7-step engagement workflow, and milestone refund terms.
+- [Brand Asset Portal](https://wayforth.in/brand/index.html): Official vector logo package, 3D architectural monolith render, and WhatsApp Business assets.
+- [Full Academic Context](https://wayforth.in/llms-full.txt): Comprehensive institutional guidelines, citation formats (APA, IEEE, Harvard, Chicago), and fee schedules.
 
-## Institutional Ethics & Academic Policy
-- Wayforth provides editorial assistance, research frameworks, reference monographs, and quantitative models.
-- **Grade Disclaimer**: Strictly no guarantee of academic grades, marks, or examination outcomes. Deliverables serve as high-standard educational reference materials to assist students in balancing demanding careers, internships, and coursework.
+## Optional
+
+- [Robots Directives](https://wayforth.in/robots.txt): Search engine and AI bot crawler allowances.
+- [XML Sitemap](https://wayforth.in/sitemap.xml): Complete URL index.

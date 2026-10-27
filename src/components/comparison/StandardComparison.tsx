@@ -24,7 +24,7 @@ export function StandardComparison({ brandName }: StandardComparisonProps) {
   return (
     <section id="comparison" className="py-20 sm:py-28 bg-[#FFFFFF] border-b border-[#D8E2EC]">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex items-center justify-between border-b border-[#D8E2EC] pb-4 mb-16 text-xs font-mono text-[#738A9E]">
+        <div className="flex items-center justify-between border-b border-[#D8E2EC] pb-4 mb-16 text-xs font-mono text-[#4A607A]">
           <div className="flex items-center gap-2">
             <span className="w-1.5 h-1.5 bg-[#12324E]" />
             <span className="uppercase tracking-widest text-[#12324E] font-semibold">THE WAYFORTH STANDARD // INSTITUTIONAL INTEGRITY</span>
@@ -39,7 +39,7 @@ export function StandardComparison({ brandName }: StandardComparisonProps) {
           <h2 className="font-serif text-3xl sm:text-5xl font-normal text-[#12324E] leading-tight mb-4">
             Designed to protect your peace of mind, your money, and your academic credibility.
           </h2>
-          <p className="text-[#42586E] text-base leading-relaxed">
+          <p className="text-[#364B62] text-base leading-relaxed">
             Many providers in the market spread themselves thin across software, app building, and assignments,
             while enforcing rigid 100% upfront non-refundable policies. We believe students deserve
             specialization, transparency, and contractual security.
@@ -61,14 +61,14 @@ export function StandardComparison({ brandName }: StandardComparisonProps) {
               <div className="w-10 h-10 bg-[#F4F7FB] border border-[#D8E2EC] flex items-center justify-center text-[#12324E] mb-6">
                 <ShieldCheck className="w-5 h-5 text-[#1D5382]" />
               </div>
-              <span className="font-mono text-xs uppercase tracking-widest text-[#738A9E] block mb-2">
+              <span className="font-mono text-xs uppercase tracking-widest text-[#4A607A] block mb-2">
                 Pillar 01 / Authenticity
               </span>
               <h3 className="font-serif text-2xl text-[#12324E] mb-4">
                 100% Genuine Human Writing
               </h3>
               
-              <div className="space-y-4 text-sm text-[#42586E] mb-6">
+              <div className="space-y-4 text-sm text-[#364B62] mb-6">
                 <div className="p-3 bg-[#FFF5F5] border-l-2 border-red-700 text-xs">
                   <span className="font-mono uppercase text-red-800 block font-semibold mb-1">The Industry Risk:</span>
                   Agencies using generic AI generators that output hallucinated citations and robotic phrasing that fail academic scrutiny.
@@ -80,7 +80,7 @@ export function StandardComparison({ brandName }: StandardComparisonProps) {
               </div>
             </div>
 
-            <div className="pt-4 border-t border-[#D8E2EC] text-xs font-mono text-[#738A9E]">
+            <div className="pt-4 border-t border-[#D8E2EC] text-xs font-mono text-[#4A607A]">
               ZERO AUTOMATED SHORTCUTS
             </div>
           </motion.div>
@@ -108,7 +108,7 @@ export function StandardComparison({ brandName }: StandardComparisonProps) {
                 Pay-As-You-Go Milestone Model
               </h3>
               
-              <div className="space-y-4 text-sm text-[#42586E] mb-6">
+              <div className="space-y-4 text-sm text-[#364B62] mb-6">
                 <div className="p-3 bg-[#FFF5F5] border-l-2 border-red-700 text-xs">
                   <span className="font-mono uppercase text-red-800 block font-semibold mb-1">The Industry Risk:</span>
                   Competitors demanding 100% upfront payment with terms stating advances are entirely non-refundable before you inspect a single page.
@@ -138,14 +138,14 @@ export function StandardComparison({ brandName }: StandardComparisonProps) {
               <div className="w-10 h-10 bg-[#F4F7FB] border border-[#D8E2EC] flex items-center justify-center text-[#12324E] mb-6">
                 <Target className="w-5 h-5 text-[#1D5382]" />
               </div>
-              <span className="font-mono text-xs uppercase tracking-widest text-[#738A9E] block mb-2">
+              <span className="font-mono text-xs uppercase tracking-widest text-[#4A607A] block mb-2">
                 Pillar 03 / Domain Focus
               </span>
               <h3 className="font-serif text-2xl text-[#12324E] mb-4">
                 100% Academic & Research Focus
               </h3>
               
-              <div className="space-y-4 text-sm text-[#4A525A] mb-6">
+              <div className="space-y-4 text-sm text-[#364B62] mb-6">
                 <div className="p-3 bg-[#FFF5F5] border-l-2 border-red-700 text-xs">
                   <span className="font-mono uppercase text-red-800 block font-semibold mb-1">The Industry Risk:</span>
                   Bloated aggregators that claim to build mobile apps, websites, and school homework all on the same assembly line.
@@ -157,7 +157,7 @@ export function StandardComparison({ brandName }: StandardComparisonProps) {
               </div>
             </div>
 
-            <div className="pt-4 border-t border-[#D8E2EC] text-xs font-mono text-[#738A9E]">
+            <div className="pt-4 border-t border-[#D8E2EC] text-xs font-mono text-[#4A607A]">
               SPECIALISTS, NOT GENERAL AGGREGATORS
             </div>
           </motion.div>

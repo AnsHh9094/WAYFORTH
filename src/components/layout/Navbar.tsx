@@ -75,14 +75,14 @@ export function Navbar({ onRequestQuote }: NavbarProps) {
             <WayforthLogo variant="full" theme="dark" />
           </a>
           <span className="hidden md:inline-block h-6 w-px bg-[#D8E2EC]"></span>
-          <span className="hidden md:inline-flex items-center gap-1.5 text-[10px] font-mono text-[#42586E] bg-[#F4F7FB] px-2.5 py-1 border border-[#D8E2EC]">
+          <span className="hidden md:inline-flex items-center gap-1.5 text-[10px] font-mono text-[#1D5382] font-semibold bg-[#F4F7FB] px-2.5 py-1 border border-[#D8E2EC]">
             <ShieldCheck className="w-3.5 h-3.5 text-[#1D5382]" />
             WAYFORTH.IN // OFFICIAL ADVISORY
           </span>
         </div>
 
         {/* Desktop Navigation Links */}
-        <nav className="hidden lg:flex items-center gap-8 text-[13px] font-medium text-[#42586E]">
+        <nav className="hidden lg:flex items-center gap-8 text-[13px] font-medium text-[#243B53]">
           <a
             href="#manifesto"
             className="hover:text-[#12324E] transition-colors hover:underline underline-offset-8 decoration-[#12324E]"

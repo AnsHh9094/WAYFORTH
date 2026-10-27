@@ -28,7 +28,7 @@ export function WayforthLogo({
 
   const textColor = isLight ? 'text-[#FFFFFF]' : 'text-[#12324E]';
   const dotColor = isLight ? '#38BDF8' : '#1D5382';
-  const sublineColor = isLight ? 'text-[#9BB3C9]' : 'text-[#738A9E]';
+  const sublineColor = isLight ? 'text-[#CBD5E1]' : 'text-[#4A607A]';
 
   return (
     <div className={`inline-flex items-center gap-3.5 select-none ${className}`}>

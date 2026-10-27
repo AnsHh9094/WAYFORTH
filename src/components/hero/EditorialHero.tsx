@@ -1,10 +1,28 @@
 'use client';
 
 import React from 'react';
+import dynamic from 'next/dynamic';
 import { motion } from 'framer-motion';
 import { ArrowDown, ArrowUpRight, Shield, FileText, Clock, Sparkles } from 'lucide-react';
 import { BrandName } from '@/config/brand.config';
-import { ArchivalMonolith3D } from '@/components/preview/ArchivalMonolith3D';
+
+// Lazy-load Three.js 3D Monolith to eliminate blocking time on initial load
+const ArchivalMonolith3D = dynamic(
+  () => import('@/components/preview/ArchivalMonolith3D').then((m) => m.ArchivalMonolith3D),
+  {
+    ssr: false,
+    loading: () => (
+      <div className="w-full h-[460px] sm:h-[520px] rounded-[3px] bg-[#0E253A]/40 border border-[#224A70] flex flex-col items-center justify-center gap-3 animate-pulse">
+        <div className="w-12 h-12 rounded-[2px] bg-[#12324E] border border-[#224A70] flex items-center justify-center">
+          <FileText className="w-6 h-6 text-[#38BDF8]" />
+        </div>
+        <span className="font-mono text-xs uppercase tracking-widest text-[#CBD5E1]">
+          Initializing 3D Archival Monolith...
+        </span>
+      </div>
+    ),
+  }
+);
 
 interface EditorialHeroProps {
   brandName: BrandName;
@@ -45,7 +63,7 @@ export function EditorialHero({ brandName, onRequestQuote }: EditorialHeroProps)
       >
         {/* Top Folio Rubric Bar */}
         <motion.div
-          className="flex items-center justify-between border-b border-[#1D3D5E] pb-4 mb-12 text-[11px] font-mono uppercase tracking-wider text-[#9BB3C9]"
+          className="flex items-center justify-between border-b border-[#1D3D5E] pb-4 mb-12 text-[11px] font-mono uppercase tracking-wider text-[#CBD5E1]"
           variants={revealItem(0)}
         >
           <div className="flex items-center gap-2">
@@ -81,7 +99,7 @@ export function EditorialHero({ brandName, onRequestQuote }: EditorialHeroProps)
             </motion.h1>
 
             <motion.p
-              className="text-base sm:text-lg text-[#9BB3C9] font-sans font-normal leading-relaxed max-w-2xl mb-10"
+              className="text-base sm:text-lg text-[#CBD5E1] font-sans font-normal leading-relaxed max-w-2xl mb-10"
               variants={revealItem(0.22)}
             >
               We believe your university career should be about more than keeping up with an endless cycle of deadlines.
@@ -113,7 +131,7 @@ export function EditorialHero({ brandName, onRequestQuote }: EditorialHeroProps)
 
             {/* Quick Scope Chip Matrix */}
             <motion.div
-              className="flex flex-wrap items-center gap-2 text-[10.5px] font-mono text-[#9BB3C9]"
+              className="flex flex-wrap items-center gap-2 text-[10.5px] font-mono text-[#CBD5E1]"
               variants={revealItem(0.4)}
             >
               <span className="px-3 py-1 bg-[#0E253A] border border-[#224A70] text-[#E2ECF5]">UNDERGRADUATE</span>
@@ -147,7 +165,7 @@ export function EditorialHero({ brandName, onRequestQuote }: EditorialHeroProps)
               <strong className="block text-[#FFFFFF] font-sans text-sm mb-1 font-semibold">
                 Pay-As-You-Go Milestone Model
               </strong>
-              <p className="text-[#9BB3C9] leading-relaxed">
+              <p className="text-[#CBD5E1] leading-relaxed">
                 No big upfront fees. Inspect watermarked representative excerpts before releasing the milestone balance.
               </p>
             </div>
@@ -161,7 +179,7 @@ export function EditorialHero({ brandName, onRequestQuote }: EditorialHeroProps)
               <strong className="block text-[#FFFFFF] font-sans text-sm mb-1 font-semibold">
                 100% Genuine Human Writing
               </strong>
-              <p className="text-[#9BB3C9] leading-relaxed">
+              <p className="text-[#CBD5E1] leading-relaxed">
                 Authored by discipline specialists. Legitimate, verifiable citations tailored strictly to university rubrics.
               </p>
             </div>
@@ -175,7 +193,7 @@ export function EditorialHero({ brandName, onRequestQuote }: EditorialHeroProps)
               <strong className="block text-[#FFFFFF] font-sans text-sm mb-1 font-semibold">
                 1 Included Revision Round
               </strong>
-              <p className="text-[#9BB3C9] leading-relaxed">
+              <p className="text-[#CBD5E1] leading-relaxed">
                 24-hour review window after draft sample delivery for consolidated feedback and fine-tuning.
               </p>
             </div>

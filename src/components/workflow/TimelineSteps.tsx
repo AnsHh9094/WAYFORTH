@@ -13,7 +13,7 @@ export function TimelineSteps() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         
         {/* Section Header */}
-        <div className="flex items-center justify-between border-b border-[#D8E2EC] pb-4 mb-16 text-xs font-mono text-[#738A9E]">
+        <div className="flex items-center justify-between border-b border-[#D8E2EC] pb-4 mb-16 text-xs font-mono text-[#4A607A]">
           <div className="flex items-center gap-2">
             <span className="w-1.5 h-1.5 bg-[#12324E]" />
             <span className="uppercase tracking-widest text-[#12324E] font-semibold">
@@ -32,14 +32,14 @@ export function TimelineSteps() {
           <h2 className="font-serif text-3xl sm:text-5xl font-normal text-[#12324E] leading-tight mb-4">
             An unbroken workflow from initial brief to final delivery.
           </h2>
-          <p className="text-[#42586E] text-base leading-relaxed">
+          <p className="text-[#364B62] text-base leading-relaxed">
             Every project follows a defined, orderly progression designed to eliminate ambiguity, protect university deadlines, and ensure complete satisfaction before final payment release.
           </p>
         </div>
 
         {/* ── Visual Progression Spine ── */}
         <div className="hidden lg:block mb-16 bg-[#FFFFFF] border border-[#D8E2EC] p-6 shadow-xs relative">
-          <div className="flex items-center justify-between mb-6 text-[10px] font-mono text-[#738A9E] uppercase tracking-wider">
+          <div className="flex items-center justify-between mb-6 text-[10px] font-mono text-[#4A607A] uppercase tracking-wider">
             <span>ENGAGEMENT MILESTONES</span>
             <span className="text-[#12324E] font-semibold">ALL STAGES MONITORED</span>
           </div>
@@ -130,7 +130,7 @@ export function TimelineSteps() {
                 )}
 
                 <div>
-                  <div className="flex items-center justify-between text-xs font-mono text-[#738A9E] mb-3">
+                  <div className="flex items-center justify-between text-xs font-mono text-[#4A607A] mb-3">
                     <span className="font-bold text-sm text-[#12324E]">
                       STAGE {step.step}
                     </span>
@@ -147,12 +147,12 @@ export function TimelineSteps() {
                     {step.summary}
                   </p>
 
-                  <p className="text-xs text-[#42586E] leading-relaxed">
+                  <p className="text-xs text-[#364B62] leading-relaxed">
                     {step.detail}
                   </p>
                 </div>
 
-                <div className="pt-4 mt-6 border-t border-[#F4F7FB] flex items-center justify-between text-[10px] font-mono text-[#738A9E]">
+                <div className="pt-4 mt-6 border-t border-[#F4F7FB] flex items-center justify-between text-[10px] font-mono text-[#4A607A]">
                   <span>CONTRACTUAL PROTOCOL</span>
                   <span className="text-[#12324E] font-semibold">STEP {step.step} OF 07</span>
                 </div>

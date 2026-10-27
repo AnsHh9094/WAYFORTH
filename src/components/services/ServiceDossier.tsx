@@ -78,7 +78,7 @@ export function ServiceDossier({ onRequestQuote }: ServiceDossierProps) {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
         {/* Section Header */}
-        <div className="flex items-center justify-between border-b border-[#D8E2EC] pb-4 mb-12 text-xs font-mono text-[#738A9E]">
+        <div className="flex items-center justify-between border-b border-[#D8E2EC] pb-4 mb-12 text-xs font-mono text-[#4A607A]">
           <div className="flex items-center gap-2">
             <span className="w-1.5 h-1.5 bg-[#12324E]" />
             <span className="uppercase tracking-widest text-[#12324E] font-semibold">
@@ -95,7 +95,7 @@ export function ServiceDossier({ onRequestQuote }: ServiceDossierProps) {
           <h2 className="font-serif text-3xl sm:text-5xl font-normal text-[#12324E] leading-tight mb-4">
             Specialized academic support with representative research portfolios.
           </h2>
-          <p className="text-[#42586E] text-base leading-relaxed">
+          <p className="text-[#364B62] text-base leading-relaxed">
             Every academic level demands distinct analytical rigor, formatting styles, and citation standards.
             Explore each discipline below along with its representative project sample.
           </p>
@@ -112,7 +112,7 @@ export function ServiceDossier({ onRequestQuote }: ServiceDossierProps) {
                 className={`p-4 text-left border-r border-[#D8E2EC] last:border-r-0 transition-colors cursor-pointer relative ${
                   isActive
                     ? 'bg-[#FFFFFF] text-[#12324E] shadow-xs'
-                    : 'text-[#42586E] hover:bg-[#EBF1F6]'
+                    : 'text-[#364B62] hover:bg-[#EBF1F6]'
                 }`}
               >
                 {/* Active tab indicator bar */}
@@ -134,7 +134,7 @@ export function ServiceDossier({ onRequestQuote }: ServiceDossierProps) {
                 <div className="font-serif text-sm sm:text-base font-semibold leading-tight mb-1 text-[#12324E]">
                   {service.title}
                 </div>
-                <div className="text-[11px] font-mono text-[#738A9E] truncate">
+                <div className="text-[11px] font-mono text-[#4A607A] truncate">
                   {service.targetAudience}
                 </div>
               </button>
@@ -162,7 +162,7 @@ export function ServiceDossier({ onRequestQuote }: ServiceDossierProps) {
                     <h3 className="font-serif text-2xl sm:text-3xl text-[#12324E] leading-snug mb-3">
                       {currentService.title}
                     </h3>
-                    <p className="text-sm text-[#42586E] leading-relaxed">
+                    <p className="text-sm text-[#364B62] leading-relaxed">
                       {currentService.description}
                     </p>
                   </div>
@@ -175,7 +175,7 @@ export function ServiceDossier({ onRequestQuote }: ServiceDossierProps) {
                       {currentService.deliverables.map((item, idx) => (
                         <div
                           key={idx}
-                          className="flex items-start gap-2.5 p-3 bg-[#F4F7FB] border border-[#D8E2EC] text-xs text-[#42586E]"
+                          className="flex items-start gap-2.5 p-3 bg-[#F4F7FB] border border-[#D8E2EC] text-xs text-[#364B62]"
                         >
                           <Check className="w-3.5 h-3.5 text-[#1D5382] mt-0.5 shrink-0" />
                           <span>{item}</span>
@@ -213,27 +213,27 @@ export function ServiceDossier({ onRequestQuote }: ServiceDossierProps) {
                         <FileText className="w-3.5 h-3.5" />
                         <span>PORTFOLIO SPECIMEN</span>
                       </span>
-                      <span className="text-[#738A9E]">{currentService.sample.pageCount} PAGES</span>
+                      <span className="text-[#4A607A] font-semibold">{currentService.sample.pageCount} PAGES</span>
                     </div>
 
                     <div>
-                      <span className="text-[10px] font-mono uppercase text-[#738A9E] block mb-1">
+                      <span className="text-[10px] font-mono uppercase text-[#4A607A] block mb-1 font-semibold">
                         {currentService.sample.category}
                       </span>
                       <h4 className="font-serif text-lg text-[#12324E] leading-snug font-medium mb-2">
                         {currentService.sample.title}
                       </h4>
-                      <p className="text-xs text-[#42586E] leading-relaxed line-clamp-3">
+                      <p className="text-xs text-[#364B62] leading-relaxed line-clamp-3">
                         {currentService.sample.executiveSummary}
                       </p>
                     </div>
 
                     <div className="bg-[#FFFFFF] border border-[#D8E2EC] p-3 text-xs font-mono space-y-1.5">
-                      <div className="flex justify-between text-[#738A9E]">
+                      <div className="flex justify-between text-[#4A607A]">
                         <span>Standard Metric:</span>
                         <span className="text-[#12324E] font-semibold">{currentService.sample.institutionFormat}</span>
                       </div>
-                      <div className="flex justify-between text-[#738A9E]">
+                      <div className="flex justify-between text-[#4A607A]">
                         <span>Volume Caliber:</span>
                         <span className="text-[#12324E] font-semibold">{currentService.sample.wordCount}</span>
                       </div>
@@ -268,11 +268,11 @@ export function ServiceDossier({ onRequestQuote }: ServiceDossierProps) {
             <h4 className="font-serif text-lg text-[#12324E] font-normal">
               Class 10, 11 & 12 Secondary School Project Advisory
             </h4>
-            <p className="text-xs text-[#42586E] leading-relaxed max-w-2xl">
+            <p className="text-xs text-[#364B62] leading-relaxed max-w-2xl">
               Board-related practical files, subject-specific reports, and handwritten document structuring aligned with individual school guidelines will launch in an upcoming cohort.
             </p>
           </div>
-          <span className="text-xs font-mono text-[#738A9E] shrink-0 border border-[#D8E2EC] bg-white px-3 py-1.5">
+          <span className="text-xs font-mono text-[#4A607A] shrink-0 border border-[#D8E2EC] bg-white px-3 py-1.5 font-medium">
             Under Development
           </span>
         </div>
@@ -305,7 +305,7 @@ export function ServiceDossier({ onRequestQuote }: ServiceDossierProps) {
                   </div>
                   <button
                     onClick={() => setSelectedSample(null)}
-                    className="p-1.5 text-[#738A9E] hover:text-[#12324E] transition-colors cursor-pointer"
+                    className="p-1.5 text-[#4A607A] hover:text-[#12324E] transition-colors cursor-pointer"
                     aria-label="Close sample preview"
                   >
                     <X className="w-5 h-5" />
@@ -315,7 +315,7 @@ export function ServiceDossier({ onRequestQuote }: ServiceDossierProps) {
                 {/* Exemplar Academic Page Excerpt */}
                 <div className="relative border border-[#D8E2EC] bg-[#F4F7FB] p-6 sm:p-8 space-y-6">
                   {/* Header Monospace */}
-                  <div className="flex justify-between text-[11px] font-mono text-[#738A9E] border-b border-[#D8E2EC] pb-2">
+                  <div className="flex justify-between text-[11px] font-mono text-[#4A607A] border-b border-[#D8E2EC] pb-2 font-medium">
                     <span>{selectedSample.institutionFormat}</span>
                     <span>{selectedSample.wordCount}</span>
                   </div>
@@ -324,7 +324,7 @@ export function ServiceDossier({ onRequestQuote }: ServiceDossierProps) {
                     <h3 className="font-serif text-2xl text-[#12161A] leading-snug mb-3">
                       {selectedSample.title}
                     </h3>
-                    <p className="text-xs text-[#42586E] leading-relaxed italic bg-[#FFFFFF] p-3 border-l-2 border-[#12324E]">
+                    <p className="text-xs text-[#364B62] leading-relaxed italic bg-[#FFFFFF] p-3 border-l-2 border-[#12324E]">
                       <strong>Executive Abstract:</strong> {selectedSample.executiveSummary}
                     </p>
                   </div>
@@ -336,7 +336,7 @@ export function ServiceDossier({ onRequestQuote }: ServiceDossierProps) {
                         <h4 className="font-mono text-xs text-[#1D5382] uppercase font-bold tracking-wider">
                           {excerpt.sectionHeading}
                         </h4>
-                        <p className="text-xs text-[#42586E] leading-relaxed font-sans">
+                        <p className="text-xs text-[#364B62] leading-relaxed font-sans">
                           {excerpt.content}
                         </p>
                       </div>
@@ -345,7 +345,7 @@ export function ServiceDossier({ onRequestQuote }: ServiceDossierProps) {
 
                   {/* Deliverable Scope */}
                   <div className="pt-4 border-t border-[#D8E2EC]">
-                    <span className="text-[10px] font-mono uppercase tracking-wider text-[#738A9E] block mb-2">
+                    <span className="text-[10px] font-mono uppercase tracking-wider text-[#4A607A] block mb-2 font-semibold">
                       Full Client Package Includes:
                     </span>
                     <div className="grid grid-cols-1 sm:grid-cols-2 gap-2 text-xs text-[#12324E]">
@@ -361,14 +361,14 @@ export function ServiceDossier({ onRequestQuote }: ServiceDossierProps) {
 
                 {/* Modal Footer CTAs */}
                 <div className="mt-6 pt-4 border-t border-[#D8E2EC] flex flex-col sm:flex-row items-center justify-between gap-4">
-                  <div className="flex items-center gap-2 text-xs font-mono text-[#738A9E]">
+                  <div className="flex items-center gap-2 text-xs font-mono text-[#4A607A]">
                     <ShieldCheck className="w-4 h-4 text-[#1D5382]" />
                     <span>Pay-as-you-go milestone model • 1 revision included</span>
                   </div>
                   <div className="flex items-center gap-3 w-full sm:w-auto">
                     <button
                       onClick={() => setSelectedSample(null)}
-                      className="px-4 py-2.5 text-xs font-mono border border-[#D8E2EC] text-[#42586E] hover:border-[#12324E] transition-colors cursor-pointer w-1/2 sm:w-auto"
+                      className="px-4 py-2.5 text-xs font-mono border border-[#D8E2EC] text-[#364B62] hover:border-[#12324E] transition-colors cursor-pointer w-1/2 sm:w-auto"
                     >
                       Close Specimen
                     </button>

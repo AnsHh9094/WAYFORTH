@@ -16,8 +16,8 @@
     --surface-elevated: #FFFFFF;
     --surface-tint: #EDF2F7;
     --ink-primary: #12324E;        /* Deep Academic Navy Blue */
-    --ink-secondary: #42586E;      /* Refined Steel Blue Slate */
-    --ink-muted: #738A9E;          /* Soft Subtext Slate */
+    --ink-secondary: #364B62;      /* Refined Steel Blue Slate */
+    --ink-muted: #4A607A;          /* High-Contrast Accessible Subtext Slate (WCAG AA Compliant) */
     --border-subtle: #D8E2EC;      /* Crisp Architectural Rule */
     --border-strong: #B8C9D8;      /* Strong Section Rule */
     --accent-oxford: #12324E;      /* Deep Midnight Academic Navy */

@@ -438,8 +438,10 @@ export function ArchivalMonolith3D({ brandName, className = '' }: ArchivalMonoli
     // 7. Animation Loop with Buttery Damping & Levitation
     let animationFrameId: number;
     let clock = new THREE.Clock();
+    let isVisible = true;
 
     const animate = () => {
+      if (!isVisible) return;
       animationFrameId = requestAnimationFrame(animate);
       const elapsedTime = clock.getElapsedTime();
 
@@ -468,6 +470,22 @@ export function ArchivalMonolith3D({ brandName, className = '' }: ArchivalMonoli
       renderer.render(scene, camera);
     };
 
+    // Pause WebGL rendering when scrolled out of viewport to preserve main thread
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        const nowVisible = entry.isIntersecting;
+        if (nowVisible && !isVisible) {
+          isVisible = true;
+          animate();
+        } else if (!nowVisible) {
+          isVisible = false;
+          cancelAnimationFrame(animationFrameId);
+        }
+      },
+      { threshold: 0.05 }
+    );
+    observer.observe(container);
+
     animate();
 
     // 8. Handle Window Resize
@@ -484,6 +502,7 @@ export function ArchivalMonolith3D({ brandName, className = '' }: ArchivalMonoli
 
     // Cleanup resources on unmount
     return () => {
+      observer.disconnect();
       cancelAnimationFrame(animationFrameId);
       window.removeEventListener('resize', handleResize);
       geometry.dispose();
