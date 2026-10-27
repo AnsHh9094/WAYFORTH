@@ -4,6 +4,7 @@ import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { BRAND_CONFIG } from '@/config/brand.config';
 import { Plus, Sparkles, BookOpen, ShieldCheck, Award, ArrowRight } from 'lucide-react';
+import { TiltCard } from '@/components/ui/TiltCard';
 
 interface ManifestoSectionProps {
   onRequestQuote?: () => void;
@@ -97,9 +98,9 @@ export function ManifestoSection({ onRequestQuote }: ManifestoSectionProps) {
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
             {BRAND_CONFIG.coreUSPs.map((usp, uIdx) => (
-              <div
+              <TiltCard
                 key={usp.id}
-                className="bg-[#FFFFFF] border border-[#D8E2EC] hover:border-[#12324E] transition-all p-6 flex flex-col justify-between shadow-xs group"
+                className="bg-[#FFFFFF] border border-[#D8E2EC] hover:border-[#12324E] hover:shadow-xl transition-all p-6 flex flex-col justify-between shadow-xs group rounded-[3px]"
               >
                 <div>
                   <div className="flex items-center justify-between mb-4">
@@ -132,7 +133,7 @@ export function ManifestoSection({ onRequestQuote }: ManifestoSectionProps) {
                   <span>AUTHENTIC HUMAN INQUIRY</span>
                   <span className="text-[#12324E] font-semibold">WAYFORTH</span>
                 </div>
-              </div>
+              </TiltCard>
             ))}
           </div>
         </div>

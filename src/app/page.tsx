@@ -2,8 +2,11 @@
 
 import React from 'react';
 import { BRAND_CONFIG } from '@/config/brand.config';
+import { SmoothScrollProvider } from '@/components/scroll/SmoothScrollProvider';
 import { Navbar } from '@/components/layout/Navbar';
 import { EditorialHero } from '@/components/hero/EditorialHero';
+import { InfiniteMarquee } from '@/components/marquee/InfiniteMarquee';
+import { KineticStatsTicker } from '@/components/stats/KineticStatsTicker';
 import { ManifestoSection } from '@/components/manifesto/ManifestoSection';
 import { ServiceDossier } from '@/components/services/ServiceDossier';
 import { StandardComparison } from '@/components/comparison/StandardComparison';
@@ -21,12 +24,18 @@ export default function HomePage() {
   const handleScrollToQuote = () => {
     const el = document.getElementById('quote-console');
     if (el) {
-      el.scrollIntoView({ behavior: 'smooth' });
+      // Use Lenis if available, or native smooth scroll fallback
+      const lenis = (window as unknown as { __lenis?: { scrollTo: (target: HTMLElement, options: object) => void } }).__lenis;
+      if (lenis) {
+        lenis.scrollTo(el, { offset: -60, duration: 1.3 });
+      } else {
+        el.scrollIntoView({ behavior: 'smooth' });
+      }
     }
   };
 
   return (
-    <>
+    <SmoothScrollProvider>
       {/* Editorial Precision Spring Cursor */}
       <PrecisionCursor />
 
@@ -34,13 +43,19 @@ export default function HomePage() {
         {/* Masthead Navigation */}
         <Navbar onRequestQuote={handleScrollToQuote} />
 
-        {/* Hero Section */}
+        {/* Hero Section: Deep Architectural Navy Stage with 3D Monolith */}
         <div id="hero">
           <EditorialHero
             brandName={brandName}
             onRequestQuote={handleScrollToQuote}
           />
         </div>
+
+        {/* Dynamic Infinite Marquee Ribbon */}
+        <InfiniteMarquee />
+
+        {/* Kinetic Operational Metrics Counter Ticker */}
+        <KineticStatsTicker />
 
         {/* The Core Thesis: "Why We Exist", Foundational USPs & The 6 Pillars */}
         <div id="manifesto">
@@ -81,6 +96,6 @@ export default function HomePage() {
         {/* Minimalist Floating Archival Scroll Dock */}
         <ArchivalScrollDock onRequestQuote={handleScrollToQuote} />
       </main>
-    </>
+    </SmoothScrollProvider>
   );
 }
