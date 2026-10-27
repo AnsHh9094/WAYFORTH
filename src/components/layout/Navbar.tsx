@@ -21,6 +21,22 @@ export function Navbar({ onRequestQuote }: NavbarProps) {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
+  // Lock scroll when mobile menu is open
+  useEffect(() => {
+    const lenis = (window as unknown as { __lenis?: { stop: () => void; start: () => void } }).__lenis;
+    if (mobileMenuOpen) {
+      document.body.style.overflow = 'hidden';
+      if (lenis) lenis.stop();
+    } else {
+      document.body.style.overflow = '';
+      if (lenis) lenis.start();
+    }
+    return () => {
+      document.body.style.overflow = '';
+      if (lenis) lenis.start();
+    };
+  }, [mobileMenuOpen]);
+
   return (
     <header
       className={`sticky top-0 z-50 w-full transition-all duration-300 ${

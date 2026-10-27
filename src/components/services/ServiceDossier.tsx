@@ -1,6 +1,6 @@
 'use client';
 
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { BRAND_CONFIG, SampleSpecimen } from '@/config/brand.config';
 import {
@@ -28,6 +28,32 @@ const editorial = [0.16, 1, 0.3, 1] as const;
 export function ServiceDossier({ onRequestQuote }: ServiceDossierProps) {
   const [activeTab, setActiveTab] = useState(BRAND_CONFIG.services[0].id);
   const [selectedSample, setSelectedSample] = useState<SampleSpecimen | null>(null);
+
+  // Lock background scroll and pause Lenis while modal is open
+  useEffect(() => {
+    const lenis = (window as unknown as { __lenis?: { stop: () => void; start: () => void } }).__lenis;
+    if (selectedSample) {
+      document.body.style.overflow = 'hidden';
+      if (lenis) lenis.stop();
+    } else {
+      document.body.style.overflow = '';
+      if (lenis) lenis.start();
+    }
+
+    const handleKeyDown = (e: KeyboardEvent) => {
+      if (e.key === 'Escape') setSelectedSample(null);
+    };
+
+    if (selectedSample) {
+      window.addEventListener('keydown', handleKeyDown);
+    }
+
+    return () => {
+      document.body.style.overflow = '';
+      if (lenis) lenis.start();
+      window.removeEventListener('keydown', handleKeyDown);
+    };
+  }, [selectedSample]);
 
   const currentService =
     BRAND_CONFIG.services.find((s) => s.id === activeTab) || BRAND_CONFIG.services[0];
@@ -254,13 +280,20 @@ export function ServiceDossier({ onRequestQuote }: ServiceDossierProps) {
         {/* ── Interactive Full Sample Reader Modal ── */}
         <AnimatePresence>
           {selectedSample && (
-            <div className="fixed inset-0 z-50 flex items-center justify-center p-4 sm:p-6 bg-[#12324E]/80 backdrop-blur-xs">
+            <div
+              data-lenis-prevent="true"
+              onClick={(e) => {
+                if (e.target === e.currentTarget) setSelectedSample(null);
+              }}
+              className="fixed inset-0 z-50 flex items-center justify-center p-4 sm:p-6 bg-[#091624]/85 backdrop-blur-sm overscroll-contain"
+            >
               <motion.div
-                initial={{ opacity: 0, scale: 0.95, y: 12 }}
+                data-lenis-prevent="true"
+                initial={{ opacity: 0, scale: 0.96, y: 14 }}
                 animate={{ opacity: 1, scale: 1, y: 0 }}
-                exit={{ opacity: 0, scale: 0.95, y: 12 }}
+                exit={{ opacity: 0, scale: 0.96, y: 14 }}
                 transition={{ duration: 0.28, ease: editorial }}
-                className="bg-[#FFFFFF] border border-[#12324E] max-w-3xl w-full max-h-[90vh] overflow-y-auto shadow-2xl relative p-6 sm:p-10 select-none"
+                className="bg-[#FFFFFF] border-2 border-[#12324E] max-w-3xl w-full max-h-[88vh] overflow-y-auto shadow-2xl relative p-6 sm:p-10 select-none overscroll-contain"
               >
                 {/* Modal Masthead */}
                 <div className="flex items-center justify-between border-b border-[#D8E2EC] pb-4 mb-6">

@@ -17,6 +17,13 @@ export function SmoothScrollProvider({ children }: { children: React.ReactNode }
       smoothWheel: true,
       wheelMultiplier: 1.1,
       touchMultiplier: 1.8,
+      prevent: (node) => {
+        return (
+          node.classList.contains('lenis-prevent') ||
+          node.hasAttribute('data-lenis-prevent') ||
+          Boolean(node.closest('[data-lenis-prevent]'))
+        );
+      },
     });
 
     // Expose lenis globally for programmatic scrolls
