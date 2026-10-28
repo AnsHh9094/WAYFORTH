@@ -34,7 +34,7 @@ export function WayforthLogo({
     <div className={`inline-flex items-center gap-3.5 select-none ${className}`}>
       {/* 3D Architectural Monolith Monogram Mark */}
       <div
-        className={`w-10 h-10 rounded-[3px] ${markBg} overflow-hidden flex items-center justify-center relative shadow-xs border transition-all duration-300 hover:scale-105 shrink-0`}
+        className={`w-10 h-10 rounded-xl ${markBg} overflow-hidden flex items-center justify-center relative shadow-xs border transition-all duration-300 hover:scale-105 shrink-0`}
         aria-hidden="true"
       >
         {use3DMark ? (

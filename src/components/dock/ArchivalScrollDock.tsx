@@ -65,7 +65,7 @@ export function ArchivalScrollDock({ onRequestQuote }: ArchivalScrollDockProps) 
           transition={{ duration: 0.3, ease: [0.16, 1, 0.3, 1] }}
           className="fixed bottom-5 left-1/2 -translate-x-1/2 z-40 select-none max-w-[92vw]"
         >
-          <div className="flex items-center gap-3 px-3.5 py-1.5 bg-[#FFFFFF]/90 backdrop-blur-md border border-[#D8E2EC] shadow-[0_10px_25px_-5px_rgba(18,50,78,0.12)] rounded-[3px] text-[10px] font-mono text-[#4A607A]">
+          <div className="flex items-center gap-3 px-4 py-2 bg-[#FFFFFF]/95 backdrop-blur-md border border-[#D8E2EC] shadow-[0_10px_30px_-5px_rgba(18,50,78,0.15)] rounded-full text-[10.5px] font-sans text-[#4A607A]">
             {/* Live Section Tracker */}
             <div className="flex items-center gap-1.5">
               <span className="w-1.5 h-1.5 rounded-full bg-[#12324E]" />

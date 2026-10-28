@@ -96,22 +96,22 @@ export function KineticStatsTicker() {
           <span className="hidden sm:inline text-[#38BDF8]">VERIFIED ACADEMIC ASSURANCE</span>
         </div>
 
-        {/* 4 Kinetic Stat Columns */}
-        <div className="grid grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-12">
+        {/* 4 Kinetic Stat Columns (Smooth Rounded-2xl Cards) */}
+        <div className="grid grid-cols-2 lg:grid-cols-4 gap-6 lg:gap-8">
           {STATS.map((stat, idx) => (
             <motion.div
               key={idx}
-              className="flex flex-col p-6 bg-[#0B1826]/70 border border-[#224A70] rounded-[3px] hover:border-[#38BDF8]/60 transition-colors shadow-xs"
+              className="flex flex-col p-6 sm:p-7 bg-[#0B1826]/80 border border-[#224A70] rounded-2xl hover:border-[#38BDF8]/60 transition-all shadow-md group"
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.6, delay: idx * 0.1 }}
             >
-              <div className="flex items-center justify-between mb-4">
-                <div className="p-2 bg-[#12324E] border border-[#224A70] rounded-[2px]">
+              <div className="flex items-center justify-between mb-5">
+                <div className="p-2.5 bg-[#12324E] border border-[#224A70] rounded-xl text-[#38BDF8] group-hover:border-[#38BDF8]/50 transition-colors">
                   {stat.icon}
                 </div>
-                <span className="text-[10px] font-mono text-[#94A3B8] tracking-widest">
+                <span className="text-[10px] font-mono text-[#94A3B8] tracking-widest px-2 py-0.5 bg-[#12324E]/60 border border-[#224A70] rounded-full">
                   [0{idx + 1}]
                 </span>
               </div>
@@ -123,7 +123,7 @@ export function KineticStatsTicker() {
               <strong className="block text-sm font-sans text-[#E2ECF5] font-semibold mb-1">
                 {stat.label}
               </strong>
-              <p className="text-xs text-[#CBD5E1] leading-relaxed">
+              <p className="text-xs text-[#CBD5E1] leading-relaxed font-sans font-normal">
                 {stat.sublabel}
               </p>
             </motion.div>
