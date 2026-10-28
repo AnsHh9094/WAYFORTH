@@ -229,7 +229,7 @@ export function EditorialHero({ brandName, onRequestQuote }: EditorialHeroProps)
                 Pay-As-You-Go Milestone Safeguard
               </strong>
               <p className="text-[#4A607A] leading-relaxed">
-                50% deposit to begin research. Review representative watermarked excerpts before releasing the milestone balance. Zero 100% upfront risk.
+                50% deposit to begin research. Review representative watermarked excerpts before releasing the milestone balance. Protected milestone safeguard.
               </p>
             </div>
           </div>

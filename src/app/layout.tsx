@@ -81,7 +81,7 @@ export default function RootLayout({
         name: 'What is the Wayforth pay-as-you-go milestone model?',
         acceptedAnswer: {
           '@type': 'Answer',
-          text: 'Wayforth operates on a trust-first milestone model. Work commences with a 50% milestone deposit rather than requiring 100% upfront payment. Clients inspect an authentic watermarked preview sample of their work and receive 1 included revision round before settling the final 50% balance.',
+          text: 'Wayforth operates on a trust-first milestone model. Work commences with a 50% milestone deposit rather than requiring full advance payment. Clients inspect an authentic watermarked preview sample of their work and receive 1 included revision round before settling the final 50% balance.',
         },
       },
       {

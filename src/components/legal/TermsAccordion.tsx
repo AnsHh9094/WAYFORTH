@@ -83,12 +83,12 @@ export function TermsAccordion({ brandName }: TermsAccordionProps) {
       ),
     },
     {
-      title: 'Included Revision Scope (24-Hour Review Window)',
+      title: 'Included Revision Scope (1 Revision Round Included)',
       category: 'Revision Terms',
       content: (
         <div className="space-y-3 text-xs text-[#364B62] leading-relaxed font-sans">
           <p>
-            One comprehensive revision round is included within the agreed scope. To ensure timely delivery, feedback must be consolidated into a single response within <strong>24 hours of receiving the watermarked sample preview</strong>.
+            One comprehensive revision round is included within the agreed scope. To ensure timely delivery, feedback must be consolidated into a single response following receipt of the watermarked sample preview.
           </p>
           <p>
             Changes that alter the original brief, rubric, word count, or methodology after commencement are quoted separately.

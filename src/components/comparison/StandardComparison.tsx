@@ -41,7 +41,7 @@ export function StandardComparison({ brandName }: StandardComparisonProps) {
           </h2>
           <p className="text-[#364B62] text-base leading-relaxed">
             Many providers in the market spread themselves thin across software, app building, and assignments,
-            while enforcing rigid 100% upfront non-refundable policies. We believe students deserve
+            while enforcing rigid advance payment policies. We believe students deserve
             specialization, transparency, and contractual security.
           </p>
         </div>
@@ -111,11 +111,11 @@ export function StandardComparison({ brandName }: StandardComparisonProps) {
               <div className="space-y-4 text-sm text-[#364B62] mb-6">
                 <div className="p-3 bg-[#FFF5F5] border-l-2 border-red-700 text-xs">
                   <span className="font-mono uppercase text-red-800 block font-semibold mb-1">The Industry Risk:</span>
-                  Competitors demanding 100% upfront payment with terms stating advances are entirely non-refundable before you inspect a single page.
+                  Competitors demanding full upfront advance payments with terms stating fees are entirely non-refundable before you inspect a single page.
                 </div>
                 <div className="p-3 bg-[#F0F5FA] border-l-2 border-[#12324E] text-xs">
                   <span className="font-mono uppercase text-[#12324E] block font-semibold mb-1">The {brandName} Standard:</span>
-                  No big upfront fees. Initial deposit initiates specialist research → inspect representative watermarked excerpts → 1 included revision round → release balance. Full trust.
+                  50% milestone advance initiates research → inspect representative watermarked excerpts → 1 included revision round → release final balance. Full trust.
                 </div>
               </div>
             </div>
