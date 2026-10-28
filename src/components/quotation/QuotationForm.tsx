@@ -279,15 +279,6 @@ _Initiated via wayforth.in official quotation calculator_`;
                 </p>
               </div>
 
-              {/* Informational assurance tag instead of a second conflicting button */}
-              <div className="p-2.5 bg-[#F0F5FA] border border-[#C5DCF0] text-[11px] font-mono text-[#1D5382] flex items-center justify-between">
-                <span className="flex items-center gap-1.5 font-semibold">
-                  <Check className="w-3.5 h-3.5 text-[#1D5382]" />
-                  <span>15% Introductory Rate Applied</span>
-                </span>
-                <span className="text-[10px] uppercase font-bold text-[#12324E]">Formal Quote</span>
-              </div>
-
               <p className="text-[10px] text-center font-mono text-[#738A9E]">
                 Questions? Direct email: <strong>{BRAND_CONFIG.contactEmail}</strong>
               </p>

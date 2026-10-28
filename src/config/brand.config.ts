@@ -149,20 +149,20 @@ export const BRAND_CONFIG: BrandConfig = {
         'Every deliverable is written from scratch by human domain specialists. We do not use robotic AI regurgitation that hallucinates citations or produces generic filler. Transparent, verifiable academic references tailored strictly to your rubric.',
     },
     {
-      id: 'stellar-caliber',
-      title: 'Curated for Academic Excellence & Distinction',
-      badge: 'Faculty Rubric Alignment',
-      lead: 'Engineered to withstand rigorous institutional evaluation.',
-      description:
-        'While institutional grading depends on examiners, our projects are crafted to the highest scholastic standards: structured logical arguments, immaculate formatting, robust methodologies, and defense-ready insights that place your work in the top evaluation tier.',
-    },
-    {
       id: 'more-time',
       title: 'More Time for What Matters',
       badge: 'Strategic Advantage',
       lead: 'Reclaim your bandwidth for internships, skills, and career launches.',
       description:
         'In a competitive job market, practical experience trumps formatting compliance. Wayforth handles demanding project documentation so you can focus on building a career that stands out.',
+    },
+    {
+      id: 'stellar-caliber',
+      title: 'Curated for Academic Excellence & Distinction',
+      badge: 'Faculty Rubric Alignment',
+      lead: 'Engineered to withstand rigorous institutional evaluation.',
+      description:
+        'While institutional grading depends on examiners, our projects are crafted to the highest scholastic standards: structured logical arguments, immaculate formatting, robust methodologies, and defense-ready insights that place your work in the top evaluation tier.',
     },
   ],
   services: [
@@ -251,48 +251,6 @@ export const BRAND_CONFIG: BrandConfig = {
       },
     },
     {
-      id: 'quantitative',
-      title: 'Data Analysis & Excel Projects',
-      badge: 'Active Priority',
-      targetAudience: 'Analytics, Finance & Technical Candidates',
-      description:
-        'Dynamic Excel workbooks, statistical testing, financial valuation models, regression analysis, structured charts, and academic data appendices.',
-      deliverables: [
-        'Financial valuation & forecast models (DCF, LBO)',
-        'Statistical data analysis (Descriptive & Inferential)',
-        'Excel datasets with formulas, macros & pivot charts',
-        'Structured appendices ready for document embedding',
-      ],
-      sample: {
-        id: 'sample-excel',
-        category: 'Quantitative Excel Model & Analytics',
-        title: 'Multifactor Capital Allocation Model & Monte Carlo Valuation Workbook',
-        institutionFormat: 'Dynamic .XLSX + Structured PDF Appendix • 18 Pages',
-        wordCount: '~4,500 Words + 6 Workbook Tabs',
-        pageCount: 18,
-        executiveSummary:
-          'Fully automated financial workbook incorporating DCF, sensitivity matrices, WACC calculation, and 1,000-iteration Monte Carlo simulation for downside risk modeling. Includes an accompanying analytical report explaining formulas and findings.',
-        sampleExcerpts: [
-          {
-            sectionHeading: 'Model Architecture: Automated Sensitivity Engine',
-            content:
-              'Tab 03 features dynamic two-variable data tables evaluating Terminal Growth Rate (1.5%–3.5%) against Cost of Capital (8.0%–12.5%). Cells utilize native INDEX/MATCH and XLOOKUP architectures with error-handling wrapping (=IFERROR).',
-          },
-          {
-            sectionHeading: 'Methodology: Statistical Normalization Notes',
-            content:
-              'Raw market data (500 trading days) was filtered for extreme outlier kurtosis using Cook’s Distance criteria (D > 4/n). Variance Inflation Factor (VIF = 1.42) verified absence of multi-collinearity across selected independent market betas.',
-          },
-        ],
-        deliverableIncludes: [
-          'Interactive Excel workbook (.xlsx) with live formulas & no hardcodes',
-          'Data cleaning & outlier treatment audit log',
-          'High-res vector charts ready for report embedding',
-          'Written analytical interpretation document',
-        ],
-      },
-    },
-    {
       id: 'research',
       title: 'Research Thesis & Dissertation Support',
       badge: 'Active Priority',
@@ -331,6 +289,48 @@ export const BRAND_CONFIG: BrandConfig = {
           'Zotero / Mendeley ready .bib and .ris export library',
           'Detailed methodology justification for academic committee defense',
           'Plagiarism similarity audit report',
+        ],
+      },
+    },
+    {
+      id: 'quantitative',
+      title: 'Data Analysis & Excel Projects',
+      badge: 'Active Priority',
+      targetAudience: 'Analytics, Finance & Technical Candidates',
+      description:
+        'Dynamic Excel workbooks, statistical testing, financial valuation models, regression analysis, structured charts, and academic data appendices.',
+      deliverables: [
+        'Financial valuation & forecast models (DCF, LBO)',
+        'Statistical data analysis (Descriptive & Inferential)',
+        'Excel datasets with formulas, macros & pivot charts',
+        'Structured appendices ready for document embedding',
+      ],
+      sample: {
+        id: 'sample-excel',
+        category: 'Quantitative Excel Model & Analytics',
+        title: 'Multifactor Capital Allocation Model & Monte Carlo Valuation Workbook',
+        institutionFormat: 'Dynamic .XLSX + Structured PDF Appendix • 18 Pages',
+        wordCount: '~4,500 Words + 6 Workbook Tabs',
+        pageCount: 18,
+        executiveSummary:
+          'Fully automated financial workbook incorporating DCF, sensitivity matrices, WACC calculation, and 1,000-iteration Monte Carlo simulation for downside risk modeling. Includes an accompanying analytical report explaining formulas and findings.',
+        sampleExcerpts: [
+          {
+            sectionHeading: 'Model Architecture: Automated Sensitivity Engine',
+            content:
+              'Tab 03 features dynamic two-variable data tables evaluating Terminal Growth Rate (1.5%–3.5%) against Cost of Capital (8.0%–12.5%). Cells utilize native INDEX/MATCH and XLOOKUP architectures with error-handling wrapping (=IFERROR).',
+          },
+          {
+            sectionHeading: 'Methodology: Statistical Normalization Notes',
+            content:
+              'Raw market data (500 trading days) was filtered for extreme outlier kurtosis using Cook’s Distance criteria (D > 4/n). Variance Inflation Factor (VIF = 1.42) verified absence of multi-collinearity across selected independent market betas.',
+          },
+        ],
+        deliverableIncludes: [
+          'Interactive Excel workbook (.xlsx) with live formulas & no hardcodes',
+          'Data cleaning & outlier treatment audit log',
+          'High-res vector charts ready for report embedding',
+          'Written analytical interpretation document',
         ],
       },
     },

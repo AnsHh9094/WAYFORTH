@@ -42,7 +42,6 @@ export function ManifestoSection({ onRequestQuote }: ManifestoSectionProps) {
             <span className="w-1.5 h-1.5 bg-[#12324E]" />
             <span className="uppercase tracking-widest text-[#12324E] font-semibold">FOUNDATIONAL MANIFESTO // WHY WE EXIST</span>
           </div>
-          <span className="text-[#1D5382] uppercase font-semibold">MAKE ROOM FOR MORE</span>
         </div>
 
         {/* ── PART 1: The Core Thesis ("Why We Exist") ── */}
@@ -56,8 +55,7 @@ export function ManifestoSection({ onRequestQuote }: ManifestoSectionProps) {
               Your future is <span className="italic font-serif font-light text-[#1D5382]">bigger</span> than your next submission.
             </h2>
             <div className="p-4 bg-[#FFFFFF] border-l-3 border-[#12324E] border-y border-r border-[#D8E2EC] text-xs font-mono text-[#12324E] mb-6 shadow-xs">
-              <span className="font-bold block uppercase tracking-wider mb-1 text-[#1D5382]">Tagline:</span>
-              <span className="text-base font-serif italic text-[#12324E]">&ldquo;Make Room for More.&rdquo;</span>
+              <span className="text-base font-serif italic text-[#12324E] block">&ldquo;Make Room for More.&rdquo;</span>
             </div>
 
             <p className="text-xs font-mono text-[#738A9E] uppercase tracking-wider">
