@@ -56,7 +56,7 @@ export function EditorialHero({ brandName, onRequestQuote }: EditorialHeroProps)
         {/* Clean Editorial Hero Layout */}
         <div className="max-w-4xl mb-16">
           <motion.div
-            className="inline-flex items-center gap-2 px-3 py-1 rounded-[2px] bg-[#F4F7FB] border border-[#D8E2EC] text-[#1D5382] text-[10.5px] font-mono uppercase tracking-widest mb-6 font-semibold shadow-2xs"
+            className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#F4F7FB] border border-[#D8E2EC] text-[#1D5382] text-[10.5px] font-mono uppercase tracking-widest mb-6 font-semibold shadow-2xs"
             variants={revealItem(0.05)}
           >
             <Sparkles className="w-3.5 h-3.5 text-[#1D5382]" />
@@ -87,7 +87,7 @@ export function EditorialHero({ brandName, onRequestQuote }: EditorialHeroProps)
           >
             <button
               onClick={onRequestQuote}
-              className="group relative inline-flex items-center justify-center gap-2.5 px-8 py-4 bg-[#12324E] text-[#FFFFFF] text-xs font-mono uppercase tracking-widest font-bold hover:bg-[#1D5382] transition-all duration-200 cursor-pointer shadow-md rounded-[2px]"
+              className="group relative inline-flex items-center justify-center gap-2.5 px-8 py-4 bg-[#12324E] text-[#FFFFFF] text-xs font-mono uppercase tracking-widest font-bold hover:bg-[#1D5382] transition-all duration-200 cursor-pointer shadow-md rounded-xl"
             >
               <span>Calculate Project Quote</span>
               <ArrowUpRight className="w-4 h-4 text-[#38BDF8] group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />
@@ -95,7 +95,7 @@ export function EditorialHero({ brandName, onRequestQuote }: EditorialHeroProps)
 
             <a
               href="#disciplines"
-              className="inline-flex items-center justify-center gap-2 px-7 py-4 bg-[#F4F7FB] text-[#12324E] text-xs font-mono uppercase tracking-widest border border-[#D8E2EC] hover:border-[#12324E] hover:bg-[#FFFFFF] transition-all rounded-[2px]"
+              className="inline-flex items-center justify-center gap-2 px-7 py-4 bg-[#F4F7FB] text-[#12324E] text-xs font-mono uppercase tracking-widest border border-[#D8E2EC] hover:border-[#12324E] hover:bg-[#FFFFFF] transition-all rounded-xl font-semibold"
             >
               <span>Inspect Sample Dossiers</span>
               <ArrowDown className="w-3.5 h-3.5 text-[#1D5382]" />
@@ -107,55 +107,55 @@ export function EditorialHero({ brandName, onRequestQuote }: EditorialHeroProps)
             className="flex flex-wrap items-center gap-2 text-[10.5px] font-mono text-[#4A607A]"
             variants={revealItem(0.4)}
           >
-            <span className="px-3 py-1 bg-[#F4F7FB] border border-[#D8E2EC] text-[#12324E]">UNDERGRADUATE</span>
-            <span className="px-3 py-1 bg-[#F4F7FB] border border-[#D8E2EC] text-[#12324E]">POSTGRADUATE / MBA</span>
-            <span className="px-3 py-1 bg-[#F4F7FB] border border-[#D8E2EC] text-[#12324E]">THESIS & DISSERTATION</span>
-            <span className="px-3 py-1 bg-[#F4F7FB] border border-[#D8E2EC] text-[#1D5382] font-bold">DATA ANALYSIS & EXCEL</span>
+            <span className="px-3.5 py-1 bg-[#F4F7FB] border border-[#D8E2EC] text-[#12324E] rounded-full">UNDERGRADUATE</span>
+            <span className="px-3.5 py-1 bg-[#F4F7FB] border border-[#D8E2EC] text-[#12324E] rounded-full">POSTGRADUATE / MBA</span>
+            <span className="px-3.5 py-1 bg-[#F4F7FB] border border-[#D8E2EC] text-[#12324E] rounded-full">THESIS & DISSERTATION</span>
+            <span className="px-3.5 py-1 bg-[#F4F7FB] border border-[#D8E2EC] text-[#1D5382] font-bold rounded-full">DATA ANALYSIS & EXCEL</span>
           </motion.div>
         </div>
 
         {/* 3 Core Value Anchor Pillars */}
         <motion.div
-          className="grid grid-cols-1 md:grid-cols-3 gap-6 pt-10 border-t border-[#D8E2EC] text-xs font-mono"
+          className="grid grid-cols-1 md:grid-cols-3 gap-6 pt-10 border-t border-[#D8E2EC] text-xs font-sans"
           variants={revealItem(0.45)}
         >
-          <div className="flex items-start gap-3 p-4 bg-[#F4F7FB] border border-[#D8E2EC] rounded-[2px]">
-            <div className="p-1.5 bg-[#FFFFFF] border border-[#D8E2EC] text-[#1D5382] mt-0.5 shrink-0">
+          <div className="flex items-start gap-4 p-5 bg-[#F4F7FB] border border-[#D8E2EC] rounded-2xl">
+            <div className="p-2 bg-[#FFFFFF] border border-[#D8E2EC] text-[#1D5382] mt-0.5 shrink-0 rounded-xl">
               <ShieldCheck className="w-4 h-4 text-[#1D5382]" />
             </div>
             <div>
               <strong className="block text-[#12324E] font-sans text-sm mb-1 font-semibold">
                 Pay-As-You-Go Milestone Safeguard
               </strong>
-              <p className="text-[#4A607A] leading-relaxed">
+              <p className="text-[#4A607A] leading-relaxed font-sans">
                 50% deposit to begin research. Review representative watermarked excerpts before releasing the milestone balance. Protected milestone safeguard.
               </p>
             </div>
           </div>
 
-          <div className="flex items-start gap-3 p-4 bg-[#F4F7FB] border border-[#D8E2EC] rounded-[2px]">
-            <div className="p-1.5 bg-[#FFFFFF] border border-[#D8E2EC] text-[#1D5382] mt-0.5 shrink-0">
+          <div className="flex items-start gap-4 p-5 bg-[#F4F7FB] border border-[#D8E2EC] rounded-2xl">
+            <div className="p-2 bg-[#FFFFFF] border border-[#D8E2EC] text-[#1D5382] mt-0.5 shrink-0 rounded-xl">
               <FileCheck className="w-4 h-4 text-[#1D5382]" />
             </div>
             <div>
               <strong className="block text-[#12324E] font-sans text-sm mb-1 font-semibold">
                 100% Genuine Human Research
               </strong>
-              <p className="text-[#4A607A] leading-relaxed">
+              <p className="text-[#4A607A] leading-relaxed font-sans">
                 Authored by dedicated domain scholars. Legitimate, verifiable academic citations tailored strictly to university evaluation rubrics.
               </p>
             </div>
           </div>
 
-          <div className="flex items-start gap-3 p-4 bg-[#F4F7FB] border border-[#D8E2EC] rounded-[2px]">
-            <div className="p-1.5 bg-[#FFFFFF] border border-[#D8E2EC] text-[#1D5382] mt-0.5 shrink-0">
+          <div className="flex items-start gap-4 p-5 bg-[#F4F7FB] border border-[#D8E2EC] rounded-2xl">
+            <div className="p-2 bg-[#FFFFFF] border border-[#D8E2EC] text-[#1D5382] mt-0.5 shrink-0 rounded-xl">
               <Layers className="w-4 h-4 text-[#1D5382]" />
             </div>
             <div>
               <strong className="block text-[#12324E] font-sans text-sm mb-1 font-semibold">
                 1 Included Revision Round
               </strong>
-              <p className="text-[#4A607A] leading-relaxed">
+              <p className="text-[#4A607A] leading-relaxed font-sans">
                 Comprehensive revision round included with every engagement for consolidated feedback and fine-tuning within the agreed brief.
               </p>
             </div>

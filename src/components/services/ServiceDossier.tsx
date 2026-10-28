@@ -103,7 +103,7 @@ export function ServiceDossier({ onRequestQuote }: ServiceDossierProps) {
                     {service.deliverables.map((item, dIdx) => (
                       <span
                         key={dIdx}
-                        className="text-[11px] font-mono px-2.5 py-1 bg-[#FFFFFF] border border-[#E2DDD5] text-[#364B62]"
+                        className="text-[11px] font-mono px-3 py-1 bg-[#FFFFFF] border border-[#E2DDD5] text-[#364B62] rounded-full"
                       >
                         {item}
                       </span>
@@ -135,7 +135,7 @@ export function ServiceDossier({ onRequestQuote }: ServiceDossierProps) {
                   {service.sample && (
                     <button
                       onClick={() => setSelectedSample(service.sample!)}
-                      className="inline-flex items-center gap-1.5 px-4 py-2 bg-[#FFFFFF] border border-[#12324E] text-[#12324E] text-xs font-mono uppercase tracking-wider hover:bg-[#12324E] hover:text-white transition-colors cursor-pointer rounded-[2px]"
+                      className="inline-flex items-center gap-1.5 px-4 py-2 bg-[#FFFFFF] border border-[#12324E] text-[#12324E] text-xs font-mono uppercase tracking-wider hover:bg-[#12324E] hover:text-white transition-colors cursor-pointer rounded-xl font-semibold"
                     >
                       <Eye className="w-3.5 h-3.5" />
                       <span>Inspect Specimen</span>
@@ -144,7 +144,7 @@ export function ServiceDossier({ onRequestQuote }: ServiceDossierProps) {
 
                   <button
                     onClick={onRequestQuote}
-                    className="inline-flex items-center gap-1.5 px-4 py-2 bg-[#12324E] text-white text-xs font-mono uppercase tracking-wider hover:bg-[#1D5382] transition-colors cursor-pointer rounded-[2px]"
+                    className="inline-flex items-center gap-1.5 px-4 py-2 bg-[#12324E] text-white text-xs font-mono uppercase tracking-wider hover:bg-[#1D5382] transition-colors cursor-pointer rounded-xl font-bold"
                   >
                     <span>Quote Scope</span>
                     <ArrowUpRight className="w-3.5 h-3.5 text-[#38BDF8]" />
@@ -156,10 +156,10 @@ export function ServiceDossier({ onRequestQuote }: ServiceDossierProps) {
         </div>
 
         {/* ── Secondary School Boards Notice ── */}
-        <div className="mt-16 p-6 sm:p-8 bg-[#FFFFFF] border border-[#E2DDD5] flex flex-col md:flex-row items-start md:items-center justify-between gap-6 shadow-2xs">
+        <div className="mt-16 p-6 sm:p-8 bg-[#FFFFFF] border border-[#E2DDD5] flex flex-col md:flex-row items-start md:items-center justify-between gap-6 shadow-2xs rounded-2xl">
           <div className="space-y-1.5">
             <div className="flex items-center gap-2">
-              <span className="inline-flex items-center gap-1 px-2 py-0.5 bg-[#12324E] text-white text-[10px] font-mono uppercase tracking-wider font-semibold">
+              <span className="inline-flex items-center gap-1 px-2.5 py-0.5 bg-[#12324E] text-white text-[10px] font-mono uppercase tracking-wider font-semibold rounded-full">
                 <Clock className="w-3 h-3" />
                 <span>COMING SOON</span>
               </span>
@@ -174,7 +174,7 @@ export function ServiceDossier({ onRequestQuote }: ServiceDossierProps) {
               Board-related practical files, subject-specific reports, and handwritten document structuring aligned with individual school guidelines will launch in an upcoming cohort.
             </p>
           </div>
-          <span className="text-xs font-mono text-[#738A9E] shrink-0 border border-[#E2DDD5] bg-[#FAFAF8] px-3 py-1.5 font-medium">
+          <span className="text-xs font-mono text-[#738A9E] shrink-0 border border-[#E2DDD5] bg-[#FAFAF8] px-3.5 py-1.5 font-medium rounded-full">
             Cohort Allocation Pending
           </span>
         </div>
@@ -195,7 +195,7 @@ export function ServiceDossier({ onRequestQuote }: ServiceDossierProps) {
                 animate={{ opacity: 1, scale: 1, y: 0 }}
                 exit={{ opacity: 0, scale: 0.96, y: 14 }}
                 transition={{ duration: 0.28, ease: editorial }}
-                className="bg-[#FFFFFF] border-2 border-[#12324E] max-w-3xl w-full max-h-[88vh] overflow-y-auto shadow-2xl relative p-6 sm:p-10 select-none overscroll-contain"
+                className="bg-[#FFFFFF] border-2 border-[#12324E] max-w-3xl w-full max-h-[88vh] overflow-y-auto shadow-2xl relative p-6 sm:p-10 select-none overscroll-contain rounded-2xl"
               >
                 {/* Modal Masthead */}
                 <div className="flex items-center justify-between border-b border-[#D8E2EC] pb-4 mb-6">
@@ -207,7 +207,7 @@ export function ServiceDossier({ onRequestQuote }: ServiceDossierProps) {
                   </div>
                   <button
                     onClick={() => setSelectedSample(null)}
-                    className="p-1.5 text-[#4A607A] hover:text-[#12324E] transition-colors cursor-pointer"
+                    className="p-1.5 text-[#4A607A] hover:text-[#12324E] transition-colors cursor-pointer rounded-full"
                     aria-label="Close sample preview"
                   >
                     <X className="w-5 h-5" />
@@ -215,7 +215,7 @@ export function ServiceDossier({ onRequestQuote }: ServiceDossierProps) {
                 </div>
 
                 {/* Exemplar Academic Page Excerpt */}
-                <div className="relative border border-[#D8E2EC] bg-[#FAFAF8] p-6 sm:p-8 space-y-6">
+                <div className="relative border border-[#D8E2EC] bg-[#FAFAF8] p-6 sm:p-8 space-y-6 rounded-xl">
                   {/* Header Monospace */}
                   <div className="flex justify-between text-[11px] font-mono text-[#4A607A] border-b border-[#D8E2EC] pb-2 font-medium">
                     <span>{selectedSample.institutionFormat}</span>
@@ -226,7 +226,7 @@ export function ServiceDossier({ onRequestQuote }: ServiceDossierProps) {
                     <h3 className="font-serif text-2xl text-[#12161A] leading-snug mb-3 font-normal">
                       {selectedSample.title}
                     </h3>
-                    <p className="text-xs text-[#364B62] leading-relaxed italic bg-[#FFFFFF] p-3 border-l-2 border-[#12324E]">
+                    <p className="text-xs text-[#364B62] leading-relaxed italic bg-[#FFFFFF] p-3 border-l-2 border-[#12324E] rounded-r-lg">
                       <strong>Executive Abstract:</strong> {selectedSample.executiveSummary}
                     </p>
                   </div>
@@ -270,7 +270,7 @@ export function ServiceDossier({ onRequestQuote }: ServiceDossierProps) {
                   <div className="flex items-center gap-3 w-full sm:w-auto">
                     <button
                       onClick={() => setSelectedSample(null)}
-                      className="px-4 py-2.5 text-xs font-mono border border-[#D8E2EC] text-[#364B62] hover:border-[#12324E] transition-colors cursor-pointer w-1/2 sm:w-auto"
+                      className="px-4 py-2.5 text-xs font-mono border border-[#D8E2EC] text-[#364B62] hover:border-[#12324E] transition-colors cursor-pointer w-1/2 sm:w-auto rounded-xl"
                     >
                       Close Specimen
                     </button>
@@ -279,7 +279,7 @@ export function ServiceDossier({ onRequestQuote }: ServiceDossierProps) {
                         setSelectedSample(null);
                         onRequestQuote();
                       }}
-                      className="px-5 py-2.5 bg-[#12324E] text-white text-xs font-mono uppercase tracking-wider hover:bg-[#1D5382] transition-colors cursor-pointer w-1/2 sm:w-auto flex items-center justify-center gap-1.5"
+                      className="px-5 py-2.5 bg-[#12324E] text-white text-xs font-mono uppercase tracking-wider hover:bg-[#1D5382] transition-colors cursor-pointer w-1/2 sm:w-auto flex items-center justify-center gap-1.5 rounded-xl font-semibold"
                     >
                       <span>Inquire Now</span>
                       <ArrowUpRight className="w-3.5 h-3.5 text-[#38BDF8]" />

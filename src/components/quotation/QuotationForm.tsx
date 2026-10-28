@@ -183,13 +183,13 @@ _Initiated via wayforth.in official quotation calculator_`;
             </div>
 
             {/* The Live Ledger Matrix Card */}
-            <div className="bg-[#FFFFFF] border-2 border-[#12324E] p-6 space-y-4 shadow-sm relative">
+            <div className="bg-[#FFFFFF] border-2 border-[#12324E] p-6 sm:p-7 space-y-4 shadow-sm relative rounded-2xl">
               <div className="flex items-center justify-between text-xs font-mono border-b border-[#D8E2EC] pb-3">
                 <span className="flex items-center gap-1.5 text-[#12324E] font-semibold">
                   <Calculator className="w-4 h-4 text-[#1D5382]" />
                   <span>TRANSPARENT LEDGER</span>
                 </span>
-                <span className="bg-[#12324E] text-white px-2 py-0.5 text-[10px] uppercase font-bold tracking-wider">
+                <span className="bg-[#12324E] text-white px-3 py-0.5 text-[10px] uppercase font-bold tracking-wider rounded-full">
                   {level.toUpperCase()}
                 </span>
               </div>
@@ -229,7 +229,7 @@ _Initiated via wayforth.in official quotation calculator_`;
                 )}
 
                 {/* 15% Introductory Discount */}
-                <div className="flex justify-between items-center text-[#12324E] pt-2 border-t border-[#F4F7FB] bg-[#F0F5FA] p-2 -mx-2">
+                <div className="flex justify-between items-center text-[#12324E] pt-2 border-t border-[#F4F7FB] bg-[#F0F5FA] p-2.5 rounded-xl">
                   <span className="flex items-center gap-1 font-semibold text-[#1D5382]">
                     <Sparkles className="w-3.5 h-3.5 text-[#38BDF8]" />
                     <span>Introductory Discount:</span>
@@ -286,9 +286,9 @@ _Initiated via wayforth.in official quotation calculator_`;
           </div>
 
           {/* Right Column: Interactive Parameter Console & Intake Form */}
-          <div className="lg:col-span-7 bg-[#FFFFFF] border border-[#D8E2EC] p-6 sm:p-10 shadow-xs">
+          <div className="lg:col-span-7 bg-[#FFFFFF] border border-[#D8E2EC] p-6 sm:p-10 shadow-xs rounded-2xl">
             {serverError && (
-              <div className="mb-6 p-3 bg-red-50 border border-red-200 text-red-800 text-xs font-mono flex items-center gap-2">
+              <div className="mb-6 p-3 bg-red-50 border border-red-200 text-red-800 text-xs font-mono flex items-center gap-2 rounded-xl">
                 <AlertCircle className="w-4 h-4 shrink-0" />
                 <span>{serverError}</span>
               </div>
@@ -310,14 +310,14 @@ _Initiated via wayforth.in official quotation calculator_`;
                     href={whatsappUrl}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="w-full sm:w-auto px-6 py-3 bg-[#12324E] text-white text-xs font-mono uppercase tracking-wider flex items-center justify-center gap-2 hover:bg-[#1D5382] transition-colors"
+                    className="w-full sm:w-auto px-6 py-3 bg-[#12324E] text-white text-xs font-mono uppercase tracking-wider flex items-center justify-center gap-2 hover:bg-[#1D5382] transition-colors rounded-xl font-bold"
                   >
                     <MessageSquare className="w-4 h-4 text-[#38BDF8]" />
                     <span>Open in WhatsApp</span>
                   </a>
                   <button
                     onClick={() => setSubmitted(false)}
-                    className="w-full sm:w-auto px-6 py-3 border border-[#D8E2EC] text-[#12324E] text-xs font-mono uppercase tracking-wider hover:border-[#12324E]"
+                    className="w-full sm:w-auto px-6 py-3 border border-[#D8E2EC] text-[#12324E] text-xs font-mono uppercase tracking-wider hover:border-[#12324E] rounded-xl"
                   >
                     Adjust Parameters
                   </button>
@@ -339,7 +339,7 @@ _Initiated via wayforth.in official quotation calculator_`;
                           key={tier.level}
                           type="button"
                           onClick={() => setLevel(tier.level)}
-                          className={`p-3.5 text-left border transition-all cursor-pointer ${
+                          className={`p-4 text-left border transition-all cursor-pointer rounded-xl ${
                             isSelected
                               ? 'border-[#12324E] bg-[#F4F7FB] shadow-2xs ring-1 ring-[#12324E]'
                               : 'border-[#D8E2EC] bg-[#FFFFFF] hover:border-[#12324E]/50'
@@ -353,7 +353,7 @@ _Initiated via wayforth.in official quotation calculator_`;
                               ₹{tier.perPageRate}/pg
                             </span>
                           </div>
-                          <span className="text-[11px] text-[#4A607A] block leading-tight">
+                          <span className="text-[11px] text-[#4A607A] block leading-tight font-sans">
                             {tier.label}
                           </span>
                         </button>
@@ -381,7 +381,7 @@ _Initiated via wayforth.in official quotation calculator_`;
                     max="80"
                     value={pages}
                     onChange={(e) => setPages(parseInt(e.target.value))}
-                    className="w-full h-1.5 bg-[#D8E2EC] appearance-none cursor-pointer accent-[#12324E]"
+                    className="w-full h-2 bg-[#D8E2EC] appearance-none cursor-pointer accent-[#12324E] rounded-full"
                   />
                   <div className="flex justify-between text-[10px] font-mono text-[#4A607A] mt-1.5">
                     <span>3 pgs (Short Essay)</span>
@@ -410,7 +410,7 @@ _Initiated via wayforth.in official quotation calculator_`;
                           key={urg.id}
                           type="button"
                           onClick={() => setUrgencyId(urg.id)}
-                          className={`p-3 text-left border transition-all cursor-pointer ${
+                          className={`p-3 text-left border transition-all cursor-pointer rounded-xl ${
                             isSelected
                               ? 'border-[#12324E] bg-[#12324E] text-white shadow-xs'
                               : 'border-[#D8E2EC] bg-[#FFFFFF] text-[#42586E] hover:border-[#12324E]'
@@ -422,7 +422,7 @@ _Initiated via wayforth.in official quotation calculator_`;
                             </span>
                             {urg.multiplier > 0 && (
                               <span
-                                className={`text-[9px] font-mono px-1 py-0.2 ${
+                                className={`text-[9px] font-mono px-2 py-0.5 rounded-full ${
                                   isSelected
                                     ? 'bg-white text-[#12324E]'
                                     : 'bg-[#EBF3FB] text-[#1D5382] border border-[#C5DCF0]'
@@ -433,7 +433,7 @@ _Initiated via wayforth.in official quotation calculator_`;
                             )}
                           </div>
                           <span
-                            className={`text-[10px] block ${
+                            className={`text-[10px] block font-sans ${
                               isSelected ? 'text-white/80' : 'text-[#4A607A]'
                             }`}
                           >
@@ -463,7 +463,7 @@ _Initiated via wayforth.in official quotation calculator_`;
                         <div
                           key={addon.id}
                           onClick={() => toggleAddon(addon.id)}
-                          className={`p-3 border flex items-start gap-3 transition-colors cursor-pointer rounded-[2px] ${
+                          className={`p-3.5 border flex items-start gap-3 transition-colors cursor-pointer rounded-xl ${
                             isChecked
                               ? 'bg-[#F0F5FA] border-[#12324E] shadow-2xs'
                               : isCharts
@@ -472,7 +472,7 @@ _Initiated via wayforth.in official quotation calculator_`;
                           }`}
                         >
                           <div
-                            className={`w-4 h-4 rounded-[2px] border mt-0.5 flex items-center justify-center shrink-0 ${
+                            className={`w-4 h-4 rounded-md border mt-0.5 flex items-center justify-center shrink-0 ${
                               isChecked
                                 ? 'bg-[#12324E] border-[#12324E] text-white'
                                 : 'border-[#94A3B8] bg-white'
@@ -489,11 +489,11 @@ _Initiated via wayforth.in official quotation calculator_`;
                                 +₹{addon.price}
                               </span>
                             </div>
-                            <p className="text-[11px] text-[#4A607A] leading-tight">
+                            <p className="text-[11px] text-[#4A607A] leading-tight font-sans">
                               {addon.description}
                             </p>
                             {isCharts && (
-                              <span className="inline-block mt-1 text-[9px] font-mono text-[#1D5382] bg-[#EBF3FB] px-1.5 py-0.2 border border-[#C5DCF0]">
+                              <span className="inline-block mt-1 text-[9px] font-mono text-[#1D5382] bg-[#EBF3FB] px-2 py-0.5 border border-[#C5DCF0] rounded-full">
                                 Custom data graphs & visual models
                               </span>
                             )}
@@ -520,7 +520,7 @@ _Initiated via wayforth.in official quotation calculator_`;
                         value={name}
                         onChange={(e) => setName(e.target.value)}
                         placeholder="e.g. Aryan Sharma"
-                        className="w-full px-4 py-2.5 bg-[#FFFFFF] border border-[#D8E2EC] text-xs text-[#12324E] focus:border-[#12324E] focus:outline-none"
+                        className="w-full px-4 py-2.5 bg-[#FFFFFF] border border-[#D8E2EC] text-xs text-[#12324E] focus:border-[#12324E] focus:outline-none rounded-xl"
                       />
                     </div>
 
@@ -537,7 +537,7 @@ _Initiated via wayforth.in official quotation calculator_`;
                         value={contact}
                         onChange={(e) => setContact(e.target.value)}
                         placeholder="+91 ... / student@university.edu"
-                        className="w-full px-4 py-2.5 bg-[#FFFFFF] border border-[#D8E2EC] text-xs text-[#12324E] focus:border-[#12324E] focus:outline-none"
+                        className="w-full px-4 py-2.5 bg-[#FFFFFF] border border-[#D8E2EC] text-xs text-[#12324E] focus:border-[#12324E] focus:outline-none rounded-xl"
                       />
                     </div>
                   </div>
@@ -556,7 +556,7 @@ _Initiated via wayforth.in official quotation calculator_`;
                         value={institution}
                         onChange={(e) => setInstitution(e.target.value)}
                         placeholder="e.g. Delhi University / NMIMS / IIM"
-                        className="w-full px-4 py-2.5 bg-[#FFFFFF] border border-[#D8E2EC] text-xs text-[#12324E] focus:border-[#12324E] focus:outline-none"
+                        className="w-full px-4 py-2.5 bg-[#FFFFFF] border border-[#D8E2EC] text-xs text-[#12324E] focus:border-[#12324E] focus:outline-none rounded-xl"
                       />
                     </div>
 
@@ -573,7 +573,7 @@ _Initiated via wayforth.in official quotation calculator_`;
                         value={discipline}
                         onChange={(e) => setDiscipline(e.target.value)}
                         placeholder="e.g. Corporate Finance / Supply Chain"
-                        className="w-full px-4 py-2.5 bg-[#FFFFFF] border border-[#D8E2EC] text-xs text-[#12324E] focus:border-[#12324E] focus:outline-none"
+                        className="w-full px-4 py-2.5 bg-[#FFFFFF] border border-[#D8E2EC] text-xs text-[#12324E] focus:border-[#12324E] focus:outline-none rounded-xl"
                       />
                     </div>
                   </div>
@@ -590,7 +590,7 @@ _Initiated via wayforth.in official quotation calculator_`;
                       value={brief}
                       onChange={(e) => setBrief(e.target.value)}
                       placeholder="Outline your project title, referencing style (APA, Harvard, etc.), faculty guidelines, or paste rubric requirements..."
-                      className="w-full px-4 py-2.5 bg-[#FFFFFF] border border-[#D8E2EC] text-xs text-[#12324E] focus:border-[#12324E] focus:outline-none"
+                      className="w-full px-4 py-2.5 bg-[#FFFFFF] border border-[#D8E2EC] text-xs text-[#12324E] focus:border-[#12324E] focus:outline-none rounded-xl font-sans"
                     ></textarea>
                   </div>
                 </div>
@@ -600,7 +600,7 @@ _Initiated via wayforth.in official quotation calculator_`;
                   <button
                     type="submit"
                     disabled={isSubmitting}
-                    className="w-full py-4 bg-[#12324E] text-white hover:bg-[#1D5382] transition-colors text-xs font-mono uppercase tracking-widest flex items-center justify-center gap-2 cursor-pointer shadow-xs disabled:opacity-50 font-semibold"
+                    className="w-full py-4 bg-[#12324E] text-white hover:bg-[#1D5382] transition-colors text-xs font-mono uppercase tracking-widest flex items-center justify-center gap-2 cursor-pointer shadow-xs disabled:opacity-50 font-bold rounded-xl"
                   >
                     <span>{isSubmitting ? 'Formatting Brief...' : 'Send Requirements & Lock Quote via WhatsApp'}</span>
                     <Send className="w-4 h-4 text-[#38BDF8]" />

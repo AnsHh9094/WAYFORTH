@@ -134,7 +134,7 @@ export function ManifestoSection({ onRequestQuote }: ManifestoSectionProps) {
             {onRequestQuote && (
               <button
                 onClick={onRequestQuote}
-                className="inline-flex items-center gap-2 px-6 py-3 bg-[#B8975A] text-[#0C1220] text-xs font-mono uppercase tracking-widest font-bold hover:bg-[#D4AF37] transition-all cursor-pointer rounded-[2px] shadow-sm"
+                className="inline-flex items-center gap-2 px-6 py-3.5 bg-[#B8975A] text-[#0C1220] text-xs font-mono uppercase tracking-widest font-bold hover:bg-[#D4AF37] transition-all cursor-pointer rounded-xl shadow-sm"
               >
                 <span>Calculate Engagement Fee</span>
                 <ArrowUpRight className="w-3.5 h-3.5 text-[#0C1220]" />

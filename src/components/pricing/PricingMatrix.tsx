@@ -52,7 +52,7 @@ export function PricingMatrix({ onRequestQuote }: PricingMatrixProps) {
         </div>
 
         {/* The Mathematical Formula Banner with Pay-As-You-Go Inset */}
-        <div className="bg-[#FFFFFF] border border-[#12324E] p-6 sm:p-8 mb-12 flex flex-col md:flex-row items-start md:items-center justify-between gap-6 shadow-xs">
+        <div className="bg-[#FFFFFF] border border-[#12324E] p-6 sm:p-8 mb-12 flex flex-col md:flex-row items-start md:items-center justify-between gap-6 shadow-xs rounded-2xl">
           <div className="space-y-1.5">
             <span className="text-xs font-mono uppercase tracking-widest text-[#1D5382] font-bold block">
               The Fee Formula
@@ -66,12 +66,12 @@ export function PricingMatrix({ onRequestQuote }: PricingMatrixProps) {
           </div>
 
           {/* Standard Page Metric Badge */}
-          <div className="bg-[#F4F7FB] border border-[#D8E2EC] p-4 text-xs font-mono max-w-sm shrink-0">
+          <div className="bg-[#F4F7FB] border border-[#D8E2EC] p-4 text-xs font-mono max-w-sm shrink-0 rounded-xl">
             <div className="flex items-center gap-2 text-[#12324E] font-semibold mb-1">
               <Info className="w-4 h-4 text-[#1D5382]" />
               <span>Standard Academic Page:</span>
             </div>
-            <p className="text-[#42586E] text-[11px] leading-relaxed">
+            <p className="text-[#42586E] text-[11px] leading-relaxed font-sans">
               1 standard content page ≈ <strong>{BRAND_CONFIG.wordCountPerPage}</strong> (Double-spaced, standard 12pt typeface).
               Preliminary title pages and references itemized transparently.
             </p>
@@ -85,7 +85,7 @@ export function PricingMatrix({ onRequestQuote }: PricingMatrixProps) {
             return (
               <motion.div
                 key={idx}
-                className={`bg-[#FFFFFF] p-6 flex flex-col justify-between transition-all relative ${
+                className={`bg-[#FFFFFF] p-6 sm:p-7 flex flex-col justify-between transition-all relative rounded-2xl ${
                   isFeatured
                     ? 'border-2 border-[#12324E] shadow-md'
                     : 'border border-[#D8E2EC] hover:border-[#12324E]'
@@ -97,16 +97,16 @@ export function PricingMatrix({ onRequestQuote }: PricingMatrixProps) {
                 viewport={{ once: true, margin: '-60px' }}
               >
                 {isFeatured && (
-                  <div className="absolute -top-3 left-6 bg-[#12324E] text-white text-[9px] font-mono uppercase tracking-widest px-2.5 py-0.5 flex items-center gap-1 shadow-xs font-semibold">
-                    <Sparkles className="w-2.5 h-2.5 text-[#38BDF8]" />
+                  <div className="absolute -top-3 left-6 bg-[#12324E] text-white text-[10px] font-sans uppercase tracking-wider px-3 py-1 flex items-center gap-1.5 shadow-xs font-semibold rounded-full">
+                    <Sparkles className="w-3 h-3 text-[#38BDF8]" />
                     <span>Most Requested</span>
                   </div>
                 )}
 
                 <div>
                   <div className="flex items-center justify-between text-xs font-mono text-[#738A9E] mb-3">
-                    <span>CATEGORY {idx + 1}</span>
-                    <span className="flex items-center gap-1 text-[#1D5382] font-medium">
+                    <span className="font-semibold">CATEGORY {idx + 1}</span>
+                    <span className="flex items-center gap-1 text-[#1D5382] font-semibold px-2 py-0.5 bg-[#F4F7FB] rounded-full text-[10.5px]">
                       <Clock className="w-3 h-3" />
                       {tier.turnaround}
                     </span>
@@ -119,12 +119,12 @@ export function PricingMatrix({ onRequestQuote }: PricingMatrixProps) {
                     {tier.label}
                   </span>
 
-                  <p className="text-xs text-[#42586E] mb-6 leading-relaxed">
+                  <p className="text-xs text-[#42586E] mb-6 leading-relaxed font-sans">
                     {tier.description}
                   </p>
 
                   <div className="border-t border-b border-[#F4F7FB] py-4 mb-6">
-                    <div className="text-[11px] text-[#738A9E] font-mono">Standard Investment:</div>
+                    <div className="text-[11px] text-[#738A9E] font-sans">Standard Investment:</div>
                     <div className="font-mono text-base font-bold text-[#12324E]">
                       From ₹{tier.startingBase.toLocaleString()} base floor
                     </div>
@@ -134,11 +134,11 @@ export function PricingMatrix({ onRequestQuote }: PricingMatrixProps) {
                   </div>
 
                   <div className="space-y-2.5 mb-8">
-                    <span className="text-[11px] font-mono uppercase tracking-widest text-[#738A9E] block">
+                    <span className="text-[11px] font-sans uppercase tracking-wider text-[#738A9E] font-semibold block">
                       Deliverable Includes:
                     </span>
                     {tier.features.map((feat, i) => (
-                      <div key={i} className="flex items-start gap-2 text-xs text-[#42586E]">
+                      <div key={i} className="flex items-start gap-2 text-xs text-[#42586E] font-sans">
                         <Check className="w-3.5 h-3.5 text-[#1D5382] mt-0.5 shrink-0" />
                         <span>{feat}</span>
                       </div>
@@ -148,7 +148,7 @@ export function PricingMatrix({ onRequestQuote }: PricingMatrixProps) {
 
                 <button
                   onClick={onRequestQuote}
-                  className={`group w-full py-3 text-xs font-mono uppercase tracking-wider transition-all flex items-center justify-center gap-2 cursor-pointer ${
+                  className={`group w-full py-3.5 text-xs font-mono uppercase tracking-wider transition-all flex items-center justify-center gap-2 cursor-pointer rounded-xl font-bold ${
                     isFeatured
                       ? 'bg-[#12324E] text-white hover:bg-[#1D5382]'
                       : 'bg-[#F4F7FB] text-[#12324E] hover:bg-[#12324E] hover:text-white border border-[#D8E2EC]'

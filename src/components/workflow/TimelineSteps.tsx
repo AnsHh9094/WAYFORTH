@@ -38,7 +38,7 @@ export function TimelineSteps() {
         </div>
 
         {/* ── Visual Progression Spine ── */}
-        <div className="hidden lg:block mb-16 bg-[#FFFFFF] border border-[#D8E2EC] p-6 shadow-xs relative">
+        <div className="hidden lg:block mb-16 bg-[#FFFFFF] border border-[#D8E2EC] p-6 shadow-xs relative rounded-2xl">
           <div className="flex items-center justify-between mb-6 text-[10px] font-mono text-[#4A607A] uppercase tracking-wider">
             <span>ENGAGEMENT MILESTONES</span>
             <span className="text-[#12324E] font-semibold">ALL STAGES MONITORED</span>
@@ -82,7 +82,7 @@ export function TimelineSteps() {
 
                   {/* Micro Node Title */}
                   <div className="mt-3 text-center">
-                    <span className="block text-[10px] font-mono font-medium text-[#12324E] truncate max-w-[110px]">
+                    <span className="block text-[10px] font-sans font-medium text-[#12324E] truncate max-w-[110px]">
                       {isGate4 ? 'Preview Review' : isGate7 ? 'Final Release' : step.title}
                     </span>
                   </div>
@@ -92,7 +92,7 @@ export function TimelineSteps() {
           </div>
         </div>
 
-        {/* ── 7-Step Cards ── */}
+        {/* ── 7-Step Cards (Smooth Rounded-2xl Corners) ── */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 relative">
           {BRAND_CONFIG.workflowSteps.map((step, idx) => {
             const isGate4 = step.step === '04';
@@ -105,7 +105,7 @@ export function TimelineSteps() {
                 onMouseEnter={() => setActiveStep(idx)}
                 onMouseLeave={() => setActiveStep(null)}
                 data-cursor="INSPECT"
-                className={`bg-[#FFFFFF] border p-6 flex flex-col justify-between transition-all duration-300 relative group ${
+                className={`bg-[#FFFFFF] border p-6 sm:p-7 flex flex-col justify-between transition-all duration-300 relative group rounded-2xl ${
                   isGate7
                     ? 'border-[#12324E] shadow-md ring-2 ring-[#12324E]/15 bg-gradient-to-b from-[#FFFFFF] to-[#F4F7FB]'
                     : isGate4
@@ -115,26 +115,26 @@ export function TimelineSteps() {
                     : 'border-[#D8E2EC] hover:border-[#12324E]/50'
                 }`}
               >
-                {/* Milestone Ribbon for Key Gates */}
+                {/* Milestone Ribbon for Key Gates — Rounded-full Capsule */}
                 {isGate4 && (
-                  <div className="absolute top-0 right-0 bg-[#1D5382] text-white text-[9px] font-mono uppercase tracking-widest px-3 py-1 flex items-center gap-1.5 shadow-xs font-semibold">
-                    <ShieldCheck className="w-3 h-3 text-[#38BDF8]" />
+                  <div className="absolute top-4 right-4 bg-[#1D5382] text-white text-[10px] font-sans uppercase tracking-wider px-3 py-1 flex items-center gap-1.5 shadow-xs font-semibold rounded-full">
+                    <ShieldCheck className="w-3.5 h-3.5 text-[#38BDF8]" />
                     <span>Safeguard Milestone</span>
                   </div>
                 )}
                 {isGate7 && (
-                  <div className="absolute top-0 right-0 bg-[#12324E] text-white text-[9px] font-mono uppercase tracking-widest px-3 py-1 flex items-center gap-1.5 shadow-xs font-semibold">
-                    <KeyRound className="w-3 h-3 text-[#38BDF8]" />
+                  <div className="absolute top-4 right-4 bg-[#12324E] text-white text-[10px] font-sans uppercase tracking-wider px-3 py-1 flex items-center gap-1.5 shadow-xs font-semibold rounded-full">
+                    <KeyRound className="w-3.5 h-3.5 text-[#38BDF8]" />
                     <span>Complete Handover</span>
                   </div>
                 )}
 
                 <div>
-                  <div className="flex items-center justify-between text-xs font-mono text-[#4A607A] mb-3">
-                    <span className="font-bold text-sm text-[#12324E]">
-                      STAGE {step.step}
+                  <div className="flex items-center justify-between text-xs font-mono text-[#4A607A] mb-4">
+                    <span className="font-bold text-sm font-sans text-[#12324E] tracking-tight">
+                      Stage {step.step}
                     </span>
-                    <span className="px-2 py-0.5 bg-[#F4F7FB] border border-[#D8E2EC] text-[10px] uppercase font-medium text-[#1D5382]">
+                    <span className="px-2.5 py-0.5 bg-[#F4F7FB] border border-[#D8E2EC] text-[10px] uppercase font-sans font-semibold text-[#1D5382] rounded-full">
                       {step.actor}
                     </span>
                   </div>
@@ -143,18 +143,18 @@ export function TimelineSteps() {
                     {step.title}
                   </h3>
 
-                  <p className="text-xs font-mono text-[#1D5382] font-medium mb-3">
+                  <p className="text-xs font-sans text-[#1D5382] font-semibold mb-3 leading-relaxed">
                     {step.summary}
                   </p>
 
-                  <p className="text-xs text-[#364B62] leading-relaxed">
+                  <p className="text-xs text-[#4A607A] leading-relaxed font-sans font-normal">
                     {step.detail}
                   </p>
                 </div>
 
-                <div className="pt-4 mt-6 border-t border-[#F4F7FB] flex items-center justify-between text-[10px] font-mono text-[#4A607A]">
-                  <span>CONTRACTUAL PROTOCOL</span>
-                  <span className="text-[#12324E] font-semibold">STEP {step.step} OF 07</span>
+                <div className="pt-4 mt-6 border-t border-[#F4F7FB] flex items-center justify-between text-[10px] font-sans text-[#4A607A]">
+                  <span className="uppercase tracking-wider">Contractual Protocol</span>
+                  <span className="text-[#12324E] font-semibold">Step {step.step} of 07</span>
                 </div>
               </motion.div>
             );
