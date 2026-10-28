@@ -48,6 +48,7 @@ LEADS.md
 # old raw design templates & videos
 *.mp4
 public/crest-logo-*
+rushic-*
 public/heraldic-crest-logos-*
 
 .originkit/

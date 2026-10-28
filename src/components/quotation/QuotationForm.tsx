@@ -165,20 +165,6 @@ _Initiated via wayforth.in official quotation calculator_`;
       className="py-20 sm:py-28 bg-[#FFFFFF] border-b border-[#D8E2EC]"
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        
-        {/* Section Header */}
-        <div className="flex items-center justify-between border-b border-[#D8E2EC] pb-4 mb-16 text-xs font-mono text-[#738A9E]">
-          <div className="flex items-center gap-2">
-            <span className="w-1.5 h-1.5 bg-[#12324E]" />
-            <span className="uppercase tracking-widest text-[#12324E] font-semibold">
-              LIVE PRICING CALCULATOR // PROJECT INTAKE
-            </span>
-          </div>
-          <span className="text-[#1D5382] uppercase font-semibold">
-            PAY-AS-YOU-GO • 50% INITIAL DEPOSIT • FULL TRUST
-          </span>
-        </div>
-
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-start">
           
           {/* Left Column: Live Interactive Ledger Summary */}

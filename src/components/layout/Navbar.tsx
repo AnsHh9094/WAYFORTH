@@ -45,27 +45,6 @@ export function Navbar({ onRequestQuote }: NavbarProps) {
           : 'bg-[#FFFFFF] border-b border-[#D8E2EC]/80'
       }`}
     >
-      {/* Top Folio Banner Notice - Deep Academic Navy */}
-      <div className="bg-[#12324E] text-[#F0F4F8] px-4 py-1.5 text-[11px] font-mono tracking-wide flex items-center justify-between border-b border-[#12324E]">
-        <div className="max-w-7xl mx-auto w-full flex items-center justify-between">
-          <div className="flex items-center gap-2">
-            <span className="w-1.5 h-1.5 rounded-full bg-[#38BDF8] animate-pulse"></span>
-            <span>100% HUMAN-RESEARCHED DELIVERABLES • ZERO PLAGIARISM • PAY-AS-YOU-GO MODEL</span>
-          </div>
-          <div className="hidden sm:flex items-center gap-4 text-[11px] text-[#A6C0D7]">
-            <a
-              href={`mailto:${BRAND_CONFIG.contactEmail}`}
-              className="hover:text-white transition-colors flex items-center gap-1.5"
-            >
-              <Mail className="w-3 h-3 text-[#38BDF8]" />
-              <span>{BRAND_CONFIG.contactEmail}</span>
-            </a>
-            <span>•</span>
-            <span className="text-[#38BDF8] font-semibold">15% INTRODUCTORY DISCOUNT</span>
-          </div>
-        </div>
-      </div>
-
       {/* Main Masthead Navigation */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
         
@@ -106,6 +85,12 @@ export function Navbar({ onRequestQuote }: NavbarProps) {
             className="hover:text-[#12324E] transition-colors hover:underline underline-offset-8 decoration-[#12324E]"
           >
             7-Step Process
+          </a>
+          <a
+            href="#contact"
+            className="hover:text-[#12324E] transition-colors hover:underline underline-offset-8 decoration-[#12324E]"
+          >
+            Contact
           </a>
           <a
             href="/terms"
@@ -167,6 +152,13 @@ export function Navbar({ onRequestQuote }: NavbarProps) {
               className="py-1 border-b border-[#D8E2EC]"
             >
               7-Step Process
+            </a>
+            <a
+              href="#contact"
+              onClick={() => setMobileMenuOpen(false)}
+              className="py-1 border-b border-[#D8E2EC]"
+            >
+              Direct Advisory Contact
             </a>
             <a
               href="/terms"

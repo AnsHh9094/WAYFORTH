@@ -5,13 +5,13 @@ import { BRAND_CONFIG } from '@/config/brand.config';
 import { SmoothScrollProvider } from '@/components/scroll/SmoothScrollProvider';
 import { Navbar } from '@/components/layout/Navbar';
 import { EditorialHero } from '@/components/hero/EditorialHero';
-import { InfiniteMarquee } from '@/components/marquee/InfiniteMarquee';
 import { KineticStatsTicker } from '@/components/stats/KineticStatsTicker';
 import { ManifestoSection } from '@/components/manifesto/ManifestoSection';
 import { ServiceDossier } from '@/components/services/ServiceDossier';
 import { PricingMatrix } from '@/components/pricing/PricingMatrix';
 import { TimelineSteps } from '@/components/workflow/TimelineSteps';
 import { QuotationForm } from '@/components/quotation/QuotationForm';
+import { ContactSection } from '@/components/contact/ContactSection';
 import { Footer } from '@/components/layout/Footer';
 import { ArchivalScrollDock } from '@/components/dock/ArchivalScrollDock';
 import { PrecisionCursor } from '@/components/ui/PrecisionCursor';
@@ -49,9 +49,6 @@ export default function HomePage() {
           />
         </div>
 
-        {/* Dynamic Infinite Marquee Ribbon */}
-        <InfiniteMarquee />
-
         {/* Kinetic Operational Metrics Counter Ticker */}
         <KineticStatsTicker />
 
@@ -77,6 +74,9 @@ export default function HomePage() {
 
         {/* Interactive Quotation Intake & Live Pricing Calculator Console */}
         <QuotationForm />
+
+        {/* Dedicated Direct Advisory Desk & Contact Section */}
+        <ContactSection />
 
         {/* Print Editorial Footer */}
         <Footer onRequestQuote={handleScrollToQuote} />

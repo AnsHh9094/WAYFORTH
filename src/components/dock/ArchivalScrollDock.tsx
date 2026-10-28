@@ -15,6 +15,7 @@ const SECTIONS = [
   { id: 'pricing', label: 'FEES' },
   { id: 'workflow', label: 'WORKFLOW' },
   { id: 'quote-console', label: 'INTAKE' },
+  { id: 'contact', label: 'CONTACT' },
 ];
 
 export function ArchivalScrollDock({ onRequestQuote }: ArchivalScrollDockProps) {
