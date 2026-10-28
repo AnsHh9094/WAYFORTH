@@ -54,14 +54,9 @@ export function PricingMatrix({ onRequestQuote }: PricingMatrixProps) {
         {/* The Mathematical Formula Banner with Pay-As-You-Go Inset */}
         <div className="bg-[#FFFFFF] border border-[#12324E] p-6 sm:p-8 mb-12 flex flex-col md:flex-row items-start md:items-center justify-between gap-6 shadow-xs">
           <div className="space-y-1.5">
-            <div className="flex items-center gap-2">
-              <span className="text-xs font-mono uppercase tracking-widest text-[#1D5382] font-bold">
-                The Fee Formula
-              </span>
-              <span className="text-[10px] font-mono px-2 py-0.5 bg-[#EBF3FB] text-[#1D5382] border border-[#C5DCF0] font-semibold">
-                15% Introductory Discount Applied on Final Total
-              </span>
-            </div>
+            <span className="text-xs font-mono uppercase tracking-widest text-[#1D5382] font-bold block">
+              The Fee Formula
+            </span>
             <div className="font-serif text-lg sm:text-xl text-[#12324E] font-medium">
               Base Project Floor + Itemized Page Volume — 15% Introductory Discount
             </div>
@@ -165,45 +160,6 @@ export function PricingMatrix({ onRequestQuote }: PricingMatrixProps) {
               </motion.div>
             );
           })}
-        </div>
-
-        {/* 3 Core Commitments: Pay-As-You-Go, Urgent Delivery, and 15% Discount */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 text-xs text-[#42586E]">
-          <div className="p-6 bg-[#FFFFFF] border-l-2 border-l-[#12324E] border-t border-r border-b border-[#D8E2EC] shadow-xs">
-            <span className="text-[10px] font-mono uppercase tracking-widest text-[#12324E] block mb-1 font-semibold">
-              PAY-AS-YOU-GO MILESTONE SAFEGUARD
-            </span>
-            <strong className="block font-sans text-sm text-[#12324E] font-medium mb-1">
-              Mutual Trust Model
-            </strong>
-            <p className="leading-relaxed">
-              50% deposit to begin. We begin with an initial 50% milestone deposit, provide a protected preview of completed chapters for your verification, and request remaining 50% settlement only prior to clean file release.
-            </p>
-          </div>
-
-          <div className="p-6 bg-[#FFFFFF] border-l-2 border-l-[#1D5382] border-t border-r border-b border-[#D8E2EC] shadow-xs">
-            <span className="text-[10px] font-mono uppercase tracking-widest text-[#1D5382] block mb-1 font-semibold">
-              VARIABLE URGENCY ALLOCATION
-            </span>
-            <strong className="block font-sans text-sm text-[#12324E] font-medium mb-1">
-              Transparent Turnaround Rates
-            </strong>
-            <p className="leading-relaxed">
-              When tight submission windows require dedicated 48–72 hour scholar allocation, calculated urgency surcharges are confirmed upfront in your formal quotation with zero retrospective billing.
-            </p>
-          </div>
-
-          <div className="p-6 bg-[#FFFFFF] border-l-2 border-l-[#12324E] border-t border-r border-b border-[#D8E2EC] shadow-xs">
-            <span className="text-[10px] font-mono uppercase tracking-widest text-[#12324E] block mb-1 font-semibold">
-              INTRODUCTORY CLIENT DISCOUNT
-            </span>
-            <strong className="block font-sans text-sm text-[#12324E] font-medium mb-1">
-              15% Introductory Deduction
-            </strong>
-            <p className="leading-relaxed">
-              To celebrate the launch of {BRAND_CONFIG.name} and foster long-term scholar partnerships, an automatic 15% introductory discount is applied to all initial quotation calculations.
-            </p>
-          </div>
         </div>
 
       </div>

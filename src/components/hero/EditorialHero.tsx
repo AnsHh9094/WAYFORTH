@@ -1,14 +1,9 @@
 'use client';
 
 import React, { useState, useEffect } from 'react';
-import dynamic from 'next/dynamic';
 import { motion, AnimatePresence } from 'framer-motion';
 import { ArrowDown, ArrowUpRight, ShieldCheck, FileCheck, Sparkles, Layers } from 'lucide-react';
 import { BrandName } from '@/config/brand.config';
-
-const AeroShards = dynamic(() => import('@/components/ui/AeroShards'), {
-  ssr: false,
-});
 
 interface EditorialHeroProps {
   brandName: BrandName;
@@ -48,24 +43,6 @@ export function EditorialHero({ brandName, onRequestQuote }: EditorialHeroProps)
 
   return (
     <section className="relative overflow-hidden bg-[#FFFFFF] text-[#12324E] pt-12 pb-20 sm:pt-16 sm:pb-24 border-b border-[#D8E2EC]">
-      {/* Interactive Aero Glass Shards (Ambient Depth on Right) */}
-      <div className="absolute inset-0 pointer-events-none overflow-hidden z-0">
-        <AeroShards
-          placement="right"
-          lightMode={true}
-          shardColor="#1D5382"
-          accentColor="#0284C7"
-          material="glass"
-          count={500}
-          shardSize={1.4}
-          speed={0.5}
-          grain={0.03}
-          glow={0.3}
-          mouseInteraction={true}
-          className="w-full h-full"
-        />
-      </div>
-
       {/* Subtle Architectural Blueprint Grid */}
       <div className="absolute inset-0 pointer-events-none opacity-40">
         <div className="max-w-7xl mx-auto h-full grid grid-cols-4 lg:grid-cols-12 border-x border-[#D8E2EC]">
