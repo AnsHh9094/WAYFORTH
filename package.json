@@ -16,7 +16,8 @@
     "next": "16.4.2",
     "react": "19.3.0",
     "react-dom": "19.3.0",
-    "three": "^0.186.1"
+    "three": "^0.186.1",
+    "vgpu": "^0.6.0"
   },
   "devDependencies": {
     "@tailwindcss/turbopack": "^4",
