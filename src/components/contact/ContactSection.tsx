@@ -44,8 +44,9 @@ export function ContactSection() {
             </div>
 
             <div>
-              <div className="text-xs font-mono font-bold text-[#12324E] mb-4">
-                {BRAND_CONFIG.whatsappNumber}
+              <div className="text-xs font-mono font-semibold text-[#1D5382] mb-4 flex items-center gap-1.5">
+                <span className="w-1.5 h-1.5 rounded-full bg-emerald-500 animate-pulse" />
+                <span>Encrypted Advisory Line</span>
               </div>
               <a
                 href={`https://wa.me/${BRAND_CONFIG.whatsappRawNumber}?text=${encodeURIComponent(

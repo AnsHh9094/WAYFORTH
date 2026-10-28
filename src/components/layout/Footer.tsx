@@ -53,7 +53,7 @@ export function Footer({ onRequestQuote }: FooterProps) {
                   rel="noopener noreferrer"
                   className="hover:text-white transition-colors"
                 >
-                  {BRAND_CONFIG.whatsappNumber} (Direct Advisory Desk)
+                  Direct Advisory Desk (WhatsApp)
                 </a>
               </div>
             </div>
