@@ -1050,6 +1050,7 @@ export default function AeroShards({
       cancelAnimationFrame(raf);
       gpu?.dispose();
       gpu = null;
+      console.warn('[AeroShards] WebGPU init failed (fallback mode):', error);
       onErrorRef.current?.(error instanceof Error ? error : new Error(String(error)));
     };
 
@@ -1057,6 +1058,7 @@ export default function AeroShards({
       if (typeof navigator === 'undefined' || !('gpu' in navigator)) throw new Error('WebGPU is not available');
       const instance = await init({ powerPreference: 'high-performance' });
       gpu = instance;
+      console.log('[AeroShards] WebGPU initialized successfully');
       if (disposed) {
         instance.dispose();
         return;

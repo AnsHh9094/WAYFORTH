@@ -49,17 +49,18 @@ export function EditorialHero({ brandName, onRequestQuote }: EditorialHeroProps)
   return (
     <section className="relative overflow-hidden bg-[#FFFFFF] text-[#12324E] pt-12 pb-20 sm:pt-16 sm:pb-24 border-b border-[#D8E2EC]">
       {/* Interactive Aero Glass Shards (Ambient Depth on Right) */}
-      <div className="absolute inset-0 pointer-events-none overflow-hidden z-0 opacity-50">
+      <div className="absolute inset-0 pointer-events-none overflow-hidden z-0">
         <AeroShards
           placement="right"
           lightMode={true}
           shardColor="#1D5382"
           accentColor="#0284C7"
           material="glass"
-          count={350}
-          speed={0.4}
-          grain={0.02}
-          glow={0.15}
+          count={500}
+          shardSize={1.4}
+          speed={0.5}
+          grain={0.03}
+          glow={0.3}
           mouseInteraction={true}
           className="w-full h-full"
         />
