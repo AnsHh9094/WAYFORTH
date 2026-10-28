@@ -19,9 +19,9 @@ const TRACK_1: MarqueeItem[] = [
 ];
 
 const TRACK_2: MarqueeItem[] = [
-  { text: 'PAY-AS-YOU-GO MILESTONE SAFEGUARD', badge: 'NO UPFRONT FEES' },
+  { text: 'PAY-AS-YOU-GO MILESTONE SAFEGUARD', badge: '50% DEPOSIT' },
   { text: 'INSPECT REPRESENTATIVE SAMPLES FIRST', badge: 'FULL TRUST' },
-  { text: '24-HOUR INCLUDED REVISION WINDOW', badge: 'GUARANTEED' },
+  { text: '1 INCLUDED REVISION ROUND', badge: 'GUARANTEED' },
   { text: 'CBSE, CISCE & STATE BOARDS (CLASS 10-12)', badge: 'COMING SOON' },
   { text: 'EXCEL DATA ANALYSIS & MACROS', badge: 'CLEAN DATASETS' },
   { text: 'MAKE ROOM FOR MORE', badge: 'WAYFORTH.IN' },

@@ -88,9 +88,9 @@ export function QuotationForm() {
 
 *Financial Estimate:*
 • Base + Page Rate: ₹${baseSubtotal.toLocaleString()}
-${urgencyFee > 0 ? `• Urgency Surcharge (+${currentUrgency.multiplier}%): ₹${urgencyFee.toLocaleString()}\n` : ''}${addOnsTotal > 0 ? `• Special Add-ons: ₹${addOnsTotal.toLocaleString()}\n` : ''}• Introductory Goodwill Discount (15%): -₹${discountAmount.toLocaleString()}
+${urgencyFee > 0 ? `• Urgency Surcharge (+${currentUrgency.multiplier}%): ₹${urgencyFee.toLocaleString()}\n` : ''}${addOnsTotal > 0 ? `• Special Add-ons: ₹${addOnsTotal.toLocaleString()}\n` : ''}• Introductory Discount (15%): -₹${discountAmount.toLocaleString()}
 *Estimated Total:* ₹${finalTotal.toLocaleString()}
-*Payment Model:* Pay-As-You-Go Milestone Model (No Big Upfront Fees, Full Trust)
+*Payment Terms:* Pay-As-You-Go Milestone Model (50% Deposit to Begin: ₹${Math.round(finalTotal / 2).toLocaleString()} • 50% Balance on Preview Approval: ₹${Math.round(finalTotal / 2).toLocaleString()})
 
 *Project Brief & Rubric:*
 ${brief || 'Brief will be shared in discussion.'}
@@ -175,7 +175,7 @@ _Initiated via wayforth.in official quotation calculator_`;
             </span>
           </div>
           <span className="text-[#1D5382] uppercase font-semibold">
-            PAY-AS-YOU-GO • NO BIG UPFRONT FEES • FULL TRUST
+            PAY-AS-YOU-GO • 50% INITIAL DEPOSIT • FULL TRUST
           </span>
         </div>
 
@@ -192,7 +192,7 @@ _Initiated via wayforth.in official quotation calculator_`;
               </h2>
               <p className="text-xs sm:text-sm text-[#42586E] leading-relaxed">
                 Configure your academic level, page volume, turnaround deadline, and custom design needs.
-                Includes our <strong>15% introductory goodwill discount</strong> automatically.
+                Includes our <strong>15% introductory discount</strong> automatically.
               </p>
             </div>
 
@@ -242,11 +242,11 @@ _Initiated via wayforth.in official quotation calculator_`;
                   </div>
                 )}
 
-                {/* 15% Introductory Goodwill Discount */}
+                {/* 15% Introductory Discount */}
                 <div className="flex justify-between items-center text-[#12324E] pt-2 border-t border-[#F4F7FB] bg-[#F0F5FA] p-2 -mx-2">
                   <span className="flex items-center gap-1 font-semibold text-[#1D5382]">
                     <Sparkles className="w-3.5 h-3.5 text-[#38BDF8]" />
-                    <span>Inaugural Goodwill Discount:</span>
+                    <span>Introductory Discount:</span>
                   </span>
                   <span className="font-bold text-[#1D5382]">
                     -15% (-₹{discountAmount.toLocaleString()})
@@ -274,27 +274,33 @@ _Initiated via wayforth.in official quotation calculator_`;
                 </div>
               </div>
 
-              {/* Pay-as-you-go Banner */}
-              <div className="p-3 bg-[#F4F7FB] border border-[#D8E2EC] text-[11px] font-mono text-[#12324E] space-y-1">
+              {/* Pay-as-you-go Balanced Milestones Breakdown */}
+              <div className="p-3.5 bg-[#F4F7FB] border border-[#D8E2EC] text-[11px] font-mono text-[#12324E] space-y-2">
                 <div className="flex items-center gap-1.5 font-bold text-[#1D5382]">
                   <ShieldCheck className="w-3.5 h-3.5 text-[#1D5382]" />
-                  <span>PAY-AS-YOU-GO MODEL // FULL TRUST</span>
+                  <span>PAY-AS-YOU-GO MILESTONES (50 / 50)</span>
                 </div>
-                <p className="text-[#42586E] text-[10.5px] leading-relaxed">
-                  No big upfront fees. Initial deposit initiates research → inspect protected watermarked sample preview → 1 included revision round → release balance.
+                <div className="flex justify-between text-[#42586E]">
+                  <span>50% Advance to Begin:</span>
+                  <span className="font-bold text-[#12324E]">₹{Math.round(finalTotal / 2).toLocaleString()}</span>
+                </div>
+                <div className="flex justify-between text-[#42586E]">
+                  <span>50% Balance on Preview Approval:</span>
+                  <span className="font-bold text-[#12324E]">₹{Math.round(finalTotal / 2).toLocaleString()}</span>
+                </div>
+                <p className="text-[#4A607A] text-[10px] leading-relaxed pt-1.5 border-t border-[#D8E2EC]">
+                  Pay 50% deposit to initiate research → review watermarked representative preview → 1 included revision round → release final balance.
                 </p>
               </div>
 
-              {/* Direct WhatsApp Instant Trigger */}
-              <a
-                href={whatsappUrl}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="w-full py-3.5 bg-[#12324E] text-white hover:bg-[#1D5382] transition-colors text-xs font-mono uppercase tracking-widest flex items-center justify-center gap-2 cursor-pointer shadow-xs"
-              >
-                <MessageSquare className="w-4 h-4 text-[#38BDF8]" />
-                <span>Lock Quote on WhatsApp Instantly</span>
-              </a>
+              {/* Informational assurance tag instead of a second conflicting button */}
+              <div className="p-2.5 bg-[#F0F5FA] border border-[#C5DCF0] text-[11px] font-mono text-[#1D5382] flex items-center justify-between">
+                <span className="flex items-center gap-1.5 font-semibold">
+                  <Check className="w-3.5 h-3.5 text-[#1D5382]" />
+                  <span>15% Introductory Rate Applied</span>
+                </span>
+                <span className="text-[10px] uppercase font-bold text-[#12324E]">Formal Quote</span>
+              </div>
 
               <p className="text-[10px] text-center font-mono text-[#738A9E]">
                 Questions? Direct email: <strong>{BRAND_CONFIG.contactEmail}</strong>
@@ -467,20 +473,24 @@ _Initiated via wayforth.in official quotation calculator_`;
                   <div className="flex items-center justify-between mb-2">
                     <label className="text-xs font-mono uppercase tracking-wider text-[#12324E] font-semibold flex items-center gap-1.5">
                       <Layers className="w-3.5 h-3.5 text-[#1D5382]" />
-                      <span>4. Special Custom Scope Add-ons (Optional)</span>
+                      <span>4. Custom Scope Additions (Graphs, Instruments & Analysis)</span>
                     </label>
+                    <span className="text-[10px] font-mono text-[#1D5382]">Select all that apply</span>
                   </div>
 
                   <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
                     {BRAND_CONFIG.customAddOns.map((addon) => {
                       const isChecked = selectedAddons.includes(addon.id);
+                      const isCharts = addon.id === 'charts';
                       return (
                         <div
                           key={addon.id}
                           onClick={() => toggleAddon(addon.id)}
-                          className={`p-3 border flex items-start gap-3 transition-colors cursor-pointer ${
+                          className={`p-3 border flex items-start gap-3 transition-colors cursor-pointer rounded-[2px] ${
                             isChecked
-                              ? 'bg-[#F0F5FA] border-[#12324E]'
+                              ? 'bg-[#F0F5FA] border-[#12324E] shadow-2xs'
+                              : isCharts
+                              ? 'bg-[#FAFCFF] border-[#B8C9D8] hover:border-[#12324E]'
                               : 'bg-[#FFFFFF] border-[#D8E2EC] hover:border-[#B8C9D8]'
                           }`}
                         >
@@ -488,23 +498,28 @@ _Initiated via wayforth.in official quotation calculator_`;
                             className={`w-4 h-4 rounded-[2px] border mt-0.5 flex items-center justify-center shrink-0 ${
                               isChecked
                                 ? 'bg-[#12324E] border-[#12324E] text-white'
-                                : 'border-[#B8C9D8] bg-white'
+                                : 'border-[#94A3B8] bg-white'
                             }`}
                           >
                             {isChecked && <Check className="w-3 h-3" />}
                           </div>
-                          <div className="space-y-0.5">
+                          <div className="space-y-0.5 w-full">
                             <div className="flex items-center justify-between gap-2">
-                              <span className="text-xs font-mono font-medium text-[#12324E]">
+                              <span className="text-xs font-mono font-semibold text-[#12324E]">
                                 {addon.label}
                               </span>
-                              <span className="text-[10px] font-mono text-[#1D5382] font-bold">
+                              <span className="text-[10px] font-mono text-[#1D5382] font-bold shrink-0">
                                 +₹{addon.price}
                               </span>
                             </div>
                             <p className="text-[11px] text-[#4A607A] leading-tight">
                               {addon.description}
                             </p>
+                            {isCharts && (
+                              <span className="inline-block mt-1 text-[9px] font-mono text-[#1D5382] bg-[#EBF3FB] px-1.5 py-0.2 border border-[#C5DCF0]">
+                                Custom data graphs & visual models
+                              </span>
+                            )}
                           </div>
                         </div>
                       );
@@ -603,19 +618,19 @@ _Initiated via wayforth.in official quotation calculator_`;
                   </div>
                 </div>
 
-                {/* Submission Button */}
+                {/* Single Consolidated Submission Button */}
                 <div className="space-y-3 pt-2">
                   <button
                     type="submit"
                     disabled={isSubmitting}
-                    className="w-full py-4 bg-[#12324E] text-white hover:bg-[#1D5382] transition-colors text-xs font-mono uppercase tracking-widest flex items-center justify-center gap-2 cursor-pointer shadow-xs disabled:opacity-50"
+                    className="w-full py-4 bg-[#12324E] text-white hover:bg-[#1D5382] transition-colors text-xs font-mono uppercase tracking-widest flex items-center justify-center gap-2 cursor-pointer shadow-xs disabled:opacity-50 font-semibold"
                   >
-                    <span>{isSubmitting ? 'Verifying Brief...' : 'Send Requirements via WhatsApp'}</span>
+                    <span>{isSubmitting ? 'Formatting Brief...' : 'Send Requirements & Lock Quote via WhatsApp'}</span>
                     <Send className="w-4 h-4 text-[#38BDF8]" />
                   </button>
 
                   <p className="text-[10px] text-center font-mono text-[#4A607A]">
-                    Submitting automatically prepares your quotation brief and transmits it directly to our advisory WhatsApp. Zero upfront commitment.
+                    Submitting automatically prepares your quotation brief and transmits it directly to our advisory WhatsApp. Pay-as-you-go milestone model (50% deposit to begin).
                   </p>
                 </div>
               </form>

@@ -19,8 +19,8 @@ export function PrecisionCursor() {
   useEffect(() => {
     // Disable on touch devices
     if (window.matchMedia('(pointer: coarse)').matches) {
-      setIsTouch(true);
-      return;
+      const timer = setTimeout(() => setIsTouch(true), 0);
+      return () => clearTimeout(timer);
     }
 
     const handleMouseMove = (e: MouseEvent) => {

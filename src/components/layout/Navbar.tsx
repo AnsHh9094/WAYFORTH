@@ -61,7 +61,7 @@ export function Navbar({ onRequestQuote }: NavbarProps) {
               <span>{BRAND_CONFIG.contactEmail}</span>
             </a>
             <span>•</span>
-            <span className="text-[#38BDF8] font-semibold">15% INAUGURAL GOODWILL DISCOUNT</span>
+            <span className="text-[#38BDF8] font-semibold">15% INTRODUCTORY DISCOUNT</span>
           </div>
         </div>
       </div>

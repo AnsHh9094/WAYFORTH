@@ -1,28 +1,7 @@
 import type { Metadata } from 'next';
-import { Fraunces, Inter_Tight, JetBrains_Mono } from 'next/font/google';
 import './globals.css';
 import { BRAND_CONFIG } from '@/config/brand.config';
 import { GoogleAnalytics } from '@/components/analytics/GoogleAnalytics';
-
-const fraunces = Fraunces({
-  subsets: ['latin'],
-  variable: '--font-serif',
-  display: 'swap',
-  axes: ['opsz'],
-  style: ['normal', 'italic'],
-});
-
-const interTight = Inter_Tight({
-  subsets: ['latin'],
-  variable: '--font-sans',
-  display: 'swap',
-});
-
-const jetbrainsMono = JetBrains_Mono({
-  subsets: ['latin'],
-  variable: '--font-mono',
-  display: 'swap',
-});
 
 export const metadata: Metadata = {
   metadataBase: new URL(`https://${BRAND_CONFIG.domain}`),
@@ -102,7 +81,7 @@ export default function RootLayout({
         name: 'What is the Wayforth pay-as-you-go milestone model?',
         acceptedAnswer: {
           '@type': 'Answer',
-          text: 'Wayforth operates on a trust-first milestone model. Work commences with an initial milestone deposit rather than requiring 100% upfront payment. Clients inspect an authentic watermarked preview sample of their work and receive 1 included revision round within 24 hours before settling the final balance.',
+          text: 'Wayforth operates on a trust-first milestone model. Work commences with a 50% milestone deposit rather than requiring 100% upfront payment. Clients inspect an authentic watermarked preview sample of their work and receive 1 included revision round before settling the final 50% balance.',
         },
       },
       {
@@ -118,7 +97,7 @@ export default function RootLayout({
         name: 'How does Wayforth calculate pricing for academic advisory?',
         acceptedAnswer: {
           '@type': 'Answer',
-          text: 'Pricing uses a transparent mathematical formula: Base Starting Fee + (Pages × Per-Page Rate) + Urgency Surcharge + Custom Add-ons, minus an automatic 15% introductory goodwill discount. Standard page volumes represent 250 to 300 words per page.',
+          text: 'Pricing uses a transparent mathematical formula: Base Starting Fee + (Pages × Per-Page Rate) + Urgency Surcharge + Custom Add-ons, minus an automatic 15% introductory discount. Standard page volumes represent 250 to 300 words per page.',
         },
       },
       {
@@ -135,7 +114,7 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={`${fraunces.variable} ${interTight.variable} ${jetbrainsMono.variable} scroll-smooth antialiased`}
+      className="scroll-smooth antialiased"
     >
       <head>
         <script

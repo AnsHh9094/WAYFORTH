@@ -111,16 +111,16 @@ export default function TermsPage() {
                 <strong>Step 1 (Brief & Quote):</strong> You share your project guidelines, rubric, and target deadline. We issue a formal written quotation with an itemized breakdown.
               </li>
               <li>
-                <strong>Step 2 (Initial Milestone Deposit):</strong> Work commences immediately upon receipt of a trusted milestone deposit. No big upfront fees, full trust.
+                <strong>Step 2 (50% Initial Milestone Deposit):</strong> Work commences immediately upon receipt of a 50% milestone advance deposit. Pay-as-you-go milestone safeguard.
               </li>
               <li>
                 <strong>Step 3 (Watermarked Preview):</strong> Once a representative draft or designated chapter section is prepared, you receive a protected watermarked preview to evaluate research depth, citation rigor, and writing tone.
               </li>
               <li>
-                <strong>Step 4 (1 Included Revision):</strong> You have a <strong>24-hour review window</strong> to consolidate feedback for the included revision round.
+                <strong>Step 4 (1 Included Revision):</strong> One comprehensive revision round is included to consolidate feedback and fine-tune your deliverable within the agreed brief.
               </li>
               <li>
-                <strong>Step 5 (Final Settlement & Release):</strong> The remaining milestone balance becomes due after preview acceptance, upon which clean unwatermarked Word (.docx) and PDF files are released.
+                <strong>Step 5 (Final 50% Settlement & Release):</strong> The remaining 50% milestone balance becomes due after preview acceptance, upon which clean unwatermarked Word (.docx) and PDF files are released.
               </li>
             </ul>
           </section>

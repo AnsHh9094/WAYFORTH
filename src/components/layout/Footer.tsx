@@ -85,7 +85,7 @@ export function Footer({ onRequestQuote }: FooterProps) {
                 <span>Pay-As-You-Go Milestone Model</span>
               </div>
               <p className="text-[11px] leading-relaxed">
-                Initial deposit to commence research → watermarked preview review → 1 included revision round → release balance. No big upfront fees, full trust.
+                50% deposit to commence research → watermarked preview review → 1 included revision round → release remaining 50% balance. Pay-as-you-go milestone safeguard.
               </p>
             </div>
 

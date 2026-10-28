@@ -23,17 +23,17 @@ const STATS: StatItem[] = [
   },
   {
     icon: <Zap className="w-5 h-5 text-[#38BDF8]" />,
-    value: 0,
-    prefix: '₹',
-    label: 'Upfront Lock-In Fees',
-    sublabel: 'Pay-as-you-go trust milestones',
+    value: 50,
+    suffix: '%',
+    label: 'Initial Milestone Deposit',
+    sublabel: 'Pay-as-you-go milestone safeguard',
   },
   {
     icon: <Award className="w-5 h-5 text-[#38BDF8]" />,
-    value: 24,
-    suffix: 'h',
-    label: 'Fast Revision Turnaround',
-    sublabel: '1 included feedback round within 24h',
+    value: 1,
+    suffix: ' Round',
+    label: 'Included Revision',
+    sublabel: 'Comprehensive feedback & refinements included',
   },
   {
     icon: <BookOpen className="w-5 h-5 text-[#38BDF8]" />,
@@ -52,8 +52,7 @@ function CounterNumber({ value, prefix = '', suffix = '' }: { value: number; pre
   useEffect(() => {
     if (!isInView) return;
 
-    if (value === 0) {
-      setCount(0);
+    if (value <= 0) {
       return;
     }
 

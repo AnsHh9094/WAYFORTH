@@ -9,10 +9,8 @@ import { InfiniteMarquee } from '@/components/marquee/InfiniteMarquee';
 import { KineticStatsTicker } from '@/components/stats/KineticStatsTicker';
 import { ManifestoSection } from '@/components/manifesto/ManifestoSection';
 import { ServiceDossier } from '@/components/services/ServiceDossier';
-import { StandardComparison } from '@/components/comparison/StandardComparison';
 import { PricingMatrix } from '@/components/pricing/PricingMatrix';
 import { TimelineSteps } from '@/components/workflow/TimelineSteps';
-import { TermsAccordion } from '@/components/legal/TermsAccordion';
 import { QuotationForm } from '@/components/quotation/QuotationForm';
 import { Footer } from '@/components/layout/Footer';
 import { ArchivalScrollDock } from '@/components/dock/ArchivalScrollDock';
@@ -67,11 +65,6 @@ export default function HomePage() {
           <ServiceDossier onRequestQuote={handleScrollToQuote} />
         </div>
 
-        {/* The Standard vs Competitors (Milestone Model & Academic Specialization) */}
-        <div id="comparison">
-          <StandardComparison brandName={brandName} />
-        </div>
-
         {/* Pricing Formula & Page Definition */}
         <div id="pricing">
           <PricingMatrix onRequestQuote={handleScrollToQuote} />
@@ -84,11 +77,6 @@ export default function HomePage() {
 
         {/* Interactive Quotation Intake & Live Pricing Calculator Console */}
         <QuotationForm />
-
-        {/* Governance, Cancellation, Ethics & Disclaimers */}
-        <div id="terms">
-          <TermsAccordion brandName={brandName} />
-        </div>
 
         {/* Print Editorial Footer */}
         <Footer onRequestQuote={handleScrollToQuote} />

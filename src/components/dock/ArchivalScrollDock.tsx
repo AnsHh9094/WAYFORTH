@@ -12,7 +12,6 @@ const SECTIONS = [
   { id: 'hero', label: 'THESIS' },
   { id: 'manifesto', label: 'MANIFESTO' },
   { id: 'disciplines', label: 'DISCIPLINES' },
-  { id: 'comparison', label: 'THE STANDARD' },
   { id: 'pricing', label: 'FEES' },
   { id: 'workflow', label: 'WORKFLOW' },
   { id: 'quote-console', label: 'INTAKE' },

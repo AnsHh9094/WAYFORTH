@@ -34,7 +34,7 @@ export function PricingMatrix({ onRequestQuote }: PricingMatrixProps) {
             </span>
           </div>
           <span className="text-[#1D5382] uppercase font-semibold">
-            PAY-AS-YOU-GO • 15% INAUGURAL GOODWILL
+            PAY-AS-YOU-GO • 15% INTRODUCTORY DISCOUNT
           </span>
         </div>
 
@@ -47,7 +47,7 @@ export function PricingMatrix({ onRequestQuote }: PricingMatrixProps) {
           </h2>
           <p className="text-[#42586E] text-base leading-relaxed">
             Every engagement at {BRAND_CONFIG.name} is structured around a clear base floor and a transparent per-page rate. 
-            All projects follow milestone reviews, ensuring you inspect quality before releasing final funds.
+            All projects follow milestone reviews with 50% deposit to begin, ensuring you inspect quality before releasing final funds.
           </p>
         </div>
 
@@ -59,11 +59,11 @@ export function PricingMatrix({ onRequestQuote }: PricingMatrixProps) {
                 The Fee Formula
               </span>
               <span className="text-[10px] font-mono px-2 py-0.5 bg-[#EBF3FB] text-[#1D5382] border border-[#C5DCF0] font-semibold">
-                15% Goodwill Discount Applied on Final Total
+                15% Introductory Discount Applied on Final Total
               </span>
             </div>
             <div className="font-serif text-lg sm:text-xl text-[#12324E] font-medium">
-              Base Project Floor + Itemized Page Volume — 15% Inaugural Discount
+              Base Project Floor + Itemized Page Volume — 15% Introductory Discount
             </div>
             <p className="text-xs text-[#738A9E] font-sans">
               Confirmed in writing before initiation. One comprehensive revision round included with all orders.
@@ -177,7 +177,7 @@ export function PricingMatrix({ onRequestQuote }: PricingMatrixProps) {
               Mutual Trust Model
             </strong>
             <p className="leading-relaxed">
-              No big upfront fees. We begin with an initial milestone deposit, provide a protected preview of completed chapters for your verification, and request final settlement only prior to clean file release.
+              50% deposit to begin. We begin with an initial 50% milestone deposit, provide a protected preview of completed chapters for your verification, and request remaining 50% settlement only prior to clean file release.
             </p>
           </div>
 
@@ -195,13 +195,13 @@ export function PricingMatrix({ onRequestQuote }: PricingMatrixProps) {
 
           <div className="p-6 bg-[#FFFFFF] border-l-2 border-l-[#12324E] border-t border-r border-b border-[#D8E2EC] shadow-xs">
             <span className="text-[10px] font-mono uppercase tracking-widest text-[#12324E] block mb-1 font-semibold">
-              INAUGURAL CLIENT DISCOUNT
+              INTRODUCTORY CLIENT DISCOUNT
             </span>
             <strong className="block font-sans text-sm text-[#12324E] font-medium mb-1">
-              15% Goodwill Deduction
+              15% Introductory Deduction
             </strong>
             <p className="leading-relaxed">
-              To celebrate the launch of {BRAND_CONFIG.name} and foster long-term scholar partnerships, an automatic 15% discount is applied to all initial quotation calculations.
+              To celebrate the launch of {BRAND_CONFIG.name} and foster long-term scholar partnerships, an automatic 15% introductory discount is applied to all initial quotation calculations.
             </p>
           </div>
         </div>
