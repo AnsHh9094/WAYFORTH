@@ -69,7 +69,6 @@ export function EditorialHero({ brandName, onRequestQuote }: EditorialHeroProps)
             <span className="hidden sm:inline text-[#B8C9D8]">•</span>
             <span className="hidden sm:inline text-[#1D5382] font-medium">100% GENUINE HUMAN AUTHORSHIP</span>
           </div>
-          <span className="text-[#1D5382] font-bold tracking-widest">WAYFORTH ARCHIVAL FOLIO // 2026</span>
         </motion.div>
 
         {/* Clean Editorial Hero Layout */}
