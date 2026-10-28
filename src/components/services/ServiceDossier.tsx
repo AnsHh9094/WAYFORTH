@@ -4,19 +4,13 @@ import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { BRAND_CONFIG, SampleSpecimen } from '@/config/brand.config';
 import {
-  Check,
   ArrowUpRight,
-  Lock,
-  BookOpen,
-  BarChart3,
-  GraduationCap,
-  FileCheck,
-  FileText,
   Eye,
   X,
   ShieldCheck,
   CheckCircle2,
   Clock,
+  Sparkles,
 } from 'lucide-react';
 
 interface ServiceDossierProps {
@@ -26,7 +20,6 @@ interface ServiceDossierProps {
 const editorial = [0.16, 1, 0.3, 1] as const;
 
 export function ServiceDossier({ onRequestQuote }: ServiceDossierProps) {
-  const [activeTab, setActiveTab] = useState(BRAND_CONFIG.services[0].id);
   const [selectedSample, setSelectedSample] = useState<SampleSpecimen | null>(null);
 
   // Lock background scroll and pause Lenis while modal is open
@@ -55,206 +48,115 @@ export function ServiceDossier({ onRequestQuote }: ServiceDossierProps) {
     };
   }, [selectedSample]);
 
-  const currentService =
-    BRAND_CONFIG.services.find((s) => s.id === activeTab) || BRAND_CONFIG.services[0];
-
-  const getIcon = (id: string) => {
-    switch (id) {
-      case 'undergrad':
-        return <GraduationCap className="w-4 h-4 text-[#1D5382]" />;
-      case 'postgrad':
-        return <BookOpen className="w-4 h-4 text-[#1D5382]" />;
-      case 'research':
-        return <FileCheck className="w-4 h-4 text-[#1D5382]" />;
-      case 'quantitative':
-        return <BarChart3 className="w-4 h-4 text-[#1D5382]" />;
-      default:
-        return <Lock className="w-4 h-4 text-[#1D5382]" />;
-    }
-  };
-
   return (
-    <section id="disciplines" className="py-20 sm:py-28 bg-[#FFFFFF] border-b border-[#D8E2EC]">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <section id="disciplines" className="py-24 sm:py-36 bg-[#FAFAF8] border-b border-[#E2DDD5]">
+      <div className="max-w-6xl mx-auto px-6 sm:px-10 lg:px-12">
         
-        {/* Section Header */}
-        <div className="flex items-center justify-between border-b border-[#D8E2EC] pb-4 mb-12 text-xs font-mono text-[#4A607A]">
-          <div className="flex items-center gap-2">
-            <span className="w-1.5 h-1.5 bg-[#12324E]" />
-            <span className="uppercase tracking-widest text-[#12324E] font-semibold">
-              ACADEMIC DISCIPLINES & RESEARCH SCOPE
-            </span>
+        {/* Section Header — Broadsheet style */}
+        <div className="flex flex-col sm:flex-row sm:items-baseline justify-between gap-4 mb-20 border-b border-[#E2DDD5] pb-8">
+          <div>
+            <p className="text-xs font-mono tracking-[0.25em] uppercase text-[#1D5382] font-semibold mb-2">
+              Academic Disciplines // Scope
+            </p>
+            <h2 className="font-serif text-3xl sm:text-4xl lg:text-5xl font-normal text-[#12324E] tracking-tight">
+              Four specialized tiers. One standard of scholarship.
+            </h2>
           </div>
-          <span className="text-[#1D5382] uppercase font-semibold">FOUR COMPREHENSIVE TIERS</span>
-        </div>
-
-        <div className="max-w-3xl mb-12">
-          <span className="text-xs font-mono uppercase tracking-widest text-[#1D5382] block mb-2 font-semibold">
-            Academic Scope & Portfolio
-          </span>
-          <h2 className="font-serif text-3xl sm:text-5xl font-normal text-[#12324E] leading-tight mb-4">
-            Specialized academic support with representative research portfolios.
-          </h2>
-          <p className="text-[#364B62] text-base leading-relaxed">
-            Every academic level demands distinct analytical rigor, formatting styles, and citation standards.
-            Explore each discipline below along with its representative project sample.
+          <p className="text-xs font-mono text-[#738A9E] sm:text-right shrink-0">
+            50+ Undergrad to Doctoral Methodologies
           </p>
         </div>
 
-        {/* Tab Selector Matrix */}
-        <div className="grid grid-cols-2 lg:grid-cols-4 border border-[#D8E2EC] bg-[#F4F7FB] mb-8 shadow-2xs">
-          {BRAND_CONFIG.services.map((service) => {
-            const isActive = activeTab === service.id;
-            return (
-              <button
-                key={service.id}
-                onClick={() => setActiveTab(service.id)}
-                className={`p-4 text-left border-r border-[#D8E2EC] last:border-r-0 transition-colors cursor-pointer relative ${
-                  isActive
-                    ? 'bg-[#FFFFFF] text-[#12324E] shadow-xs'
-                    : 'text-[#364B62] hover:bg-[#EBF1F6]'
-                }`}
-              >
-                {/* Active tab indicator bar */}
-                {isActive && (
-                  <motion.div
-                    layoutId="activeTabIndicator"
-                    className="absolute bottom-0 left-0 right-0 h-[2.5px] bg-[#12324E]"
-                    transition={{ type: 'spring', stiffness: 380, damping: 34 }}
-                  />
-                )}
-                <div className="flex items-center justify-between mb-2">
-                  <span className="p-1.5 bg-[#F4F7FB] border border-[#D8E2EC]">
-                    {getIcon(service.id)}
-                  </span>
-                  <span className="text-[10px] font-mono uppercase tracking-wider text-[#1D5382] font-semibold">
-                    {service.badge}
-                  </span>
-                </div>
-                <div className="font-serif text-sm sm:text-base font-semibold leading-tight mb-1 text-[#12324E]">
-                  {service.title}
-                </div>
-                <div className="text-[11px] font-mono text-[#4A607A] truncate">
-                  {service.targetAudience}
-                </div>
-              </button>
-            );
-          })}
-        </div>
-
-        {/* Active Discipline Deep Dossier */}
-        <div className="bg-[#FFFFFF] border border-[#D8E2EC] p-6 sm:p-10 shadow-xs mb-10">
-          <AnimatePresence mode="wait">
-            <motion.div
-              key={currentService.id}
-              initial={{ opacity: 0, y: 10 }}
-              animate={{ opacity: 1, y: 0 }}
-              exit={{ opacity: 0, y: -10 }}
-              transition={{ duration: 0.35, ease: editorial }}
+        {/* The Broadsheet Docket List (divide-y replaces card borders completely) */}
+        <div className="divide-y divide-[#E2DDD5]">
+          {BRAND_CONFIG.services.map((service, idx) => (
+            <div
+              key={service.id}
+              className="group grid grid-cols-1 lg:grid-cols-12 gap-8 py-16 items-start transition-colors hover:bg-[#F3EFE6]/40 px-4 -mx-4 rounded-[2px]"
             >
-              <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 items-start">
-                {/* Left Column: Scope Details & Deliverables */}
-                <div className="lg:col-span-7 space-y-6">
+              {/* LEFT COLUMN: Large Ghost Ordinal + Narrative Scope */}
+              <div className="lg:col-span-8 flex flex-col sm:flex-row gap-6 sm:gap-10 items-start">
+                {/* Large Ghost Ordinal */}
+                <span
+                  className="font-serif text-[4rem] sm:text-[5rem] font-light text-[#D5CEBF] leading-none select-none flex-none w-16 sm:w-20 text-left sm:text-right"
+                  aria-hidden="true"
+                >
+                  0{idx + 1}
+                </span>
+
+                <div className="pt-2 space-y-4">
                   <div>
-                    <span className="text-xs font-mono uppercase tracking-widest text-[#1D5382] block mb-2 font-semibold">
-                      Target Audience: {currentService.targetAudience}
+                    <span className="text-[10.5px] font-mono tracking-[0.2em] uppercase text-[#1D5382] font-semibold block mb-1">
+                      {service.badge} • {service.targetAudience}
                     </span>
-                    <h3 className="font-serif text-2xl sm:text-3xl text-[#12324E] leading-snug mb-3">
-                      {currentService.title}
+                    <h3 className="text-2xl sm:text-3xl font-serif font-normal text-[#12324E] tracking-tight group-hover:text-[#1D5382] transition-colors">
+                      {service.title}
                     </h3>
-                    <p className="text-sm text-[#364B62] leading-relaxed">
-                      {currentService.description}
-                    </p>
                   </div>
 
-                  <div>
-                    <span className="text-xs font-mono uppercase tracking-wider text-[#12324E] block mb-3 font-semibold">
-                      Core Academic Deliverables & Focus Areas:
-                    </span>
-                    <div className="grid grid-cols-1 sm:grid-cols-2 gap-2.5">
-                      {currentService.deliverables.map((item, idx) => (
-                        <div
-                          key={idx}
-                          className="flex items-start gap-2.5 p-3 bg-[#F4F7FB] border border-[#D8E2EC] text-xs text-[#364B62]"
-                        >
-                          <Check className="w-3.5 h-3.5 text-[#1D5382] mt-0.5 shrink-0" />
-                          <span>{item}</span>
-                        </div>
-                      ))}
-                    </div>
-                  </div>
+                  <p className="text-[#4A607A] text-sm sm:text-base leading-[1.85] font-light max-w-xl">
+                    {service.description}
+                  </p>
 
-                  <div className="pt-2 flex flex-wrap items-center gap-3">
-                    <button
-                      onClick={onRequestQuote}
-                      className="inline-flex items-center gap-2 px-6 py-3.5 bg-[#12324E] text-white text-xs font-mono uppercase tracking-wider hover:bg-[#1D5382] transition-colors cursor-pointer"
-                    >
-                      <span>Calculate Quote for This Discipline</span>
-                      <ArrowUpRight className="w-4 h-4 text-[#38BDF8]" />
-                    </button>
-
-                    {currentService.sample && (
-                      <button
-                        onClick={() => setSelectedSample(currentService.sample!)}
-                        className="inline-flex items-center gap-2 px-5 py-3.5 bg-[#F4F7FB] border border-[#D8E2EC] text-[#12324E] text-xs font-mono uppercase tracking-wider hover:border-[#12324E] transition-colors cursor-pointer"
+                  {/* Core Deliverable Tags */}
+                  <div className="flex flex-wrap gap-2 pt-2">
+                    {service.deliverables.map((item, dIdx) => (
+                      <span
+                        key={dIdx}
+                        className="text-[11px] font-mono px-2.5 py-1 bg-[#FFFFFF] border border-[#E2DDD5] text-[#364B62]"
                       >
-                        <Eye className="w-4 h-4 text-[#1D5382]" />
-                        <span>Examine Exemplar Sample</span>
-                      </button>
-                    )}
+                        {item}
+                      </span>
+                    ))}
                   </div>
                 </div>
+              </div>
 
-                {/* Right Column: Integrated Live Sample Specimen Card */}
-                {currentService.sample && (
-                  <div className="lg:col-span-5 bg-[#F4F7FB] border border-[#D8E2EC] p-6 space-y-4 relative">
-                    <div className="flex items-center justify-between text-[10px] font-mono border-b border-[#D8E2EC] pb-3">
-                      <span className="text-[#1D5382] uppercase font-bold flex items-center gap-1.5">
-                        <FileText className="w-3.5 h-3.5" />
-                        <span>PORTFOLIO SPECIMEN</span>
-                      </span>
-                      <span className="text-[#4A607A] font-semibold">{currentService.sample.pageCount} PAGES</span>
-                    </div>
-
-                    <div>
-                      <span className="text-[10px] font-mono uppercase text-[#4A607A] block mb-1 font-semibold">
-                        {currentService.sample.category}
-                      </span>
-                      <h4 className="font-serif text-lg text-[#12324E] leading-snug font-medium mb-2">
-                        {currentService.sample.title}
-                      </h4>
-                      <p className="text-xs text-[#364B62] leading-relaxed line-clamp-3">
-                        {currentService.sample.executiveSummary}
+              {/* RIGHT COLUMN: Deliverable Specimen & Actions */}
+              <div className="lg:col-span-4 lg:text-right pt-2 pl-0 sm:pl-28 lg:pl-0 space-y-4">
+                <div>
+                  <p className="text-[10px] font-mono tracking-[0.2em] uppercase text-[#8A9BB0] font-semibold mb-1">
+                    Representative Deliverable
+                  </p>
+                  {service.sample && (
+                    <div className="space-y-1">
+                      <p className="text-sm font-serif text-[#12324E] font-medium">
+                        {service.sample.title}
+                      </p>
+                      <p className="text-xs font-mono text-[#738A9E]">
+                        {service.sample.wordCount} • {service.sample.institutionFormat}
                       </p>
                     </div>
+                  )}
+                </div>
 
-                    <div className="bg-[#FFFFFF] border border-[#D8E2EC] p-3 text-xs font-mono space-y-1.5">
-                      <div className="flex justify-between text-[#4A607A]">
-                        <span>Standard Metric:</span>
-                        <span className="text-[#12324E] font-semibold">{currentService.sample.institutionFormat}</span>
-                      </div>
-                      <div className="flex justify-between text-[#4A607A]">
-                        <span>Volume Caliber:</span>
-                        <span className="text-[#12324E] font-semibold">{currentService.sample.wordCount}</span>
-                      </div>
-                    </div>
-
+                {/* Actions */}
+                <div className="flex flex-wrap lg:justify-end gap-3 pt-2">
+                  {service.sample && (
                     <button
-                      onClick={() => setSelectedSample(currentService.sample!)}
-                      className="w-full py-2.5 bg-[#FFFFFF] border border-[#12324E] text-[#12324E] text-xs font-mono uppercase tracking-wider hover:bg-[#12324E] hover:text-white transition-colors cursor-pointer flex items-center justify-center gap-2"
+                      onClick={() => setSelectedSample(service.sample!)}
+                      className="inline-flex items-center gap-1.5 px-4 py-2 bg-[#FFFFFF] border border-[#12324E] text-[#12324E] text-xs font-mono uppercase tracking-wider hover:bg-[#12324E] hover:text-white transition-colors cursor-pointer rounded-[2px]"
                     >
                       <Eye className="w-3.5 h-3.5" />
-                      <span>Inspect Representative Excerpts</span>
+                      <span>Inspect Specimen</span>
                     </button>
-                  </div>
-                )}
+                  )}
+
+                  <button
+                    onClick={onRequestQuote}
+                    className="inline-flex items-center gap-1.5 px-4 py-2 bg-[#12324E] text-white text-xs font-mono uppercase tracking-wider hover:bg-[#1D5382] transition-colors cursor-pointer rounded-[2px]"
+                  >
+                    <span>Quote Scope</span>
+                    <ArrowUpRight className="w-3.5 h-3.5 text-[#38BDF8]" />
+                  </button>
+                </div>
               </div>
-            </motion.div>
-          </AnimatePresence>
+            </div>
+          ))}
         </div>
 
-        {/* ── COMING SOON: Class 10, 11 & 12 School Boards ── */}
-        <div className="p-6 bg-[#F4F7FB] border border-[#D8E2EC] flex flex-col md:flex-row items-start md:items-center justify-between gap-6">
+        {/* ── Secondary School Boards Notice ── */}
+        <div className="mt-16 p-6 sm:p-8 bg-[#FFFFFF] border border-[#E2DDD5] flex flex-col md:flex-row items-start md:items-center justify-between gap-6 shadow-2xs">
           <div className="space-y-1.5">
             <div className="flex items-center gap-2">
               <span className="inline-flex items-center gap-1 px-2 py-0.5 bg-[#12324E] text-white text-[10px] font-mono uppercase tracking-wider font-semibold">
@@ -268,12 +170,12 @@ export function ServiceDossier({ onRequestQuote }: ServiceDossierProps) {
             <h4 className="font-serif text-lg text-[#12324E] font-normal">
               Class 10, 11 & 12 Secondary School Project Advisory
             </h4>
-            <p className="text-xs text-[#364B62] leading-relaxed max-w-2xl">
+            <p className="text-xs text-[#4A607A] leading-relaxed max-w-2xl font-light">
               Board-related practical files, subject-specific reports, and handwritten document structuring aligned with individual school guidelines will launch in an upcoming cohort.
             </p>
           </div>
-          <span className="text-xs font-mono text-[#4A607A] shrink-0 border border-[#D8E2EC] bg-white px-3 py-1.5 font-medium">
-            Under Development
+          <span className="text-xs font-mono text-[#738A9E] shrink-0 border border-[#E2DDD5] bg-[#FAFAF8] px-3 py-1.5 font-medium">
+            Cohort Allocation Pending
           </span>
         </div>
 
@@ -313,7 +215,7 @@ export function ServiceDossier({ onRequestQuote }: ServiceDossierProps) {
                 </div>
 
                 {/* Exemplar Academic Page Excerpt */}
-                <div className="relative border border-[#D8E2EC] bg-[#F4F7FB] p-6 sm:p-8 space-y-6">
+                <div className="relative border border-[#D8E2EC] bg-[#FAFAF8] p-6 sm:p-8 space-y-6">
                   {/* Header Monospace */}
                   <div className="flex justify-between text-[11px] font-mono text-[#4A607A] border-b border-[#D8E2EC] pb-2 font-medium">
                     <span>{selectedSample.institutionFormat}</span>
@@ -321,7 +223,7 @@ export function ServiceDossier({ onRequestQuote }: ServiceDossierProps) {
                   </div>
 
                   <div>
-                    <h3 className="font-serif text-2xl text-[#12161A] leading-snug mb-3">
+                    <h3 className="font-serif text-2xl text-[#12161A] leading-snug mb-3 font-normal">
                       {selectedSample.title}
                     </h3>
                     <p className="text-xs text-[#364B62] leading-relaxed italic bg-[#FFFFFF] p-3 border-l-2 border-[#12324E]">
@@ -331,12 +233,12 @@ export function ServiceDossier({ onRequestQuote }: ServiceDossierProps) {
 
                   {/* Manuscript Excerpts */}
                   <div className="space-y-4">
-                    {selectedSample.sampleExcerpts.map((excerpt, idx) => (
-                      <div key={idx} className="space-y-1.5">
+                    {selectedSample.sampleExcerpts.map((excerpt, sIdx) => (
+                      <div key={sIdx} className="space-y-1.5">
                         <h4 className="font-mono text-xs text-[#1D5382] uppercase font-bold tracking-wider">
                           {excerpt.sectionHeading}
                         </h4>
-                        <p className="text-xs text-[#364B62] leading-relaxed font-sans">
+                        <p className="text-xs text-[#364B62] leading-relaxed font-sans font-light">
                           {excerpt.content}
                         </p>
                       </div>

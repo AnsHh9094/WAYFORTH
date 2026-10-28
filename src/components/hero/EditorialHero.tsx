@@ -1,7 +1,7 @@
 'use client';
 
-import React, { useState, useEffect } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
+import React from 'react';
+import { motion } from 'framer-motion';
 import { ArrowDown, ArrowUpRight, ShieldCheck, FileCheck, Sparkles, Layers } from 'lucide-react';
 import { BrandName } from '@/config/brand.config';
 
@@ -9,15 +9,6 @@ interface EditorialHeroProps {
   brandName: BrandName;
   onRequestQuote: () => void;
 }
-
-const ROTATING_WORDS = [
-  'Opportunities.',
-  'Internships.',
-  'Ambitions.',
-  'Practical Skills.',
-  'New Ventures.',
-  'What Truly Matters.',
-];
 
 const editorial = [0.16, 1, 0.3, 1] as const;
 
@@ -32,15 +23,6 @@ const revealItem = (delay: number) => ({
 });
 
 export function EditorialHero({ brandName, onRequestQuote }: EditorialHeroProps) {
-  const [wordIndex, setWordIndex] = useState(0);
-
-  useEffect(() => {
-    const interval = setInterval(() => {
-      setWordIndex((prev) => (prev + 1) % ROTATING_WORDS.length);
-    }, 2800);
-    return () => clearInterval(interval);
-  }, []);
-
   return (
     <section className="relative overflow-hidden bg-[#FFFFFF] text-[#12324E] pt-12 pb-20 sm:pt-16 sm:pb-24 border-b border-[#D8E2EC]">
       {/* Subtle Architectural Blueprint Grid */}
@@ -81,23 +63,12 @@ export function EditorialHero({ brandName, onRequestQuote }: EditorialHeroProps)
             <span>PAY-AS-YOU-GO MILESTONE MODEL • 50% DEPOSIT TO BEGIN</span>
           </motion.div>
 
-          {/* Main Headline with Dynamic Rotating Feature */}
+          {/* Main Headline — Static, Authoritative, Editorial */}
           <motion.div className="mb-8" variants={revealItem(0.12)}>
-            <h1 className="font-serif text-4xl sm:text-6xl lg:text-[68px] font-normal tracking-[-0.03em] text-[#12324E] leading-[1.06]">
+            <h1 className="font-serif text-4xl sm:text-6xl lg:text-[70px] font-normal tracking-[-0.03em] text-[#12324E] leading-[1.06]">
               Make Room for{' '}
-              <span className="relative inline-flex items-baseline text-[#1D5382] font-serif italic underline decoration-[#D8E2EC] decoration-2 underline-offset-8">
-                <AnimatePresence mode="wait">
-                  <motion.span
-                    key={wordIndex}
-                    initial={{ opacity: 0, y: 16 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    exit={{ opacity: 0, y: -16 }}
-                    transition={{ duration: 0.35, ease: editorial }}
-                    className="inline-block"
-                  >
-                    {ROTATING_WORDS[wordIndex]}
-                  </motion.span>
-                </AnimatePresence>
+              <span className="italic font-serif font-light text-[#1D5382]">
+                What Truly Matters.
               </span>
             </h1>
           </motion.div>
