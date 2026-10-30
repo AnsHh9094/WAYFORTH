@@ -103,7 +103,7 @@ export function TermsAccordion({ brandName }: TermsAccordionProps) {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
         {/* Section Header */}
-        <div className="flex items-center justify-between border-b border-[#D8E2EC] pb-4 mb-16 text-xs font-mono text-[#4A607A]">
+        <div className="flex items-center justify-between border-b border-[#D8E2EC] pb-4 mb-16 text-[11px] font-sans font-medium uppercase tracking-[0.16em] text-[#4A607A]">
           <div className="flex items-center gap-2">
             <span className="w-1.5 h-1.5 bg-[#12324E]" />
             <span className="uppercase tracking-widest text-[#12324E] font-semibold">
@@ -114,7 +114,7 @@ export function TermsAccordion({ brandName }: TermsAccordionProps) {
         </div>
 
         <div className="max-w-3xl mb-12">
-          <span className="text-xs font-mono uppercase tracking-widest text-[#1D5382] block mb-2 font-semibold">
+          <span className="text-xs font-sans uppercase tracking-[0.14em] text-[#1D5382] block mb-2 font-semibold">
             Institutional Terms
           </span>
           <h2 className="font-serif text-3xl sm:text-5xl font-normal text-[#12324E] leading-tight mb-4">
@@ -141,11 +141,11 @@ export function TermsAccordion({ brandName }: TermsAccordionProps) {
                   className="w-full px-6 py-5 text-left flex items-center justify-between gap-4 cursor-pointer"
                 >
                   <div className="flex items-center gap-4">
-                    <span className="font-mono text-xs text-[#1D5382] font-semibold">
+                    <span className="font-sans text-xs text-[#1D5382] font-semibold">
                       0{idx + 1}
                     </span>
                     <div>
-                      <span className="text-[10px] font-mono uppercase tracking-widest text-[#4A607A] block font-semibold">
+                      <span className="text-[10.5px] font-sans uppercase tracking-[0.14em] text-[#4A607A] block font-semibold">
                         {policy.category}
                       </span>
                       <h3 className="font-serif text-lg text-[#12324E] font-medium">

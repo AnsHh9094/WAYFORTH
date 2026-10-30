@@ -85,7 +85,7 @@ export function PrecisionCursor() {
         }}
       >
         {cursorText && (
-          <span className="text-[7.5px] font-mono font-bold tracking-widest text-[#12324E] uppercase whitespace-nowrap bg-white/90 px-1 py-0.5 rounded-[1px] border border-[#D8E2EC]">
+          <span className="text-[7.5px] font-sans font-bold tracking-widest text-[#12324E] uppercase whitespace-nowrap bg-white/90 px-1 py-0.5 rounded-[1px] border border-[#D8E2EC]">
             {cursorText}
           </span>
         )}

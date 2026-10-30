@@ -2,7 +2,7 @@
 
 import React, { useEffect, useRef, useState } from 'react';
 import { motion, useInView } from 'framer-motion';
-import { ShieldCheck, BookOpen, Clock, Sparkles } from 'lucide-react';
+import { FileText, Clock, ShieldCheck, BookOpen } from 'lucide-react';
 
 interface StatItem {
   icon: React.ReactNode;
@@ -15,32 +15,32 @@ interface StatItem {
 
 const STATS: StatItem[] = [
   {
+    icon: <FileText className="w-5 h-5 text-[#38BDF8]" />,
+    value: 200,
+    suffix: '+',
+    label: 'Reports Completed',
+    sublabel: 'Across Undergraduate, Master’s & Research projects',
+  },
+  {
+    icon: <Clock className="w-5 h-5 text-[#38BDF8]" />,
+    value: 93,
+    suffix: '%',
+    label: 'On-Time Delivery',
+    sublabel: 'Strict adherence to confirmed university deadlines',
+  },
+  {
     icon: <ShieldCheck className="w-5 h-5 text-[#38BDF8]" />,
     value: 100,
     suffix: '%',
     label: 'Genuine Human Writing',
-    sublabel: 'Zero AI regurgitation or hallucinated citations',
+    sublabel: 'Original research with zero automated AI regurgitation',
   },
   {
     icon: <BookOpen className="w-5 h-5 text-[#38BDF8]" />,
     value: 50,
     suffix: '+',
     label: 'Academic Disciplines',
-    sublabel: 'Undergrad to PhD doctoral methodologies',
-  },
-  {
-    icon: <Clock className="w-5 h-5 text-[#38BDF8]" />,
-    value: 24,
-    suffix: 'h',
-    label: 'Review Window',
-    sublabel: 'Guaranteed consolidated advisory feedback cycle',
-  },
-  {
-    icon: <Sparkles className="w-5 h-5 text-[#38BDF8]" />,
-    value: 15,
-    suffix: '%',
-    label: 'Introductory Waiver',
-    sublabel: 'First engagement incentive for new client commissions',
+    sublabel: 'Domain-specialized scholars across diverse fields',
   },
 ];
 

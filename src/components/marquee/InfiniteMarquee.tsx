@@ -42,7 +42,7 @@ export function InfiniteMarquee() {
           transition={{ repeat: Infinity, ease: 'linear', duration: 28 }}
         >
           {[...TRACK_1, ...TRACK_1, ...TRACK_1].map((item, idx) => (
-            <div key={idx} className="inline-flex items-center gap-3 font-mono text-[11px] uppercase tracking-wider text-[#9BB3C9]">
+            <div key={idx} className="inline-flex items-center gap-3 font-sans font-medium text-[11.5px] uppercase tracking-[0.14em] text-[#9BB3C9]">
               <span className="text-[#38BDF8] text-xs">✦</span>
               <span className="font-semibold text-[#FFFFFF]">{item.text}</span>
               {item.badge && (
@@ -63,7 +63,7 @@ export function InfiniteMarquee() {
           transition={{ repeat: Infinity, ease: 'linear', duration: 32 }}
         >
           {[...TRACK_2, ...TRACK_2, ...TRACK_2].map((item, idx) => (
-            <div key={idx} className="inline-flex items-center gap-3 font-mono text-[11px] uppercase tracking-wider text-[#7E9AB3]">
+            <div key={idx} className="inline-flex items-center gap-3 font-sans font-medium text-[11.5px] uppercase tracking-[0.14em] text-[#7E9AB3]">
               <span className="text-[#1D5382] text-xs">◆</span>
               <span className="font-normal text-[#E2ECF5]">{item.text}</span>
               {item.badge && (

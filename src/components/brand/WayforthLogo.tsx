@@ -92,7 +92,7 @@ export function WayforthLogo({
           </div>
           {variant === 'full' && (
             <span
-              className={`text-[8.5px] uppercase font-mono tracking-[0.2em] ${sublineColor} mt-1`}
+              className={`text-[8.5px] uppercase font-sans font-medium tracking-[0.2em] ${sublineColor} mt-1`}
             >
               {sublineText}
             </span>

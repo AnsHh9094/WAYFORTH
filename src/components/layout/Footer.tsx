@@ -35,7 +35,7 @@ export function Footer({ onRequestQuote }: FooterProps) {
               100% genuine human research, mathematical pricing transparency, and milestone preview safeguards.
             </p>
 
-            <div className="pt-2 flex flex-wrap gap-x-6 gap-y-2 text-xs font-mono text-[#CBD5E1]">
+            <div className="pt-2 flex flex-wrap gap-x-6 gap-y-2 text-[12.5px] font-sans text-[#CBD5E1]">
               <div className="flex items-center gap-2">
                 <Mail className="w-3.5 h-3.5 text-[#38BDF8]" />
                 <a
@@ -61,10 +61,10 @@ export function Footer({ onRequestQuote }: FooterProps) {
 
           {/* Institutional Governance Links */}
           <div className="md:col-span-5 lg:col-span-4 space-y-3 md:pl-6">
-            <div className="text-xs font-mono uppercase tracking-widest text-[#93C5FD] font-semibold">
+            <div className="text-xs font-sans uppercase tracking-[0.14em] text-[#93C5FD] font-semibold">
               Institutional Governance
             </div>
-            <ul className="space-y-2.5 text-xs font-mono text-[#CBD5E1]">
+            <ul className="space-y-2.5 text-[12.5px] font-sans text-[#CBD5E1]">
               <li>
                 <Link href="/terms" className="hover:text-white transition-colors flex items-center gap-1.5">
                   <span className="text-[#38BDF8]">/</span> Terms & Conditions
@@ -91,7 +91,7 @@ export function Footer({ onRequestQuote }: FooterProps) {
 
         {/* Ethical Notice Disclaimer */}
         <div className="py-6 border-b border-[#224A70] text-[11px] text-[#CBD5E1] leading-relaxed font-sans">
-          <strong className="text-[#FFFFFF] block mb-1 font-mono uppercase text-[10px] tracking-wider">
+          <strong className="text-[#FFFFFF] block mb-1 font-sans uppercase text-[10.5px] tracking-wider font-semibold">
             Institutional Compliance & Academic Ethics Notice:
           </strong>
           {BRAND_CONFIG.name} provides research support, reference frameworks, editorial assistance, and quantitative models.
@@ -108,7 +108,7 @@ export function Footer({ onRequestQuote }: FooterProps) {
         </div>
 
         {/* Bottom Bar */}
-        <div className="pt-6 flex flex-col sm:flex-row items-center justify-between text-xs font-mono text-[#CBD5E1] gap-4">
+        <div className="pt-6 flex flex-col sm:flex-row items-center justify-between text-xs font-sans text-[#CBD5E1] gap-4">
           <div>
             © 2026 {BRAND_CONFIG.name} Advisory ({BRAND_CONFIG.domain}). All rights reserved.
           </div>

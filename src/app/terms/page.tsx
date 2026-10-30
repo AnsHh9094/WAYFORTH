@@ -22,7 +22,7 @@ export default function TermsPage() {
           </Link>
           <Link
             href="/"
-            className="inline-flex items-center gap-1.5 text-xs font-mono text-[#42586E] hover:text-[#12324E] transition-colors border border-[#D8E2EC] px-3 py-1.5 bg-[#F4F7FB]"
+            className="inline-flex items-center gap-1.5 text-xs font-sans font-medium text-[#42586E] hover:text-[#12324E] transition-colors border border-[#D8E2EC] px-3.5 py-1.5 bg-[#F4F7FB] rounded-lg"
           >
             <ArrowLeft className="w-3.5 h-3.5" />
             <span>Back to Main Folio</span>
@@ -33,30 +33,30 @@ export default function TermsPage() {
       {/* Main Legal Document Content */}
       <article className="max-w-4xl mx-auto px-4 sm:px-6 py-16 sm:py-24">
         {/* Folio Identifier */}
-        <div className="flex items-center justify-between border-b border-[#D8E2EC] pb-4 mb-10 text-xs font-mono text-[#738A9E]">
+        <div className="flex items-center justify-between border-b border-[#D8E2EC] pb-4 mb-10 text-[11px] font-sans font-medium text-[#738A9E] tracking-wider">
           <span>DOCUMENT NO. WF-LEG-2026-01</span>
           <span className="text-[#1D5382] font-semibold">LAST REVISED: OCTOBER 2026</span>
         </div>
 
         <div className="mb-12">
-          <span className="text-xs font-mono uppercase tracking-widest text-[#1D5382] block mb-2 font-semibold">
+          <span className="text-xs font-sans uppercase tracking-[0.14em] text-[#1D5382] block mb-2 font-semibold">
             Contractual Clarity & Mutual Accountability
           </span>
           <h1 className="font-serif text-3xl sm:text-5xl text-[#12324E] font-normal tracking-tight mb-4">
             Terms of Service & Institutional Governance
           </h1>
-          <p className="text-sm text-[#42586E] leading-relaxed max-w-2xl">
+          <p className="text-sm sm:text-base text-[#42586E] leading-relaxed max-w-2xl">
             At <strong>{BRAND_CONFIG.name}</strong> ({BRAND_CONFIG.domain}), we publish our contractual terms, cancellation schedules, and academic disclaimers openly.
             Work begins only upon written confirmation of your customized quotation.
           </p>
         </div>
 
         {/* Legal Clauses Grid */}
-        <div className="space-y-12 text-xs sm:text-[13px] text-[#42586E] leading-relaxed">
+        <div className="space-y-12 text-[13.5px] sm:text-sm text-[#42586E] leading-relaxed">
           
           {/* Section 1: Cancellation & Refund Policy */}
           <section id="cancellation" className="border-t border-[#D8E2EC] pt-8 space-y-4">
-            <span className="text-xs font-mono uppercase tracking-widest text-[#1D5382] font-bold block">
+            <span className="text-xs font-sans uppercase tracking-[0.14em] text-[#1D5382] font-bold block">
               Section 01 // Cancellation and Refund Policy
             </span>
             <h2 className="font-serif text-2xl text-[#12324E]">
@@ -64,7 +64,7 @@ export default function TermsPage() {
             </h2>
             <p>
               A customer may request order cancellation by submitting written communication via email to{' '}
-              <a href={`mailto:${BRAND_CONFIG.contactEmail}`} className="text-[#1D5382] underline font-mono">
+              <a href={`mailto:${BRAND_CONFIG.contactEmail}`} className="text-[#1D5382] underline font-sans font-semibold">
                 {BRAND_CONFIG.contactEmail}
               </a>{' '}
               or our confirmed WhatsApp advisory channel. The applicable refund depends strictly on the proportion of the agreed project timeline that has elapsed, the research work completed, and reasonable reserved costs incurred:
@@ -90,14 +90,14 @@ export default function TermsPage() {
               </div>
             </div>
 
-            <p className="text-xs text-[#738A9E] font-mono">
+            <p className="text-xs text-[#738A9E] font-sans">
               *Note: Elapsed timeline is calculated between the confirmed order initiation date and the mutually agreed delivery deadline stated in your written quotation.
             </p>
           </section>
 
           {/* Section 2: Pay-As-You-Go Workflow */}
           <section id="workflow" className="border-t border-[#D8E2EC] pt-8 space-y-4">
-            <span className="text-xs font-mono uppercase tracking-widest text-[#1D5382] font-bold block">
+            <span className="text-xs font-sans uppercase tracking-[0.14em] text-[#1D5382] font-bold block">
               Section 02 // Pay-As-You-Go Milestone Safeguard
             </span>
             <h2 className="font-serif text-2xl text-[#12324E]">
@@ -127,7 +127,7 @@ export default function TermsPage() {
 
           {/* Section 3: Revision Allowance */}
           <section id="revisions" className="border-t border-[#D8E2EC] pt-8 space-y-4">
-            <span className="text-xs font-mono uppercase tracking-widest text-[#1D5382] font-bold block">
+            <span className="text-xs font-sans uppercase tracking-[0.14em] text-[#1D5382] font-bold block">
               Section 03 // Revisions & Scope Boundaries
             </span>
             <h2 className="font-serif text-2xl text-[#12324E]">
@@ -143,7 +143,7 @@ export default function TermsPage() {
 
           {/* Section 4: Academic Integrity & Outcomes Disclaimer */}
           <section id="ethics" className="border-t border-[#D8E2EC] pt-8 space-y-4">
-            <span className="text-xs font-mono uppercase tracking-widest text-[#1D5382] font-bold block">
+            <span className="text-xs font-sans uppercase tracking-[0.14em] text-[#1D5382] font-bold block">
               Section 04 // Academic Outcomes & Ethical Use
             </span>
             <h2 className="font-serif text-2xl text-[#12324E]">
@@ -159,7 +159,7 @@ export default function TermsPage() {
 
           {/* Section 5: Human-Written Standard */}
           <section id="human-content" className="border-t border-[#D8E2EC] pt-8 space-y-4">
-            <span className="text-xs font-mono uppercase tracking-widest text-[#1D5382] font-bold block">
+            <span className="text-xs font-sans uppercase tracking-[0.14em] text-[#1D5382] font-bold block">
               Section 05 // Authorship & Originality
             </span>
             <h2 className="font-serif text-2xl text-[#12324E]">
@@ -175,7 +175,7 @@ export default function TermsPage() {
 
           {/* Section 6: Delivery Package */}
           <section id="delivery" className="border-t border-[#D8E2EC] pt-8 space-y-4">
-            <span className="text-xs font-mono uppercase tracking-widest text-[#1D5382] font-bold block">
+            <span className="text-xs font-sans uppercase tracking-[0.14em] text-[#1D5382] font-bold block">
               Section 06 // Deliverables Package
             </span>
             <h2 className="font-serif text-2xl text-[#12324E]">
@@ -193,12 +193,12 @@ export default function TermsPage() {
           </section>
 
           {/* Legal Inquiries Box */}
-          <div className="p-6 bg-[#F4F7FB] border border-[#D8E2EC] space-y-2 mt-8">
-            <div className="flex items-center gap-2 text-xs font-mono uppercase font-bold text-[#12324E]">
+          <div className="p-6 bg-[#F4F7FB] border border-[#D8E2EC] space-y-2 mt-8 rounded-xl">
+            <div className="flex items-center gap-2 text-xs font-sans uppercase font-bold text-[#12324E]">
               <Mail className="w-4 h-4 text-[#1D5382]" />
               <span>Questions Regarding These Policies?</span>
             </div>
-            <p className="text-xs text-[#42586E]">
+            <p className="text-xs sm:text-[13px] text-[#42586E]">
               Direct all contractual inquiries and quotation clarifications to our primary business desk at{' '}
               <a href={`mailto:${BRAND_CONFIG.contactEmail}`} className="text-[#1D5382] font-semibold underline">
                 {BRAND_CONFIG.contactEmail}
@@ -211,7 +211,7 @@ export default function TermsPage() {
       </article>
 
       {/* Legal Footer */}
-      <footer className="border-t border-[#D8E2EC] bg-[#FFFFFF] py-8 text-center text-xs font-mono text-[#738A9E]">
+      <footer className="border-t border-[#D8E2EC] bg-[#FFFFFF] py-8 text-center text-xs font-sans text-[#738A9E]">
         <p>© 2026 {BRAND_CONFIG.name} Advisory ({BRAND_CONFIG.domain}). All rights reserved.</p>
       </footer>
     </main>

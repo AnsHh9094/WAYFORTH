@@ -2,7 +2,7 @@
 
 import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { ArrowDown, ArrowUpRight, ShieldCheck, Lock, GraduationCap, Sparkles } from 'lucide-react';
+import { ArrowDown, ArrowUpRight, Sparkles } from 'lucide-react';
 import { BrandName } from '@/config/brand.config';
 
 interface EditorialHeroProps {
@@ -140,54 +140,6 @@ export function EditorialHero({ brandName, onRequestQuote }: EditorialHeroProps)
             <span className="px-3.5 py-1 bg-[#F4F7FB] border border-[#D8E2EC] text-[#1D5382] font-bold rounded-full">DATA ANALYSIS & EXCEL</span>
           </motion.div>
         </div>
-
-        {/* 3 Core Value Anchor Pillars — Qualitative Commitments (Deduplicated against quantitative Stats Ticker) */}
-        <motion.div
-          className="grid grid-cols-1 md:grid-cols-3 gap-6 pt-10 border-t border-[#D8E2EC] text-xs font-sans"
-          variants={revealItem(0.45)}
-        >
-          <div className="flex items-start gap-4 p-5 bg-[#F4F7FB] border border-[#D8E2EC] rounded-2xl">
-            <div className="p-2 bg-[#FFFFFF] border border-[#D8E2EC] text-[#1D5382] mt-0.5 shrink-0 rounded-xl">
-              <ShieldCheck className="w-4 h-4 text-[#1D5382]" />
-            </div>
-            <div>
-              <strong className="block text-[#12324E] font-sans text-sm mb-1 font-semibold">
-                Pay-As-You-Go Milestone Safeguard
-              </strong>
-              <p className="text-[#4A607A] leading-relaxed font-sans text-[13px]">
-                50% deposit to commence research. Review watermarked representative excerpts and verify progress before authorizing the balance.
-              </p>
-            </div>
-          </div>
-
-          <div className="flex items-start gap-4 p-5 bg-[#F4F7FB] border border-[#D8E2EC] rounded-2xl">
-            <div className="p-2 bg-[#FFFFFF] border border-[#D8E2EC] text-[#1D5382] mt-0.5 shrink-0 rounded-xl">
-              <Lock className="w-4 h-4 text-[#1D5382]" />
-            </div>
-            <div>
-              <strong className="block text-[#12324E] font-sans text-sm mb-1 font-semibold">
-                Strict Academic Discretion & NDAs
-              </strong>
-              <p className="text-[#4A607A] leading-relaxed font-sans text-[13px]">
-                Complete institutional privacy. Dedicated non-disclosure protocols, zero commercial data indexing, and private office confidentiality.
-              </p>
-            </div>
-          </div>
-
-          <div className="flex items-start gap-4 p-5 bg-[#F4F7FB] border border-[#D8E2EC] rounded-2xl">
-            <div className="p-2 bg-[#FFFFFF] border border-[#D8E2EC] text-[#1D5382] mt-0.5 shrink-0 rounded-xl">
-              <GraduationCap className="w-4 h-4 text-[#1D5382]" />
-            </div>
-            <div>
-              <strong className="block text-[#12324E] font-sans text-sm mb-1 font-semibold">
-                Faculty Rubric & Defense Alignment
-              </strong>
-              <p className="text-[#4A607A] leading-relaxed font-sans text-[13px]">
-                Methodological frameworks, peer-reviewed citations, and defense talking points tailored strictly to university assessment standards.
-              </p>
-            </div>
-          </div>
-        </motion.div>
       </motion.div>
     </section>
   );

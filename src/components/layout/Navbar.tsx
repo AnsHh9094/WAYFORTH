@@ -99,7 +99,7 @@ export function Navbar({ onRequestQuote }: NavbarProps) {
         <div className="flex items-center gap-3">
           <button
             onClick={onRequestQuote}
-            className="group relative inline-flex items-center gap-2 px-5 py-2.5 bg-[#12324E] text-[#FFFFFF] text-xs font-mono uppercase tracking-wider border border-[#12324E] hover:bg-[#1D5382] hover:border-[#1D5382] transition-all cursor-pointer shadow-xs active:translate-y-px"
+            className="group relative inline-flex items-center gap-2 px-5 py-2.5 bg-[#12324E] text-[#FFFFFF] text-xs font-sans uppercase tracking-[0.14em] font-bold border border-[#12324E] hover:bg-[#1D5382] hover:border-[#1D5382] transition-all cursor-pointer shadow-xs active:translate-y-px rounded-lg"
           >
             <span>Get a Quote</span>
             <ArrowUpRight className="w-3.5 h-3.5 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform text-[#38BDF8]" />
@@ -170,7 +170,7 @@ export function Navbar({ onRequestQuote }: NavbarProps) {
                 onRequestQuote();
                 setMobileMenuOpen(false);
               }}
-              className="w-full text-center py-3 bg-[#12324E] text-white text-xs font-mono uppercase tracking-widest cursor-pointer"
+              className="w-full text-center py-3 bg-[#12324E] text-white text-xs font-sans uppercase tracking-[0.14em] font-bold cursor-pointer rounded-lg"
             >
               Open Live Pricing Calculator
             </button>
