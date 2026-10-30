@@ -485,9 +485,6 @@ _Initiated via wayforth.in official quotation calculator_`;
                               <span className="text-xs font-mono font-semibold text-[#12324E]">
                                 {addon.label}
                               </span>
-                              <span className="text-[10px] font-mono text-[#1D5382] font-bold shrink-0">
-                                +₹{addon.price}
-                              </span>
                             </div>
                             <p className="text-[11px] text-[#4A607A] leading-tight font-sans">
                               {addon.description}

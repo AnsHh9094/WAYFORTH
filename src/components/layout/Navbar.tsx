@@ -53,11 +53,6 @@ export function Navbar({ onRequestQuote }: NavbarProps) {
           <a href="#" className="group">
             <WayforthLogo variant="full" theme="dark" />
           </a>
-          <span className="hidden md:inline-block h-6 w-px bg-[#D8E2EC]"></span>
-          <span className="hidden md:inline-flex items-center gap-1.5 text-[10px] font-mono text-[#1D5382] font-semibold bg-[#F4F7FB] px-2.5 py-1 border border-[#D8E2EC]">
-            <ShieldCheck className="w-3.5 h-3.5 text-[#1D5382]" />
-            WAYFORTH.IN // OFFICIAL ADVISORY
-          </span>
         </div>
 
         {/* Desktop Navigation Links */}
@@ -75,16 +70,16 @@ export function Navbar({ onRequestQuote }: NavbarProps) {
             Disciplines & Samples
           </a>
           <a
-            href="#pricing"
-            className="hover:text-[#12324E] transition-colors hover:underline underline-offset-8 decoration-[#12324E]"
-          >
-            Pricing Architecture
-          </a>
-          <a
             href="#workflow"
             className="hover:text-[#12324E] transition-colors hover:underline underline-offset-8 decoration-[#12324E]"
           >
-            7-Step Process
+            6-Step Process
+          </a>
+          <a
+            href="#pricing"
+            className="hover:text-[#12324E] transition-colors hover:underline underline-offset-8 decoration-[#12324E]"
+          >
+            Pricing & Calculator
           </a>
           <a
             href="#contact"
@@ -140,18 +135,18 @@ export function Navbar({ onRequestQuote }: NavbarProps) {
               Disciplines & Samples
             </a>
             <a
-              href="#pricing"
-              onClick={() => setMobileMenuOpen(false)}
-              className="py-1 border-b border-[#D8E2EC]"
-            >
-              Pricing Architecture
-            </a>
-            <a
               href="#workflow"
               onClick={() => setMobileMenuOpen(false)}
               className="py-1 border-b border-[#D8E2EC]"
             >
-              7-Step Process
+              6-Step Process
+            </a>
+            <a
+              href="#pricing"
+              onClick={() => setMobileMenuOpen(false)}
+              className="py-1 border-b border-[#D8E2EC]"
+            >
+              Pricing & Calculator
             </a>
             <a
               href="#contact"

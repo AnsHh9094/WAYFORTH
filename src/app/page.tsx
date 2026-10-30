@@ -8,7 +8,6 @@ import { EditorialHero } from '@/components/hero/EditorialHero';
 import { KineticStatsTicker } from '@/components/stats/KineticStatsTicker';
 import { ManifestoSection } from '@/components/manifesto/ManifestoSection';
 import { ServiceDossier } from '@/components/services/ServiceDossier';
-import { PricingMatrix } from '@/components/pricing/PricingMatrix';
 import { TimelineSteps } from '@/components/workflow/TimelineSteps';
 import { QuotationForm } from '@/components/quotation/QuotationForm';
 import { ContactSection } from '@/components/contact/ContactSection';
@@ -62,18 +61,15 @@ export default function HomePage() {
           <ServiceDossier onRequestQuote={handleScrollToQuote} />
         </div>
 
-        {/* Pricing Formula & Page Definition */}
-        <div id="pricing">
-          <PricingMatrix onRequestQuote={handleScrollToQuote} />
-        </div>
-
-        {/* 7-Step Contractual Workflow */}
+        {/* 6-Step Contractual Workflow */}
         <div id="workflow">
           <TimelineSteps />
         </div>
 
         {/* Interactive Quotation Intake & Live Pricing Calculator Console */}
-        <QuotationForm />
+        <div id="pricing">
+          <QuotationForm />
+        </div>
 
         {/* Dedicated Direct Advisory Desk & Contact Section */}
         <ContactSection />

@@ -17,7 +17,7 @@ export function TimelineSteps() {
           <div className="flex items-center gap-2">
             <span className="w-1.5 h-1.5 bg-[#12324E]" />
             <span className="uppercase tracking-widest text-[#12324E] font-semibold">
-              CONTRACTUAL LIFECYCLE // SEVEN-STAGE PROCESS
+              CONTRACTUAL LIFECYCLE // SIX-STAGE PROCESS
             </span>
           </div>
           <span className="text-[#1D5382] uppercase font-semibold">
@@ -54,7 +54,7 @@ export function TimelineSteps() {
 
             {BRAND_CONFIG.workflowSteps.map((step, idx) => {
               const isGate4 = step.step === '04';
-              const isGate7 = step.step === '07';
+              const isGate6 = step.step === '06';
               const isHovered = activeStep === idx;
 
               return (
@@ -70,7 +70,7 @@ export function TimelineSteps() {
                     className={`w-9 h-9 rounded-full flex items-center justify-center font-mono text-xs font-bold transition-all duration-300 ${
                       isGate4
                         ? 'bg-[#1D5382] text-white ring-4 ring-[#1D5382]/20 shadow-sm scale-110'
-                        : isGate7
+                        : isGate6
                         ? 'bg-[#12324E] text-white ring-4 ring-[#12324E]/20 shadow-sm scale-110'
                         : isHovered
                         ? 'bg-[#12324E] text-white shadow-xs'
@@ -83,7 +83,7 @@ export function TimelineSteps() {
                   {/* Micro Node Title */}
                   <div className="mt-3 text-center">
                     <span className="block text-[10px] font-sans font-medium text-[#12324E] truncate max-w-[110px]">
-                      {isGate4 ? 'Preview Review' : isGate7 ? 'Final Release' : step.title}
+                      {isGate4 ? 'Preview Review' : isGate6 ? 'Final Release' : step.title}
                     </span>
                   </div>
                 </div>
@@ -92,11 +92,11 @@ export function TimelineSteps() {
           </div>
         </div>
 
-        {/* ── 7-Step Cards (Smooth Rounded-2xl Corners) ── */}
+        {/* ── 6-Step Cards (Smooth Rounded-2xl Corners) ── */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 relative">
           {BRAND_CONFIG.workflowSteps.map((step, idx) => {
             const isGate4 = step.step === '04';
-            const isGate7 = step.step === '07';
+            const isGate6 = step.step === '06';
             const isHovered = activeStep === idx;
 
             return (
@@ -106,7 +106,7 @@ export function TimelineSteps() {
                 onMouseLeave={() => setActiveStep(null)}
                 data-cursor="INSPECT"
                 className={`bg-[#FFFFFF] border p-6 sm:p-7 flex flex-col justify-between transition-all duration-300 relative group rounded-2xl ${
-                  isGate7
+                  isGate6
                     ? 'border-[#12324E] shadow-md ring-2 ring-[#12324E]/15 bg-gradient-to-b from-[#FFFFFF] to-[#F4F7FB]'
                     : isGate4
                     ? 'border-[#1D5382] shadow-md ring-2 ring-[#1D5382]/15 bg-gradient-to-b from-[#FFFFFF] to-[#F0F5FA]'
@@ -122,7 +122,7 @@ export function TimelineSteps() {
                     <span>Safeguard Milestone</span>
                   </div>
                 )}
-                {isGate7 && (
+                {isGate6 && (
                   <div className="absolute top-4 right-4 bg-[#12324E] text-white text-[10px] font-sans uppercase tracking-wider px-3 py-1 flex items-center gap-1.5 shadow-xs font-semibold rounded-full">
                     <KeyRound className="w-3.5 h-3.5 text-[#38BDF8]" />
                     <span>Complete Handover</span>
@@ -154,7 +154,7 @@ export function TimelineSteps() {
 
                 <div className="pt-4 mt-6 border-t border-[#F4F7FB] flex items-center justify-between text-[10px] font-sans text-[#4A607A]">
                   <span className="uppercase tracking-wider">Contractual Protocol</span>
-                  <span className="text-[#12324E] font-semibold">Step {step.step} of 07</span>
+                  <span className="text-[#12324E] font-semibold">Step {step.step} of 06</span>
                 </div>
               </motion.div>
             );
