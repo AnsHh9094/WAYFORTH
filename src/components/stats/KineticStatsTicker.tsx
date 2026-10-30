@@ -76,7 +76,7 @@ function CounterNumber({ value, prefix = '', suffix = '' }: { value: number; pre
   }, [isInView, value]);
 
   return (
-    <span ref={ref} className="font-serif font-light text-4xl sm:text-6xl text-[#FFFFFF] tracking-tight">
+    <span ref={ref} className="font-serif font-light text-5xl sm:text-6xl text-[#FFFFFF] tracking-tight">
       {prefix}{count}{suffix}
     </span>
   );
@@ -84,11 +84,11 @@ function CounterNumber({ value, prefix = '', suffix = '' }: { value: number; pre
 
 export function KineticStatsTicker() {
   return (
-    <section className="relative py-16 bg-[#0E253A] border-b border-[#224A70] select-none">
+    <section className="relative py-20 sm:py-24 lg:py-28 bg-[#0E253A] border-b border-[#224A70] select-none">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
         {/* Top Ledger Strip */}
-        <div className="flex items-center justify-between pb-6 mb-10 border-b border-[#224A70] text-[10.5px] font-mono tracking-widest uppercase text-[#CBD5E1]">
+        <div className="flex items-center justify-between pb-6 mb-12 border-b border-[#224A70] text-[10.5px] font-mono tracking-widest uppercase text-[#CBD5E1]">
           <div className="flex items-center gap-2">
             <span className="w-2 h-2 rounded-full bg-[#00FFA3] animate-pulse" />
             <span className="text-[#FFFFFF] font-bold">OPERATIONAL METRICS // AUTUMN 2026</span>
@@ -96,12 +96,12 @@ export function KineticStatsTicker() {
           <span className="hidden sm:inline text-[#38BDF8]">VERIFIED ACADEMIC ASSURANCE</span>
         </div>
 
-        {/* 4 Kinetic Stat Columns (Smooth Rounded-2xl Cards) */}
-        <div className="grid grid-cols-2 lg:grid-cols-4 gap-6 lg:gap-8">
+        {/* 4 Kinetic Stat Columns (Restored Spacious Layout) */}
+        <div className="grid grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-12">
           {STATS.map((stat, idx) => (
             <motion.div
               key={idx}
-              className="flex flex-col p-6 sm:p-7 bg-[#0B1826]/80 border border-[#224A70] rounded-2xl hover:border-[#38BDF8]/60 transition-all shadow-md group"
+              className="flex flex-col p-6 sm:p-8 bg-[#0B1826]/80 border border-[#224A70] rounded-2xl hover:border-[#38BDF8]/60 transition-all shadow-md group min-h-[230px]"
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}

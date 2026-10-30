@@ -48,13 +48,11 @@ export function EditorialHero({ brandName, onRequestQuote }: EditorialHeroProps)
           <div className="flex items-center gap-2">
             <span className="w-2 h-2 rounded-full bg-[#1D5382] animate-pulse" />
             <span className="text-[#12324E] font-semibold">ACADEMIC RESEARCH & THESIS ADVISORY</span>
-            <span className="hidden sm:inline text-[#B8C9D8]">•</span>
-            <span className="hidden sm:inline text-[#1D5382] font-medium">100% GENUINE HUMAN AUTHORSHIP</span>
           </div>
         </motion.div>
 
-        {/* Clean Editorial Hero Layout */}
-        <div className="max-w-4xl mx-auto text-center mb-16 flex flex-col items-center">
+        {/* Clean Editorial Hero Layout — Centered Container with Large Left-Aligned Type */}
+        <div className="max-w-4xl mx-auto mb-16 text-left">
           <motion.div
             className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#F4F7FB] border border-[#D8E2EC] text-[#1D5382] text-[10.5px] font-mono uppercase tracking-widest mb-6 font-semibold shadow-2xs"
             variants={revealItem(0.05)}
@@ -63,18 +61,22 @@ export function EditorialHero({ brandName, onRequestQuote }: EditorialHeroProps)
             <span>PAY-AS-YOU-GO MILESTONE MODEL • 50% DEPOSIT TO BEGIN</span>
           </motion.div>
 
-          {/* Main Headline — Static, Authoritative, Editorial */}
+          {/* Main Headline — Restored to Grand Scale */}
           <motion.div className="mb-8" variants={revealItem(0.12)}>
-            <h1 className="font-serif text-4xl sm:text-6xl lg:text-[70px] font-normal tracking-[-0.03em] text-[#12324E] leading-[1.06]">
+            <h1 className="font-serif text-5xl sm:text-7xl lg:text-[82px] font-normal tracking-[-0.03em] text-[#12324E] leading-[1.04]">
               Make Room for{' '}
               <span className="italic font-serif font-light text-[#1D5382]">
-                What Truly Matters.
+                What Truly
+              </span>
+              <br />
+              <span className="italic font-serif font-light text-[#1D5382]">
+                Matters.
               </span>
             </h1>
           </motion.div>
 
           <motion.p
-            className="text-base sm:text-lg text-[#364B62] font-sans font-normal leading-relaxed max-w-2xl mx-auto mb-10"
+            className="text-base sm:text-lg text-[#364B62] font-sans font-normal leading-relaxed max-w-2xl mb-10 text-left"
             variants={revealItem(0.22)}
           >
             Your future is <strong className="text-[#12324E]">bigger</strong> than your next submission. We believe your university career should be about more than keeping up with an endless cycle of deadlines. Through accessible, dependable academic project, report, and research support by <strong className="text-[#12324E]">{brandName}</strong>, we help you reclaim bandwidth for off-campus internships, skills, and ventures that truly matter.
@@ -82,7 +84,7 @@ export function EditorialHero({ brandName, onRequestQuote }: EditorialHeroProps)
 
           {/* Kinetic Action CTAs */}
           <motion.div
-            className="flex flex-col sm:flex-row items-stretch sm:items-center justify-center gap-4 mb-12"
+            className="flex flex-col sm:flex-row items-stretch sm:items-center gap-4 mb-12"
             variants={revealItem(0.32)}
           >
             <button
@@ -104,7 +106,7 @@ export function EditorialHero({ brandName, onRequestQuote }: EditorialHeroProps)
 
           {/* Quick Scope Chip Matrix */}
           <motion.div
-            className="flex flex-wrap items-center justify-center gap-2 text-[10.5px] font-mono text-[#4A607A]"
+            className="flex flex-wrap items-center gap-2 text-[10.5px] font-mono text-[#4A607A]"
             variants={revealItem(0.4)}
           >
             <span className="px-3.5 py-1 bg-[#F4F7FB] border border-[#D8E2EC] text-[#12324E] rounded-full">UNDERGRADUATE</span>
