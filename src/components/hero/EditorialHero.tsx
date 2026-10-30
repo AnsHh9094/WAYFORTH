@@ -42,7 +42,7 @@ export function EditorialHero({ brandName, onRequestQuote }: EditorialHeroProps)
       >
         {/* Top Folio Rubric Bar */}
         <motion.div
-          className="flex items-center justify-center sm:justify-between border-b border-[#D8E2EC] pb-4 mb-12 text-[11px] font-mono uppercase tracking-wider text-[#4A607A]"
+          className="flex items-center justify-between border-b border-[#D8E2EC] pb-4 mb-12 text-[11px] font-mono uppercase tracking-wider text-[#4A607A]"
           variants={revealItem(0)}
         >
           <div className="flex items-center gap-2">
@@ -51,11 +51,10 @@ export function EditorialHero({ brandName, onRequestQuote }: EditorialHeroProps)
             <span className="hidden sm:inline text-[#B8C9D8]">•</span>
             <span className="hidden sm:inline text-[#1D5382] font-medium">100% GENUINE HUMAN AUTHORSHIP</span>
           </div>
-          <span className="hidden sm:inline text-[10.5px]">EST. 2026 // DISCREET COHORT ALLOCATION</span>
         </motion.div>
 
-        {/* Clean Editorial Centered Hero Layout */}
-        <div className="max-w-4xl mx-auto mb-16 text-center flex flex-col items-center">
+        {/* Clean Editorial Hero Layout */}
+        <div className="max-w-4xl mx-auto text-center mb-16 flex flex-col items-center">
           <motion.div
             className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#F4F7FB] border border-[#D8E2EC] text-[#1D5382] text-[10.5px] font-mono uppercase tracking-widest mb-6 font-semibold shadow-2xs"
             variants={revealItem(0.05)}
@@ -65,8 +64,8 @@ export function EditorialHero({ brandName, onRequestQuote }: EditorialHeroProps)
           </motion.div>
 
           {/* Main Headline — Static, Authoritative, Editorial */}
-          <motion.div className="mb-8 w-full" variants={revealItem(0.12)}>
-            <h1 className="font-serif text-4xl sm:text-6xl lg:text-[72px] font-normal tracking-[-0.03em] text-[#12324E] leading-[1.06]">
+          <motion.div className="mb-8" variants={revealItem(0.12)}>
+            <h1 className="font-serif text-4xl sm:text-6xl lg:text-[70px] font-normal tracking-[-0.03em] text-[#12324E] leading-[1.06]">
               Make Room for{' '}
               <span className="italic font-serif font-light text-[#1D5382]">
                 What Truly Matters.
@@ -83,7 +82,7 @@ export function EditorialHero({ brandName, onRequestQuote }: EditorialHeroProps)
 
           {/* Kinetic Action CTAs */}
           <motion.div
-            className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-12 w-full"
+            className="flex flex-col sm:flex-row items-stretch sm:items-center justify-center gap-4 mb-12"
             variants={revealItem(0.32)}
           >
             <button

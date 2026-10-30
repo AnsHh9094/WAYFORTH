@@ -3,7 +3,7 @@
 import React, { useState, useEffect } from 'react';
 import { BRAND_CONFIG } from '@/config/brand.config';
 import { WayforthLogo } from '@/components/brand/WayforthLogo';
-import { ArrowUpRight, ShieldCheck, Menu, X, Mail } from 'lucide-react';
+import { ArrowUpRight, Menu, X, Mail } from 'lucide-react';
 
 interface NavbarProps {
   onRequestQuote: () => void;
@@ -76,10 +76,10 @@ export function Navbar({ onRequestQuote }: NavbarProps) {
             6-Step Process
           </a>
           <a
-            href="#pricing"
+            href="#quote-console"
             className="hover:text-[#12324E] transition-colors hover:underline underline-offset-8 decoration-[#12324E]"
           >
-            Pricing & Calculator
+            Live Calculator
           </a>
           <a
             href="#contact"
@@ -142,11 +142,11 @@ export function Navbar({ onRequestQuote }: NavbarProps) {
               6-Step Process
             </a>
             <a
-              href="#pricing"
+              href="#quote-console"
               onClick={() => setMobileMenuOpen(false)}
               className="py-1 border-b border-[#D8E2EC]"
             >
-              Pricing & Calculator
+              Live Calculator
             </a>
             <a
               href="#contact"

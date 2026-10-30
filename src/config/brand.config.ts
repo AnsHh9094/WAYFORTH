@@ -508,19 +508,19 @@ export const BRAND_CONFIG: BrandConfig = {
     },
     {
       step: '05',
-      title: 'Request Included Revision & Finalization',
+      title: 'Request Included Revision',
       actor: 'Client',
-      summary: '1 comprehensive revision round included with final delivery package preparation.',
+      summary: '1 comprehensive revision round included with every project.',
       detail:
-        'One comprehensive revision round is included within the agreed scope. Share your consolidated feedback for fine-tuning as we prepare your complete unwatermarked package: editable Word (.docx), PDF, and all supporting datasets.',
+        'One comprehensive revision round is included within the agreed scope. Share your consolidated feedback for fine-tuning without any extra charge.',
     },
     {
       step: '06',
-      title: 'Release Balance & Receive Final Deliverables',
-      actor: 'Mutual',
-      summary: 'Settle remaining 50% milestone balance and receive all clean files immediately.',
+      title: 'Release Remaining 50% & Receive Final Deliverable',
+      actor: 'Client',
+      summary: 'Settle remaining balance and receive your complete unwatermarked package.',
       detail:
-        'Once you are satisfied with the preview and agreed revisions are finalized, settle the remaining 50% milestone balance to instantly receive your clean, unwatermarked deliverables with zero delay.',
+        'Once you are satisfied with the preview and agreed revisions are finalized, the remaining 50% milestone balance becomes due. Upon settlement, receive your complete unwatermarked package: editable Microsoft Word (.docx), print-ready Adobe PDF, and all supporting datasets or appendices. Full peace of mind.',
     },
   ],
 };

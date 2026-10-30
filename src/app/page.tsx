@@ -67,9 +67,7 @@ export default function HomePage() {
         </div>
 
         {/* Interactive Quotation Intake & Live Pricing Calculator Console */}
-        <div id="pricing">
-          <QuotationForm />
-        </div>
+        <QuotationForm />
 
         {/* Dedicated Direct Advisory Desk & Contact Section */}
         <ContactSection />

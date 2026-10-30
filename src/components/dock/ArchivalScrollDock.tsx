@@ -13,7 +13,7 @@ const SECTIONS = [
   { id: 'manifesto', label: 'MANIFESTO' },
   { id: 'disciplines', label: 'DISCIPLINES' },
   { id: 'workflow', label: 'WORKFLOW' },
-  { id: 'pricing', label: 'CALCULATOR' },
+  { id: 'quote-console', label: 'INTAKE' },
   { id: 'contact', label: 'CONTACT' },
 ];
 
