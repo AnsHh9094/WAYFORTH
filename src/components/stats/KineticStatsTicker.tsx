@@ -76,7 +76,11 @@ function CounterNumber({ value, prefix = '', suffix = '' }: { value: number; pre
   }, [isInView, value]);
 
   return (
-    <span ref={ref} className="font-serif font-light text-5xl sm:text-6xl text-[#FFFFFF] tracking-tight">
+    <span
+      ref={ref}
+      className="font-serif font-light text-5xl sm:text-6xl text-[#FFFFFF] tracking-tight"
+      style={{ fontSize: 'clamp(2.75rem, 4.5vw, 3.75rem)', lineHeight: 1.1 }}
+    >
       {prefix}{count}{suffix}
     </span>
   );
@@ -84,7 +88,10 @@ function CounterNumber({ value, prefix = '', suffix = '' }: { value: number; pre
 
 export function KineticStatsTicker() {
   return (
-    <section className="relative py-20 sm:py-24 lg:py-28 bg-[#0E253A] border-b border-[#224A70] select-none">
+    <section
+      className="relative py-20 sm:py-24 lg:py-28 bg-[#0E253A] border-b border-[#224A70] select-none"
+      style={{ minHeight: '440px', paddingTop: '5.5rem', paddingBottom: '5.5rem' }}
+    >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
         {/* Top Ledger Strip */}
@@ -102,6 +109,7 @@ export function KineticStatsTicker() {
             <motion.div
               key={idx}
               className="flex flex-col p-6 sm:p-8 bg-[#0B1826]/80 border border-[#224A70] rounded-2xl hover:border-[#38BDF8]/60 transition-all shadow-md group min-h-[230px]"
+              style={{ minHeight: '230px' }}
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
