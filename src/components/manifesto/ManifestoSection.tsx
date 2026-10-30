@@ -12,6 +12,8 @@ interface ManifestoSectionProps {
 const editorial = [0.16, 1, 0.3, 1] as const;
 
 export function ManifestoSection({ onRequestQuote }: ManifestoSectionProps) {
+  const fontStyle = { fontFamily: "'RumelazGekinsa', Georgia, serif" };
+
   return (
     <section id="manifesto" className="relative bg-[#0C1220] text-[#F5F0E8] overflow-hidden">
       {/* Editorial Hairline Top Rule in Antique Brass */}
@@ -36,12 +38,15 @@ export function ManifestoSection({ onRequestQuote }: ManifestoSectionProps) {
           </p>
         </div>
 
-        {/* The Core Thesis Pull Quote */}
+        {/* The Core Thesis Pull Quote in Rumelaz Gekinsa */}
         <blockquote className="space-y-6 max-w-4xl mb-12">
-          <h2 className="text-[#F5F0E8] font-serif text-3xl sm:text-5xl lg:text-[54px] font-light leading-[1.18] tracking-[-0.02em]">
+          <h2
+            className="text-[#F5F0E8] font-rumelaz text-3xl sm:text-5xl lg:text-[54px] font-normal leading-[1.2] tracking-[-0.01em]"
+            style={fontStyle}
+          >
             Your future is <span className="text-[#FFFFFF] font-normal underline decoration-[#B8975A]/60 decoration-1 underline-offset-8">bigger</span> than your next submission.
             The difference is not effort — it is{' '}
-            <span className="italic font-serif text-[#B8975A]">
+            <span className="italic font-rumelaz text-[#B8975A]" style={fontStyle}>
               reclaiming bandwidth for what truly matters.
             </span>
           </h2>
@@ -56,22 +61,25 @@ export function ManifestoSection({ onRequestQuote }: ManifestoSectionProps) {
           </span>
         </div>
 
-        {/* Two-Column Supporting Narrative (No generic card boxes) */}
+        {/* Two-Column Supporting Narrative (Unified Rumelaz styling) */}
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-16 mb-20 text-sm sm:text-base leading-[1.85] font-light text-[#8A9BB0]">
           <div className="lg:col-span-6 space-y-5">
-            <p className="text-[#F5F0E8] font-serif text-lg sm:text-xl font-normal leading-relaxed italic border-l-2 border-[#B8975A] pl-5">
+            <p
+              className="text-[#F5F0E8] font-rumelaz text-lg sm:text-xl font-normal leading-relaxed italic border-l-2 border-[#B8975A] pl-5"
+              style={fontStyle}
+            >
               &ldquo;{BRAND_CONFIG.manifestoLead}&rdquo;
             </p>
-            <p>
+            <p className="font-rumelaz text-[#CBD8E6] text-base leading-relaxed tracking-normal font-normal" style={fontStyle}>
               When exhaustive documentation, data formatting, and formatting compliance consume your entire waking bandwidth, it is your off-campus internships, startup ventures, and career placements that suffer.
             </p>
           </div>
 
           <div className="lg:col-span-6 space-y-5">
-            <p>
+            <p className="font-rumelaz text-[#CBD8E6] text-base leading-relaxed tracking-normal font-normal" style={fontStyle}>
               Wayforth was founded on the conviction that elite academic advisory should operate with the intellectual rigour of an independent research consultancy and the complete discretion of a private office.
             </p>
-            <p>
+            <p className="font-rumelaz text-[#CBD8E6] text-base leading-relaxed tracking-normal font-normal" style={fontStyle}>
               We do not provide generic automated shortcuts. We construct rigorous, peer-reviewed methodological frameworks and custom empirical workbooks—empowering you to defend with total confidence.
             </p>
           </div>
@@ -100,7 +108,10 @@ export function ManifestoSection({ onRequestQuote }: ManifestoSectionProps) {
                     [0{idx + 1}]
                   </span>
                   <div>
-                    <h3 className="font-serif text-xl sm:text-2xl text-[#F5F0E8] font-normal tracking-tight group-hover:text-white transition-colors">
+                    <h3
+                      className="font-rumelaz text-xl sm:text-2xl text-[#F5F0E8] font-normal tracking-tight group-hover:text-white transition-colors"
+                      style={fontStyle}
+                    >
                       {usp.title}
                     </h3>
                     <span className="inline-block mt-1 text-[10px] font-mono uppercase tracking-wider text-[#B8975A]/90">
@@ -111,14 +122,20 @@ export function ManifestoSection({ onRequestQuote }: ManifestoSectionProps) {
 
                 {/* Subtitle / Lead */}
                 <div className="md:col-span-3">
-                  <p className="text-xs font-mono text-[#F5F0E8] font-medium leading-relaxed">
+                  <p
+                    className="font-rumelaz text-xs leading-relaxed text-[#CBD8E6] font-medium"
+                    style={fontStyle}
+                  >
                     {usp.lead}
                   </p>
                 </div>
 
                 {/* Detailed Description */}
                 <div className="md:col-span-5">
-                  <p className="text-xs sm:text-[13px] text-[#8A9BB0] leading-relaxed font-light">
+                  <p
+                    className="font-rumelaz text-xs sm:text-[13px] leading-relaxed font-normal text-[#CBD8E6]"
+                    style={fontStyle}
+                  >
                     {usp.description}
                   </p>
                 </div>

@@ -62,9 +62,6 @@ export function ServiceDossier({ onRequestQuote }: ServiceDossierProps) {
               Four specialized tiers. One standard of scholarship.
             </h2>
           </div>
-          <p className="text-xs font-mono text-[#738A9E] sm:text-right shrink-0">
-            50+ Undergrad to Doctoral Methodologies
-          </p>
         </div>
 
         {/* The Broadsheet Docket List (divide-y replaces card borders completely) */}

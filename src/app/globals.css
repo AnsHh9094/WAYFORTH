@@ -1,6 +1,57 @@
 @import url('https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400..700;1,400..700&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap');
 @import "tailwindcss";
 
+@font-face {
+  font-family: 'GCVank';
+  src: url('/fonts/GCVank.woff2') format('woff2'),
+       url('/fonts/GCVank.otf') format('opentype');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'SATriumph';
+  src: url('/fonts/SATriumph.woff') format('woff'),
+       url('/fonts/SATriumph.otf') format('opentype');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'RumelazGekinsa';
+  src: url('/fonts/RumelazGekinsa-Regular.woff') format('woff'),
+       url('/fonts/RumelazGekinsa-Regular.otf') format('opentype');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'RumelazGekinsa';
+  src: url('/fonts/RumelazGekinsa-Italic.woff') format('woff'),
+       url('/fonts/RumelazGekinsa-Italic.otf') format('opentype');
+  font-weight: normal;
+  font-style: italic;
+  font-display: swap;
+}
+
+.font-vank {
+  font-family: 'GCVank', sans-serif !important;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
+.font-triumph {
+  font-family: 'SATriumph', sans-serif !important;
+  letter-spacing: 0.06em;
+}
+
+.font-rumelaz {
+  font-family: 'RumelazGekinsa', Georgia, serif !important;
+}
+
 @theme {
   --font-serif: "EB Garamond", "Newsreader", Georgia, serif;
   --font-sans: "Plus Jakarta Sans", "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
