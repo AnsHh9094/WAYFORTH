@@ -13,7 +13,7 @@ export function TimelineSteps() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         
         {/* Section Header */}
-        <div className="flex items-center justify-between border-b border-[#D8E2EC] pb-4 mb-16 text-xs font-mono text-[#4A607A]">
+        <div className="flex items-center justify-between border-b border-[#D8E2EC] pb-4 mb-16 text-[11px] font-sans font-medium uppercase tracking-[0.16em] text-[#4A607A]">
           <div className="flex items-center gap-2">
             <span className="w-1.5 h-1.5 bg-[#12324E]" />
             <span className="uppercase tracking-widest text-[#12324E] font-semibold">
@@ -26,7 +26,7 @@ export function TimelineSteps() {
         </div>
 
         <div className="max-w-3xl mb-12 sm:mb-16">
-          <span className="text-xs font-mono uppercase tracking-widest text-[#1D5382] block mb-2 font-semibold">
+          <span className="text-xs font-sans uppercase tracking-[0.14em] text-[#1D5382] block mb-2 font-semibold">
             Structured Engagement Process
           </span>
           <h2 className="font-serif text-3xl sm:text-5xl font-normal text-[#12324E] leading-tight mb-4">
@@ -39,7 +39,7 @@ export function TimelineSteps() {
 
         {/* ── Visual Progression Spine ── */}
         <div className="hidden lg:block mb-16 bg-[#FFFFFF] border border-[#D8E2EC] p-6 shadow-xs relative rounded-2xl">
-          <div className="flex items-center justify-between mb-6 text-[10px] font-mono text-[#4A607A] uppercase tracking-wider">
+          <div className="flex items-center justify-between mb-6 text-[11px] font-sans font-medium text-[#4A607A] uppercase tracking-[0.12em]">
             <span>ENGAGEMENT MILESTONES</span>
             <span className="text-[#12324E] font-semibold">ALL STAGES MONITORED</span>
           </div>
@@ -67,7 +67,7 @@ export function TimelineSteps() {
                 >
                   {/* Node Circle */}
                   <div
-                    className={`w-9 h-9 rounded-full flex items-center justify-center font-mono text-xs font-bold transition-all duration-300 ${
+                    className={`w-9 h-9 rounded-full flex items-center justify-center font-sans text-xs font-bold transition-all duration-300 ${
                       isGate4
                         ? 'bg-[#1D5382] text-white ring-4 ring-[#1D5382]/20 shadow-sm scale-110'
                         : isGate6
@@ -130,11 +130,11 @@ export function TimelineSteps() {
                 )}
 
                 <div>
-                  <div className="flex items-center justify-between text-xs font-mono text-[#4A607A] mb-4">
+                  <div className="flex items-center justify-between text-xs font-sans text-[#4A607A] mb-4">
                     <span className="font-bold text-sm font-sans text-[#12324E] tracking-tight">
                       Stage {step.step}
                     </span>
-                    <span className="px-2.5 py-0.5 bg-[#F4F7FB] border border-[#D8E2EC] text-[10px] uppercase font-sans font-semibold text-[#1D5382] rounded-full">
+                    <span className="px-2.5 py-0.5 bg-[#F4F7FB] border border-[#D8E2EC] text-[10.5px] uppercase font-sans font-semibold text-[#1D5382] rounded-full">
                       {step.actor}
                     </span>
                   </div>
@@ -143,11 +143,11 @@ export function TimelineSteps() {
                     {step.title}
                   </h3>
 
-                  <p className="text-xs font-sans text-[#1D5382] font-semibold mb-3 leading-relaxed">
+                  <p className="text-[13.5px] font-sans text-[#1D5382] font-semibold mb-3 leading-relaxed">
                     {step.summary}
                   </p>
 
-                  <p className="text-xs text-[#4A607A] leading-relaxed font-sans font-normal">
+                  <p className="text-[13.5px] text-[#4A607A] leading-relaxed font-sans font-normal">
                     {step.detail}
                   </p>
                 </div>

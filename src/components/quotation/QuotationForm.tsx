@@ -170,7 +170,7 @@ _Initiated via wayforth.in official quotation calculator_`;
           {/* Left Column: Live Interactive Ledger Summary */}
           <div className="lg:col-span-5 space-y-6 lg:sticky lg:top-28">
             <div>
-              <span className="text-xs font-mono uppercase tracking-widest text-[#1D5382] block mb-2 font-semibold">
+              <span className="text-xs font-sans uppercase tracking-[0.16em] text-[#1D5382] block mb-2 font-semibold">
                 Mathematical Transparency
               </span>
               <h2 className="font-serif text-3xl sm:text-4xl text-[#12324E] leading-tight mb-3">
@@ -184,8 +184,8 @@ _Initiated via wayforth.in official quotation calculator_`;
 
             {/* The Live Ledger Matrix Card */}
             <div className="bg-[#FFFFFF] border-2 border-[#12324E] p-6 sm:p-7 space-y-4 shadow-sm relative rounded-2xl">
-              <div className="flex items-center justify-between text-xs font-mono border-b border-[#D8E2EC] pb-3">
-                <span className="flex items-center gap-1.5 text-[#12324E] font-semibold">
+              <div className="flex items-center justify-between text-xs font-sans border-b border-[#D8E2EC] pb-3">
+                <span className="flex items-center gap-1.5 text-[#12324E] font-semibold tracking-wide">
                   <Calculator className="w-4 h-4 text-[#1D5382]" />
                   <span>TRANSPARENT LEDGER</span>
                 </span>
@@ -194,16 +194,16 @@ _Initiated via wayforth.in official quotation calculator_`;
                 </span>
               </div>
 
-              <div className="space-y-2.5 text-xs font-mono">
+              <div className="space-y-2.5 text-xs font-sans">
                 <div className="flex justify-between items-center text-[#42586E]">
                   <span>Base Fee Floor:</span>
-                  <span className="text-[#12324E] font-medium">₹{currentTier.startingBase.toLocaleString()}</span>
+                  <span className="text-[#12324E] font-semibold">₹{currentTier.startingBase.toLocaleString()}</span>
                 </div>
                 <div className="flex justify-between items-center text-[#42586E]">
                   <span>
                     Volume ({pages} Pages × ₹{currentTier.perPageRate}/pg):
                   </span>
-                  <span className="text-[#12324E] font-medium">
+                  <span className="text-[#12324E] font-semibold">
                     ₹{(pages * currentTier.perPageRate).toLocaleString()}
                   </span>
                 </div>
@@ -242,7 +242,7 @@ _Initiated via wayforth.in official quotation calculator_`;
                 {/* Final Estimated Total */}
                 <div className="flex justify-between items-baseline pt-3 border-t-2 border-[#12324E]">
                   <div>
-                    <span className="text-xs uppercase font-bold text-[#12324E] block">
+                    <span className="text-xs uppercase font-bold text-[#12324E] block tracking-wide">
                       Estimated Net Total:
                     </span>
                     <span className="text-[10px] text-[#738A9E]">
@@ -261,8 +261,8 @@ _Initiated via wayforth.in official quotation calculator_`;
               </div>
 
               {/* Pay-as-you-go Balanced Milestones Breakdown */}
-              <div className="p-3.5 bg-[#F4F7FB] border border-[#D8E2EC] text-[11px] font-mono text-[#12324E] space-y-2">
-                <div className="flex items-center gap-1.5 font-bold text-[#1D5382]">
+              <div className="p-3.5 bg-[#F4F7FB] border border-[#D8E2EC] text-[11.5px] font-sans text-[#12324E] space-y-2 rounded-xl">
+                <div className="flex items-center gap-1.5 font-bold text-[#1D5382] text-xs">
                   <ShieldCheck className="w-3.5 h-3.5 text-[#1D5382]" />
                   <span>PAY-AS-YOU-GO MILESTONES (50 / 50)</span>
                 </div>
@@ -274,12 +274,12 @@ _Initiated via wayforth.in official quotation calculator_`;
                   <span>50% Balance on Preview Approval:</span>
                   <span className="font-bold text-[#12324E]">₹{Math.round(finalTotal / 2).toLocaleString()}</span>
                 </div>
-                <p className="text-[#4A607A] text-[10px] leading-relaxed pt-1.5 border-t border-[#D8E2EC]">
+                <p className="text-[#4A607A] text-[10.5px] leading-relaxed pt-1.5 border-t border-[#D8E2EC]">
                   Pay 50% deposit to initiate research → review watermarked representative preview → 1 included revision round → release final balance.
                 </p>
               </div>
 
-              <p className="text-[10px] text-center font-mono text-[#738A9E]">
+              <p className="text-[11px] text-center font-sans text-[#738A9E]">
                 Questions? Direct email: <strong>{BRAND_CONFIG.contactEmail}</strong>
               </p>
             </div>
@@ -288,7 +288,7 @@ _Initiated via wayforth.in official quotation calculator_`;
           {/* Right Column: Interactive Parameter Console & Intake Form */}
           <div className="lg:col-span-7 bg-[#FFFFFF] border border-[#D8E2EC] p-6 sm:p-10 shadow-xs rounded-2xl">
             {serverError && (
-              <div className="mb-6 p-3 bg-red-50 border border-red-200 text-red-800 text-xs font-mono flex items-center gap-2 rounded-xl">
+              <div className="mb-6 p-3 bg-red-50 border border-red-200 text-red-800 text-xs font-sans flex items-center gap-2 rounded-xl">
                 <AlertCircle className="w-4 h-4 shrink-0" />
                 <span>{serverError}</span>
               </div>
@@ -302,7 +302,7 @@ _Initiated via wayforth.in official quotation calculator_`;
                 <h3 className="font-serif text-3xl text-[#12324E]">
                   Quotation Prepared for Dispatch
                 </h3>
-                <p className="text-sm text-[#42586E] max-w-md mx-auto leading-relaxed">
+                <p className="text-sm text-[#42586E] max-w-md mx-auto leading-relaxed font-sans">
                   Thank you, <strong>{name || 'Client'}</strong>. Your brief for <strong>{level}</strong> ({pages} pages, estimated total ₹{finalTotal.toLocaleString()}) has been verified and formatted for instant WhatsApp transmission to our chief advisory desk.
                 </p>
                 <div className="pt-4 flex flex-col sm:flex-row items-center justify-center gap-3">
@@ -310,14 +310,14 @@ _Initiated via wayforth.in official quotation calculator_`;
                     href={whatsappUrl}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="w-full sm:w-auto px-6 py-3 bg-[#12324E] text-white text-xs font-mono uppercase tracking-wider flex items-center justify-center gap-2 hover:bg-[#1D5382] transition-colors rounded-xl font-bold"
+                    className="w-full sm:w-auto px-6 py-3.5 bg-[#12324E] text-white text-xs font-sans uppercase tracking-wider flex items-center justify-center gap-2 hover:bg-[#1D5382] transition-colors rounded-xl font-bold"
                   >
                     <MessageSquare className="w-4 h-4 text-[#38BDF8]" />
                     <span>Open in WhatsApp</span>
                   </a>
                   <button
                     onClick={() => setSubmitted(false)}
-                    className="w-full sm:w-auto px-6 py-3 border border-[#D8E2EC] text-[#12324E] text-xs font-mono uppercase tracking-wider hover:border-[#12324E] rounded-xl"
+                    className="w-full sm:w-auto px-6 py-3.5 border border-[#D8E2EC] text-[#12324E] text-xs font-sans uppercase tracking-wider hover:border-[#12324E] rounded-xl font-semibold cursor-pointer"
                   >
                     Adjust Parameters
                   </button>
@@ -328,7 +328,7 @@ _Initiated via wayforth.in official quotation calculator_`;
                 
                 {/* 1. Academic Level Selection */}
                 <div>
-                  <label className="block text-xs font-mono uppercase tracking-wider text-[#12324E] mb-3 font-semibold">
+                  <label className="block text-xs font-sans uppercase tracking-wider text-[#12324E] mb-3 font-semibold">
                     1. Select Academic Category *
                   </label>
                   <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
@@ -349,11 +349,11 @@ _Initiated via wayforth.in official quotation calculator_`;
                             <span className="font-serif text-sm font-semibold text-[#12324E]">
                               {tier.level}
                             </span>
-                            <span className="text-[10px] font-mono text-[#1D5382] font-bold">
+                            <span className="text-[11px] font-sans text-[#1D5382] font-bold">
                               ₹{tier.perPageRate}/pg
                             </span>
                           </div>
-                          <span className="text-[11px] text-[#4A607A] block leading-tight font-sans">
+                          <span className="text-[11.5px] text-[#4A607A] block leading-tight font-sans">
                             {tier.label}
                           </span>
                         </button>
@@ -365,10 +365,10 @@ _Initiated via wayforth.in official quotation calculator_`;
                 {/* 2. Page Volume Slider */}
                 <div>
                   <div className="flex justify-between items-center mb-2">
-                    <label htmlFor="page-volume-slider" className="text-xs font-mono uppercase tracking-wider text-[#12324E] font-semibold">
+                    <label htmlFor="page-volume-slider" className="text-xs font-sans uppercase tracking-wider text-[#12324E] font-semibold">
                       2. Required Volume: <strong>{pages} Content Pages</strong>
                     </label>
-                    <span className="text-xs font-mono text-[#1D5382] font-semibold">
+                    <span className="text-xs font-sans text-[#1D5382] font-semibold">
                       (~{totalWords.toLocaleString()} Words at 275w/pg)
                     </span>
                   </div>
@@ -383,7 +383,7 @@ _Initiated via wayforth.in official quotation calculator_`;
                     onChange={(e) => setPages(parseInt(e.target.value))}
                     className="w-full h-2 bg-[#D8E2EC] appearance-none cursor-pointer accent-[#12324E] rounded-full"
                   />
-                  <div className="flex justify-between text-[10px] font-mono text-[#4A607A] mt-1.5">
+                  <div className="flex justify-between text-[11px] font-sans text-[#4A607A] mt-1.5">
                     <span>3 pgs (Short Essay)</span>
                     <span>15–20 pgs (Standard Term Project)</span>
                     <span>80+ pgs (Dissertation)</span>
@@ -393,10 +393,10 @@ _Initiated via wayforth.in official quotation calculator_`;
                 {/* 3. Turnaround Deadline & Variable Urgency Fees */}
                 <div>
                   <div className="flex items-center justify-between mb-2">
-                    <label className="text-xs font-mono uppercase tracking-wider text-[#12324E] font-semibold">
+                    <label className="text-xs font-sans uppercase tracking-wider text-[#12324E] font-semibold">
                       3. Target Submission Deadline (Variable Urgency Rate) *
                     </label>
-                    <span className="text-[10px] font-mono text-[#4A607A] flex items-center gap-1">
+                    <span className="text-[11px] font-sans text-[#4A607A] flex items-center gap-1">
                       <Clock className="w-3 h-3 text-[#1D5382]" />
                       <span>Confirms specialist sprint allocation</span>
                     </span>
@@ -417,12 +417,12 @@ _Initiated via wayforth.in official quotation calculator_`;
                           }`}
                         >
                           <div className="flex items-center justify-between mb-0.5">
-                            <span className="text-xs font-mono font-semibold">
+                            <span className="text-xs font-sans font-semibold">
                               {urg.label}
                             </span>
                             {urg.multiplier > 0 && (
                               <span
-                                className={`text-[9px] font-mono px-2 py-0.5 rounded-full ${
+                                className={`text-[9.5px] font-sans font-semibold px-2 py-0.5 rounded-full ${
                                   isSelected
                                     ? 'bg-white text-[#12324E]'
                                     : 'bg-[#EBF3FB] text-[#1D5382] border border-[#C5DCF0]'
@@ -433,7 +433,7 @@ _Initiated via wayforth.in official quotation calculator_`;
                             )}
                           </div>
                           <span
-                            className={`text-[10px] block font-sans ${
+                            className={`text-[10.5px] block font-sans ${
                               isSelected ? 'text-white/80' : 'text-[#4A607A]'
                             }`}
                           >
@@ -448,11 +448,11 @@ _Initiated via wayforth.in official quotation calculator_`;
                 {/* 4. Special Custom Requirements Checkboxes */}
                 <div>
                   <div className="flex items-center justify-between mb-2">
-                    <label className="text-xs font-mono uppercase tracking-wider text-[#12324E] font-semibold flex items-center gap-1.5">
+                    <label className="text-xs font-sans uppercase tracking-wider text-[#12324E] font-semibold flex items-center gap-1.5">
                       <Layers className="w-3.5 h-3.5 text-[#1D5382]" />
                       <span>4. Custom Scope Additions (Graphs, Instruments & Analysis)</span>
                     </label>
-                    <span className="text-[10px] font-mono text-[#1D5382]">Select all that apply</span>
+                    <span className="text-[11px] font-sans text-[#1D5382] font-medium">Select all that apply</span>
                   </div>
 
                   <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
@@ -482,15 +482,15 @@ _Initiated via wayforth.in official quotation calculator_`;
                           </div>
                           <div className="space-y-0.5 w-full">
                             <div className="flex items-center justify-between gap-2">
-                              <span className="text-xs font-mono font-semibold text-[#12324E]">
+                              <span className="text-xs font-sans font-semibold text-[#12324E]">
                                 {addon.label}
                               </span>
                             </div>
-                            <p className="text-[11px] text-[#4A607A] leading-tight font-sans">
+                            <p className="text-[11.5px] text-[#4A607A] leading-tight font-sans">
                               {addon.description}
                             </p>
                             {isCharts && (
-                              <span className="inline-block mt-1 text-[9px] font-mono text-[#1D5382] bg-[#EBF3FB] px-2 py-0.5 border border-[#C5DCF0] rounded-full">
+                              <span className="inline-block mt-1 text-[9.5px] font-sans font-semibold text-[#1D5382] bg-[#EBF3FB] px-2 py-0.5 border border-[#C5DCF0] rounded-full">
                                 Custom data graphs & visual models
                               </span>
                             )}
@@ -505,7 +505,7 @@ _Initiated via wayforth.in official quotation calculator_`;
                 <div className="pt-2 border-t border-[#D8E2EC] space-y-4">
                   <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                     <div>
-                      <label htmlFor="client-name" className="block text-xs font-mono uppercase tracking-wider text-[#12324E] mb-1.5 font-semibold">
+                      <label htmlFor="client-name" className="block text-xs font-sans uppercase tracking-wider text-[#12324E] mb-1.5 font-semibold">
                         Your Full Name *
                       </label>
                       <input
@@ -517,12 +517,12 @@ _Initiated via wayforth.in official quotation calculator_`;
                         value={name}
                         onChange={(e) => setName(e.target.value)}
                         placeholder="e.g. Aryan Sharma"
-                        className="w-full px-4 py-2.5 bg-[#FFFFFF] border border-[#D8E2EC] text-xs text-[#12324E] focus:border-[#12324E] focus:outline-none rounded-xl"
+                        className="w-full px-4 py-2.5 bg-[#FFFFFF] border border-[#D8E2EC] text-xs font-sans text-[#12324E] focus:border-[#12324E] focus:outline-none rounded-xl"
                       />
                     </div>
 
                     <div>
-                      <label htmlFor="client-contact" className="block text-xs font-mono uppercase tracking-wider text-[#12324E] mb-1.5 font-semibold">
+                      <label htmlFor="client-contact" className="block text-xs font-sans uppercase tracking-wider text-[#12324E] mb-1.5 font-semibold">
                         WhatsApp Contact / Email *
                       </label>
                       <input
@@ -534,14 +534,14 @@ _Initiated via wayforth.in official quotation calculator_`;
                         value={contact}
                         onChange={(e) => setContact(e.target.value)}
                         placeholder="+91 ... / student@university.edu"
-                        className="w-full px-4 py-2.5 bg-[#FFFFFF] border border-[#D8E2EC] text-xs text-[#12324E] focus:border-[#12324E] focus:outline-none rounded-xl"
+                        className="w-full px-4 py-2.5 bg-[#FFFFFF] border border-[#D8E2EC] text-xs font-sans text-[#12324E] focus:border-[#12324E] focus:outline-none rounded-xl"
                       />
                     </div>
                   </div>
 
                   <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                     <div>
-                      <label htmlFor="client-institution" className="block text-xs font-mono uppercase tracking-wider text-[#12324E] mb-1.5 font-semibold">
+                      <label htmlFor="client-institution" className="block text-xs font-sans uppercase tracking-wider text-[#12324E] mb-1.5 font-semibold">
                         University / College / Board *
                       </label>
                       <input
@@ -553,12 +553,12 @@ _Initiated via wayforth.in official quotation calculator_`;
                         value={institution}
                         onChange={(e) => setInstitution(e.target.value)}
                         placeholder="e.g. Delhi University / NMIMS / IIM"
-                        className="w-full px-4 py-2.5 bg-[#FFFFFF] border border-[#D8E2EC] text-xs text-[#12324E] focus:border-[#12324E] focus:outline-none rounded-xl"
+                        className="w-full px-4 py-2.5 bg-[#FFFFFF] border border-[#D8E2EC] text-xs font-sans text-[#12324E] focus:border-[#12324E] focus:outline-none rounded-xl"
                       />
                     </div>
 
                     <div>
-                      <label htmlFor="client-discipline" className="block text-xs font-mono uppercase tracking-wider text-[#12324E] mb-1.5 font-semibold">
+                      <label htmlFor="client-discipline" className="block text-xs font-sans uppercase tracking-wider text-[#12324E] mb-1.5 font-semibold">
                         Subject / Discipline Area *
                       </label>
                       <input
@@ -570,13 +570,13 @@ _Initiated via wayforth.in official quotation calculator_`;
                         value={discipline}
                         onChange={(e) => setDiscipline(e.target.value)}
                         placeholder="e.g. Corporate Finance / Supply Chain"
-                        className="w-full px-4 py-2.5 bg-[#FFFFFF] border border-[#D8E2EC] text-xs text-[#12324E] focus:border-[#12324E] focus:outline-none rounded-xl"
+                        className="w-full px-4 py-2.5 bg-[#FFFFFF] border border-[#D8E2EC] text-xs font-sans text-[#12324E] focus:border-[#12324E] focus:outline-none rounded-xl"
                       />
                     </div>
                   </div>
 
                   <div>
-                    <label htmlFor="client-brief" className="block text-xs font-mono uppercase tracking-wider text-[#12324E] mb-1.5 font-semibold">
+                    <label htmlFor="client-brief" className="block text-xs font-sans uppercase tracking-wider text-[#12324E] mb-1.5 font-semibold">
                       Project Topic, Rubric & Faculty Instructions *
                     </label>
                     <textarea
@@ -597,13 +597,13 @@ _Initiated via wayforth.in official quotation calculator_`;
                   <button
                     type="submit"
                     disabled={isSubmitting}
-                    className="w-full py-4 bg-[#12324E] text-white hover:bg-[#1D5382] transition-colors text-xs font-mono uppercase tracking-widest flex items-center justify-center gap-2 cursor-pointer shadow-xs disabled:opacity-50 font-bold rounded-xl"
+                    className="w-full py-4 bg-[#12324E] text-white hover:bg-[#1D5382] transition-colors text-xs font-sans uppercase tracking-wider flex items-center justify-center gap-2 cursor-pointer shadow-xs disabled:opacity-50 font-bold rounded-xl"
                   >
                     <span>{isSubmitting ? 'Formatting Brief...' : 'Send Requirements & Lock Quote via WhatsApp'}</span>
                     <Send className="w-4 h-4 text-[#38BDF8]" />
                   </button>
 
-                  <p className="text-[10px] text-center font-mono text-[#4A607A]">
+                  <p className="text-[11px] text-center font-sans text-[#4A607A]">
                     Submitting automatically prepares your quotation brief and transmits it directly to our advisory WhatsApp. Pay-as-you-go milestone model (50% deposit to begin).
                   </p>
                 </div>

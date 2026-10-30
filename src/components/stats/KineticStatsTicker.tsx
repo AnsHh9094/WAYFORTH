@@ -2,7 +2,7 @@
 
 import React, { useEffect, useRef, useState } from 'react';
 import { motion, useInView } from 'framer-motion';
-import { ShieldCheck, Zap, Award, BookOpen } from 'lucide-react';
+import { ShieldCheck, BookOpen, Clock, Sparkles } from 'lucide-react';
 
 interface StatItem {
   icon: React.ReactNode;
@@ -22,25 +22,25 @@ const STATS: StatItem[] = [
     sublabel: 'Zero AI regurgitation or hallucinated citations',
   },
   {
-    icon: <Zap className="w-5 h-5 text-[#38BDF8]" />,
-    value: 50,
-    suffix: '%',
-    label: 'Initial Milestone Deposit',
-    sublabel: 'Pay-as-you-go milestone safeguard',
-  },
-  {
-    icon: <Award className="w-5 h-5 text-[#38BDF8]" />,
-    value: 1,
-    suffix: ' Round',
-    label: 'Included Revision',
-    sublabel: 'Comprehensive feedback & refinements included',
-  },
-  {
     icon: <BookOpen className="w-5 h-5 text-[#38BDF8]" />,
     value: 50,
     suffix: '+',
     label: 'Academic Disciplines',
     sublabel: 'Undergrad to PhD doctoral methodologies',
+  },
+  {
+    icon: <Clock className="w-5 h-5 text-[#38BDF8]" />,
+    value: 24,
+    suffix: 'h',
+    label: 'Review Window',
+    sublabel: 'Guaranteed consolidated advisory feedback cycle',
+  },
+  {
+    icon: <Sparkles className="w-5 h-5 text-[#38BDF8]" />,
+    value: 15,
+    suffix: '%',
+    label: 'Introductory Waiver',
+    sublabel: 'First engagement incentive for new client commissions',
   },
 ];
 
@@ -90,12 +90,12 @@ export function KineticStatsTicker() {
   return (
     <section
       className="relative py-20 sm:py-24 lg:py-28 bg-[#0E253A] border-b border-[#224A70] select-none"
-      style={{ minHeight: '440px', paddingTop: '5.5rem', paddingBottom: '5.5rem' }}
+      style={{ minHeight: '460px', paddingTop: '5.5rem', paddingBottom: '5.5rem' }}
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
         {/* Top Ledger Strip */}
-        <div className="flex items-center justify-between pb-6 mb-12 border-b border-[#224A70] text-[10.5px] font-mono tracking-widest uppercase text-[#CBD5E1]">
+        <div className="flex items-center justify-between pb-6 mb-12 border-b border-[#224A70] text-[11px] font-sans font-medium tracking-[0.16em] uppercase text-[#CBD5E1]">
           <div className="flex items-center gap-2">
             <span className="w-2 h-2 rounded-full bg-[#00FFA3] animate-pulse" />
             <span className="text-[#FFFFFF] font-bold">OPERATIONAL METRICS // AUTUMN 2026</span>
@@ -108,8 +108,8 @@ export function KineticStatsTicker() {
           {STATS.map((stat, idx) => (
             <motion.div
               key={idx}
-              className="flex flex-col p-6 sm:p-8 bg-[#0B1826]/80 border border-[#224A70] rounded-2xl hover:border-[#38BDF8]/60 transition-all shadow-md group min-h-[230px]"
-              style={{ minHeight: '230px' }}
+              className="flex flex-col p-6 sm:p-8 bg-[#0B1826]/80 border border-[#224A70] rounded-2xl hover:border-[#38BDF8]/60 transition-all shadow-md group min-h-[235px]"
+              style={{ minHeight: '235px' }}
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
@@ -119,7 +119,7 @@ export function KineticStatsTicker() {
                 <div className="p-2.5 bg-[#12324E] border border-[#224A70] rounded-xl text-[#38BDF8] group-hover:border-[#38BDF8]/50 transition-colors">
                   {stat.icon}
                 </div>
-                <span className="text-[10px] font-mono text-[#94A3B8] tracking-widest px-2 py-0.5 bg-[#12324E]/60 border border-[#224A70] rounded-full">
+                <span className="text-[10.5px] font-sans font-semibold text-[#94A3B8] tracking-widest px-2.5 py-0.5 bg-[#12324E]/60 border border-[#224A70] rounded-full">
                   [0{idx + 1}]
                 </span>
               </div>
@@ -128,10 +128,10 @@ export function KineticStatsTicker() {
                 <CounterNumber value={stat.value} prefix={stat.prefix} suffix={stat.suffix} />
               </div>
 
-              <strong className="block text-sm font-sans text-[#E2ECF5] font-semibold mb-1">
+              <strong className="block text-sm sm:text-[15px] font-sans text-[#E2ECF5] font-semibold mb-1">
                 {stat.label}
               </strong>
-              <p className="text-xs text-[#CBD5E1] leading-relaxed font-sans font-normal">
+              <p className="text-[13px] text-[#CBD5E1] leading-relaxed font-sans font-normal">
                 {stat.sublabel}
               </p>
             </motion.div>

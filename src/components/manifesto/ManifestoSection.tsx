@@ -28,7 +28,7 @@ export function ManifestoSection({ onRequestQuote }: ManifestoSectionProps) {
         {/* Kicker — Small caps, tracked, institutional label */}
         <div className="flex items-center gap-3 mb-10">
           <span className="w-1.5 h-1.5 rounded-full bg-[#B8975A] animate-pulse" />
-          <p className="text-[#8A9BB0] text-[11px] font-mono tracking-[0.25em] uppercase font-medium">
+          <p className="text-[#8A9BB0] text-[11.5px] font-sans tracking-[0.2em] uppercase font-medium">
             Foundational Manifesto // Why We Exist
           </p>
         </div>
@@ -54,7 +54,7 @@ export function ManifestoSection({ onRequestQuote }: ManifestoSectionProps) {
         <div className="flex items-center gap-6 my-12">
           <div className="h-px bg-[#B8975A] w-16 flex-none" />
           <div className="h-px bg-[#2A3548] flex-1" />
-          <span className="text-[10px] font-mono text-[#8A9BB0] tracking-widest uppercase flex-none">
+          <span className="text-[11px] font-sans font-medium text-[#8A9BB0] tracking-widest uppercase flex-none">
             {BRAND_CONFIG.name} Advisory • Est. 2026
           </span>
         </div>
@@ -95,10 +95,10 @@ export function ManifestoSection({ onRequestQuote }: ManifestoSectionProps) {
         {/* Broadsheet Ledger: The Four Guiding Commitments (Hairline divided, ZERO cards) */}
         <div className="pt-12 border-t border-[#2A3548]">
           <div className="flex flex-col sm:flex-row sm:items-baseline justify-between gap-4 mb-10 pb-4 border-b border-[#2A3548]">
-            <p className="text-xs font-mono tracking-[0.25em] uppercase text-[#B8975A] font-medium">
+            <p className="text-xs font-sans tracking-[0.2em] uppercase text-[#B8975A] font-semibold">
               Operational Standards
             </p>
-            <p className="text-xs font-mono text-[#8A9BB0]">
+            <p className="text-xs sm:text-[13px] font-sans text-[#8A9BB0]">
               Non-negotiable protocols governing every client commission
             </p>
           </div>
@@ -111,7 +111,7 @@ export function ManifestoSection({ onRequestQuote }: ManifestoSectionProps) {
               >
                 {/* Ghost Ordinal + Title */}
                 <div className="md:col-span-4 flex items-baseline gap-4">
-                  <span className="font-mono text-xs text-[#B8975A] font-bold tracking-widest flex-none">
+                  <span className="font-sans text-xs text-[#B8975A] font-bold tracking-wider flex-none">
                     [0{idx + 1}]
                   </span>
                   <div>
@@ -121,7 +121,7 @@ export function ManifestoSection({ onRequestQuote }: ManifestoSectionProps) {
                     >
                       {usp.title}
                     </h3>
-                    <span className="inline-block mt-1 text-[10px] font-mono uppercase tracking-wider text-[#B8975A]/90">
+                    <span className="inline-block mt-1 text-[10.5px] font-sans font-medium uppercase tracking-wider text-[#B8975A]/90">
                       {usp.badge}
                     </span>
                   </div>
@@ -130,7 +130,7 @@ export function ManifestoSection({ onRequestQuote }: ManifestoSectionProps) {
                 {/* Subtitle / Lead */}
                 <div className="md:col-span-3">
                   <p
-                    className="font-rumelaz text-xs text-[#CBD8E6] font-medium leading-relaxed"
+                    className="font-rumelaz text-sm text-[#CBD8E6] font-medium leading-relaxed"
                     style={{ fontFamily: "'RumelazGekinsa', Georgia, serif" }}
                   >
                     {usp.lead}
@@ -140,7 +140,7 @@ export function ManifestoSection({ onRequestQuote }: ManifestoSectionProps) {
                 {/* Detailed Description */}
                 <div className="md:col-span-5">
                   <p
-                    className="font-rumelaz text-xs sm:text-[13px] text-[#A2B4C7] leading-relaxed font-normal"
+                    className="font-rumelaz text-[13.5px] sm:text-sm text-[#A2B4C7] leading-relaxed font-normal"
                     style={{ fontFamily: "'RumelazGekinsa', Georgia, serif" }}
                   >
                     {usp.description}
@@ -152,13 +152,13 @@ export function ManifestoSection({ onRequestQuote }: ManifestoSectionProps) {
 
           {/* Bottom Action Strip */}
           <div className="mt-14 pt-8 border-t border-[#2A3548] flex flex-col sm:flex-row items-start sm:items-center justify-between gap-6">
-            <p className="text-xs font-mono text-[#8A9BB0]">
+            <p className="text-xs sm:text-sm font-sans text-[#8A9BB0]">
               All engagements operate under strict academic discretion and NDAs.
             </p>
             {onRequestQuote && (
               <button
                 onClick={onRequestQuote}
-                className="inline-flex items-center gap-2 px-6 py-3.5 bg-[#B8975A] text-[#0C1220] text-xs font-mono uppercase tracking-widest font-bold hover:bg-[#D4AF37] transition-all cursor-pointer rounded-xl shadow-sm"
+                className="inline-flex items-center gap-2 px-6 py-3.5 bg-[#B8975A] text-[#0C1220] text-xs font-sans uppercase tracking-[0.14em] font-bold hover:bg-[#D4AF37] transition-all cursor-pointer rounded-xl shadow-sm"
               >
                 <span>Calculate Engagement Fee</span>
                 <ArrowUpRight className="w-3.5 h-3.5 text-[#0C1220]" />
