@@ -89,7 +89,7 @@ export function Navbar({ onRequestQuote }: NavbarProps) {
           </a>
           <a
             href="/terms"
-            className="hover:text-[#12324E] transition-colors hover:underline underline-offset-8 decoration-[#12324E] text-xs font-mono"
+            className="hover:text-[#12324E] transition-colors hover:underline underline-offset-8 decoration-[#12324E]"
           >
             Terms & Refunds
           </a>
@@ -158,9 +158,9 @@ export function Navbar({ onRequestQuote }: NavbarProps) {
             <a
               href="/terms"
               onClick={() => setMobileMenuOpen(false)}
-              className="py-1 border-b border-[#D8E2EC] text-xs font-mono"
+              className="py-1 border-b border-[#D8E2EC]"
             >
-              Terms, Policies & Refunds
+              Terms & Refunds
             </a>
           </div>
 
