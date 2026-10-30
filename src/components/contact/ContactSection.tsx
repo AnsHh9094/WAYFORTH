@@ -108,7 +108,7 @@ export function ContactSection() {
               <ul className="text-xs text-[#4A607A] space-y-2 mb-6 font-sans">
                 <li className="flex justify-between border-b border-[#D8E2EC]/60 pb-1.5">
                   <span>Mon – Sat:</span>
-                  <span className="text-[#12324E] font-semibold">9:00 AM – 9:00 PM IST</span>
+                  <span className="text-[#12324E] font-semibold">12:00 PM – 12:00 AM IST</span>
                 </li>
                 <li className="flex justify-between border-b border-[#D8E2EC]/60 pb-1.5">
                   <span>Sunday:</span>

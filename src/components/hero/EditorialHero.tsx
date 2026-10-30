@@ -1,7 +1,7 @@
 'use client';
 
-import React from 'react';
-import { motion } from 'framer-motion';
+import React, { useState, useEffect } from 'react';
+import { motion, AnimatePresence } from 'framer-motion';
 import { ArrowDown, ArrowUpRight, ShieldCheck, FileCheck, Sparkles, Layers } from 'lucide-react';
 import { BrandName } from '@/config/brand.config';
 
@@ -9,6 +9,15 @@ interface EditorialHeroProps {
   brandName: BrandName;
   onRequestQuote: () => void;
 }
+
+const ROTATING_WORDS = [
+  'What Truly Matters.',
+  'Opportunities.',
+  'Internships.',
+  'Ambitions.',
+  'Practical Skills.',
+  'New Ventures.',
+];
 
 const editorial = [0.16, 1, 0.3, 1] as const;
 
@@ -23,6 +32,15 @@ const revealItem = (delay: number) => ({
 });
 
 export function EditorialHero({ brandName, onRequestQuote }: EditorialHeroProps) {
+  const [wordIndex, setWordIndex] = useState(0);
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setWordIndex((prev) => (prev + 1) % ROTATING_WORDS.length);
+    }, 2800);
+    return () => clearInterval(interval);
+  }, []);
+
   return (
     <section className="relative overflow-hidden bg-[#FFFFFF] text-[#12324E] pt-12 pb-20 sm:pt-16 sm:pb-24 border-b border-[#D8E2EC]">
       {/* Subtle Architectural Blueprint Grid */}
@@ -61,16 +79,23 @@ export function EditorialHero({ brandName, onRequestQuote }: EditorialHeroProps)
             <span>PAY-AS-YOU-GO MILESTONE MODEL • 50% DEPOSIT TO BEGIN</span>
           </motion.div>
 
-          {/* Main Headline — Restored to Grand Scale */}
+          {/* Main Headline — Restored to Grand Scale with Fixed-Dimension Kinetic Slot */}
           <motion.div className="mb-8" variants={revealItem(0.12)}>
-            <h1 className="font-serif text-5xl sm:text-7xl lg:text-[82px] font-normal tracking-[-0.03em] text-[#12324E] leading-[1.04]">
-              Make Room for{' '}
-              <span className="italic font-serif font-light text-[#1D5382]">
-                What Truly
-              </span>
-              <br />
-              <span className="italic font-serif font-light text-[#1D5382]">
-                Matters.
+            <h1 className="font-serif text-4xl sm:text-6xl lg:text-[76px] font-normal tracking-[-0.03em] text-[#12324E] leading-[1.08]">
+              <span className="block">Make Room for</span>
+              <span className="relative block h-[1.22em] overflow-hidden text-[#1D5382] italic font-serif font-light">
+                <AnimatePresence mode="popLayout" initial={false}>
+                  <motion.span
+                    key={wordIndex}
+                    initial={{ opacity: 0, y: '65%', filter: 'blur(3px)' }}
+                    animate={{ opacity: 1, y: '0%', filter: 'blur(0px)' }}
+                    exit={{ opacity: 0, y: '-65%', filter: 'blur(3px)' }}
+                    transition={{ duration: 0.45, ease: editorial }}
+                    className="block whitespace-nowrap"
+                  >
+                    {ROTATING_WORDS[wordIndex]}
+                  </motion.span>
+                </AnimatePresence>
               </span>
             </h1>
           </motion.div>
