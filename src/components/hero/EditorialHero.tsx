@@ -72,18 +72,18 @@ export function EditorialHero({ brandName, onRequestQuote }: EditorialHeroProps)
         {/* Clean Editorial Hero Layout — Centered Container with Large Left-Aligned Type */}
         <div className="max-w-4xl mx-auto mb-16 text-left">
           <motion.div
-            className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#F4F7FB] border border-[#D8E2EC] text-[#1D5382] text-[10.5px] font-mono uppercase tracking-widest mb-6 font-semibold shadow-2xs"
+            className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-[#F4F7FB] border border-[#D8E2EC] text-[#1D5382] text-[11px] sm:text-xs font-mono uppercase tracking-widest mb-7 font-semibold shadow-2xs"
             variants={revealItem(0.05)}
           >
             <Sparkles className="w-3.5 h-3.5 text-[#1D5382]" />
             <span>PAY-AS-YOU-GO MILESTONE MODEL • 50% DEPOSIT TO BEGIN</span>
           </motion.div>
 
-          {/* Main Headline — Restored to Grand Scale with Fixed-Dimension Kinetic Slot */}
+          {/* Main Headline — Grand Scale Matching Original Editorial Specimen */}
           <motion.div className="mb-8" variants={revealItem(0.12)}>
-            <h1 className="font-serif text-4xl sm:text-6xl lg:text-[76px] font-normal tracking-[-0.03em] text-[#12324E] leading-[1.08]">
+            <h1 className="font-serif text-5xl sm:text-7xl md:text-[80px] lg:text-[88px] xl:text-[94px] font-normal tracking-[-0.03em] text-[#12324E] leading-[1.05]">
               <span className="block">Make Room for</span>
-              <span className="relative block h-[1.22em] overflow-hidden text-[#1D5382] italic font-serif font-light">
+              <span className="relative block h-[1.18em] overflow-hidden text-[#1D5382] italic font-serif font-light">
                 <AnimatePresence mode="popLayout" initial={false}>
                   <motion.span
                     key={wordIndex}
@@ -101,7 +101,7 @@ export function EditorialHero({ brandName, onRequestQuote }: EditorialHeroProps)
           </motion.div>
 
           <motion.p
-            className="text-base sm:text-lg text-[#364B62] font-sans font-normal leading-relaxed max-w-2xl mb-10 text-left"
+            className="text-base sm:text-lg lg:text-xl text-[#364B62] font-sans font-normal leading-relaxed max-w-2xl lg:max-w-3xl mb-10 text-left"
             variants={revealItem(0.22)}
           >
             Your future is <strong className="text-[#12324E]">bigger</strong> than your next submission. We believe your university career should be about more than keeping up with an endless cycle of deadlines. Through accessible, dependable academic project, report, and research support by <strong className="text-[#12324E]">{brandName}</strong>, we help you reclaim bandwidth for off-campus internships, skills, and ventures that truly matter.
