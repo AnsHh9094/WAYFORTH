@@ -100,7 +100,7 @@ export function ServiceDossier({ onRequestQuote }: ServiceDossierProps) {
                     {service.deliverables.map((item, dIdx) => (
                       <span
                         key={dIdx}
-                        className="text-[11.5px] font-sans px-3.5 py-1 bg-[#FFFFFF] border border-[#E2DDD5] text-[#364B62] rounded-full"
+                        className="text-[13px] sm:text-[13.5px] font-sans px-3.5 py-1 bg-[#FFFFFF] border border-[#E2DDD5] text-[#364B62] rounded-full"
                       >
                         {item}
                       </span>

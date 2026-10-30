@@ -30,7 +30,7 @@ export function Footer({ onRequestQuote }: FooterProps) {
               &ldquo;{BRAND_CONFIG.tagline}&rdquo;
             </p>
             
-            <p className="text-xs text-[#CBD5E1] leading-relaxed max-w-xl font-sans">
+            <p className="text-[13.5px] sm:text-[14px] text-[#CBD5E1] leading-relaxed max-w-xl font-sans">
               Dedicated academic project, research, and report-writing advisory across undergraduate, postgraduate, and doctoral levels.
               100% genuine human research, mathematical pricing transparency, and milestone preview safeguards.
             </p>
@@ -90,7 +90,7 @@ export function Footer({ onRequestQuote }: FooterProps) {
         </div>
 
         {/* Ethical Notice Disclaimer */}
-        <div className="py-6 border-b border-[#224A70] text-[11px] text-[#CBD5E1] leading-relaxed font-sans">
+        <div className="py-6 border-b border-[#224A70] text-[12px] sm:text-[12.5px] text-[#CBD5E1] leading-relaxed font-sans">
           <strong className="text-[#FFFFFF] block mb-1 font-sans uppercase text-[10.5px] tracking-wider font-semibold">
             Institutional Compliance & Academic Ethics Notice:
           </strong>
@@ -108,7 +108,7 @@ export function Footer({ onRequestQuote }: FooterProps) {
         </div>
 
         {/* Bottom Bar */}
-        <div className="pt-6 flex flex-col sm:flex-row items-center justify-between text-xs font-sans text-[#CBD5E1] gap-4">
+        <div className="pt-6 flex flex-col sm:flex-row items-center justify-between text-[12px] font-sans text-[#CBD5E1] gap-4">
           <div>
             © 2026 {BRAND_CONFIG.name} Advisory ({BRAND_CONFIG.domain}). All rights reserved.
           </div>

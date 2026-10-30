@@ -105,7 +105,7 @@ export function ContactSection() {
               <h3 className="font-serif text-xl text-[#12324E] font-medium mb-2">
                 Operational Availability
               </h3>
-              <ul className="text-[13px] text-[#4A607A] space-y-2 mb-6 font-sans">
+              <ul className="text-[13.5px] sm:text-[14px] text-[#4A607A] space-y-2 mb-6 font-sans">
                 <li className="flex justify-between border-b border-[#D8E2EC]/60 pb-1.5">
                   <span>Mon – Sat:</span>
                   <span className="text-[#12324E] font-semibold">12:00 PM – 12:00 AM IST</span>
@@ -121,7 +121,7 @@ export function ContactSection() {
               </ul>
             </div>
 
-            <div className="p-3 bg-[#F4F7FB] border border-[#D8E2EC] text-[10.5px] font-sans text-[#4A607A] flex items-center gap-2 rounded-xl">
+            <div className="p-3 bg-[#F4F7FB] border border-[#D8E2EC] text-[12px] font-sans text-[#4A607A] flex items-center gap-2 rounded-xl">
               <ShieldCheck className="w-4 h-4 text-[#1D5382] shrink-0" />
               <span>Strict institutional confidentiality maintained.</span>
             </div>

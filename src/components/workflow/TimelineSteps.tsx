@@ -143,16 +143,16 @@ export function TimelineSteps() {
                     {step.title}
                   </h3>
 
-                  <p className="text-[13.5px] font-sans text-[#1D5382] font-semibold mb-3 leading-relaxed">
+                  <p className="text-[14px] font-sans text-[#1D5382] font-semibold mb-3 leading-relaxed">
                     {step.summary}
                   </p>
 
-                  <p className="text-[13.5px] text-[#4A607A] leading-relaxed font-sans font-normal">
+                  <p className="text-[13.5px] sm:text-[14px] text-[#42586E] leading-relaxed font-sans font-normal">
                     {step.detail}
                   </p>
                 </div>
 
-                <div className="pt-4 mt-6 border-t border-[#F4F7FB] flex items-center justify-between text-[10px] font-sans text-[#4A607A]">
+                <div className="pt-4 mt-6 border-t border-[#F4F7FB] flex items-center justify-between text-[11px] font-sans text-[#4A607A]">
                   <span className="uppercase tracking-wider">Contractual Protocol</span>
                   <span className="text-[#12324E] font-semibold">Step {step.step} of 06</span>
                 </div>

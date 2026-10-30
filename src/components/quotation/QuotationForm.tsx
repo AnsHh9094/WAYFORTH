@@ -194,7 +194,7 @@ _Initiated via wayforth.in official quotation calculator_`;
                 </span>
               </div>
 
-              <div className="space-y-2.5 text-xs font-sans">
+              <div className="space-y-2.5 text-[13px] sm:text-[13.5px] font-sans">
                 <div className="flex justify-between items-center text-[#42586E]">
                   <span>Base Fee Floor:</span>
                   <span className="text-[#12324E] font-semibold">₹{currentTier.startingBase.toLocaleString()}</span>
@@ -207,7 +207,7 @@ _Initiated via wayforth.in official quotation calculator_`;
                     ₹{(pages * currentTier.perPageRate).toLocaleString()}
                   </span>
                 </div>
-                <div className="flex justify-between items-center text-[#738A9E] text-[11px]">
+                <div className="flex justify-between items-center text-[#738A9E] text-[12px]">
                   <span>Standard Page Metric:</span>
                   <span>~{totalWords.toLocaleString()} Words (275 w/page)</span>
                 </div>
@@ -245,7 +245,7 @@ _Initiated via wayforth.in official quotation calculator_`;
                     <span className="text-xs uppercase font-bold text-[#12324E] block tracking-wide">
                       Estimated Net Total:
                     </span>
-                    <span className="text-[10px] text-[#738A9E]">
+                    <span className="text-[11.5px] text-[#738A9E]">
                       Includes 1 comprehensive revision round
                     </span>
                   </div>
@@ -261,7 +261,7 @@ _Initiated via wayforth.in official quotation calculator_`;
               </div>
 
               {/* Pay-as-you-go Balanced Milestones Breakdown */}
-              <div className="p-3.5 bg-[#F4F7FB] border border-[#D8E2EC] text-[11.5px] font-sans text-[#12324E] space-y-2 rounded-xl">
+              <div className="p-3.5 bg-[#F4F7FB] border border-[#D8E2EC] text-[12.5px] sm:text-[13px] font-sans text-[#12324E] space-y-2 rounded-xl">
                 <div className="flex items-center gap-1.5 font-bold text-[#1D5382] text-xs">
                   <ShieldCheck className="w-3.5 h-3.5 text-[#1D5382]" />
                   <span>PAY-AS-YOU-GO MILESTONES (50 / 50)</span>
@@ -274,7 +274,7 @@ _Initiated via wayforth.in official quotation calculator_`;
                   <span>50% Balance on Preview Approval:</span>
                   <span className="font-bold text-[#12324E]">₹{Math.round(finalTotal / 2).toLocaleString()}</span>
                 </div>
-                <p className="text-[#4A607A] text-[10.5px] leading-relaxed pt-1.5 border-t border-[#D8E2EC]">
+                <p className="text-[#4A607A] text-[12px] leading-relaxed pt-1.5 border-t border-[#D8E2EC]">
                   Pay 50% deposit to initiate research → review watermarked representative preview → 1 included revision round → release final balance.
                 </p>
               </div>
@@ -486,7 +486,7 @@ _Initiated via wayforth.in official quotation calculator_`;
                                 {addon.label}
                               </span>
                             </div>
-                            <p className="text-[11.5px] text-[#4A607A] leading-tight font-sans">
+                            <p className="text-[12.5px] sm:text-[13px] text-[#4A607A] leading-tight font-sans">
                               {addon.description}
                             </p>
                             {isCharts && (
@@ -603,7 +603,7 @@ _Initiated via wayforth.in official quotation calculator_`;
                     <Send className="w-4 h-4 text-[#38BDF8]" />
                   </button>
 
-                  <p className="text-[11px] text-center font-sans text-[#4A607A]">
+                  <p className="text-[12px] sm:text-[12.5px] text-center font-sans text-[#4A607A]">
                     Submitting automatically prepares your quotation brief and transmits it directly to our advisory WhatsApp. Pay-as-you-go milestone model (50% deposit to begin).
                   </p>
                 </div>
