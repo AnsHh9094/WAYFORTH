@@ -11,7 +11,7 @@ export function ContactSection() {
         
         {/* Section Heading */}
         <div className="max-w-3xl mb-14">
-          <span className="text-xs font-sans uppercase tracking-[0.14em] text-[#1D5382] block mb-2 font-semibold">
+          <span className="text-xs font-sans uppercase tracking-[0.14em] text-[#B8975A] block mb-2 font-semibold">
             Direct Communications Desk
           </span>
           <h2 className="font-serif text-3xl sm:text-5xl font-normal text-[#12324E] leading-tight mb-4">
@@ -45,7 +45,7 @@ export function ContactSection() {
 
             <div>
               <div className="text-xs font-sans font-semibold text-[#1D5382] mb-4 flex items-center gap-1.5">
-                <span className="w-1.5 h-1.5 rounded-full bg-emerald-500 animate-pulse" />
+                <span className="w-1.5 h-1.5 rounded-full bg-[#B8975A] animate-pulse" />
                 <span>Encrypted Advisory Line</span>
               </div>
               <a
@@ -57,7 +57,7 @@ export function ContactSection() {
                 className="w-full inline-flex items-center justify-center gap-2 py-3.5 bg-[#12324E] text-white text-xs font-sans uppercase tracking-[0.14em] hover:bg-[#1D5382] transition-colors rounded-xl font-bold"
               >
                 <span>Message on WhatsApp</span>
-                <ArrowUpRight className="w-3.5 h-3.5 text-[#38BDF8]" />
+                <ArrowUpRight className="w-3.5 h-3.5 text-[#B8975A]" />
               </a>
             </div>
           </div>

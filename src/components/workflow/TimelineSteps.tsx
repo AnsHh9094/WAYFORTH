@@ -15,18 +15,18 @@ export function TimelineSteps() {
         {/* Section Header */}
         <div className="flex items-center justify-between border-b border-[#D8E2EC] pb-4 mb-16 text-[11px] font-sans font-medium uppercase tracking-[0.16em] text-[#4A607A]">
           <div className="flex items-center gap-2">
-            <span className="w-1.5 h-1.5 bg-[#12324E]" />
+            <span className="w-1.5 h-1.5 rounded-full bg-[#B8975A]" />
             <span className="uppercase tracking-widest text-[#12324E] font-semibold">
               CONTRACTUAL LIFECYCLE // SIX-STAGE PROCESS
             </span>
           </div>
-          <span className="text-[#1D5382] uppercase font-semibold">
+          <span className="text-[#B8975A] uppercase font-semibold">
             TRANSPARENT MILESTONES
           </span>
         </div>
 
         <div className="max-w-3xl mb-12 sm:mb-16">
-          <span className="text-xs font-sans uppercase tracking-[0.14em] text-[#1D5382] block mb-2 font-semibold">
+          <span className="text-xs font-sans uppercase tracking-[0.14em] text-[#B8975A] block mb-2 font-semibold">
             Structured Engagement Process
           </span>
           <h2 className="font-serif text-3xl sm:text-5xl font-normal text-[#12324E] leading-tight mb-4">
@@ -118,13 +118,13 @@ export function TimelineSteps() {
                 {/* Milestone Ribbon for Key Gates — Rounded-full Capsule */}
                 {isGate4 && (
                   <div className="absolute top-4 right-4 bg-[#1D5382] text-white text-[10px] font-sans uppercase tracking-wider px-3 py-1 flex items-center gap-1.5 shadow-xs font-semibold rounded-full">
-                    <ShieldCheck className="w-3.5 h-3.5 text-[#38BDF8]" />
+                    <ShieldCheck className="w-3.5 h-3.5 text-[#B8975A]" />
                     <span>Safeguard Milestone</span>
                   </div>
                 )}
                 {isGate6 && (
-                  <div className="absolute top-4 right-4 bg-[#12324E] text-white text-[10px] font-sans uppercase tracking-wider px-3 py-1 flex items-center gap-1.5 shadow-xs font-semibold rounded-full">
-                    <KeyRound className="w-3.5 h-3.5 text-[#38BDF8]" />
+                  <div className="absolute top-4 right-4 bg-[#12324E] text-white text-[10px] font-sans uppercase tracking-wider px-3 py-1 flex items-center gap-1.5 shadow-xs font-semibold rounded-full border border-[#B8975A]/40">
+                    <KeyRound className="w-3.5 h-3.5 text-[#B8975A]" />
                     <span>Complete Handover</span>
                   </div>
                 )}

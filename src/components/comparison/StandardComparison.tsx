@@ -26,14 +26,14 @@ export function StandardComparison({ brandName }: StandardComparisonProps) {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between border-b border-[#D8E2EC] pb-4 mb-16 text-[11px] font-sans font-medium uppercase tracking-[0.16em] text-[#4A607A]">
           <div className="flex items-center gap-2">
-            <span className="w-1.5 h-1.5 bg-[#12324E]" />
+            <span className="w-1.5 h-1.5 rounded-full bg-[#B8975A]" />
             <span className="uppercase tracking-widest text-[#12324E] font-semibold">THE WAYFORTH STANDARD // INSTITUTIONAL INTEGRITY</span>
           </div>
-          <span className="text-[#1D5382] uppercase font-semibold">EXCELLENCE & ACCOUNTABILITY</span>
+          <span className="text-[#B8975A] uppercase font-semibold">EXCELLENCE & ACCOUNTABILITY</span>
         </div>
 
         <div className="max-w-3xl mb-16">
-          <span className="text-xs font-sans uppercase tracking-[0.14em] text-[#1D5382] block mb-2 font-semibold">
+          <span className="text-xs font-sans uppercase tracking-[0.14em] text-[#B8975A] block mb-2 font-semibold">
             The Trust Dilemma in Academic Support
           </span>
           <h2 className="font-serif text-3xl sm:text-5xl font-normal text-[#12324E] leading-tight mb-4">
@@ -99,7 +99,7 @@ export function StandardComparison({ brandName }: StandardComparisonProps) {
             </div>
             <div>
               <div className="w-10 h-10 bg-[#12324E] text-white flex items-center justify-center mb-6">
-                <Eye className="w-5 h-5 text-[#38BDF8]" />
+                <Eye className="w-5 h-5 text-[#B8975A]" />
               </div>
               <span className="font-sans text-xs uppercase tracking-[0.14em] text-[#1D5382] block mb-2 font-semibold">
                 Pillar 02 / Risk Mitigation

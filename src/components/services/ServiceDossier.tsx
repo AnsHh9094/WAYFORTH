@@ -55,8 +55,9 @@ export function ServiceDossier({ onRequestQuote }: ServiceDossierProps) {
         {/* Section Header — Broadsheet style */}
         <div className="flex flex-col sm:flex-row sm:items-baseline justify-between gap-4 mb-20 border-b border-[#E2DDD5] pb-8">
           <div>
-            <p className="text-[11px] font-sans tracking-[0.2em] uppercase text-[#1D5382] font-semibold mb-2">
-              Academic Disciplines // Scope
+            <p className="text-[11px] font-sans tracking-[0.2em] uppercase text-[#B8975A] font-semibold mb-2 flex items-center gap-2">
+              <span className="w-1.5 h-1.5 rounded-full bg-[#B8975A]" />
+              <span>Academic Disciplines // Scope</span>
             </p>
             <h2 className="font-serif text-3xl sm:text-4xl lg:text-5xl font-normal text-[#12324E] tracking-tight">
               Four specialized tiers. One standard of scholarship.
@@ -144,7 +145,7 @@ export function ServiceDossier({ onRequestQuote }: ServiceDossierProps) {
                     className="inline-flex items-center gap-1.5 px-4 py-2 bg-[#12324E] text-white text-xs font-sans uppercase tracking-[0.14em] hover:bg-[#1D5382] transition-colors cursor-pointer rounded-xl font-bold"
                   >
                     <span>Quote Scope</span>
-                    <ArrowUpRight className="w-3.5 h-3.5 text-[#38BDF8]" />
+                    <ArrowUpRight className="w-3.5 h-3.5 text-[#B8975A]" />
                   </button>
                 </div>
               </div>
@@ -279,7 +280,7 @@ export function ServiceDossier({ onRequestQuote }: ServiceDossierProps) {
                       className="px-5 py-2.5 bg-[#12324E] text-white text-xs font-sans uppercase tracking-[0.14em] hover:bg-[#1D5382] transition-colors cursor-pointer w-1/2 sm:w-auto flex items-center justify-center gap-1.5 rounded-xl font-semibold"
                     >
                       <span>Inquire Now</span>
-                      <ArrowUpRight className="w-3.5 h-3.5 text-[#38BDF8]" />
+                      <ArrowUpRight className="w-3.5 h-3.5 text-[#B8975A]" />
                     </button>
                   </div>
                 </div>

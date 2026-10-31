@@ -94,7 +94,7 @@ export function ArchivalScrollDock({ onRequestQuote }: ArchivalScrollDockProps) 
               className="inline-flex items-center gap-1 text-[#1D5382] hover:text-[#12324E] font-semibold tracking-wide transition-colors cursor-pointer"
             >
               <span>GET QUOTE</span>
-              <ArrowUpRight className="w-3 h-3 text-[#38BDF8]" />
+              <ArrowUpRight className="w-3 h-3 text-[#B8975A]" />
             </button>
           </div>
         </motion.aside>

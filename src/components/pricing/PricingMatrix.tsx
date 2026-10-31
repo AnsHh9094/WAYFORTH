@@ -28,18 +28,18 @@ export function PricingMatrix({ onRequestQuote }: PricingMatrixProps) {
         {/* Section Header */}
         <div className="flex items-center justify-between border-b border-[#D8E2EC] pb-4 mb-16 text-[11px] font-sans font-medium uppercase tracking-[0.16em] text-[#738A9E]">
           <div className="flex items-center gap-2">
-            <span className="w-1.5 h-1.5 bg-[#12324E]" />
+            <span className="w-1.5 h-1.5 rounded-full bg-[#B8975A]" />
             <span className="uppercase tracking-widest text-[#12324E] font-semibold">
               PRICING & FEE STRUCTURE
             </span>
           </div>
-          <span className="text-[#1D5382] uppercase font-semibold">
+          <span className="text-[#B8975A] uppercase font-semibold">
             PAY-AS-YOU-GO • 15% INTRODUCTORY DISCOUNT
           </span>
         </div>
 
         <div className="max-w-3xl mb-12">
-          <span className="text-xs font-sans uppercase tracking-[0.14em] text-[#1D5382] block mb-2 font-semibold">
+          <span className="text-xs font-sans uppercase tracking-[0.14em] text-[#B8975A] block mb-2 font-semibold">
             Transparent Pricing Schedule
           </span>
           <h2 className="font-serif text-3xl sm:text-5xl font-normal text-[#12324E] leading-tight mb-4">
@@ -54,7 +54,7 @@ export function PricingMatrix({ onRequestQuote }: PricingMatrixProps) {
         {/* The Mathematical Formula Banner with Pay-As-You-Go Inset */}
         <div className="bg-[#FFFFFF] border border-[#12324E] p-6 sm:p-8 mb-12 flex flex-col md:flex-row items-start md:items-center justify-between gap-6 shadow-xs rounded-2xl">
           <div className="space-y-1.5">
-            <span className="text-xs font-sans uppercase tracking-[0.14em] text-[#1D5382] font-bold block">
+            <span className="text-xs font-sans uppercase tracking-[0.14em] text-[#B8975A] font-bold block">
               The Fee Formula
             </span>
             <div className="font-serif text-lg sm:text-xl text-[#12324E] font-medium">
@@ -98,7 +98,7 @@ export function PricingMatrix({ onRequestQuote }: PricingMatrixProps) {
               >
                 {isFeatured && (
                   <div className="absolute -top-3 left-6 bg-[#12324E] text-white text-[10px] font-sans uppercase tracking-wider px-3 py-1 flex items-center gap-1.5 shadow-xs font-semibold rounded-full">
-                    <Sparkles className="w-3 h-3 text-[#38BDF8]" />
+                    <Sparkles className="w-3 h-3 text-[#B8975A]" />
                     <span>Most Requested</span>
                   </div>
                 )}

@@ -15,28 +15,28 @@ interface StatItem {
 
 const STATS: StatItem[] = [
   {
-    icon: <FileText className="w-5 h-5 text-[#38BDF8]" />,
+    icon: <FileText className="w-5 h-5 text-[#B8975A]" />,
     value: 200,
     suffix: '+',
     label: 'Reports Completed',
     sublabel: 'Across Undergraduate, Master’s & Research projects',
   },
   {
-    icon: <Clock className="w-5 h-5 text-[#38BDF8]" />,
+    icon: <Clock className="w-5 h-5 text-[#B8975A]" />,
     value: 93,
     suffix: '%',
     label: 'On-Time Delivery',
     sublabel: 'Strict adherence to confirmed university deadlines',
   },
   {
-    icon: <ShieldCheck className="w-5 h-5 text-[#38BDF8]" />,
+    icon: <ShieldCheck className="w-5 h-5 text-[#B8975A]" />,
     value: 100,
     suffix: '%',
     label: 'Genuine Human Writing',
     sublabel: 'Original research with zero automated AI regurgitation',
   },
   {
-    icon: <BookOpen className="w-5 h-5 text-[#38BDF8]" />,
+    icon: <BookOpen className="w-5 h-5 text-[#B8975A]" />,
     value: 50,
     suffix: '+',
     label: 'Academic Disciplines',
@@ -97,10 +97,10 @@ export function KineticStatsTicker() {
         {/* Top Ledger Strip */}
         <div className="flex items-center justify-between pb-6 mb-12 border-b border-[#224A70] text-[11px] font-sans font-medium tracking-[0.16em] uppercase text-[#CBD5E1]">
           <div className="flex items-center gap-2">
-            <span className="w-2 h-2 rounded-full bg-[#00FFA3] animate-pulse" />
+            <span className="w-2 h-2 rounded-full bg-[#B8975A] animate-pulse" />
             <span className="text-[#FFFFFF] font-bold">OPERATIONAL METRICS // AUTUMN 2026</span>
           </div>
-          <span className="hidden sm:inline text-[#38BDF8]">VERIFIED ACADEMIC ASSURANCE</span>
+          <span className="hidden sm:inline text-[#B8975A] font-semibold">VERIFIED ACADEMIC ASSURANCE</span>
         </div>
 
         {/* 4 Kinetic Stat Columns (Restored Spacious Layout) */}
@@ -108,7 +108,7 @@ export function KineticStatsTicker() {
           {STATS.map((stat, idx) => (
             <motion.div
               key={idx}
-              className="flex flex-col p-6 sm:p-8 bg-[#0B1826]/80 border border-[#224A70] rounded-2xl hover:border-[#38BDF8]/60 transition-all shadow-md group min-h-[235px]"
+              className="flex flex-col p-6 sm:p-8 bg-[#0B1826]/80 border border-[#224A70] rounded-2xl hover:border-[#B8975A]/60 transition-all shadow-md group min-h-[235px]"
               style={{ minHeight: '235px' }}
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -116,10 +116,10 @@ export function KineticStatsTicker() {
               transition={{ duration: 0.6, delay: idx * 0.1 }}
             >
               <div className="flex items-center justify-between mb-5">
-                <div className="p-2.5 bg-[#12324E] border border-[#224A70] rounded-xl text-[#38BDF8] group-hover:border-[#38BDF8]/50 transition-colors">
+                <div className="p-2.5 bg-[#12324E] border border-[#224A70] rounded-xl text-[#B8975A] group-hover:border-[#B8975A]/50 transition-colors">
                   {stat.icon}
                 </div>
-                <span className="text-[10.5px] font-sans font-semibold text-[#94A3B8] tracking-widest px-2.5 py-0.5 bg-[#12324E]/60 border border-[#224A70] rounded-full">
+                <span className="text-[10.5px] font-sans font-semibold text-[#B8975A] tracking-widest px-2.5 py-0.5 bg-[#12324E]/60 border border-[#B8975A]/30 rounded-full">
                   [0{idx + 1}]
                 </span>
               </div>

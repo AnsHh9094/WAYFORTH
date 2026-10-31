@@ -170,7 +170,7 @@ _Initiated via wayforth.in official quotation calculator_`;
           {/* Left Column: Live Interactive Ledger Summary */}
           <div className="lg:col-span-5 space-y-6 lg:sticky lg:top-28">
             <div>
-              <span className="text-xs font-sans uppercase tracking-[0.16em] text-[#1D5382] block mb-2 font-semibold">
+              <span className="text-xs font-sans uppercase tracking-[0.16em] text-[#B8975A] block mb-2 font-semibold">
                 Mathematical Transparency
               </span>
               <h2 className="font-serif text-3xl sm:text-4xl text-[#12324E] leading-tight mb-3">
@@ -186,7 +186,7 @@ _Initiated via wayforth.in official quotation calculator_`;
             <div className="bg-[#FFFFFF] border-2 border-[#12324E] p-6 sm:p-7 space-y-4 shadow-sm relative rounded-2xl">
               <div className="flex items-center justify-between text-xs font-sans border-b border-[#D8E2EC] pb-3">
                 <span className="flex items-center gap-1.5 text-[#12324E] font-semibold tracking-wide">
-                  <Calculator className="w-4 h-4 text-[#1D5382]" />
+                  <Calculator className="w-4 h-4 text-[#B8975A]" />
                   <span>TRANSPARENT LEDGER</span>
                 </span>
                 <span className="bg-[#12324E] text-white px-3 py-0.5 text-[10px] uppercase font-bold tracking-wider rounded-full">
@@ -231,7 +231,7 @@ _Initiated via wayforth.in official quotation calculator_`;
                 {/* 15% Introductory Discount */}
                 <div className="flex justify-between items-center text-[#12324E] pt-2 border-t border-[#F4F7FB] bg-[#F0F5FA] p-2.5 rounded-xl">
                   <span className="flex items-center gap-1 font-semibold text-[#1D5382]">
-                    <Sparkles className="w-3.5 h-3.5 text-[#38BDF8]" />
+                    <Sparkles className="w-3.5 h-3.5 text-[#B8975A]" />
                     <span>Introductory Discount:</span>
                   </span>
                   <span className="font-bold text-[#1D5382]">
@@ -312,7 +312,7 @@ _Initiated via wayforth.in official quotation calculator_`;
                     rel="noopener noreferrer"
                     className="w-full sm:w-auto px-6 py-3.5 bg-[#12324E] text-white text-xs font-sans uppercase tracking-wider flex items-center justify-center gap-2 hover:bg-[#1D5382] transition-colors rounded-xl font-bold"
                   >
-                    <MessageSquare className="w-4 h-4 text-[#38BDF8]" />
+                    <MessageSquare className="w-4 h-4 text-[#B8975A]" />
                     <span>Open in WhatsApp</span>
                   </a>
                   <button
@@ -600,7 +600,7 @@ _Initiated via wayforth.in official quotation calculator_`;
                     className="w-full py-4 bg-[#12324E] text-white hover:bg-[#1D5382] transition-colors text-xs font-sans uppercase tracking-wider flex items-center justify-center gap-2 cursor-pointer shadow-xs disabled:opacity-50 font-bold rounded-xl"
                   >
                     <span>{isSubmitting ? 'Formatting Brief...' : 'Send Requirements & Lock Quote via WhatsApp'}</span>
-                    <Send className="w-4 h-4 text-[#38BDF8]" />
+                    <Send className="w-4 h-4 text-[#B8975A]" />
                   </button>
 
                   <p className="text-[12px] sm:text-[12.5px] text-center font-sans text-[#4A607A]">

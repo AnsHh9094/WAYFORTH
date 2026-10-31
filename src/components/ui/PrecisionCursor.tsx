@@ -72,7 +72,7 @@ export function PrecisionCursor() {
 
       {/* Trailing Accent Ring: Shrinks out of the way when hovering over buttons */}
       <motion.div
-        className="fixed top-0 left-0 flex items-center justify-center rounded-full -translate-x-1/2 -translate-y-1/2 border border-[#1D5382]/40 transition-all duration-200"
+        className="fixed top-0 left-0 flex items-center justify-center rounded-full -translate-x-1/2 -translate-y-1/2 border border-[#B8975A]/60 transition-all duration-200"
         animate={{
           scale: isClickable ? (cursorText ? 1.4 : 0.4) : 1,
           opacity: isClickable && !cursorText ? 0 : 0.6,

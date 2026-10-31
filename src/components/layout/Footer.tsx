@@ -37,7 +37,7 @@ export function Footer({ onRequestQuote }: FooterProps) {
 
             <div className="pt-2 flex flex-wrap gap-x-6 gap-y-2 text-[12.5px] font-sans text-[#CBD5E1]">
               <div className="flex items-center gap-2">
-                <Mail className="w-3.5 h-3.5 text-[#38BDF8]" />
+                <Mail className="w-3.5 h-3.5 text-[#B8975A]" />
                 <a
                   href={`mailto:${BRAND_CONFIG.contactEmail}`}
                   className="hover:text-white transition-colors"
@@ -46,7 +46,7 @@ export function Footer({ onRequestQuote }: FooterProps) {
                 </a>
               </div>
               <div className="flex items-center gap-2">
-                <MessageSquare className="w-3.5 h-3.5 text-[#38BDF8]" />
+                <MessageSquare className="w-3.5 h-3.5 text-[#B8975A]" />
                 <a
                   href={`https://wa.me/${BRAND_CONFIG.whatsappRawNumber}`}
                   target="_blank"
@@ -61,28 +61,28 @@ export function Footer({ onRequestQuote }: FooterProps) {
 
           {/* Institutional Governance Links */}
           <div className="md:col-span-5 lg:col-span-4 space-y-3 md:pl-6">
-            <div className="text-xs font-sans uppercase tracking-[0.14em] text-[#93C5FD] font-semibold">
+            <div className="text-xs font-sans uppercase tracking-[0.14em] text-[#B8975A] font-semibold">
               Institutional Governance
             </div>
             <ul className="space-y-2.5 text-[12.5px] font-sans text-[#CBD5E1]">
               <li>
                 <Link href="/terms" className="hover:text-white transition-colors flex items-center gap-1.5">
-                  <span className="text-[#38BDF8]">/</span> Terms & Conditions
+                  <span className="text-[#B8975A]">/</span> Terms & Conditions
                 </Link>
               </li>
               <li>
                 <Link href="/terms#cancellation" className="hover:text-white transition-colors flex items-center gap-1.5">
-                  <span className="text-[#38BDF8]">/</span> Cancellation & Refund Policy
+                  <span className="text-[#B8975A]">/</span> Cancellation & Refund Policy
                 </Link>
               </li>
               <li>
                 <Link href="/terms#ethics" className="hover:text-white transition-colors flex items-center gap-1.5">
-                  <span className="text-[#38BDF8]">/</span> Academic Outcomes & Integrity Policy
+                  <span className="text-[#B8975A]">/</span> Academic Outcomes & Integrity Policy
                 </Link>
               </li>
               <li>
                 <Link href="/terms#human-content" className="hover:text-white transition-colors flex items-center gap-1.5">
-                  <span className="text-[#38BDF8]">/</span> Human-Written Standard
+                  <span className="text-[#B8975A]">/</span> Human-Written Standard
                 </Link>
               </li>
             </ul>
