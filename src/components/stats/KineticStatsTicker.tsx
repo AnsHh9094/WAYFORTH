@@ -6,7 +6,9 @@ import { FileText, Clock, ShieldCheck, BookOpen } from 'lucide-react';
 
 interface StatItem {
   icon: React.ReactNode;
-  value: number;
+  value?: number;
+  displayValue?: string;
+  decimals?: number;
   prefix?: string;
   suffix?: string;
   label: string;
@@ -16,41 +18,53 @@ interface StatItem {
 const STATS: StatItem[] = [
   {
     icon: <FileText className="w-5 h-5 text-[#B8975A]" />,
-    value: 200,
+    value: 213,
     suffix: '+',
-    label: 'Reports Completed',
+    label: 'Projects Completed',
     sublabel: 'Across Undergraduate, Master’s & Research projects',
   },
   {
+    icon: <BookOpen className="w-5 h-5 text-[#B8975A]" />,
+    value: 22,
+    suffix: '+',
+    label: 'Academic Disciplines Covered',
+    sublabel: 'Specialized domain scholars across diverse university fields',
+  },
+  {
     icon: <Clock className="w-5 h-5 text-[#B8975A]" />,
-    value: 93,
-    suffix: '%',
-    label: 'On-Time Delivery',
-    sublabel: 'Strict adherence to confirmed university deadlines',
+    displayValue: '< 2 Hours',
+    label: 'Average Response Time',
+    sublabel: 'Immediate preliminary scoping and rubric evaluation within 2 hours',
   },
   {
     icon: <ShieldCheck className="w-5 h-5 text-[#B8975A]" />,
-    value: 100,
+    value: 93.4,
     suffix: '%',
-    label: 'Genuine Human Writing',
-    sublabel: 'Original research with zero automated AI regurgitation',
-  },
-  {
-    icon: <BookOpen className="w-5 h-5 text-[#B8975A]" />,
-    value: 50,
-    suffix: '+',
-    label: 'Academic Disciplines',
-    sublabel: 'Domain-specialized scholars across diverse fields',
+    decimals: 1,
+    label: 'On-Time Delivery Rate',
+    sublabel: 'Strict adherence to confirmed university deadlines',
   },
 ];
 
-function CounterNumber({ value, prefix = '', suffix = '' }: { value: number; prefix?: string; suffix?: string }) {
+function CounterNumber({
+  value,
+  displayValue,
+  decimals = 0,
+  prefix = '',
+  suffix = '',
+}: {
+  value?: number;
+  displayValue?: string;
+  decimals?: number;
+  prefix?: string;
+  suffix?: string;
+}) {
   const [count, setCount] = useState(0);
   const ref = useRef<HTMLSpanElement>(null);
   const isInView = useInView(ref, { once: true, margin: '-40px' });
 
   useEffect(() => {
-    if (!isInView) return;
+    if (!isInView || value === undefined) return;
 
     if (value <= 0) {
       return;
@@ -68,12 +82,12 @@ function CounterNumber({ value, prefix = '', suffix = '' }: { value: number; pre
         setCount(value);
         clearInterval(timer);
       } else {
-        setCount(Math.floor(start));
+        setCount(decimals > 0 ? parseFloat(start.toFixed(decimals)) : Math.floor(start));
       }
     }, stepTime);
 
     return () => clearInterval(timer);
-  }, [isInView, value]);
+  }, [isInView, value, decimals]);
 
   return (
     <span
@@ -81,7 +95,7 @@ function CounterNumber({ value, prefix = '', suffix = '' }: { value: number; pre
       className="font-serif font-light text-5xl sm:text-6xl text-[#FFFFFF] tracking-tight"
       style={{ fontSize: 'clamp(2.75rem, 4.5vw, 3.75rem)', lineHeight: 1.1 }}
     >
-      {prefix}{count}{suffix}
+      {displayValue || `${prefix}${decimals > 0 ? count.toFixed(decimals) : count}${suffix}`}
     </span>
   );
 }
@@ -125,7 +139,13 @@ export function KineticStatsTicker() {
               </div>
 
               <div className="mb-2">
-                <CounterNumber value={stat.value} prefix={stat.prefix} suffix={stat.suffix} />
+                <CounterNumber
+                  value={stat.value}
+                  displayValue={stat.displayValue}
+                  decimals={stat.decimals}
+                  prefix={stat.prefix}
+                  suffix={stat.suffix}
+                />
               </div>
 
               <strong className="block text-sm sm:text-[15px] font-sans text-[#E2ECF5] font-semibold mb-1">

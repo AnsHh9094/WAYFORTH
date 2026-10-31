@@ -51,7 +51,7 @@ export function Navbar({ onRequestQuote }: NavbarProps) {
         {/* Brand Logo & Editorial Subline */}
         <div className="flex items-center gap-4">
           <a href="#" className="group">
-            <WayforthLogo variant="full" theme="dark" />
+            <WayforthLogo variant="compact" theme="dark" sublineText="" />
           </a>
         </div>
 

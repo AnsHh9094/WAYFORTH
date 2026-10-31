@@ -70,10 +70,10 @@ export function EditorialHero({ brandName, onRequestQuote }: EditorialHeroProps)
         </motion.div>
 
         {/* Clean Editorial Hero Layout — Centered Container with Large Left-Aligned Type */}
-        <div className="max-w-4xl mx-auto mb-16 text-left">
+        <div className="max-w-5xl mx-auto mb-8 text-left">
           {/* Main Headline — Grand Scale Matching Original Editorial Specimen */}
           <motion.div className="mb-8" variants={revealItem(0.08)}>
-            <h1 className="font-serif text-4xl sm:text-6xl md:text-[80px] lg:text-[88px] xl:text-[94px] font-normal tracking-[-0.03em] text-[#12324E] leading-[1.08] sm:leading-[1.05]">
+            <h1 className="font-serif text-5xl sm:text-7xl md:text-[84px] lg:text-[92px] xl:text-[100px] font-normal tracking-[-0.03em] text-[#12324E] leading-[1.05]">
               <span className="block">Make Room for</span>
               <span className="relative block h-[1.18em] overflow-hidden text-[#173B57] italic font-serif font-light">
                 <AnimatePresence mode="popLayout" initial={false}>
@@ -93,7 +93,7 @@ export function EditorialHero({ brandName, onRequestQuote }: EditorialHeroProps)
           </motion.div>
 
           <motion.p
-            className="text-base sm:text-lg lg:text-xl text-[#364B62] font-sans font-normal leading-relaxed max-w-2xl lg:max-w-3xl mb-10 text-left"
+            className="text-lg sm:text-xl lg:text-[22px] text-[#364B62] font-sans font-normal leading-relaxed max-w-3xl lg:max-w-4xl mb-10 text-left"
             variants={revealItem(0.18)}
           >
             Your future is <strong className="text-[#12324E]">bigger</strong> than your next submission. We believe your university career should be about more than keeping up with an endless cycle of deadlines. Through accessible, dependable academic project, report, and research support by <strong className="text-[#12324E]">{brandName}</strong>, we help you reclaim bandwidth for off-campus internships, skills, and ventures that truly matter.
@@ -101,7 +101,7 @@ export function EditorialHero({ brandName, onRequestQuote }: EditorialHeroProps)
 
           {/* Kinetic Action CTAs */}
           <motion.div
-            className="flex flex-col sm:flex-row items-stretch sm:items-center gap-4 mb-12"
+            className="flex flex-col sm:flex-row items-stretch sm:items-center gap-4 mb-10"
             variants={revealItem(0.28)}
           >
             <button
@@ -123,13 +123,60 @@ export function EditorialHero({ brandName, onRequestQuote }: EditorialHeroProps)
 
           {/* Quick Scope Chip Matrix */}
           <motion.div
-            className="flex flex-wrap items-center gap-2 text-[11px] font-sans font-medium uppercase tracking-wider text-[#4A607A]"
-            variants={revealItem(0.4)}
+            className="flex flex-wrap items-center gap-2 text-[11px] font-sans font-medium uppercase tracking-wider text-[#4A607A] mb-14"
+            variants={revealItem(0.38)}
           >
             <span className="px-3.5 py-1 bg-[#F4F7FB] border border-[#D8E2EC] text-[#12324E] rounded-full">UNDERGRADUATE</span>
             <span className="px-3.5 py-1 bg-[#F4F7FB] border border-[#D8E2EC] text-[#12324E] rounded-full">POSTGRADUATE / MBA</span>
             <span className="px-3.5 py-1 bg-[#F4F7FB] border border-[#D8E2EC] text-[#12324E] rounded-full">THESIS & DISSERTATION</span>
             <span className="px-3.5 py-1 bg-[#F4F7FB] border border-[#D8E2EC] text-[#1D5382] font-bold rounded-full">DATA ANALYSIS & EXCEL</span>
+          </motion.div>
+
+          {/* ── Student Workload Statistics Section (Item 2 in Release Spec) ── */}
+          <motion.div
+            className="pt-10 border-t border-[#D8E2EC]"
+            variants={revealItem(0.46)}
+          >
+            <div className="flex flex-col sm:flex-row sm:items-baseline justify-between gap-2 mb-6">
+              <div className="flex items-center gap-2">
+                <span className="w-1.5 h-1.5 rounded-full bg-[#B8975A]" />
+                <span className="text-[11px] font-sans font-semibold uppercase tracking-[0.18em] text-[#B8975A]">
+                  Student Workload Burden // Surveyed Reality
+                </span>
+              </div>
+              <span className="text-[11px] font-sans text-[#738A9E]">
+                Empirical Cohort Study
+              </span>
+            </div>
+
+            <div className="grid grid-cols-1 sm:grid-cols-3 gap-5">
+              <div className="p-6 bg-[#F4F7FB] border border-[#D8E2EC] rounded-2xl hover:border-[#B8975A]/60 transition-all shadow-2xs">
+                <span className="font-serif text-4xl sm:text-5xl font-light text-[#12324E] block mb-2 tracking-tight">
+                  56.3%
+                </span>
+                <p className="text-[13px] sm:text-[13.5px] text-[#4A607A] leading-relaxed font-sans">
+                  Of surveyed undergraduate medical students struggled to balance academic work and personal life.
+                </p>
+              </div>
+
+              <div className="p-6 bg-[#F4F7FB] border border-[#D8E2EC] rounded-2xl hover:border-[#B8975A]/60 transition-all shadow-2xs">
+                <span className="font-serif text-4xl sm:text-5xl font-light text-[#12324E] block mb-2 tracking-tight">
+                  56.6%
+                </span>
+                <p className="text-[13px] sm:text-[13.5px] text-[#4A607A] leading-relaxed font-sans">
+                  Described their ongoing academic workload as manageable but heavy.
+                </p>
+              </div>
+
+              <div className="p-6 bg-[#F4F7FB] border border-[#D8E2EC] rounded-2xl hover:border-[#B8975A]/60 transition-all shadow-2xs">
+                <span className="font-serif text-4xl sm:text-5xl font-light text-[#12324E] block mb-2 tracking-tight">
+                  20.7%
+                </span>
+                <p className="text-[13px] sm:text-[13.5px] text-[#4A607A] leading-relaxed font-sans">
+                  Considered their academic workload excessively and unsustainably too heavy.
+                </p>
+              </div>
+            </div>
           </motion.div>
         </div>
       </motion.div>

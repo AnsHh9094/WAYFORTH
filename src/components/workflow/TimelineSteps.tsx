@@ -37,61 +37,6 @@ export function TimelineSteps() {
           </p>
         </div>
 
-        {/* ── Visual Progression Spine ── */}
-        <div className="hidden lg:block mb-16 bg-[#FFFFFF] border border-[#D8E2EC] p-6 shadow-xs relative rounded-2xl">
-          <div className="flex items-center justify-between mb-6 text-[11px] font-sans font-medium text-[#4A607A] uppercase tracking-[0.12em]">
-            <span>ENGAGEMENT MILESTONES</span>
-            <span className="text-[#12324E] font-semibold">ALL STAGES MONITORED</span>
-          </div>
-
-          {/* Continuous Connecting Line */}
-          <div className="relative flex items-center justify-between">
-            {/* The base connecting rail */}
-            <div className="absolute left-6 right-6 top-1/2 -translate-y-1/2 h-[2px] bg-[#D8E2EC] z-0" />
-            
-            {/* Subtle accent thread along the line */}
-            <div className="absolute left-6 right-6 top-1/2 -translate-y-1/2 h-[2px] bg-gradient-to-r from-[#12324E] via-[#1D5382] to-[#12324E] opacity-40 z-0" />
-
-            {BRAND_CONFIG.workflowSteps.map((step, idx) => {
-              const isGate4 = step.step === '04';
-              const isGate6 = step.step === '06';
-              const isHovered = activeStep === idx;
-
-              return (
-                <div
-                  key={idx}
-                  onMouseEnter={() => setActiveStep(idx)}
-                  onMouseLeave={() => setActiveStep(null)}
-                  className="relative z-10 flex flex-col items-center group cursor-pointer"
-                  data-cursor="INSPECT"
-                >
-                  {/* Node Circle */}
-                  <div
-                    className={`w-9 h-9 rounded-full flex items-center justify-center font-sans text-xs font-bold transition-all duration-300 ${
-                      isGate4
-                        ? 'bg-[#1D5382] text-white ring-4 ring-[#1D5382]/20 shadow-sm scale-110'
-                        : isGate6
-                        ? 'bg-[#12324E] text-white ring-4 ring-[#12324E]/20 shadow-sm scale-110'
-                        : isHovered
-                        ? 'bg-[#12324E] text-white shadow-xs'
-                        : 'bg-[#FFFFFF] border-2 border-[#12324E]/40 text-[#12324E]'
-                    }`}
-                  >
-                    {step.step}
-                  </div>
-
-                  {/* Micro Node Title */}
-                  <div className="mt-3 text-center">
-                    <span className="block text-[10px] font-sans font-medium text-[#12324E] truncate max-w-[110px]">
-                      {isGate4 ? 'Preview Review' : isGate6 ? 'Final Release' : step.title}
-                    </span>
-                  </div>
-                </div>
-              );
-            })}
-          </div>
-        </div>
-
         {/* ── 6-Step Cards (Smooth Rounded-2xl Corners) ── */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 relative">
           {BRAND_CONFIG.workflowSteps.map((step, idx) => {

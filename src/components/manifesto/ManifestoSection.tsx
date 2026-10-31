@@ -92,19 +92,52 @@ export function ManifestoSection({ onRequestQuote }: ManifestoSectionProps) {
           </div>
         </div>
 
-        {/* Broadsheet Ledger: The Four Guiding Commitments (Hairline divided, ZERO cards) */}
+        {/* Broadsheet Ledger: Operational Standards (Distinguishable, Natural Phrasing) */}
         <div className="pt-12 border-t border-[#2A3548]">
           <div className="flex flex-col sm:flex-row sm:items-baseline justify-between gap-4 mb-10 pb-4 border-b border-[#2A3548]">
             <p className="text-xs font-sans tracking-[0.2em] uppercase text-[#B8975A] font-semibold">
               Operational Standards
             </p>
             <p className="text-xs sm:text-[13px] font-sans text-[#8A9BB0]">
-              Non-negotiable protocols governing every client commission
+              Institutional commitments governing every client commission
             </p>
           </div>
 
           <div className="divide-y divide-[#2A3548]">
-            {BRAND_CONFIG.coreUSPs.map((usp, idx) => (
+            {[
+              {
+                id: 'scope-mastery',
+                title: 'Universal Subject Scope & Level Specialization',
+                badge: 'Single Point of Contact',
+                lead: 'Dedicated academic guidance spanning all university faculties and educational tiers.',
+                description:
+                  'From undergraduate case analyses and lab reports to postgraduate financial modeling, legal monographs, and doctoral dissertations. We allocate specialist researchers strictly matching your discipline and university rubric.',
+              },
+              {
+                id: 'human-originality',
+                title: '100% Original Human Research & Zero Synthetic Filler',
+                badge: 'Authentic Authorship',
+                lead: 'Authentic critical analysis backed by legitimate, verifiable peer citations.',
+                description:
+                  'Every brief is researched and authored from scratch by human domain scholars. We reject automated AI shortcuts that hallucinate citations or generate generic filler, guaranteeing original, defensible scholarship.',
+              },
+              {
+                id: 'milestone-safeguard',
+                title: 'Transparent Milestone Model & Preview Approval',
+                badge: 'Financial Security',
+                lead: 'Inspect and approve deliverable caliber before releasing final balance funds.',
+                description:
+                  'Structured with an initial 50% commitment to begin and a comprehensive milestone preview stage. You review the draft quality and request your included revision round before completing final payment.',
+              },
+              {
+                id: 'scholastic-distinction',
+                title: 'Calibrated for Top-Tier Scholastic Standing',
+                badge: 'Faculty Rubric Alignment',
+                lead: 'Methodological depth and immaculate formatting engineered for strict evaluation.',
+                description:
+                  'While academic outcomes rest with university examiners, our work is rigorously crafted to target the highest evaluation criteria—coherent logical structures, accredited referencing, and defense-ready insights.',
+              },
+            ].map((usp, idx) => (
               <div
                 key={usp.id}
                 className="grid grid-cols-1 md:grid-cols-12 gap-6 py-8 items-start group hover:bg-[#0F172A]/50 transition-colors px-2 -mx-2 rounded-[2px]"

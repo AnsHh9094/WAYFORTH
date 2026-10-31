@@ -40,7 +40,7 @@ export default function HomePage() {
         {/* Masthead Navigation */}
         <Navbar onRequestQuote={handleScrollToQuote} />
 
-        {/* Hero Section: Deep Architectural Navy Stage with 3D Monolith */}
+        {/* Hero Section: Make Room for More & Student Survey Reality */}
         <div id="hero">
           <EditorialHero
             brandName={brandName}
@@ -48,13 +48,13 @@ export default function HomePage() {
           />
         </div>
 
-        {/* Kinetic Operational Metrics Counter Ticker */}
-        <KineticStatsTicker />
-
-        {/* The Core Thesis: "Why We Exist", Foundational USPs & The 6 Pillars */}
+        {/* The Core Thesis: "Why We Exist" & Operational Standards */}
         <div id="manifesto">
           <ManifestoSection onRequestQuote={handleScrollToQuote} />
         </div>
+
+        {/* Kinetic Operational Metrics Counter Ticker */}
+        <KineticStatsTicker />
 
         {/* Target Segments, Disciplines & Integrated Live Exemplar Samples */}
         <div id="disciplines">
