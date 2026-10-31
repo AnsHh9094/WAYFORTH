@@ -50,7 +50,7 @@ export function ServiceDossier({ onRequestQuote }: ServiceDossierProps) {
 
   return (
     <section id="disciplines" className="py-24 sm:py-36 bg-[#0C1220] border-b border-[#2A3548] text-[#F5F0E8]">
-      <div className="max-w-6xl mx-auto px-6 sm:px-10 lg:px-12">
+      <div className="max-w-[1400px] mx-auto px-6 sm:px-10 lg:px-12">
         
         {/* Section Header — Broadsheet style */}
         <div className="flex flex-col sm:flex-row sm:items-baseline justify-between gap-4 mb-20 border-b border-[#2A3548] pb-8">

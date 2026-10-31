@@ -164,7 +164,7 @@ _Initiated via wayforth.in official quotation calculator_`;
       id="quote-console"
       className="py-20 sm:py-28 bg-[#0C1220] border-b border-[#2A3548] text-[#F5F0E8]"
     >
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="max-w-[1400px] mx-auto px-4 sm:px-6 lg:px-10">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-start">
           
           {/* Left Column: Live Interactive Ledger Summary */}

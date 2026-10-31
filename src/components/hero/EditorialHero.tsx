@@ -53,7 +53,7 @@ export function EditorialHero({ brandName, onRequestQuote }: EditorialHeroProps)
       </div>
 
       <motion.div
-        className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10"
+        className="max-w-[1400px] mx-auto px-4 sm:px-6 lg:px-10 relative z-10"
         initial="hidden"
         animate="visible"
         viewport={{ once: true }}
@@ -69,11 +69,11 @@ export function EditorialHero({ brandName, onRequestQuote }: EditorialHeroProps)
           </div>
         </motion.div>
 
-        {/* Clean Editorial Hero Layout — Centered Container with Large Left-Aligned Type */}
-        <div className="max-w-5xl mx-auto mb-8 text-left">
+        {/* Clean Editorial Hero Layout — Spacious Full-Width Type */}
+        <div className="max-w-6xl xl:max-w-7xl mb-10 text-left">
           {/* Main Headline — Grand Scale Matching Original Editorial Specimen */}
           <motion.div className="mb-8" variants={revealItem(0.08)}>
-            <h1 className="font-serif text-5xl sm:text-7xl md:text-[84px] lg:text-[92px] xl:text-[100px] font-normal tracking-[-0.03em] text-[#F5F0E8] leading-[1.05]">
+            <h1 className="font-serif text-5xl sm:text-7xl md:text-[88px] lg:text-[102px] xl:text-[112px] font-normal tracking-[-0.03em] text-[#F5F0E8] leading-[1.04]">
               <span className="block">Make Room for</span>
               <span className="relative block h-[1.18em] overflow-hidden text-[#B8975A] italic font-serif font-light">
                 <AnimatePresence mode="popLayout" initial={false}>
@@ -93,7 +93,7 @@ export function EditorialHero({ brandName, onRequestQuote }: EditorialHeroProps)
           </motion.div>
 
           <motion.p
-            className="text-lg sm:text-xl lg:text-[22px] text-[#CBD8E6] font-sans font-normal leading-relaxed max-w-3xl lg:max-w-4xl mb-10 text-left"
+            className="text-lg sm:text-xl lg:text-[23px] text-[#CBD8E6] font-sans font-normal leading-relaxed max-w-4xl lg:max-w-5xl mb-12 text-left"
             variants={revealItem(0.18)}
           >
             Your future is <strong className="text-[#FFFFFF]">bigger</strong> than your next submission. We believe your university career should be about more than keeping up with an endless cycle of deadlines. Through accessible, dependable academic project, report, and research support by <strong className="text-[#F5F0E8]">{brandName}</strong>, we help you reclaim bandwidth for off-campus internships, skills, and ventures that truly matter.
@@ -101,12 +101,12 @@ export function EditorialHero({ brandName, onRequestQuote }: EditorialHeroProps)
 
           {/* Kinetic Action CTAs */}
           <motion.div
-            className="flex flex-col sm:flex-row items-stretch sm:items-center gap-4 mb-10"
+            className="flex flex-col sm:flex-row items-stretch sm:items-center gap-4 mb-12"
             variants={revealItem(0.28)}
           >
             <button
               onClick={onRequestQuote}
-              className="group relative inline-flex items-center justify-center gap-2.5 px-8 py-4 bg-[#B8975A] text-[#0C1220] text-xs font-sans uppercase tracking-[0.14em] font-bold hover:bg-[#c9a767] transition-all duration-200 cursor-pointer shadow-md rounded-xl border border-[#B8975A]"
+              className="group relative inline-flex items-center justify-center gap-2.5 px-9 py-4.5 bg-[#B8975A] text-[#0C1220] text-xs font-sans uppercase tracking-[0.14em] font-bold hover:bg-[#c9a767] transition-all duration-200 cursor-pointer shadow-md rounded-xl border border-[#B8975A]"
             >
               <span>Calculate Project Quote</span>
               <ArrowUpRight className="w-4 h-4 text-[#0C1220] group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />
@@ -114,7 +114,7 @@ export function EditorialHero({ brandName, onRequestQuote }: EditorialHeroProps)
 
             <a
               href="#disciplines"
-              className="inline-flex items-center justify-center gap-2 px-7 py-4 bg-[#101A2B] text-[#F5F0E8] text-xs font-sans uppercase tracking-[0.14em] border border-[#2A3548] hover:border-[#B8975A] hover:bg-[#16233B] transition-all rounded-xl font-semibold"
+              className="inline-flex items-center justify-center gap-2 px-8 py-4.5 bg-[#101A2B] text-[#F5F0E8] text-xs font-sans uppercase tracking-[0.14em] border border-[#2A3548] hover:border-[#B8975A] hover:bg-[#16233B] transition-all rounded-xl font-semibold"
             >
               <span>Inspect Sample Dossiers</span>
               <ArrowDown className="w-3.5 h-3.5 text-[#B8975A]" />
@@ -123,56 +123,56 @@ export function EditorialHero({ brandName, onRequestQuote }: EditorialHeroProps)
 
           {/* Quick Scope Chip Matrix */}
           <motion.div
-            className="flex flex-wrap items-center gap-2 text-[11px] font-sans font-medium uppercase tracking-wider text-[#8A9BB0] mb-14"
+            className="flex flex-wrap items-center gap-2.5 text-[11.5px] font-sans font-medium uppercase tracking-wider text-[#8A9BB0] mb-16"
             variants={revealItem(0.38)}
           >
-            <span className="px-3.5 py-1 bg-[#101A2B] border border-[#2A3548] text-[#CBD8E6] rounded-full">UNDERGRADUATE</span>
-            <span className="px-3.5 py-1 bg-[#101A2B] border border-[#2A3548] text-[#CBD8E6] rounded-full">POSTGRADUATE / MBA</span>
-            <span className="px-3.5 py-1 bg-[#101A2B] border border-[#2A3548] text-[#CBD8E6] rounded-full">THESIS & DISSERTATION</span>
-            <span className="px-3.5 py-1 bg-[#101A2B] border border-[#2A3548] text-[#B8975A] font-bold rounded-full">DATA ANALYSIS & EXCEL</span>
+            <span className="px-4 py-1.5 bg-[#101A2B] border border-[#2A3548] text-[#CBD8E6] rounded-full">UNDERGRADUATE</span>
+            <span className="px-4 py-1.5 bg-[#101A2B] border border-[#2A3548] text-[#CBD8E6] rounded-full">POSTGRADUATE / MBA</span>
+            <span className="px-4 py-1.5 bg-[#101A2B] border border-[#2A3548] text-[#CBD8E6] rounded-full">THESIS & DISSERTATION</span>
+            <span className="px-4 py-1.5 bg-[#101A2B] border border-[#2A3548] text-[#B8975A] font-bold rounded-full">DATA ANALYSIS & EXCEL</span>
           </motion.div>
 
           {/* ── Student Workload Statistics Section (Item 2 in Release Spec) ── */}
           <motion.div
-            className="pt-10 border-t border-[#2A3548]"
+            className="pt-12 border-t border-[#2A3548]"
             variants={revealItem(0.46)}
           >
-            <div className="flex flex-col sm:flex-row sm:items-baseline justify-between gap-2 mb-6">
+            <div className="flex flex-col sm:flex-row sm:items-baseline justify-between gap-2 mb-8">
               <div className="flex items-center gap-2">
                 <span className="w-1.5 h-1.5 rounded-full bg-[#B8975A]" />
-                <span className="text-[11px] font-sans font-semibold uppercase tracking-[0.18em] text-[#B8975A]">
+                <span className="text-xs font-sans font-semibold uppercase tracking-[0.18em] text-[#B8975A]">
                   Student Workload Burden // Surveyed Reality
                 </span>
               </div>
-              <span className="text-[11px] font-sans text-[#8A9BB0]">
+              <span className="text-xs font-sans text-[#8A9BB0]">
                 Empirical Cohort Study
               </span>
             </div>
 
-            <div className="grid grid-cols-1 sm:grid-cols-3 gap-5">
-              <div className="p-6 bg-[#101A2B] border border-[#2A3548] rounded-2xl hover:border-[#B8975A]/60 transition-all shadow-md group">
-                <span className="font-serif text-4xl sm:text-5xl font-light text-[#F5F0E8] group-hover:text-[#B8975A] transition-colors block mb-2 tracking-tight">
+            <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 lg:gap-8">
+              <div className="p-7 sm:p-8 bg-[#101A2B] border border-[#2A3548] rounded-2xl hover:border-[#B8975A]/60 transition-all shadow-xl group">
+                <span className="font-serif text-5xl sm:text-6xl font-light text-[#F5F0E8] group-hover:text-[#B8975A] transition-colors block mb-3 tracking-tight">
                   56.3%
                 </span>
-                <p className="text-[13px] sm:text-[13.5px] text-[#8A9BB0] leading-relaxed font-sans">
+                <p className="text-[14px] sm:text-[14.5px] text-[#8A9BB0] leading-relaxed font-sans">
                   Of surveyed undergraduate medical students struggled to balance academic work and personal life.
                 </p>
               </div>
 
-              <div className="p-6 bg-[#101A2B] border border-[#2A3548] rounded-2xl hover:border-[#B8975A]/60 transition-all shadow-md group">
-                <span className="font-serif text-4xl sm:text-5xl font-light text-[#F5F0E8] group-hover:text-[#B8975A] transition-colors block mb-2 tracking-tight">
+              <div className="p-7 sm:p-8 bg-[#101A2B] border border-[#2A3548] rounded-2xl hover:border-[#B8975A]/60 transition-all shadow-xl group">
+                <span className="font-serif text-5xl sm:text-6xl font-light text-[#F5F0E8] group-hover:text-[#B8975A] transition-colors block mb-3 tracking-tight">
                   56.6%
                 </span>
-                <p className="text-[13px] sm:text-[13.5px] text-[#8A9BB0] leading-relaxed font-sans">
+                <p className="text-[14px] sm:text-[14.5px] text-[#8A9BB0] leading-relaxed font-sans">
                   Described their ongoing academic workload as manageable but heavy.
                 </p>
               </div>
 
-              <div className="p-6 bg-[#101A2B] border border-[#2A3548] rounded-2xl hover:border-[#B8975A]/60 transition-all shadow-md group">
-                <span className="font-serif text-4xl sm:text-5xl font-light text-[#F5F0E8] group-hover:text-[#B8975A] transition-colors block mb-2 tracking-tight">
+              <div className="p-7 sm:p-8 bg-[#101A2B] border border-[#2A3548] rounded-2xl hover:border-[#B8975A]/60 transition-all shadow-xl group">
+                <span className="font-serif text-5xl sm:text-6xl font-light text-[#F5F0E8] group-hover:text-[#B8975A] transition-colors block mb-3 tracking-tight">
                   20.7%
                 </span>
-                <p className="text-[13px] sm:text-[13.5px] text-[#8A9BB0] leading-relaxed font-sans">
+                <p className="text-[14px] sm:text-[14.5px] text-[#8A9BB0] leading-relaxed font-sans">
                   Considered their academic workload excessively and unsustainably too heavy.
                 </p>
               </div>

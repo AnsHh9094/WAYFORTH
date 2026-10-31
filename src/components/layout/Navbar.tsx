@@ -46,7 +46,7 @@ export function Navbar({ onRequestQuote }: NavbarProps) {
       }`}
     >
       {/* Main Masthead Navigation */}
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+      <div className="max-w-[1400px] mx-auto px-4 sm:px-6 lg:px-10 h-22 flex items-center justify-between">
         
         {/* Brand Logo */}
         <div className="flex items-center gap-4">
@@ -56,7 +56,7 @@ export function Navbar({ onRequestQuote }: NavbarProps) {
         </div>
 
         {/* Desktop Navigation Links */}
-        <nav className="hidden lg:flex items-center gap-8 text-[13px] font-medium text-[#CBD8E6]">
+        <nav className="hidden lg:flex items-center gap-9 text-[13.5px] font-medium text-[#CBD8E6]">
           <a
             href="#manifesto"
             className="hover:text-[#FFFFFF] transition-colors hover:underline underline-offset-8 decoration-[#B8975A]"

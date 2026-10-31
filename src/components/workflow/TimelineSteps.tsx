@@ -10,7 +10,7 @@ export function TimelineSteps() {
 
   return (
     <section id="workflow" className="py-20 sm:py-28 bg-[#0C1220] border-b border-[#2A3548] text-[#F5F0E8] relative overflow-hidden">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+      <div className="max-w-[1400px] mx-auto px-4 sm:px-6 lg:px-10 relative z-10">
         
         {/* Section Header */}
         <div className="flex items-center justify-between border-b border-[#2A3548] pb-4 mb-16 text-[11px] font-sans font-medium uppercase tracking-[0.16em] text-[#8A9BB0]">

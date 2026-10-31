@@ -92,8 +92,8 @@ function CounterNumber({
   return (
     <span
       ref={ref}
-      className="font-serif font-light text-5xl sm:text-6xl text-[#FFFFFF] tracking-tight"
-      style={{ fontSize: 'clamp(2.75rem, 4.5vw, 3.75rem)', lineHeight: 1.1 }}
+      className="font-serif font-light text-5xl sm:text-6xl lg:text-7xl text-[#FFFFFF] tracking-tight"
+      style={{ fontSize: 'clamp(3rem, 4.5vw, 4.25rem)', lineHeight: 1.05 }}
     >
       {displayValue || `${prefix}${decimals > 0 ? count.toFixed(decimals) : count}${suffix}`}
     </span>
@@ -103,10 +103,10 @@ function CounterNumber({
 export function KineticStatsTicker() {
   return (
     <section
-      className="relative py-20 sm:py-24 lg:py-28 bg-[#0C1220] border-b border-[#2A3548] select-none"
-      style={{ minHeight: '460px', paddingTop: '5.5rem', paddingBottom: '5.5rem' }}
+      className="relative py-24 sm:py-28 lg:py-32 bg-[#0C1220] border-b border-[#2A3548] select-none"
+      style={{ minHeight: '480px', paddingTop: '6rem', paddingBottom: '6rem' }}
     >
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="max-w-[1400px] mx-auto px-4 sm:px-6 lg:px-10">
         
         {/* Top Ledger Strip */}
         <div className="flex items-center justify-between pb-6 mb-12 border-b border-[#2A3548] text-[11px] font-sans font-medium tracking-[0.16em] uppercase text-[#8A9BB0]">
@@ -118,27 +118,27 @@ export function KineticStatsTicker() {
         </div>
 
         {/* 4 Kinetic Stat Columns (Restored Spacious Layout) */}
-        <div className="grid grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-12">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 lg:gap-8">
           {STATS.map((stat, idx) => (
             <motion.div
               key={idx}
-              className="flex flex-col p-6 sm:p-8 bg-[#101A2B] border border-[#2A3548] rounded-2xl hover:border-[#B8975A]/60 transition-all shadow-md group min-h-[235px]"
-              style={{ minHeight: '235px' }}
+              className="flex flex-col p-7 sm:p-8 lg:p-9 bg-[#101A2B] border border-[#2A3548] rounded-2xl hover:border-[#B8975A]/60 transition-all shadow-xl group min-h-[255px]"
+              style={{ minHeight: '255px' }}
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.6, delay: idx * 0.1 }}
             >
-              <div className="flex items-center justify-between mb-5">
-                <div className="p-2.5 bg-[#16233B] border border-[#2A3548] rounded-xl text-[#B8975A] group-hover:border-[#B8975A]/50 transition-colors">
+              <div className="flex items-center justify-between mb-6">
+                <div className="p-3 bg-[#16233B] border border-[#2A3548] rounded-xl text-[#B8975A] group-hover:border-[#B8975A]/50 transition-colors">
                   {stat.icon}
                 </div>
-                <span className="text-[10.5px] font-sans font-semibold text-[#B8975A] tracking-widest px-2.5 py-0.5 bg-[#16233B]/60 border border-[#B8975A]/30 rounded-full">
+                <span className="text-[11px] font-sans font-semibold text-[#B8975A] tracking-widest px-3 py-0.5 bg-[#16233B]/60 border border-[#B8975A]/30 rounded-full">
                   [0{idx + 1}]
                 </span>
               </div>
 
-              <div className="mb-2">
+              <div className="mb-3">
                 <CounterNumber
                   value={stat.value}
                   displayValue={stat.displayValue}
@@ -148,10 +148,10 @@ export function KineticStatsTicker() {
                 />
               </div>
 
-              <strong className="block text-sm sm:text-[15px] font-sans text-[#F5F0E8] font-semibold mb-1">
+              <strong className="block text-base sm:text-[17px] font-sans text-[#F5F0E8] font-semibold mb-1.5">
                 {stat.label}
               </strong>
-              <p className="text-[13px] text-[#8A9BB0] leading-relaxed font-sans font-normal">
+              <p className="text-[13.5px] sm:text-[14px] text-[#8A9BB0] leading-relaxed font-sans font-normal">
                 {stat.sublabel}
               </p>
             </motion.div>

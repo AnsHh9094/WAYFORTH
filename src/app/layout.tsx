@@ -1,7 +1,13 @@
-import type { Metadata } from 'next';
+import type { Metadata, Viewport } from 'next';
 import './globals.css';
 import { BRAND_CONFIG } from '@/config/brand.config';
 import { GoogleAnalytics } from '@/components/analytics/GoogleAnalytics';
+
+export const viewport: Viewport = {
+  width: 'device-width',
+  initialScale: 1,
+  themeColor: '#0C1220',
+};
 
 export const metadata: Metadata = {
   metadataBase: new URL(`https://${BRAND_CONFIG.domain}`),

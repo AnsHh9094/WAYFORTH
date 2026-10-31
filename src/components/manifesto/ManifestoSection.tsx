@@ -23,7 +23,7 @@ export function ManifestoSection({ onRequestQuote }: ManifestoSectionProps) {
         </div>
       </div>
 
-      <div className="relative z-10 max-w-6xl mx-auto px-6 sm:px-10 lg:px-12 py-24 sm:py-32 lg:py-40">
+      <div className="relative z-10 max-w-[1400px] mx-auto px-6 sm:px-10 lg:px-12 py-24 sm:py-32 lg:py-40">
         
         {/* Kicker — Small caps, tracked, institutional label */}
         <div className="flex items-center gap-3 mb-10">
@@ -34,9 +34,9 @@ export function ManifestoSection({ onRequestQuote }: ManifestoSectionProps) {
         </div>
 
         {/* The Core Thesis Pull Quote */}
-        <blockquote className="space-y-6 max-w-4xl mb-12">
+        <blockquote className="space-y-6 max-w-5xl mb-12">
           <h2
-            className="text-[#F5F0E8] font-rumelaz text-3xl sm:text-5xl lg:text-[54px] font-normal leading-[1.2] tracking-[-0.01em]"
+            className="text-[#F5F0E8] font-rumelaz text-3xl sm:text-5xl lg:text-[58px] font-normal leading-[1.18] tracking-[-0.01em]"
             style={{ fontFamily: "'RumelazGekinsa', Georgia, serif" }}
           >
             Your future is <span className="text-[#FFFFFF] font-normal underline decoration-[#B8975A]/60 decoration-1 underline-offset-8">bigger</span> than your next submission.
