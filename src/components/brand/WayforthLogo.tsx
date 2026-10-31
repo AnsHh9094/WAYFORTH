@@ -17,8 +17,8 @@ export function WayforthLogo({
   className = '',
   sublineText = 'ACADEMIC & RESEARCH ADVISORY',
 }: WayforthLogoProps) {
-  const isLight = theme === 'light'; // Light for dark backgrounds (Footer)
-
+  // Theme color tokens - Dark for light backgrounds (Navbar), Light for dark backgrounds (Footer)
+  const isLight = theme === 'light';
   const logoSrc = isLight
     ? '/brand/wayforth-wordmark-stars-light.png'
     : '/brand/wayforth-wordmark-stars.png';
@@ -26,24 +26,24 @@ export function WayforthLogo({
   const sublineColor = isLight ? 'text-[#CBD5E1]' : 'text-[#4A607A]';
 
   return (
-    <div className={`inline-flex flex-col items-start select-none ${className}`}>
-      <div className="relative h-9 sm:h-11 w-auto flex items-center">
+    <div className={`inline-flex items-center select-none ${className}`}>
+      <div className="flex flex-col">
         <Image
           src={logoSrc}
           alt="Wayforth"
-          width={180}
-          height={68}
-          className="h-9 sm:h-11 w-auto object-contain transition-transform duration-200 group-hover:scale-[1.02]"
+          width={130}
+          height={54}
           priority
+          className="h-10 sm:h-11 w-auto object-contain transition-transform duration-200 group-hover:scale-[1.02]"
         />
+        {variant === 'full' && sublineText && (
+          <span
+            className={`text-[7.5px] sm:text-[8px] uppercase font-sans font-medium tracking-[0.22em] ${sublineColor} -mt-0.5`}
+          >
+            {sublineText}
+          </span>
+        )}
       </div>
-      {variant === 'full' && (
-        <span
-          className={`text-[8px] sm:text-[8.5px] uppercase font-sans font-semibold tracking-[0.22em] ${sublineColor} mt-1`}
-        >
-          {sublineText}
-        </span>
-      )}
     </div>
   );
 }
