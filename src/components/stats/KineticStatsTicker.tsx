@@ -103,16 +103,16 @@ function CounterNumber({
 export function KineticStatsTicker() {
   return (
     <section
-      className="relative py-20 sm:py-24 lg:py-28 bg-[#0E253A] border-b border-[#224A70] select-none"
+      className="relative py-20 sm:py-24 lg:py-28 bg-[#0C1220] border-b border-[#2A3548] select-none"
       style={{ minHeight: '460px', paddingTop: '5.5rem', paddingBottom: '5.5rem' }}
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
         {/* Top Ledger Strip */}
-        <div className="flex items-center justify-between pb-6 mb-12 border-b border-[#224A70] text-[11px] font-sans font-medium tracking-[0.16em] uppercase text-[#CBD5E1]">
+        <div className="flex items-center justify-between pb-6 mb-12 border-b border-[#2A3548] text-[11px] font-sans font-medium tracking-[0.16em] uppercase text-[#8A9BB0]">
           <div className="flex items-center gap-2">
             <span className="w-2 h-2 rounded-full bg-[#B8975A] animate-pulse" />
-            <span className="text-[#FFFFFF] font-bold">OPERATIONAL METRICS // AUTUMN 2026</span>
+            <span className="text-[#F5F0E8] font-bold">OPERATIONAL METRICS // AUTUMN 2026</span>
           </div>
           <span className="hidden sm:inline text-[#B8975A] font-semibold">VERIFIED ACADEMIC ASSURANCE</span>
         </div>
@@ -122,7 +122,7 @@ export function KineticStatsTicker() {
           {STATS.map((stat, idx) => (
             <motion.div
               key={idx}
-              className="flex flex-col p-6 sm:p-8 bg-[#0B1826]/80 border border-[#224A70] rounded-2xl hover:border-[#B8975A]/60 transition-all shadow-md group min-h-[235px]"
+              className="flex flex-col p-6 sm:p-8 bg-[#101A2B] border border-[#2A3548] rounded-2xl hover:border-[#B8975A]/60 transition-all shadow-md group min-h-[235px]"
               style={{ minHeight: '235px' }}
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -130,10 +130,10 @@ export function KineticStatsTicker() {
               transition={{ duration: 0.6, delay: idx * 0.1 }}
             >
               <div className="flex items-center justify-between mb-5">
-                <div className="p-2.5 bg-[#12324E] border border-[#224A70] rounded-xl text-[#B8975A] group-hover:border-[#B8975A]/50 transition-colors">
+                <div className="p-2.5 bg-[#16233B] border border-[#2A3548] rounded-xl text-[#B8975A] group-hover:border-[#B8975A]/50 transition-colors">
                   {stat.icon}
                 </div>
-                <span className="text-[10.5px] font-sans font-semibold text-[#B8975A] tracking-widest px-2.5 py-0.5 bg-[#12324E]/60 border border-[#B8975A]/30 rounded-full">
+                <span className="text-[10.5px] font-sans font-semibold text-[#B8975A] tracking-widest px-2.5 py-0.5 bg-[#16233B]/60 border border-[#B8975A]/30 rounded-full">
                   [0{idx + 1}]
                 </span>
               </div>
@@ -148,10 +148,10 @@ export function KineticStatsTicker() {
                 />
               </div>
 
-              <strong className="block text-sm sm:text-[15px] font-sans text-[#E2ECF5] font-semibold mb-1">
+              <strong className="block text-sm sm:text-[15px] font-sans text-[#F5F0E8] font-semibold mb-1">
                 {stat.label}
               </strong>
-              <p className="text-[13px] text-[#CBD5E1] leading-relaxed font-sans font-normal">
+              <p className="text-[13px] text-[#8A9BB0] leading-relaxed font-sans font-normal">
                 {stat.sublabel}
               </p>
             </motion.div>

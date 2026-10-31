@@ -36,7 +36,7 @@ export default function HomePage() {
       {/* Editorial Precision Spring Cursor */}
       <PrecisionCursor />
 
-      <main className="min-h-screen flex flex-col bg-[#FFFFFF] text-[#12324E]">
+      <main className="min-h-screen flex flex-col bg-[#0C1220] text-[#F5F0E8]">
         {/* Masthead Navigation */}
         <Navbar onRequestQuote={handleScrollToQuote} />
 

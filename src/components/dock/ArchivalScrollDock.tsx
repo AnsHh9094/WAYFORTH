@@ -64,34 +64,34 @@ export function ArchivalScrollDock({ onRequestQuote }: ArchivalScrollDockProps) 
           transition={{ duration: 0.3, ease: [0.16, 1, 0.3, 1] }}
           className="fixed bottom-5 left-1/2 -translate-x-1/2 z-40 select-none max-w-[92vw]"
         >
-          <div className="flex items-center gap-3 px-4 py-2 bg-[#FFFFFF]/95 backdrop-blur-md border border-[#D8E2EC] shadow-[0_10px_30px_-5px_rgba(18,50,78,0.15)] rounded-full text-[10.5px] font-sans text-[#4A607A]">
+          <div className="flex items-center gap-3 px-4 py-2 bg-[#101A2B]/95 backdrop-blur-md border border-[#2A3548] shadow-[0_10px_30px_-5px_rgba(0,0,0,0.6)] rounded-full text-[10.5px] font-sans text-[#8A9BB0]">
             {/* Live Section Tracker */}
             <div className="flex items-center gap-1.5">
-              <span className="w-1.5 h-1.5 rounded-full bg-[#12324E]" />
-              <span className="text-[#12324E] font-semibold tracking-wider whitespace-nowrap">
+              <span className="w-1.5 h-1.5 rounded-full bg-[#B8975A]" />
+              <span className="text-[#F5F0E8] font-semibold tracking-wider whitespace-nowrap">
                 {activeSection}
               </span>
             </div>
 
-            <span className="text-[#D8E2EC] hidden sm:inline">•</span>
+            <span className="text-[#2A3548] hidden sm:inline">•</span>
 
             {/* Micro Progress Bar */}
             <div className="hidden sm:flex items-center gap-1.5">
-              <div className="w-12 h-1 bg-[#EDF2F7] rounded-full overflow-hidden">
+              <div className="w-12 h-1 bg-[#1C2C42] rounded-full overflow-hidden">
                 <div
-                  className="h-full bg-[#12324E] transition-all duration-150"
+                  className="h-full bg-[#B8975A] transition-all duration-150"
                   style={{ width: `${scrollProgress}%` }}
                 />
               </div>
-              <span className="text-[#4A607A] text-[9px] w-6 font-medium">{scrollProgress}%</span>
+              <span className="text-[#8A9BB0] text-[9px] w-6 font-medium">{scrollProgress}%</span>
             </div>
 
-            <span className="text-[#D8E2EC]">•</span>
+            <span className="text-[#2A3548]">•</span>
 
             {/* Quick Action Button */}
             <button
               onClick={onRequestQuote}
-              className="inline-flex items-center gap-1 text-[#1D5382] hover:text-[#12324E] font-semibold tracking-wide transition-colors cursor-pointer"
+              className="inline-flex items-center gap-1 text-[#B8975A] hover:text-[#FFFFFF] font-semibold tracking-wide transition-colors cursor-pointer"
             >
               <span>GET QUOTE</span>
               <ArrowUpRight className="w-3 h-3 text-[#B8975A]" />

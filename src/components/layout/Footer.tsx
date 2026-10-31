@@ -16,26 +16,26 @@ export function Footer({ onRequestQuote }: FooterProps) {
   };
 
   return (
-    <footer className="relative w-full overflow-hidden bg-[#12324E] text-[#F0F4F8] pt-14 pb-10 border-t border-[#12324E]">
+    <footer className="relative w-full overflow-hidden bg-[#0C1220] text-[#CBD8E6] pt-14 pb-10 border-t border-[#2A3548]">
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
         {/* Main Footer Row */}
-        <div className="grid grid-cols-1 md:grid-cols-12 gap-8 lg:gap-12 pb-12 border-b border-[#224A70]">
+        <div className="grid grid-cols-1 md:grid-cols-12 gap-8 lg:gap-12 pb-12 border-b border-[#2A3548]">
           
           {/* Brand Column */}
           <div className="md:col-span-7 lg:col-span-8 space-y-4">
-            <WayforthLogo variant="full" theme="light" />
+            <WayforthLogo variant="compact" theme="light" sublineText="" />
             
-            <p className="font-serif italic text-base sm:text-lg text-[#D0E2F2] max-w-md">
+            <p className="font-serif italic text-base sm:text-lg text-[#F5F0E8] max-w-md">
               &ldquo;{BRAND_CONFIG.tagline}&rdquo;
             </p>
             
-            <p className="text-[13.5px] sm:text-[14px] text-[#CBD5E1] leading-relaxed max-w-xl font-sans">
+            <p className="text-[13.5px] sm:text-[14px] text-[#8A9BB0] leading-relaxed max-w-xl font-sans">
               Dedicated academic project, research, and report-writing advisory across undergraduate, postgraduate, and doctoral levels.
               100% genuine human research, mathematical pricing transparency, and milestone preview safeguards.
             </p>
 
-            <div className="pt-2 flex flex-wrap gap-x-6 gap-y-2 text-[12.5px] font-sans text-[#CBD5E1]">
+            <div className="pt-2 flex flex-wrap gap-x-6 gap-y-2 text-[12.5px] font-sans text-[#CBD8E6]">
               <div className="flex items-center gap-2">
                 <Mail className="w-3.5 h-3.5 text-[#B8975A]" />
                 <a
@@ -64,7 +64,7 @@ export function Footer({ onRequestQuote }: FooterProps) {
             <div className="text-xs font-sans uppercase tracking-[0.14em] text-[#B8975A] font-semibold">
               Institutional Governance
             </div>
-            <ul className="space-y-2.5 text-[12.5px] font-sans text-[#CBD5E1]">
+            <ul className="space-y-2.5 text-[12.5px] font-sans text-[#CBD8E6]">
               <li>
                 <Link href="/terms" className="hover:text-white transition-colors flex items-center gap-1.5">
                   <span className="text-[#B8975A]">/</span> Terms & Conditions
@@ -90,7 +90,7 @@ export function Footer({ onRequestQuote }: FooterProps) {
         </div>
 
         {/* Ethical Notice Disclaimer */}
-        <div className="py-6 border-b border-[#224A70] text-[12px] sm:text-[12.5px] text-[#CBD5E1] leading-relaxed font-sans">
+        <div className="py-6 border-b border-[#2A3548] text-[12px] sm:text-[12.5px] text-[#8A9BB0] leading-relaxed font-sans">
           <strong className="text-[#FFFFFF] block mb-1 font-sans uppercase text-[10.5px] tracking-wider font-semibold">
             Institutional Compliance & Academic Ethics Notice:
           </strong>
@@ -101,14 +101,14 @@ export function Footer({ onRequestQuote }: FooterProps) {
         </div>
 
         {/* Oversized Subtle Brand Watermark */}
-        <div className="pt-6 overflow-hidden select-none pointer-events-none text-center border-b border-[#224A70]/50">
+        <div className="pt-6 overflow-hidden select-none pointer-events-none text-center border-b border-[#2A3548]/50">
           <span className="font-serif text-[clamp(2.5rem,10vw,8rem)] font-light tracking-tighter text-[#FFFFFF]/[0.035] leading-none uppercase inline-block whitespace-nowrap">
             WAYFORTH
           </span>
         </div>
 
         {/* Bottom Bar */}
-        <div className="pt-6 flex flex-col sm:flex-row items-center justify-between text-[12px] font-sans text-[#CBD5E1] gap-4">
+        <div className="pt-6 flex flex-col sm:flex-row items-center justify-between text-[12px] font-sans text-[#8A9BB0] gap-4">
           <div>
             © 2026 {BRAND_CONFIG.name} Advisory ({BRAND_CONFIG.domain}). All rights reserved.
           </div>

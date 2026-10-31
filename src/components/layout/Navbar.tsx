@@ -41,55 +41,49 @@ export function Navbar({ onRequestQuote }: NavbarProps) {
     <header
       className={`sticky top-0 z-50 w-full transition-all duration-300 ${
         scrolled
-          ? 'bg-[#FFFFFF]/95 backdrop-blur-md border-b border-[#D8E2EC] shadow-xs'
-          : 'bg-[#FFFFFF] border-b border-[#D8E2EC]/80'
+          ? 'bg-[#0C1220]/95 backdrop-blur-md border-b border-[#2A3548] shadow-lg'
+          : 'bg-[#0C1220] border-b border-[#2A3548]'
       }`}
     >
       {/* Main Masthead Navigation */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
         
-        {/* Brand Logo & Editorial Subline */}
+        {/* Brand Logo */}
         <div className="flex items-center gap-4">
           <a href="#" className="group">
-            <WayforthLogo variant="compact" theme="dark" sublineText="" />
+            <WayforthLogo variant="compact" theme="light" sublineText="" />
           </a>
         </div>
 
         {/* Desktop Navigation Links */}
-        <nav className="hidden lg:flex items-center gap-8 text-[13px] font-medium text-[#243B53]">
+        <nav className="hidden lg:flex items-center gap-8 text-[13px] font-medium text-[#CBD8E6]">
           <a
             href="#manifesto"
-            className="hover:text-[#12324E] transition-colors hover:underline underline-offset-8 decoration-[#12324E]"
+            className="hover:text-[#FFFFFF] transition-colors hover:underline underline-offset-8 decoration-[#B8975A]"
           >
             Why We Exist
           </a>
           <a
             href="#disciplines"
-            className="hover:text-[#12324E] transition-colors hover:underline underline-offset-8 decoration-[#12324E]"
+            className="hover:text-[#FFFFFF] transition-colors hover:underline underline-offset-8 decoration-[#B8975A]"
           >
             Disciplines & Samples
           </a>
           <a
             href="#workflow"
-            className="hover:text-[#12324E] transition-colors hover:underline underline-offset-8 decoration-[#12324E]"
+            className="hover:text-[#FFFFFF] transition-colors hover:underline underline-offset-8 decoration-[#B8975A]"
           >
-            6-Step Process
-          </a>
-          <a
-            href="#quote-console"
-            className="hover:text-[#12324E] transition-colors hover:underline underline-offset-8 decoration-[#12324E]"
-          >
-            Live Calculator
+            Workflow
           </a>
           <a
             href="#contact"
-            className="hover:text-[#12324E] transition-colors hover:underline underline-offset-8 decoration-[#12324E]"
+            className="hover:text-[#FFFFFF] transition-colors hover:underline underline-offset-8 decoration-[#B8975A]"
           >
-            Contact
+            Contact Us
           </a>
           <a
             href="/terms"
-            className="hover:text-[#12324E] transition-colors hover:underline underline-offset-8 decoration-[#12324E]"
+            className="hover:text-[#FFFFFF] transition-colors hover:underline underline-offset-8 decoration-[#B8975A]"
           >
             Terms & Refunds
           </a>
@@ -99,16 +93,16 @@ export function Navbar({ onRequestQuote }: NavbarProps) {
         <div className="flex items-center gap-3">
           <button
             onClick={onRequestQuote}
-            className="group relative inline-flex items-center gap-2 px-5 py-2.5 bg-[#12324E] text-[#FFFFFF] text-xs font-sans uppercase tracking-[0.14em] font-bold border border-[#12324E] hover:bg-[#1D5382] hover:border-[#1D5382] transition-all cursor-pointer shadow-xs active:translate-y-px rounded-lg"
+            className="group relative inline-flex items-center gap-2 px-5 py-2.5 bg-[#B8975A] text-[#0C1220] text-xs font-sans uppercase tracking-[0.14em] font-bold border border-[#B8975A] hover:bg-[#c9a767] transition-all cursor-pointer shadow-xs active:translate-y-px rounded-lg"
           >
             <span>Get a Quote</span>
-            <ArrowUpRight className="w-3.5 h-3.5 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform text-[#B8975A]" />
+            <ArrowUpRight className="w-3.5 h-3.5 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform text-[#0C1220]" />
           </button>
 
           {/* Mobile menu hamburger button */}
           <button
             onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-            className="lg:hidden p-2 text-[#12324E] hover:bg-[#F4F7FB] transition-colors"
+            className="lg:hidden p-2 text-[#CBD8E6] hover:text-[#FFFFFF] hover:bg-[#16233B] transition-colors rounded-lg"
             aria-label="Toggle navigation menu"
           >
             {mobileMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
@@ -118,47 +112,40 @@ export function Navbar({ onRequestQuote }: NavbarProps) {
 
       {/* Mobile Drawer */}
       {mobileMenuOpen && (
-        <div className="lg:hidden bg-[#FFFFFF] border-b border-[#D8E2EC] px-6 py-6 space-y-4">
-          <div className="flex flex-col space-y-3 text-sm font-medium text-[#12324E]">
+        <div className="lg:hidden bg-[#0C1220] border-b border-[#2A3548] px-6 py-6 space-y-4">
+          <div className="flex flex-col space-y-3 text-sm font-medium text-[#CBD8E6]">
             <a
               href="#manifesto"
               onClick={() => setMobileMenuOpen(false)}
-              className="py-1 border-b border-[#D8E2EC]"
+              className="py-1 border-b border-[#2A3548] hover:text-[#FFFFFF]"
             >
               Why We Exist
             </a>
             <a
               href="#disciplines"
               onClick={() => setMobileMenuOpen(false)}
-              className="py-1 border-b border-[#D8E2EC]"
+              className="py-1 border-b border-[#2A3548] hover:text-[#FFFFFF]"
             >
               Disciplines & Samples
             </a>
             <a
               href="#workflow"
               onClick={() => setMobileMenuOpen(false)}
-              className="py-1 border-b border-[#D8E2EC]"
+              className="py-1 border-b border-[#2A3548] hover:text-[#FFFFFF]"
             >
-              6-Step Process
-            </a>
-            <a
-              href="#quote-console"
-              onClick={() => setMobileMenuOpen(false)}
-              className="py-1 border-b border-[#D8E2EC]"
-            >
-              Live Calculator
+              Workflow
             </a>
             <a
               href="#contact"
               onClick={() => setMobileMenuOpen(false)}
-              className="py-1 border-b border-[#D8E2EC]"
+              className="py-1 border-b border-[#2A3548] hover:text-[#FFFFFF]"
             >
-              Direct Advisory Contact
+              Contact Us
             </a>
             <a
               href="/terms"
               onClick={() => setMobileMenuOpen(false)}
-              className="py-1 border-b border-[#D8E2EC]"
+              className="py-1 border-b border-[#2A3548] hover:text-[#FFFFFF]"
             >
               Terms & Refunds
             </a>
@@ -170,9 +157,9 @@ export function Navbar({ onRequestQuote }: NavbarProps) {
                 onRequestQuote();
                 setMobileMenuOpen(false);
               }}
-              className="w-full text-center py-3 bg-[#12324E] text-white text-xs font-sans uppercase tracking-[0.14em] font-bold cursor-pointer rounded-lg"
+              className="w-full text-center py-3 bg-[#B8975A] text-[#0C1220] text-xs font-sans uppercase tracking-[0.14em] font-bold cursor-pointer rounded-lg hover:bg-[#c9a767] transition-colors"
             >
-              Open Live Pricing Calculator
+              Get a Quote
             </button>
           </div>
         </div>

@@ -62,20 +62,21 @@
 
 @layer base {
   :root {
-    /* Champoleon Valley Inspired Academic Navy & White Palette */
-    --paper-primary: #FFFFFF;
-    --paper-secondary: #F4F7FB;
-    --surface-elevated: #FFFFFF;
-    --surface-tint: #EDF2F7;
-    --ink-primary: #12324E;        /* Deep Academic Navy Blue */
-    --ink-secondary: #364B62;      /* Refined Steel Blue Slate */
-    --ink-muted: #4A607A;          /* High-Contrast Accessible Subtext Slate (WCAG AA Compliant) */
-    --border-subtle: #D8E2EC;      /* Crisp Architectural Rule */
-    --border-strong: #B8C9D8;      /* Strong Section Rule */
-    --accent-oxford: #12324E;      /* Deep Midnight Academic Navy */
-    --accent-blue: #1D5382;        /* Vibrant Academic Cobalt */
-    --accent-ice: #E8F1F9;         /* Glacial Highlighting Tint */
-    --accent-cyan: #0284C7;        /* Clean Interactive Highlight */
+    /* Wayforth Architectural Dark Navy & Gold Aesthetic */
+    --paper-primary: #0C1220;      /* Midnight Deep Navy */
+    --paper-secondary: #0E1726;    /* Surface Navy */
+    --surface-elevated: #101A2B;   /* Elevated Card Navy */
+    --surface-tint: #16233B;       /* Tinted Navy Highlight */
+    --ink-primary: #F5F0E8;        /* Warm Ivory White */
+    --ink-secondary: #CBD8E6;      /* Soft Slate Blue */
+    --ink-muted: #8A9BB0;          /* Muted Subtext Slate */
+    --border-subtle: #2A3548;      /* Architectural Dark Rule */
+    --border-strong: #3E4F69;      /* Prominent Section Rule */
+    --accent-oxford: #0C1220;      /* Deep Midnight */
+    --accent-blue: #1D5382;        /* Classic Academic Blue */
+    --accent-gold: #B8975A;        /* Antique Brass Gold */
+    --accent-ice: #16233B;         /* Dark Highlighting Tint */
+    --accent-cyan: #38BDF8;        /* Clean Interactive Highlight */
   }
 
   body {
@@ -87,8 +88,8 @@
   }
 
   ::selection {
-    background-color: #12324E;
-    color: #FFFFFF;
+    background-color: #B8975A;
+    color: #0C1220;
   }
 }
 
@@ -98,13 +99,13 @@
   height: 6px;
 }
 ::-webkit-scrollbar-track {
-  background: #F4F7FB;
+  background: #0C1220;
 }
 ::-webkit-scrollbar-thumb {
-  background: #B8C9D8;
+  background: #2A3548;
 }
 ::-webkit-scrollbar-thumb:hover {
-  background: #12324E;
+  background: #B8975A;
 }
 
 /* Watermark Pattern */

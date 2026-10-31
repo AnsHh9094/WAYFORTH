@@ -66,16 +66,16 @@ export function PrecisionCursor() {
     <div className="pointer-events-none fixed inset-0 z-[99999] overflow-hidden select-none">
       {/* Precision Center Pin-Dot */}
       <motion.div
-        className="fixed top-0 left-0 w-1.5 h-1.5 rounded-full bg-[#12324E] -translate-x-1/2 -translate-y-1/2"
+        className="fixed top-0 left-0 w-1.5 h-1.5 rounded-full bg-[#B8975A] -translate-x-1/2 -translate-y-1/2"
         style={{ x: mouseX, y: mouseY }}
       />
 
-      {/* Trailing Accent Ring: Shrinks out of the way when hovering over buttons */}
+      {/* Trailing Accent Ring */}
       <motion.div
-        className="fixed top-0 left-0 flex items-center justify-center rounded-full -translate-x-1/2 -translate-y-1/2 border border-[#B8975A]/60 transition-all duration-200"
+        className="fixed top-0 left-0 flex items-center justify-center rounded-full -translate-x-1/2 -translate-y-1/2 border border-[#B8975A]/80 transition-all duration-200"
         animate={{
           scale: isClickable ? (cursorText ? 1.4 : 0.4) : 1,
-          opacity: isClickable && !cursorText ? 0 : 0.6,
+          opacity: isClickable && !cursorText ? 0 : 0.7,
         }}
         style={{
           x: smoothX,
@@ -85,7 +85,7 @@ export function PrecisionCursor() {
         }}
       >
         {cursorText && (
-          <span className="text-[7.5px] font-sans font-bold tracking-widest text-[#12324E] uppercase whitespace-nowrap bg-white/90 px-1 py-0.5 rounded-[1px] border border-[#D8E2EC]">
+          <span className="text-[7.5px] font-sans font-bold tracking-widest text-[#0C1220] uppercase whitespace-nowrap bg-[#B8975A] px-1 py-0.5 rounded-[1px] border border-[#B8975A]">
             {cursorText}
           </span>
         )}

@@ -12,12 +12,12 @@ interface WayforthLogoProps {
 }
 
 export function WayforthLogo({
-  variant = 'full',
+  variant = 'compact',
   theme = 'dark',
   className = '',
-  sublineText = 'ACADEMIC & RESEARCH ADVISORY',
+  sublineText = '',
 }: WayforthLogoProps) {
-  // Theme color tokens - Dark for light backgrounds (Navbar), Light for dark backgrounds (Footer)
+  // Theme color tokens - Dark for light backgrounds, Light for dark backgrounds (Default Dark Navy site)
   const isLight = theme === 'light';
   const logoSrc = isLight
     ? '/brand/wayforth-wordmark-stars-light.png'
@@ -31,10 +31,10 @@ export function WayforthLogo({
         <Image
           src={logoSrc}
           alt="Wayforth"
-          width={130}
-          height={54}
+          width={160}
+          height={66}
           priority
-          className="h-10 sm:h-11 w-auto object-contain transition-transform duration-200 group-hover:scale-[1.02]"
+          className="h-11 sm:h-12 md:h-14 w-auto object-contain transition-transform duration-200 group-hover:scale-[1.02]"
         />
         {variant === 'full' && sublineText && (
           <span

@@ -68,25 +68,16 @@ export function ManifestoSection({ onRequestQuote }: ManifestoSectionProps) {
             >
               &ldquo;{BRAND_CONFIG.manifestoLead}&rdquo;
             </p>
-            <p
-              className="font-rumelaz text-[#CBD8E6] text-base leading-relaxed tracking-normal font-normal"
-              style={{ fontFamily: "'RumelazGekinsa', Georgia, serif" }}
-            >
+            <p className="font-sans text-[#CBD8E6] text-sm sm:text-[15px] leading-relaxed font-normal">
               When exhaustive documentation, data formatting, and formatting compliance consume your entire waking bandwidth, it is your off-campus internships, startup ventures, and career placements that suffer.
             </p>
           </div>
 
           <div className="lg:col-span-6 space-y-5">
-            <p
-              className="font-rumelaz text-[#CBD8E6] text-base leading-relaxed tracking-normal font-normal"
-              style={{ fontFamily: "'RumelazGekinsa', Georgia, serif" }}
-            >
+            <p className="font-sans text-[#CBD8E6] text-sm sm:text-[15px] leading-relaxed font-normal">
               Wayforth was founded on the conviction that elite academic advisory should operate with the intellectual rigour of an independent research consultancy and the complete discretion of a private office.
             </p>
-            <p
-              className="font-rumelaz text-[#CBD8E6] text-base leading-relaxed tracking-normal font-normal"
-              style={{ fontFamily: "'RumelazGekinsa', Georgia, serif" }}
-            >
+            <p className="font-sans text-[#CBD8E6] text-sm sm:text-[15px] leading-relaxed font-normal">
               We do not provide generic automated shortcuts. We construct rigorous, peer-reviewed methodological frameworks and custom empirical workbooks—empowering you to defend with total confidence.
             </p>
           </div>
