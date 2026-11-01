@@ -92,8 +92,13 @@ function CounterNumber({
   return (
     <span
       ref={ref}
-      className="font-serif font-light text-5xl sm:text-6xl lg:text-7xl text-[#FFFFFF] tracking-tight"
-      style={{ fontSize: 'clamp(3rem, 4.5vw, 4.25rem)', lineHeight: 1.05 }}
+      className={`font-serif font-light text-[#FFFFFF] tracking-tight whitespace-nowrap ${
+        displayValue ? 'text-3xl sm:text-4xl lg:text-[2.6rem]' : 'text-5xl sm:text-6xl lg:text-7xl'
+      }`}
+      style={{
+        fontSize: displayValue ? 'clamp(2.1rem, 2.7vw, 2.65rem)' : 'clamp(3rem, 4.5vw, 4.25rem)',
+        lineHeight: 1.05,
+      }}
     >
       {displayValue || `${prefix}${decimals > 0 ? count.toFixed(decimals) : count}${suffix}`}
     </span>
