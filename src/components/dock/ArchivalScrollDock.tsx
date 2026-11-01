@@ -9,17 +9,18 @@ interface ArchivalScrollDockProps {
 }
 
 const SECTIONS = [
-  { id: 'hero', label: 'THESIS' },
+  { id: 'hero', label: 'OVERVIEW' },
   { id: 'manifesto', label: 'MANIFESTO' },
+  { id: 'metrics', label: 'METRICS' },
   { id: 'disciplines', label: 'DISCIPLINES' },
   { id: 'workflow', label: 'WORKFLOW' },
-  { id: 'quote-console', label: 'INTAKE' },
+  { id: 'quote-console', label: 'CALCULATOR' },
   { id: 'contact', label: 'CONTACT' },
 ];
 
 export function ArchivalScrollDock({ onRequestQuote }: ArchivalScrollDockProps) {
   const [isVisible, setIsVisible] = useState<boolean>(false);
-  const [activeSection, setActiveSection] = useState<string>('THESIS');
+  const [activeSection, setActiveSection] = useState<string>('OVERVIEW');
   const [scrollProgress, setScrollProgress] = useState<number>(0);
 
   useEffect(() => {

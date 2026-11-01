@@ -50,7 +50,9 @@ export default function HomePage() {
         </div>
 
         {/* Kinetic Operational Metrics Counter Ticker */}
-        <KineticStatsTicker />
+        <div id="metrics">
+          <KineticStatsTicker />
+        </div>
 
         {/* Target Segments, Disciplines & Integrated Live Exemplar Samples */}
         <div id="disciplines">
