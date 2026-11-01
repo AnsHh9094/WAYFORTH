@@ -53,3 +53,6 @@ rushic-*
 public/heraldic-crest-logos-*
 
 .originkit/
+
+*.pdf
+*.ogg

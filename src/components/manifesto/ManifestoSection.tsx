@@ -14,15 +14,6 @@ export function ManifestoSection({ onRequestQuote }: ManifestoSectionProps) {
       {/* Editorial Hairline Top Rule in Antique Brass */}
       <div className="absolute top-0 left-0 right-0 h-px bg-[#B8975A]/40" />
 
-      {/* Subtle Architectural Blueprint Grid (Dark Navy Overlay) */}
-      <div className="absolute inset-0 pointer-events-none opacity-20">
-        <div className="max-w-7xl mx-auto h-full grid grid-cols-4 lg:grid-cols-12 border-x border-[#2A3548]">
-          <div className="border-r border-[#2A3548] hidden lg:block col-span-2" />
-          <div className="border-r border-[#2A3548] col-span-5" />
-          <div className="border-r border-[#2A3548] hidden lg:block col-span-5" />
-        </div>
-      </div>
-
       <div className="relative z-10 max-w-[1400px] mx-auto px-6 sm:px-10 lg:px-12 py-24 sm:py-32 lg:py-40">
         
         {/* Kicker — Small caps, tracked, institutional label */}
@@ -35,16 +26,10 @@ export function ManifestoSection({ onRequestQuote }: ManifestoSectionProps) {
 
         {/* The Core Thesis Pull Quote */}
         <blockquote className="space-y-6 max-w-5xl mb-12">
-          <h2
-            className="text-[#F5F0E8] font-rumelaz text-3xl sm:text-5xl lg:text-[58px] font-normal leading-[1.18] tracking-[-0.01em]"
-            style={{ fontFamily: "'RumelazGekinsa', Georgia, serif" }}
-          >
+          <h2 className="text-[#F5F0E8] font-serif text-3xl sm:text-5xl lg:text-[54px] font-normal leading-[1.18] tracking-[-0.01em]">
             Your future is <span className="text-[#FFFFFF] font-normal underline decoration-[#B8975A]/60 decoration-1 underline-offset-8">bigger</span> than your next submission.
             The difference is not effort — it is{' '}
-            <span
-              className="italic font-rumelaz text-[#B8975A]"
-              style={{ fontFamily: "'RumelazGekinsa', Georgia, serif" }}
-            >
+            <span className="italic font-serif text-[#B8975A]">
               reclaiming bandwidth for what truly matters.
             </span>
           </h2>
@@ -60,25 +45,22 @@ export function ManifestoSection({ onRequestQuote }: ManifestoSectionProps) {
         </div>
 
         {/* Two-Column Supporting Narrative (No generic card boxes) */}
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-16 mb-20 text-sm sm:text-base leading-[1.85] font-light text-[#8A9BB0]">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-16 mb-20 text-sm sm:text-base leading-[1.85] text-[#8A9BB0]">
           <div className="lg:col-span-6 space-y-5">
-            <p
-              className="text-[#F5F0E8] font-rumelaz text-lg sm:text-xl font-normal leading-relaxed italic border-l-2 border-[#B8975A] pl-5"
-              style={{ fontFamily: "'RumelazGekinsa', Georgia, serif" }}
-            >
-              &ldquo;{BRAND_CONFIG.manifestoLead}&rdquo;
+            <p className="text-[#F5F0E8] font-serif text-lg sm:text-xl font-normal leading-relaxed italic border-l-2 border-[#B8975A] pl-5">
+              &ldquo;We believe your life should be about more than keeping up with deadlines, submissions, and relentless academic cycles.&rdquo;
             </p>
             <p className="font-sans text-[#CBD8E6] text-sm sm:text-[15px] leading-relaxed font-normal">
-              When exhaustive documentation, data formatting, and formatting compliance consume your entire waking bandwidth, it is your off-campus internships, startup ventures, and career placements that suffer.
+              When exhaustive documentation, data formatting, and compliance consume your waking bandwidth, your internships, startup ventures, and career placements suffer.
             </p>
           </div>
 
           <div className="lg:col-span-6 space-y-5">
             <p className="font-sans text-[#CBD8E6] text-sm sm:text-[15px] leading-relaxed font-normal">
-              Wayforth was founded on the conviction that elite academic advisory should operate with the intellectual rigour of an independent research consultancy and the complete discretion of a private office.
+              Wayforth was founded on the conviction that elite advisory should operate with the intellectual rigor of an independent research consultancy and the discretion of a private office.
             </p>
             <p className="font-sans text-[#CBD8E6] text-sm sm:text-[15px] leading-relaxed font-normal">
-              We do not provide generic automated shortcuts. We construct rigorous, peer-reviewed methodological frameworks and custom empirical workbooks—empowering you to defend with total confidence.
+              We do not provide generic shortcuts. We construct rigorous, peer-reviewed methodological frameworks and custom empirical workbooks, empowering you to defend with total confidence.
             </p>
           </div>
         </div>
@@ -97,36 +79,36 @@ export function ManifestoSection({ onRequestQuote }: ManifestoSectionProps) {
           <div className="divide-y divide-[#2A3548]">
             {[
               {
-                id: 'scope-mastery',
-                title: 'Universal Subject Scope & Level Specialization',
-                badge: 'Single Point of Contact',
-                lead: 'Dedicated academic guidance spanning all university faculties and educational tiers.',
+                id: 'scope-specialization',
+                title: 'Universal Scope & Level Specialization',
+                badge: 'SINGLE POINT OF CONTACT',
+                lead: 'Dedicated guidance spanning all academic faculties and educational tiers.',
                 description:
-                  'From undergraduate case analyses and lab reports to postgraduate financial modeling, legal monographs, and doctoral dissertations. We allocate specialist researchers strictly matching your discipline and university rubric.',
+                  'From undergraduate case analyses and lab reports to postgraduate financial modeling, legal monographs, and doctoral dissertations, we allocate specialist researchers matched strictly to your discipline and university rubric.',
               },
               {
-                id: 'human-originality',
+                id: 'human-research',
                 title: '100% Original Human Research & Zero Synthetic Filler',
-                badge: 'Authentic Authorship',
-                lead: 'Authentic critical analysis backed by legitimate, verifiable peer citations.',
+                badge: 'AUTHENTIC AUTHORSHIP',
+                lead: 'Critical analysis backed by legitimate, verifiable peer citations.',
                 description:
-                  'Every brief is researched and authored from scratch by human domain scholars. We reject automated AI shortcuts that hallucinate citations or generate generic filler, guaranteeing original, defensible scholarship.',
+                  'Every brief is researched and authored from scratch by domain scholars. We reject automated AI shortcuts that hallucinate citations or produce generic filler, delivering original, defensible scholarship.',
               },
               {
-                id: 'milestone-safeguard',
-                title: 'Transparent Milestone Model & Preview Approval',
-                badge: 'Financial Security',
-                lead: 'Inspect and approve deliverable caliber before releasing final balance funds.',
-                description:
-                  'Structured with an initial 50% commitment to begin and a comprehensive milestone preview stage. You review the draft quality and request your included revision round before completing final payment.',
-              },
-              {
-                id: 'scholastic-distinction',
+                id: 'scholastic-standing',
                 title: 'Calibrated for Top-Tier Scholastic Standing',
-                badge: 'Faculty Rubric Alignment',
-                lead: 'Methodological depth and immaculate formatting engineered for strict evaluation.',
+                badge: 'FACULTY RUBRIC ALIGNMENT',
+                lead: 'Methodological depth and rigorous formatting engineered for strict evaluation.',
                 description:
-                  'While academic outcomes rest with university examiners, our work is rigorously crafted to target the highest evaluation criteria—coherent logical structures, accredited referencing, and defense-ready insights.',
+                  'While final academic evaluations rest with university examiners, our work is built to meet the highest assessment criteria through coherent logical structure, accredited referencing, and defense-ready analysis.',
+              },
+              {
+                id: 'milestone-model',
+                title: 'Transparent Milestone Model & Preview Approval',
+                badge: 'FINANCIAL SECURITY',
+                lead: 'Inspect and approve deliverable quality before releasing final funds.',
+                description:
+                  'Structured with a 50% initial commitment to begin, followed by a milestone preview stage. Review draft quality and request your included revision round prior to completing final payment.',
               },
             ].map((usp, idx) => (
               <div
@@ -139,13 +121,10 @@ export function ManifestoSection({ onRequestQuote }: ManifestoSectionProps) {
                     [0{idx + 1}]
                   </span>
                   <div>
-                    <h3
-                      className="font-rumelaz text-xl sm:text-2xl text-[#F5F0E8] font-normal tracking-tight group-hover:text-white transition-colors"
-                      style={{ fontFamily: "'RumelazGekinsa', Georgia, serif" }}
-                    >
+                    <h3 className="font-serif text-xl sm:text-2xl text-[#F5F0E8] font-normal tracking-tight group-hover:text-white transition-colors">
                       {usp.title}
                     </h3>
-                    <span className="inline-block mt-1 text-[10.5px] font-sans font-medium uppercase tracking-wider text-[#B8975A]/90">
+                    <span className="inline-block mt-1 text-[10px] font-sans font-semibold uppercase tracking-wider text-[#B8975A]">
                       {usp.badge}
                     </span>
                   </div>
@@ -153,20 +132,14 @@ export function ManifestoSection({ onRequestQuote }: ManifestoSectionProps) {
 
                 {/* Subtitle / Lead */}
                 <div className="md:col-span-3">
-                  <p
-                    className="font-rumelaz text-sm text-[#CBD8E6] font-medium leading-relaxed"
-                    style={{ fontFamily: "'RumelazGekinsa', Georgia, serif" }}
-                  >
+                  <p className="font-sans text-sm text-[#CBD8E6] font-medium leading-relaxed">
                     {usp.lead}
                   </p>
                 </div>
 
                 {/* Detailed Description */}
                 <div className="md:col-span-5">
-                  <p
-                    className="font-rumelaz text-[13.5px] sm:text-sm text-[#A2B4C7] leading-relaxed font-normal"
-                    style={{ fontFamily: "'RumelazGekinsa', Georgia, serif" }}
-                  >
+                  <p className="font-sans text-[13.5px] sm:text-sm text-[#8A9BB0] leading-relaxed font-normal">
                     {usp.description}
                   </p>
                 </div>
@@ -175,10 +148,7 @@ export function ManifestoSection({ onRequestQuote }: ManifestoSectionProps) {
           </div>
 
           {/* Bottom Action Strip */}
-          <div className="mt-14 pt-8 border-t border-[#2A3548] flex flex-col sm:flex-row items-start sm:items-center justify-between gap-6">
-            <p className="text-xs sm:text-sm font-sans text-[#8A9BB0]">
-              All engagements operate under strict academic discretion and NDAs.
-            </p>
+          <div className="mt-14 pt-8 border-t border-[#2A3548] flex justify-end">
             {onRequestQuote && (
               <button
                 onClick={onRequestQuote}

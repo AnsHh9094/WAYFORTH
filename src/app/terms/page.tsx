@@ -192,6 +192,19 @@ export default function TermsPage() {
             </ul>
           </section>
 
+          {/* Section 7: Confidentiality & NDAs */}
+          <section id="confidentiality" className="border-t border-[#2A3548] pt-8 space-y-4">
+            <span className="text-xs font-sans uppercase tracking-[0.14em] text-[#B8975A] font-bold block">
+              Section 07 // Confidentiality, Non-Disclosure & Academic Discretion
+            </span>
+            <h2 className="font-serif text-2xl text-[#F5F0E8]">
+              7. Non-Disclosure & Strict Discretion
+            </h2>
+            <p>
+              All engagements operate under strict academic discretion and NDAs. Client identities, institutional affiliations, research briefs, datasets, and project communications remain strictly confidential and protected from third-party disclosure.
+            </p>
+          </section>
+
           {/* Legal Inquiries Box */}
           <div className="p-6 bg-[#101A2B] border border-[#2A3548] space-y-2 mt-8 rounded-xl">
             <div className="flex items-center gap-2 text-xs font-sans uppercase font-bold text-[#F5F0E8]">

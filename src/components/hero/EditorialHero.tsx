@@ -43,15 +43,6 @@ export function EditorialHero({ brandName, onRequestQuote }: EditorialHeroProps)
 
   return (
     <section className="relative overflow-hidden bg-[#0C1220] text-[#F5F0E8] pt-12 pb-20 sm:pt-16 sm:pb-24 border-b border-[#2A3548]">
-      {/* Subtle Architectural Blueprint Grid */}
-      <div className="absolute inset-0 pointer-events-none opacity-20">
-        <div className="max-w-7xl mx-auto h-full grid grid-cols-4 lg:grid-cols-12 border-x border-[#2A3548]">
-          <div className="border-r border-[#2A3548] hidden lg:block col-span-2" />
-          <div className="border-r border-[#2A3548] col-span-5" />
-          <div className="border-r border-[#2A3548] hidden lg:block col-span-5" />
-        </div>
-      </div>
-
       <motion.div
         className="max-w-[1400px] mx-auto px-4 sm:px-6 lg:px-10 relative z-10"
         initial="hidden"
@@ -126,10 +117,10 @@ export function EditorialHero({ brandName, onRequestQuote }: EditorialHeroProps)
             className="flex flex-wrap items-center gap-2.5 text-[11.5px] font-sans font-medium uppercase tracking-wider text-[#8A9BB0] mb-16"
             variants={revealItem(0.38)}
           >
-            <span className="px-4 py-1.5 bg-[#101A2B] border border-[#2A3548] text-[#CBD8E6] rounded-full">UNDERGRADUATE</span>
-            <span className="px-4 py-1.5 bg-[#101A2B] border border-[#2A3548] text-[#CBD8E6] rounded-full">POSTGRADUATE / MBA</span>
-            <span className="px-4 py-1.5 bg-[#101A2B] border border-[#2A3548] text-[#CBD8E6] rounded-full">THESIS & DISSERTATION</span>
-            <span className="px-4 py-1.5 bg-[#101A2B] border border-[#2A3548] text-[#B8975A] font-bold rounded-full">DATA ANALYSIS & EXCEL</span>
+            <span className="px-4 py-1.5 bg-[#101A2B] border border-[#2A3548] text-[#CBD8E6] rounded-full">UNDERGRADUATES</span>
+            <span className="px-4 py-1.5 bg-[#101A2B] border border-[#2A3548] text-[#CBD8E6] rounded-full">POSTGRADUATES</span>
+            <span className="px-4 py-1.5 bg-[#101A2B] border border-[#2A3548] text-[#CBD8E6] rounded-full">THESIS AND DISSERTATIONS</span>
+            <span className="px-4 py-1.5 bg-[#101A2B] border border-[#2A3548] text-[#CBD8E6] rounded-full">DATA ANALYSIS AND EXCEL PROJECTS</span>
           </motion.div>
 
           {/* ── Student Workload Statistics Section (Item 2 in Release Spec) ── */}
@@ -139,42 +130,48 @@ export function EditorialHero({ brandName, onRequestQuote }: EditorialHeroProps)
           >
             <div className="flex flex-col sm:flex-row sm:items-baseline justify-between gap-2 mb-8">
               <div className="flex items-center gap-2">
-                <span className="w-1.5 h-1.5 rounded-full bg-[#B8975A]" />
-                <span className="text-xs font-sans font-semibold uppercase tracking-[0.18em] text-[#B8975A]">
-                  Student Workload Burden // Surveyed Reality
+                <span className="w-1.5 h-1.5 rounded-full bg-[#CBD8E6]" />
+                <span className="text-xs font-sans font-semibold uppercase tracking-[0.18em] text-[#CBD8E6]">
+                  Overwhelming Workload // Surveyed Reality
                 </span>
               </div>
-              <span className="text-xs font-sans text-[#8A9BB0]">
+              <span className="text-xs font-sans uppercase tracking-[0.18em] text-[#CBD8E6] font-semibold">
                 Empirical Cohort Study
               </span>
             </div>
 
             <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 lg:gap-8">
-              <div className="p-7 sm:p-8 bg-[#101A2B] border border-[#2A3548] rounded-2xl hover:border-[#B8975A]/60 transition-all shadow-xl group">
-                <span className="font-serif text-5xl sm:text-6xl font-light text-[#F5F0E8] group-hover:text-[#B8975A] transition-colors block mb-3 tracking-tight">
-                  56.3%
-                </span>
-                <p className="text-[14px] sm:text-[14.5px] text-[#8A9BB0] leading-relaxed font-sans">
-                  Of surveyed undergraduate medical students struggled to balance academic work and personal life.
-                </p>
+              <div className="p-7 sm:p-8 bg-[#101A2B] border border-[#2A3548] rounded-2xl hover:border-[#B8975A]/60 transition-all shadow-xl group flex flex-col justify-between">
+                <div>
+                  <span className="font-serif text-5xl sm:text-6xl font-light text-[#F5F0E8] group-hover:text-[#B8975A] transition-colors block mb-3 tracking-tight">
+                    56.3%
+                  </span>
+                  <p className="text-[14px] sm:text-[14.5px] text-[#8A9BB0] leading-relaxed font-sans min-h-[44px]">
+                    Struggled to balance academics with their personal lives.
+                  </p>
+                </div>
               </div>
 
-              <div className="p-7 sm:p-8 bg-[#101A2B] border border-[#2A3548] rounded-2xl hover:border-[#B8975A]/60 transition-all shadow-xl group">
-                <span className="font-serif text-5xl sm:text-6xl font-light text-[#F5F0E8] group-hover:text-[#B8975A] transition-colors block mb-3 tracking-tight">
-                  56.6%
-                </span>
-                <p className="text-[14px] sm:text-[14.5px] text-[#8A9BB0] leading-relaxed font-sans">
-                  Described their ongoing academic workload as manageable but heavy.
-                </p>
+              <div className="p-7 sm:p-8 bg-[#101A2B] border border-[#2A3548] rounded-2xl hover:border-[#B8975A]/60 transition-all shadow-xl group flex flex-col justify-between">
+                <div>
+                  <span className="font-serif text-5xl sm:text-6xl font-light text-[#F5F0E8] group-hover:text-[#B8975A] transition-colors block mb-3 tracking-tight">
+                    56.6%
+                  </span>
+                  <p className="text-[14px] sm:text-[14.5px] text-[#8A9BB0] leading-relaxed font-sans min-h-[44px]">
+                    Found their workload manageable yet heavy.
+                  </p>
+                </div>
               </div>
 
-              <div className="p-7 sm:p-8 bg-[#101A2B] border border-[#2A3548] rounded-2xl hover:border-[#B8975A]/60 transition-all shadow-xl group">
-                <span className="font-serif text-5xl sm:text-6xl font-light text-[#F5F0E8] group-hover:text-[#B8975A] transition-colors block mb-3 tracking-tight">
-                  20.7%
-                </span>
-                <p className="text-[14px] sm:text-[14.5px] text-[#8A9BB0] leading-relaxed font-sans">
-                  Considered their academic workload excessively and unsustainably too heavy.
-                </p>
+              <div className="p-7 sm:p-8 bg-[#101A2B] border border-[#2A3548] rounded-2xl hover:border-[#B8975A]/60 transition-all shadow-xl group flex flex-col justify-between">
+                <div>
+                  <span className="font-serif text-5xl sm:text-6xl font-light text-[#F5F0E8] group-hover:text-[#B8975A] transition-colors block mb-3 tracking-tight">
+                    20.7%
+                  </span>
+                  <p className="text-[14px] sm:text-[14.5px] text-[#8A9BB0] leading-relaxed font-sans min-h-[44px]">
+                    Viewed it as excessive and unsustainable.
+                  </p>
+                </div>
               </div>
             </div>
           </motion.div>

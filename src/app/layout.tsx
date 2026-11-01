@@ -11,7 +11,14 @@ export const viewport: Viewport = {
 
 export const metadata: Metadata = {
   metadataBase: new URL(`https://${BRAND_CONFIG.domain}`),
-  title: `${BRAND_CONFIG.name} — ${BRAND_CONFIG.subline} | Make Room for More`,
+  title: 'Wayforth',
+  icons: {
+    icon: [
+      { url: '/icon.png', sizes: '32x32', type: 'image/png' },
+      { url: '/brand/wayforth-icon-512.png', sizes: '512x512', type: 'image/png' },
+    ],
+    apple: [{ url: '/apple-icon.png', sizes: '180x180', type: 'image/png' }],
+  },
   description:
     'Dedicated academic project, research report, and thesis advisory across undergraduate, MBA, and PhD disciplines. 100% human-crafted research, pay-as-you-go milestone safeguard, and mathematical pricing transparency.',
   keywords: [
@@ -132,9 +139,8 @@ export default function RootLayout({
           dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }}
         />
       </head>
-      <body className="min-h-screen bg-[#FFFFFF] text-[#12324E] font-sans flex flex-col selection:bg-[#12324E] selection:text-white relative">
+      <body className="min-h-screen bg-[#0C1220] text-[#F5F0E8] font-sans flex flex-col selection:bg-[#B8975A] selection:text-[#0C1220] relative">
         <GoogleAnalytics />
-        <div className="paper-grain" aria-hidden="true" />
         {children}
       </body>
     </html>

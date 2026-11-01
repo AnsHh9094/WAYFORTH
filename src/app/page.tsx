@@ -13,7 +13,6 @@ import { QuotationForm } from '@/components/quotation/QuotationForm';
 import { ContactSection } from '@/components/contact/ContactSection';
 import { Footer } from '@/components/layout/Footer';
 import { ArchivalScrollDock } from '@/components/dock/ArchivalScrollDock';
-import { PrecisionCursor } from '@/components/ui/PrecisionCursor';
 
 export default function HomePage() {
   const brandName = BRAND_CONFIG.name;
@@ -33,9 +32,6 @@ export default function HomePage() {
 
   return (
     <SmoothScrollProvider>
-      {/* Editorial Precision Spring Cursor */}
-      <PrecisionCursor />
-
       <main className="min-h-screen flex flex-col bg-[#0C1220] text-[#F5F0E8]">
         {/* Masthead Navigation */}
         <Navbar onRequestQuote={handleScrollToQuote} />
