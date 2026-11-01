@@ -48,11 +48,11 @@ export function ServiceDossier({ onRequestQuote }: ServiceDossierProps) {
   }, [selectedSample]);
 
   return (
-    <section id="disciplines" className="py-24 sm:py-36 bg-[#0C1220] border-b border-[#2A3548] text-[#F5F0E8]">
+    <section id="disciplines" className="py-24 sm:py-36 bg-[#0C1220] border-b border-[#B8975A]/40 text-[#F5F0E8]">
       <div className="max-w-[1400px] mx-auto px-6 sm:px-10 lg:px-12">
         
         {/* Section Header — Broadsheet style */}
-        <div className="flex flex-col sm:flex-row sm:items-baseline justify-between gap-4 mb-20 border-b border-[#2A3548] pb-8">
+        <div className="flex flex-col sm:flex-row sm:items-baseline justify-between gap-4 mb-20 border-b border-[#B8975A]/40 pb-8">
           <div>
             <p className="text-[11px] font-sans tracking-[0.2em] uppercase text-[#B8975A] font-semibold mb-2 flex items-center gap-2">
               <span className="w-1.5 h-1.5 rounded-full bg-[#B8975A]" />

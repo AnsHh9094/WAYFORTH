@@ -16,7 +16,7 @@ export function Footer({ onRequestQuote }: FooterProps) {
   };
 
   return (
-    <footer className="relative w-full overflow-hidden bg-[#0C1220] text-[#CBD8E6] pt-14 pb-10 border-t border-[#2A3548]">
+    <footer className="relative w-full overflow-hidden bg-[#0C1220] text-[#CBD8E6] pt-14 pb-10 border-t border-[#B8975A]/40">
       <div className="relative z-10 max-w-[1400px] mx-auto px-4 sm:px-6 lg:px-10">
         
         {/* Main Footer Row */}

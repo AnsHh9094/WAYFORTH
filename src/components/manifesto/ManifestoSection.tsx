@@ -19,7 +19,7 @@ export function ManifestoSection({ onRequestQuote }: ManifestoSectionProps) {
         {/* Kicker — Small caps, tracked, institutional label */}
         <div className="flex items-center gap-3 mb-10">
           <span className="w-1.5 h-1.5 rounded-full bg-[#B8975A] animate-pulse" />
-          <p className="text-[#8A9BB0] text-[11.5px] font-sans tracking-[0.2em] uppercase font-medium">
+          <p className="text-[#B8975A] text-[11.5px] font-sans tracking-[0.2em] uppercase font-semibold">
             Foundational Manifesto // Why We Exist
           </p>
         </div>
@@ -66,12 +66,12 @@ export function ManifestoSection({ onRequestQuote }: ManifestoSectionProps) {
         </div>
 
         {/* Broadsheet Ledger: Operational Standards (Distinguishable, Natural Phrasing) */}
-        <div className="pt-12 border-t border-[#2A3548]">
-          <div className="flex flex-col sm:flex-row sm:items-baseline justify-between gap-4 mb-10 pb-4 border-b border-[#2A3548]">
+        <div className="pt-12 border-t border-[#B8975A]/40">
+          <div className="flex flex-col sm:flex-row sm:items-baseline justify-between gap-4 mb-10 pb-4 border-b border-[#B8975A]/40">
             <p className="text-xs font-sans tracking-[0.2em] uppercase text-[#B8975A] font-semibold">
               Operational Standards
             </p>
-            <p className="text-xs sm:text-[13px] font-sans text-[#8A9BB0]">
+            <p className="text-xs sm:text-[13px] font-sans text-[#FFFFFF] font-medium">
               Institutional commitments governing every client commission
             </p>
           </div>

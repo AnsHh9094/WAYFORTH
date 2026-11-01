@@ -9,18 +9,18 @@ export function TimelineSteps() {
   const [activeStep, setActiveStep] = useState<number | null>(null);
 
   return (
-    <section id="workflow" className="py-20 sm:py-28 bg-[#0C1220] border-b border-[#2A3548] text-[#F5F0E8] relative overflow-hidden">
+    <section id="workflow" className="py-20 sm:py-28 bg-[#0C1220] border-b border-[#B8975A]/40 text-[#F5F0E8] relative overflow-hidden">
       <div className="max-w-[1400px] mx-auto px-4 sm:px-6 lg:px-10 relative z-10">
         
         {/* Section Header */}
-        <div className="flex items-center justify-between border-b border-[#2A3548] pb-4 mb-16 text-[11px] font-sans font-medium uppercase tracking-[0.16em] text-[#8A9BB0]">
+        <div className="flex items-center justify-between border-b border-[#B8975A]/40 pb-4 mb-16 text-[11px] font-sans font-medium uppercase tracking-[0.16em] text-[#8A9BB0]">
           <div className="flex items-center gap-2">
             <span className="w-1.5 h-1.5 rounded-full bg-[#B8975A]" />
-            <span className="uppercase tracking-widest text-[#F5F0E8] font-semibold">
+            <span className="uppercase tracking-widest text-[#B8975A] font-semibold">
               CONTRACTUAL LIFECYCLE // SIX-STAGE PROCESS
             </span>
           </div>
-          <span className="text-[#B8975A] uppercase font-semibold">
+          <span className="text-[#FFFFFF] uppercase font-semibold">
             TRANSPARENT MILESTONES
           </span>
         </div>

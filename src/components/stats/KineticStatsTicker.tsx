@@ -103,18 +103,18 @@ function CounterNumber({
 export function KineticStatsTicker() {
   return (
     <section
-      className="relative py-24 sm:py-28 lg:py-32 bg-[#0C1220] border-b border-[#2A3548] select-none"
+      className="relative py-24 sm:py-28 lg:py-32 bg-[#0C1220] border-b border-[#B8975A]/40 select-none"
       style={{ minHeight: '480px', paddingTop: '6rem', paddingBottom: '6rem' }}
     >
       <div className="max-w-[1400px] mx-auto px-4 sm:px-6 lg:px-10">
         
         {/* Top Ledger Strip */}
-        <div className="flex items-center justify-between pb-6 mb-12 border-b border-[#2A3548] text-[11px] font-sans font-medium tracking-[0.16em] uppercase text-[#8A9BB0]">
+        <div className="flex items-center justify-between pb-6 mb-12 border-b border-[#B8975A]/40 text-[11px] font-sans font-medium tracking-[0.16em] uppercase text-[#8A9BB0]">
           <div className="flex items-center gap-2">
-            <span className="w-2 h-2 rounded-full bg-[#CBD8E6] animate-pulse" />
-            <span className="text-[#F5F0E8] font-bold">OPERATIONAL METRICS // AUTUMN 2026</span>
+            <span className="w-2 h-2 rounded-full bg-[#B8975A] animate-pulse" />
+            <span className="text-[#B8975A] font-bold">OPERATIONAL METRICS // AUTUMN 2026</span>
           </div>
-          <span className="hidden sm:inline text-[#CBD8E6] font-semibold">VERIFIED ACADEMIC ASSURANCE</span>
+          <span className="hidden sm:inline text-[#FFFFFF] font-semibold">VERIFIED ACADEMIC ASSURANCE</span>
         </div>
 
         {/* 4 Kinetic Stat Columns (Restored Spacious Layout) */}
