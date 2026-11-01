@@ -20,7 +20,7 @@ export function Footer({ onRequestQuote }: FooterProps) {
       <div className="relative z-10 max-w-[1400px] mx-auto px-4 sm:px-6 lg:px-10">
         
         {/* Main Footer Row */}
-        <div className="grid grid-cols-1 md:grid-cols-12 gap-8 lg:gap-12 pb-8 border-b border-[#B8975A]/40">
+        <div className="grid grid-cols-1 md:grid-cols-12 gap-8 lg:gap-12 pb-8 border-b border-white/10">
           
           {/* Brand Column */}
           <div className="md:col-span-7 lg:col-span-8 space-y-4">
@@ -99,7 +99,7 @@ export function Footer({ onRequestQuote }: FooterProps) {
         </div>
 
         {/* Ethical Notice Disclaimer */}
-        <div className="py-4 border-b border-[#B8975A]/40 text-[12px] sm:text-[12.5px] text-[#8A9BB0] leading-relaxed font-sans">
+        <div className="py-4 border-b border-white/10 text-[12px] sm:text-[12.5px] text-[#8A9BB0] leading-relaxed font-sans">
           <strong className="text-[#FFFFFF] block mb-1 font-sans uppercase text-[10.5px] tracking-wider font-semibold">
             Statement of Academic Integrity & Compliance:
           </strong>
@@ -107,7 +107,7 @@ export function Footer({ onRequestQuote }: FooterProps) {
         </div>
 
         {/* Oversized Subtle Brand Watermark */}
-        <div className="pt-4 overflow-hidden select-none pointer-events-none text-center border-b border-[#B8975A]/30">
+        <div className="pt-4 overflow-hidden select-none pointer-events-none text-center border-b border-white/5">
           <span className="font-serif text-[clamp(2.5rem,10vw,8rem)] font-light tracking-tighter text-[#FFFFFF]/[0.035] leading-none uppercase inline-block whitespace-nowrap">
             WAYFORTH
           </span>

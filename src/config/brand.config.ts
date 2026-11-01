@@ -89,7 +89,7 @@ export const BRAND_CONFIG: BrandConfig = {
   domain: 'wayforth.in',
   tagline: 'Make Room for More.',
   subline: 'Academic Projects, Research & Thesis Advisory',
-  contactEmail: 'info@wayforth.in',
+  contactEmail: 'support.wayforth@gmail.com',
   whatsappNumber: '+91 91571 88560',
   whatsappRawNumber: '919157188560',
   reviewWindowHours: 24,

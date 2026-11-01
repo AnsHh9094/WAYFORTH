@@ -21,7 +21,7 @@ const STATS: StatItem[] = [
     value: 213,
     suffix: '',
     label: 'Projects Completed',
-    sublabel: 'Spanning undergraduate assignments, postgraduate dissertations, and advanced research briefs tailored to institutional evaluation standards.',
+    sublabel: 'Spanning tailored undergraduate assignments, postgraduate dissertations, and advanced research briefs.',
   },
   {
     icon: <BookOpen className="w-5 h-5 text-[#B8975A]" />,
@@ -34,7 +34,7 @@ const STATS: StatItem[] = [
     icon: <Clock className="w-5 h-5 text-[#B8975A]" />,
     displayValue: '< 2 Hrs',
     label: 'Average Response Time',
-    sublabel: 'Rapid project feasibility assessment, syllabus rubric reviews, and transparent quotations delivered directly within two hours.',
+    sublabel: 'Rapid project feasibility assessment, syllabus rubric reviews, and transparent quotations delivered directly.',
   },
   {
     icon: <ShieldCheck className="w-5 h-5 text-[#B8975A]" />,
@@ -93,10 +93,10 @@ function CounterNumber({
     <span
       ref={ref}
       className={`font-serif font-light text-[#FFFFFF] tracking-tight whitespace-nowrap ${
-        displayValue ? 'text-3xl sm:text-4xl lg:text-[2.6rem]' : 'text-5xl sm:text-6xl lg:text-7xl'
+        displayValue ? 'text-3xl sm:text-4xl lg:text-[2.75rem]' : 'text-5xl sm:text-6xl lg:text-7xl'
       }`}
       style={{
-        fontSize: displayValue ? 'clamp(2.1rem, 2.7vw, 2.65rem)' : 'clamp(3rem, 4.5vw, 4.25rem)',
+        fontSize: displayValue ? 'clamp(2.15rem, 2.8vw, 2.75rem)' : 'clamp(3rem, 4.5vw, 4.25rem)',
         lineHeight: 1.05,
       }}
     >
@@ -108,13 +108,13 @@ function CounterNumber({
 export function KineticStatsTicker() {
   return (
     <section
-      className="relative py-14 sm:py-18 lg:py-20 bg-[#0C1220] border-b border-[#B8975A]/40 select-none"
+      className="relative py-14 sm:py-18 lg:py-20 bg-[#0C1220] border-b border-white/10 select-none"
       style={{ minHeight: '360px', paddingTop: '3.5rem', paddingBottom: '3.5rem' }}
     >
       <div className="max-w-[1400px] mx-auto px-4 sm:px-6 lg:px-10">
         
         {/* Top Ledger Strip */}
-        <div className="flex items-center justify-between pb-4 mb-8 border-b border-[#B8975A]/40 text-[11px] font-sans font-medium tracking-[0.16em] uppercase text-[#8A9BB0]">
+        <div className="flex items-center justify-between pb-4 mb-8 border-b border-white/10 text-[11px] font-sans font-medium tracking-[0.16em] uppercase text-[#8A9BB0]">
           <div className="flex items-center gap-2">
             <span className="w-2 h-2 rounded-full bg-[#B8975A] animate-pulse" />
             <span className="text-[#B8975A] font-bold">OPERATIONAL METRICS // AUTUMN 2026</span>
@@ -140,7 +140,7 @@ export function KineticStatsTicker() {
                   </div>
                 </div>
 
-                <div className="mb-3">
+                <div className="h-14 sm:h-16 flex items-end mb-3">
                   <CounterNumber
                     value={stat.value}
                     displayValue={stat.displayValue}

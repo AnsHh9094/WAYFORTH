@@ -42,7 +42,7 @@ export function EditorialHero({ brandName, onRequestQuote }: EditorialHeroProps)
   }, []);
 
   return (
-    <section className="relative overflow-hidden bg-[#0C1220] text-[#F5F0E8] pt-12 pb-20 sm:pt-16 sm:pb-24 border-b border-[#B8975A]/40">
+    <section className="relative overflow-hidden bg-[#0C1220] text-[#F5F0E8] pt-12 pb-10 sm:pt-16 sm:pb-12 border-b border-white/10">
       <motion.div
         className="max-w-[1400px] mx-auto px-4 sm:px-6 lg:px-10 relative z-10"
         initial="hidden"
@@ -51,7 +51,7 @@ export function EditorialHero({ brandName, onRequestQuote }: EditorialHeroProps)
       >
         {/* Top Folio Rubric Bar */}
         <motion.div
-          className="flex items-center justify-between border-b border-[#B8975A]/40 pb-4 mb-12 text-[11px] font-sans font-medium uppercase tracking-[0.16em] text-[#8A9BB0]"
+          className="flex items-center justify-between border-b border-white/10 pb-4 mb-12 text-[11px] font-sans font-medium uppercase tracking-[0.16em] text-[#8A9BB0]"
           variants={revealItem(0)}
         >
           <div className="flex items-center gap-2">
@@ -125,7 +125,7 @@ export function EditorialHero({ brandName, onRequestQuote }: EditorialHeroProps)
 
           {/* ── Student Workload Statistics Section (Item 2 in Release Spec) ── */}
           <motion.div
-            className="pt-8 border-t border-[#B8975A]/40"
+            className="pt-8 border-t border-white/10"
             variants={revealItem(0.46)}
           >
             <div className="flex flex-col sm:flex-row sm:items-baseline justify-between gap-2 mb-6">

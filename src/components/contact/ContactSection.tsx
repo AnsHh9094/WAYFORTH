@@ -6,7 +6,7 @@ import { Mail, MessageSquare, Clock, ArrowUpRight, ShieldCheck } from 'lucide-re
 
 export function ContactSection() {
   return (
-    <section id="contact" className="py-14 sm:py-20 bg-[#0C1220] border-b border-[#B8975A]/40 text-[#F5F0E8] relative">
+    <section id="contact" className="py-14 sm:py-20 bg-[#0C1220] border-b border-white/10 text-[#F5F0E8] relative">
       <div className="max-w-[1400px] mx-auto px-4 sm:px-6 lg:px-10">
         
         {/* Section Heading */}

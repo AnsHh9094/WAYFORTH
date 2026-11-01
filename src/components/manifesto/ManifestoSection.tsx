@@ -11,13 +11,13 @@ interface ManifestoSectionProps {
 export function ManifestoSection({ onRequestQuote }: ManifestoSectionProps) {
   return (
     <section id="manifesto" className="relative bg-[#0C1220] text-[#F5F0E8] overflow-hidden">
-      {/* Editorial Hairline Top Rule in Antique Brass */}
-      <div className="absolute top-0 left-0 right-0 h-px bg-[#B8975A]/40" />
+      {/* Editorial Hairline Top Rule in Crisp Subtle White */}
+      <div className="absolute top-0 left-0 right-0 h-px bg-white/10" />
 
-      <div className="relative z-10 max-w-[1400px] mx-auto px-6 sm:px-10 lg:px-12 py-14 sm:py-20 lg:py-24">
+      <div className="relative z-10 max-w-[1400px] mx-auto px-6 sm:px-10 lg:px-12 py-10 sm:py-14 lg:py-16">
         
         {/* Kicker — Small caps, tracked, institutional label */}
-        <div className="flex items-center gap-3 mb-10">
+        <div className="flex items-center gap-3 mb-6">
           <span className="w-1.5 h-1.5 rounded-full bg-[#B8975A] animate-pulse" />
           <p className="text-[#B8975A] text-[11.5px] font-sans tracking-[0.2em] uppercase font-semibold">
             Foundational Manifesto // Why We Exist
@@ -25,7 +25,7 @@ export function ManifestoSection({ onRequestQuote }: ManifestoSectionProps) {
         </div>
 
         {/* The Core Thesis Pull Quote */}
-        <blockquote className="space-y-6 max-w-5xl mb-12">
+        <blockquote className="space-y-6 max-w-5xl mb-8">
           <h2 className="text-[#F5F0E8] font-serif text-3xl sm:text-5xl lg:text-[54px] font-normal leading-[1.18] tracking-[-0.01em]">
             Your future is <span className="text-[#FFFFFF] font-normal underline decoration-[#B8975A]/60 decoration-1 underline-offset-8">bigger</span> than your next submission.
             The difference is not effort — it is{' '}
@@ -36,8 +36,8 @@ export function ManifestoSection({ onRequestQuote }: ManifestoSectionProps) {
         </blockquote>
 
         {/* Typographic Divider — Editorial Hairline */}
-        <div className="flex items-center gap-6 my-12">
-          <div className="h-px bg-[#B8975A] w-16 flex-none" />
+        <div className="flex items-center gap-6 my-8">
+          <div className="h-px bg-white/20 w-16 flex-none" />
           <div className="h-px bg-[#2A3548] flex-1" />
           <span className="text-[11px] font-sans font-medium text-[#8A9BB0] tracking-widest uppercase flex-none">
             {BRAND_CONFIG.name} Advisory • Est. 2026
@@ -45,7 +45,7 @@ export function ManifestoSection({ onRequestQuote }: ManifestoSectionProps) {
         </div>
 
         {/* Two-Column Supporting Narrative (No generic card boxes) */}
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-16 mb-20 text-sm sm:text-base leading-[1.85] text-[#8A9BB0]">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-14 mb-12 text-sm sm:text-base leading-[1.85] text-[#8A9BB0]">
           <div className="lg:col-span-6 space-y-5">
             <p className="text-[#F5F0E8] font-serif text-lg sm:text-xl font-normal leading-relaxed italic border-l-2 border-[#B8975A] pl-5">
               &ldquo;We believe your life should be about more than keeping up with deadlines, submissions, and relentless academic cycles.&rdquo;
@@ -66,8 +66,8 @@ export function ManifestoSection({ onRequestQuote }: ManifestoSectionProps) {
         </div>
 
         {/* Broadsheet Ledger: Operational Standards (Distinguishable, Natural Phrasing) */}
-        <div className="pt-12 border-t border-[#B8975A]/40">
-          <div className="flex flex-col sm:flex-row sm:items-baseline justify-between gap-4 mb-10 pb-4 border-b border-[#B8975A]/40">
+        <div className="pt-8 border-t border-white/10">
+          <div className="flex flex-col sm:flex-row sm:items-baseline justify-between gap-4 mb-6 pb-3 border-b border-white/10">
             <p className="text-xs font-sans tracking-[0.2em] uppercase text-[#B8975A] font-semibold">
               Operational Standards
             </p>

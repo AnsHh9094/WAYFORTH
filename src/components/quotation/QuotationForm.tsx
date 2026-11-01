@@ -167,7 +167,7 @@ _Initiated via wayforth.in official quotation calculator_`;
   return (
     <section
       id="quote-console"
-      className="py-14 sm:py-20 bg-[#0C1220] border-b border-[#B8975A]/40 text-[#F5F0E8]"
+      className="py-14 sm:py-20 bg-[#0C1220] border-b border-white/10 text-[#F5F0E8]"
     >
       <div className="max-w-[1400px] mx-auto px-4 sm:px-6 lg:px-10">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-start">
