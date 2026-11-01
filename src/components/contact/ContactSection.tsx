@@ -15,11 +15,10 @@ export function ContactSection() {
             Direct Communications Desk
           </span>
           <h2 className="font-serif text-3xl sm:text-5xl font-normal text-[#F5F0E8] leading-tight mb-4">
-            Connect directly with an academic advisor.
+            Speak directly with an advisor.
           </h2>
           <p className="text-[#CBD8E6] text-base leading-relaxed">
-            Have questions regarding your institutional rubric, custom datasets, or delivery timeline? 
-            Reach out through our direct advisory channels. All project briefs receive confidential evaluation.
+            Have questions about your rubric, custom datasets, or delivery timeline? Reach out through our direct advisory channels. Every project brief receives a prompt, confidential evaluation.
           </p>
         </div>
 

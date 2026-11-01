@@ -74,9 +74,12 @@ export interface BrandConfig {
   }[];
   workflowSteps: {
     step: string;
+    counter?: string;
+    badge?: string;
     title: string;
-    actor: string;
-    summary: string;
+    actor?: string;
+    summary?: string;
+    subline: string;
     detail: string;
   }[];
 }
@@ -169,15 +172,15 @@ export const BRAND_CONFIG: BrandConfig = {
     {
       id: 'undergrad',
       title: 'Undergraduate Project Advisory',
-      badge: 'Active Priority',
-      targetAudience: 'College & University Undergraduates',
+      badge: '',
+      targetAudience: 'Undergraduate Scholars',
       description:
-        'Comprehensive term papers, semester capstone projects, subject-specific case studies, and lab documentation tailored to college guidelines.',
+        'Comprehensive term papers, capstone deliverables, discipline-specific case analyses, and technical lab documentation calibrated to institutional rubrics.',
       deliverables: [
-        'College project reports & term papers',
-        'Academic documentation & lab monographs',
-        'Case study synthesis & comparative reviews',
-        'Standard accredited citations (APA, Harvard, IEEE)',
+        'Project Reports & Term Papers',
+        'Lab Monographs & Documentation',
+        'Case Synthesis & Comparative Reviews',
+        'Accredited Citation Formats (APA, Harvard, IEEE)',
       ],
       sample: {
         id: 'sample-undergrad',
@@ -210,16 +213,16 @@ export const BRAND_CONFIG: BrandConfig = {
     },
     {
       id: 'postgrad',
-      title: 'Postgraduate & MBA Consultancy',
-      badge: 'Active Priority',
-      targetAudience: 'MBA, Master’s & Executive Scholars',
+      title: 'Postgraduate Research & Advisory',
+      badge: '',
+      targetAudience: 'Master’s & Postgraduate Scholars',
       description:
-        'Rigorous business research, corporate case studies, literature surveys, strategic frameworks, and executive reports built to corporate standards.',
+        'Advanced applied research, industry case studies, structured literature surveys, and strategic frameworks engineered to rigorous academic and professional standards.',
       deliverables: [
-        'MBA research projects & capstones',
-        'Corporate case study development',
-        'Systematic literature reviews & frameworks',
-        'Strategic business documentation',
+        'Capstone & Advanced Research Projects',
+        'Applied Case Study Analysis',
+        'Systematic Literature Frameworks',
+        'Strategic & Analytical Documentation',
       ],
       sample: {
         id: 'sample-masters',
@@ -252,16 +255,16 @@ export const BRAND_CONFIG: BrandConfig = {
     },
     {
       id: 'research',
-      title: 'Research Thesis & Dissertation Support',
-      badge: 'Active Priority',
-      targetAudience: 'MPhil, PhD & Independent Scholars',
+      title: 'Thesis & Dissertation Support',
+      badge: '',
+      targetAudience: 'Advanced & Independent Researchers',
       description:
-        'Formal research proposals, systematic literature reviews, multi-tier research papers, dissertation chapter structuring, and bibliography management.',
+        'Formal research proposals, systematic literature reviews, multi-chapter manuscript structuring, and defense-ready bibliography management.',
       deliverables: [
-        'Formal research proposals & synopses',
-        'Multi-chapter thesis & dissertation structure',
-        'Peer-reviewed citation management (Zotero/Mendeley)',
-        'Methodology structuring & defense preparation notes',
+        'Research Proposals & Synopses',
+        'Multi-Chapter Manuscript Structuring',
+        'Citation Management (Zotero, Mendeley)',
+        'Methodology & Defense Preparation',
       ],
       sample: {
         id: 'sample-thesis',
@@ -294,16 +297,16 @@ export const BRAND_CONFIG: BrandConfig = {
     },
     {
       id: 'quantitative',
-      title: 'Data Analysis & Excel Projects',
-      badge: 'Active Priority',
-      targetAudience: 'Analytics, Finance & Technical Candidates',
+      title: 'Quantitative Modeling & Data Analytics',
+      badge: '',
+      targetAudience: 'Quantitative, Finance & Technical Analysts',
       description:
-        'Dynamic Excel workbooks, statistical testing, financial valuation models, regression analysis, structured charts, and academic data appendices.',
+        'Dynamic analytical workbooks, statistical testing, multivariate regressions, structured visualization charts, and research data appendices.',
       deliverables: [
-        'Financial valuation & forecast models (DCF, LBO)',
-        'Statistical data analysis (Descriptive & Inferential)',
-        'Excel datasets with formulas, macros & pivot charts',
-        'Structured appendices ready for document embedding',
+        'Financial Modeling & Valuation Frameworks',
+        'Statistical Analysis (Descriptive & Inferential)',
+        'Dynamic Datasets & Structured Calculations',
+        'Document-Ready Appendices',
       ],
       sample: {
         id: 'sample-excel',
@@ -337,28 +340,28 @@ export const BRAND_CONFIG: BrandConfig = {
   ],
   pricingTiers: [
     {
-      level: 'Undergraduate',
-      label: 'College & Degree Level',
+      level: 'Undergraduate Advisory',
+      label: 'Undergraduate & College Level',
       description:
-        'Foundational academic research, term papers, and semester project documentation.',
-      idealFor: 'BBA, B.Com, B.Tech, BA, B.Sc & University Courses',
+        'Comprehensive term papers, capstone deliverables, discipline-specific case analyses, and technical lab documentation.',
+      idealFor: 'BBA, B.Com, B.Tech, BA, B.Sc & College Programs',
       startingBase: 1200,
       perPageRate: 280,
       turnaround: '3–7 Days',
       features: [
-        '100% genuine human-researched writing',
+        '100% genuine human-researched scholarship',
         'Standard 250–300 words per content page',
         'Formatted in Word (.docx) & Adobe PDF',
-        'Pay-as-you-go milestone safeguard (50% deposit to begin, balance on preview)',
+        'Milestone preview safeguard (50% deposit to begin, balance on preview)',
         '1 comprehensive revision round included',
         'Zero hidden fees — transparent fixed quote',
       ],
     },
     {
-      level: 'Postgraduate & MBA',
-      label: 'Management & Master’s',
+      level: 'Postgraduate Advisory',
+      label: 'Master’s & Postgraduate Studies',
       description:
-        'Advanced secondary research, strategic business frameworks, and corporate case analysis.',
+        'Advanced applied research, industry case studies, structured literature surveys, and strategic frameworks.',
       idealFor: 'MBA, PGDM, M.Sc, M.Com & Master’s Programs',
       startingBase: 2200,
       perPageRate: 450,
@@ -367,16 +370,16 @@ export const BRAND_CONFIG: BrandConfig = {
         'Senior domain-specialist researchers',
         'In-depth business & industry framework synthesis',
         'Accredited referencing (Harvard, APA, Chicago)',
-        'Pay-as-you-go milestone safeguard (50% deposit to begin, balance on preview)',
+        'Milestone preview safeguard (50% deposit to begin, balance on preview)',
         '1 comprehensive revision round included',
-        'Executive summary & slide deck alignment',
+        'Executive summary & strategic alignment',
       ],
     },
     {
-      level: 'Data Analysis & Excel',
-      label: 'Analytics & Financial Models',
+      level: 'Quantitative Modeling & Data Analytics',
+      label: 'Applied Analytics & Valuation Models',
       description:
-        'Dynamic Excel workbooks, statistical testing, financial projections, and custom charting.',
+        'Dynamic analytical workbooks, statistical testing, multivariate regressions, structured visualization charts, and research data appendices.',
       idealFor: 'Finance, Operations, Data Analytics & Economics',
       startingBase: 2500,
       perPageRate: 380,
@@ -384,17 +387,17 @@ export const BRAND_CONFIG: BrandConfig = {
       features: [
         'Dynamic Excel files with live formulas (no hardcodes)',
         'Data cleaning & outlier treatment notes',
-        'High-resolution charts for document insertion',
-        'Pay-as-you-go milestone safeguard (50% deposit to begin, balance on preview)',
+        'Statistical testing & regression models',
+        'Milestone preview safeguard (50% deposit to begin, balance on preview)',
         'Formula audit & explanatory walkthrough notes',
         'Full raw dataset (.xlsx/.csv) handover',
       ],
     },
     {
-      level: 'Research Thesis',
-      label: 'Dissertations & MPhil/PhD',
+      level: 'Thesis & Dissertation Support',
+      label: 'Advanced Research & Theses',
       description:
-        'Rigorous multi-chapter dissertation advisory, research proposals, and literature reviews.',
+        'Formal research proposals, systematic literature reviews, multi-chapter manuscript structuring, and defense-ready bibliography management.',
       idealFor: 'Doctoral Candidates & Independent Scholars',
       startingBase: 4200,
       perPageRate: 620,
@@ -402,46 +405,50 @@ export const BRAND_CONFIG: BrandConfig = {
       features: [
         'Peer-reviewed journal paper synthesis (100+ sources)',
         'Comprehensive literature review matrix',
-        'Zotero/Mendeley compatible bibliography',
-        'Pay-as-you-go milestone safeguard (50% deposit to begin, balance on preview)',
+        'Citation management (Zotero, Mendeley)',
+        'Milestone preview safeguard (50% deposit to begin, balance on preview)',
         'Dedicated research milestone checkpoints',
-        'Methodology audit & defense talking points',
+        'Methodology & defense preparation',
       ],
     },
   ],
   customAddOns: [
     {
       id: 'charts',
-      label: 'Custom Graphs, Charts & Analytical Figures',
+      label: 'Custom Figures, Charts & Data Visuals',
       price: 350,
-      description: 'Bespoke analytical graphs, flowcharts, infographics & custom figures tailored to your paper',
+      description:
+        'Bespoke analytical graphs, flowcharts, infographics, and publication-ready figures tailored to your paper.',
     },
     {
       id: 'survey',
-      label: 'Questionnaire & Survey Instrument',
+      label: 'Survey Instrument & Questionnaire Design',
       price: 650,
-      description: 'Structured 15–25 question survey instrument with Likert scales & rubric',
+      description:
+        'Structured 15–25 question survey instrument complete with Likert scales, response protocols, and rubric alignment.',
     },
     {
       id: 'statistics',
       label: 'Statistical Hypothesis Testing',
       price: 900,
-      description: 'Regression, ANOVA, Chi-square & correlation modeling with interpretation',
-    },
-    {
-      id: 'rubric',
-      label: 'Custom Rubric & Faculty Guidelines Alignment',
-      price: 500,
-      description: 'Strict bespoke compliance alignment with university evaluation criteria',
+      description:
+        'Regression analysis, ANOVA, Chi-square, and bivariate correlation modeling with formal academic interpretation.',
     },
     {
       id: 'presentation',
       label: 'Executive Briefing Slide Deck',
       price: 750,
-      description: '10–12 slide PowerPoint briefing deck summarizing key findings',
+      description:
+        'Professional 10–12 slide presentation deck summarizing core findings, methodology, and key analytical outcomes.',
     },
   ],
   urgencyTiers: [
+    {
+      id: 'extended',
+      label: 'Extended (20+ Days)',
+      sublabel: 'Relaxed research pace',
+      multiplier: 0,
+    },
     {
       id: 'flexible',
       label: 'Flexible (10+ Days)',
@@ -458,69 +465,71 @@ export const BRAND_CONFIG: BrandConfig = {
       id: 'express',
       label: 'Express (3–4 Days)',
       sublabel: 'Expedited specialist allocation',
-      multiplier: 20, // +20%
+      multiplier: 20,
     },
     {
       id: 'urgent',
       label: 'Urgent (48–72 Hours)',
       sublabel: 'Priority dedicated research sprint',
-      multiplier: 35, // +35%
+      multiplier: 35,
     },
     {
-      id: 'emergency',
-      label: 'Emergency (24–48 Hours)',
+      id: 'critical',
+      label: 'Critical (24–48 Hours)',
       sublabel: 'Round-the-clock emergency dispatch',
-      multiplier: 50, // +50%
+      multiplier: 50,
     },
   ],
   workflowSteps: [
     {
       step: '01',
-      title: 'Submit Project Brief',
-      actor: 'Client',
-      summary: 'Provide rubric, word count, guidelines, and deadline target.',
+      counter: 'Step 01 of 06',
+      title: 'Project Intake & Scope Definition',
+      subline: 'Provide rubric requirements, target word counts, and submission deadlines.',
       detail:
-        'Share your institutional brief, formatting style, syllabus guidelines, and any reference materials. Zero ambiguity from day one.',
+        'Share your institutional guidelines, citation format, syllabus criteria, and reference files. Every parameter is logged from day one to ensure complete alignment.',
     },
     {
       step: '02',
-      title: 'Receive Written Binding Quotation',
-      actor: 'Wayforth',
-      summary: 'Itemized scope, page count, preview boundary, and delivery date.',
+      counter: 'Step 02 of 06',
+      title: 'Formal Scope & Binding Quotation',
+      subline: 'Itemized page counts, milestone review boundaries, and confirmed delivery dates.',
       detail:
-        'We review academic feasibility and issue a transparent quotation itemizing page counts, urgency adjustments, and guaranteed delivery milestones.',
+        'We evaluate academic feasibility and issue a fixed, transparent quotation detailing page thresholds, timeline guarantees, and scope parameters. No hidden fees or unexpected revisions.',
     },
     {
       step: '03',
-      title: '50% Initial Milestone Deposit',
-      actor: 'Client',
-      summary: '50% deposit to commence. Pay-as-you-go milestone safeguard.',
+      counter: 'Step 03 of 06',
+      title: 'Milestone Commencement Deposit',
+      subline: '50% initial deposit to begin. Secured milestone progression.',
       detail:
-        'Your 50% milestone deposit initiates research and locks in your delivery timeline. Work begins immediately with a dedicated specialist. Settle remaining 50% only after inspecting your preview.',
+        'An initial 50% commitment secures your project timeline and assigns a dedicated domain specialist. Research begins immediately, with the remaining balance due only after preview inspection.',
     },
     {
       step: '04',
-      title: 'Inspect Watermarked Sample Preview',
-      actor: 'Mutual',
-      summary: 'Review writing quality, structure, and tone before balance.',
+      badge: 'SAFEGUARD MILESTONE',
+      counter: 'Step 04 of 06',
+      title: 'Watermarked Specimen Inspection',
+      subline: 'Evaluate analytical depth, structure, and academic tone before balance settlement.',
       detail:
-        'You receive a designated representative watermarked preview to inspect structure, argument depth, and formatting. You are never forced into a blind leap of faith.',
+        'Review a designated watermarked specimen of the deliverable to verify methodological rigor, source integration, and formatting standards prior to final sign-off.',
     },
     {
       step: '05',
-      title: 'Request Included Revision',
-      actor: 'Client',
-      summary: '1 comprehensive revision round included with every project.',
+      counter: 'Step 05 of 06',
+      title: 'Consolidated Revision Round',
+      subline: 'Dedicated revision cycle included with every scope.',
       detail:
-        'One comprehensive revision round is included within the agreed scope. Share your consolidated feedback for fine-tuning without any extra charge.',
+        'Every engagement includes a comprehensive revision stage within the agreed parameters. Submit your consolidated notes, and your specialist will fine-tune the work to your exact standard.',
     },
     {
       step: '06',
-      title: 'Release Remaining 50% & Receive Final Deliverable',
-      actor: 'Client',
-      summary: 'Settle remaining balance and receive your complete unwatermarked package.',
+      badge: 'COMPLETE HANDOVER',
+      counter: 'Step 06 of 06',
+      title: 'Balance Settlement & Final Handover',
+      subline: 'Release remaining balance to access fully unlocked, editable files.',
       detail:
-        'Once you are satisfied with the preview and agreed revisions are finalized, the remaining 50% milestone balance becomes due. Upon settlement, receive your complete unwatermarked package: editable Microsoft Word (.docx), print-ready Adobe PDF, and all supporting datasets or appendices. Full peace of mind.',
+        'Upon preview approval, settle the remaining 50% balance to download the complete unwatermarked package: editable DOCX files, publication-ready PDFs, and all corresponding datasets or research appendices.',
     },
   ],
 };

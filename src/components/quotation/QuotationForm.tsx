@@ -16,7 +16,7 @@ import {
 } from 'lucide-react';
 
 export function QuotationForm() {
-  const [level, setLevel] = useState('Undergraduate');
+  const [level, setLevel] = useState('Undergraduate Advisory');
   const [pages, setPages] = useState<number>(12);
   const [urgencyId, setUrgencyId] = useState('standard');
   const [selectedAddons, setSelectedAddons] = useState<string[]>([]);
@@ -90,7 +90,7 @@ export function QuotationForm() {
 • Base + Page Rate: ₹${baseSubtotal.toLocaleString()}
 ${urgencyFee > 0 ? `• Urgency Surcharge (+${currentUrgency.multiplier}%): ₹${urgencyFee.toLocaleString()}\n` : ''}${addOnsTotal > 0 ? `• Special Add-ons: ₹${addOnsTotal.toLocaleString()}\n` : ''}• Introductory Discount (15%): -₹${discountAmount.toLocaleString()}
 *Estimated Total:* ₹${finalTotal.toLocaleString()}
-*Payment Terms:* Pay-As-You-Go Milestone Model (50% Deposit to Begin: ₹${Math.round(finalTotal / 2).toLocaleString()} • 50% Balance on Preview Approval: ₹${Math.round(finalTotal / 2).toLocaleString()})
+*Payment Terms:* Structured 50/50 Milestones (50% Deposit to Begin: ₹${Math.round(finalTotal / 2).toLocaleString()} • 50% Balance on Preview Approval: ₹${Math.round(finalTotal / 2).toLocaleString()})
 
 *Project Brief & Rubric:*
 ${brief || 'Brief will be shared in discussion.'}
@@ -260,27 +260,24 @@ _Initiated via wayforth.in official quotation calculator_`;
                 </div>
               </div>
 
-              {/* Pay-as-you-go Balanced Milestones Breakdown */}
+              {/* Structured Milestones Breakdown */}
               <div className="p-3.5 bg-[#0E1726] border border-[#2A3548] text-[12.5px] sm:text-[13px] font-sans text-[#CBD8E6] space-y-2 rounded-xl">
                 <div className="flex items-center gap-1.5 font-bold text-[#B8975A] text-xs">
                   <ShieldCheck className="w-3.5 h-3.5 text-[#B8975A]" />
-                  <span>PAY-AS-YOU-GO MILESTONES (50 / 50)</span>
+                  <span>STRUCTURED MILESTONES (50 / 50)</span>
                 </div>
                 <div className="flex justify-between text-[#8A9BB0]">
-                  <span>50% Advance to Begin:</span>
+                  <span>50% Initial Commitment to Begin:</span>
                   <span className="font-bold text-[#F5F0E8]">₹{Math.round(finalTotal / 2).toLocaleString()}</span>
                 </div>
                 <div className="flex justify-between text-[#8A9BB0]">
                   <span>50% Balance on Preview Approval:</span>
                   <span className="font-bold text-[#F5F0E8]">₹{Math.round(finalTotal / 2).toLocaleString()}</span>
                 </div>
-                <p className="text-[#8A9BB0] text-[12px] leading-relaxed pt-1.5 border-t border-[#2A3548]">
-                  Pay 50% deposit to initiate research → review watermarked representative preview → 1 included revision round → release final balance.
-                </p>
               </div>
 
               <p className="text-[11px] text-center font-sans text-[#8A9BB0]">
-                Questions? Direct email: <strong className="text-[#CBD8E6]">{BRAND_CONFIG.contactEmail}</strong>
+                Questions? Directly email: <strong className="text-[#CBD8E6]">{BRAND_CONFIG.contactEmail}</strong>
               </p>
             </div>
           </div>
@@ -390,11 +387,11 @@ _Initiated via wayforth.in official quotation calculator_`;
                   </div>
                 </div>
 
-                {/* 3. Turnaround Deadline & Variable Urgency Fees */}
+                {/* 3. Turnaround Deadline */}
                 <div>
                   <div className="flex items-center justify-between mb-2">
                     <label className="text-xs font-sans uppercase tracking-wider text-[#F5F0E8] font-semibold">
-                      3. Target Submission Deadline (Variable Urgency Rate) *
+                      3. Target Submission Deadline *
                     </label>
                     <span className="text-[11px] font-sans text-[#8A9BB0] flex items-center gap-1">
                       <Clock className="w-3 h-3 text-[#B8975A]" />
@@ -450,7 +447,7 @@ _Initiated via wayforth.in official quotation calculator_`;
                   <div className="flex items-center justify-between mb-2">
                     <label className="text-xs font-sans uppercase tracking-wider text-[#F5F0E8] font-semibold flex items-center gap-1.5">
                       <Layers className="w-3.5 h-3.5 text-[#B8975A]" />
-                      <span>4. Custom Scope Additions (Graphs, Instruments & Analysis)</span>
+                      <span>4. Custom Scope Additions</span>
                     </label>
                     <span className="text-[11px] font-sans text-[#B8975A] font-medium">Select all that apply</span>
                   </div>
@@ -458,7 +455,6 @@ _Initiated via wayforth.in official quotation calculator_`;
                   <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
                     {BRAND_CONFIG.customAddOns.map((addon) => {
                       const isChecked = selectedAddons.includes(addon.id);
-                      const isCharts = addon.id === 'charts';
                       return (
                         <div
                           key={addon.id}
@@ -466,8 +462,6 @@ _Initiated via wayforth.in official quotation calculator_`;
                           className={`p-3.5 border flex items-start gap-3 transition-colors cursor-pointer rounded-xl ${
                             isChecked
                               ? 'bg-[#16233B] border-[#B8975A] shadow-md'
-                              : isCharts
-                              ? 'bg-[#0E1726] border-[#3E4F69] hover:border-[#B8975A]'
                               : 'bg-[#0E1726] border-[#2A3548] hover:border-[#8A9BB0]'
                           }`}
                         >
@@ -489,11 +483,6 @@ _Initiated via wayforth.in official quotation calculator_`;
                             <p className="text-[12.5px] sm:text-[13px] text-[#8A9BB0] leading-tight font-sans">
                               {addon.description}
                             </p>
-                            {isCharts && (
-                              <span className="inline-block mt-1 text-[9.5px] font-sans font-semibold text-[#B8975A] bg-[#16233B] px-2 py-0.5 border border-[#B8975A]/30 rounded-full">
-                                Custom data graphs & visual models
-                              </span>
-                            )}
                           </div>
                         </div>
                       );
@@ -604,7 +593,7 @@ _Initiated via wayforth.in official quotation calculator_`;
                   </button>
 
                   <p className="text-[12px] sm:text-[12.5px] text-center font-sans text-[#8A9BB0]">
-                    Submitting automatically prepares your quotation brief and transmits it directly to our advisory WhatsApp. Pay-as-you-go milestone model (50% deposit to begin).
+                    Submitting automatically prepares your quotation brief and transmits it directly to our advisory WhatsApp.
                   </p>
                 </div>
               </form>

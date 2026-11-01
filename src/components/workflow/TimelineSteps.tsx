@@ -30,10 +30,10 @@ export function TimelineSteps() {
             Structured Engagement Process
           </span>
           <h2 className="font-serif text-3xl sm:text-5xl font-normal text-[#F5F0E8] leading-tight mb-4">
-            An unbroken workflow from initial brief to final delivery.
+            Seamless Execution from Brief to Delivery
           </h2>
           <p className="text-[#CBD8E6] text-base leading-relaxed">
-            Every project follows a defined, orderly progression designed to eliminate ambiguity, protect university deadlines, and ensure complete satisfaction before final payment release.
+            Every project follows a transparent six-stage progression designed to eliminate ambiguity, secure strict deadlines, and ensure complete confidence prior to final release.
           </p>
         </div>
 
@@ -79,9 +79,6 @@ export function TimelineSteps() {
                     <span className="font-bold text-sm font-sans text-[#F5F0E8] tracking-tight">
                       Stage {step.step}
                     </span>
-                    <span className="px-2.5 py-0.5 bg-[#16233B] border border-[#2A3548] text-[10.5px] uppercase font-sans font-semibold text-[#B8975A] rounded-full">
-                      {step.actor}
-                    </span>
                   </div>
 
                   <h3 className="font-serif text-xl text-[#F5F0E8] font-medium leading-snug mb-2">
@@ -89,7 +86,7 @@ export function TimelineSteps() {
                   </h3>
 
                   <p className="text-[14px] font-sans text-[#B8975A] font-semibold mb-3 leading-relaxed">
-                    {step.summary}
+                    {step.subline || step.summary}
                   </p>
 
                   <p className="text-[13.5px] sm:text-[14px] text-[#8A9BB0] leading-relaxed font-sans font-normal">
@@ -97,9 +94,8 @@ export function TimelineSteps() {
                   </p>
                 </div>
 
-                <div className="pt-4 mt-6 border-t border-[#1C2C42] flex items-center justify-between text-[11px] font-sans text-[#8A9BB0]">
-                  <span className="uppercase tracking-wider">Contractual Protocol</span>
-                  <span className="text-[#CBD8E6] font-semibold">Step {step.step} of 06</span>
+                <div className="pt-4 mt-6 border-t border-[#1C2C42] flex items-center justify-end text-[11px] font-sans text-[#8A9BB0]">
+                  <span className="text-[#CBD8E6] font-semibold">{step.counter || `Step ${step.step} of 06`}</span>
                 </div>
               </motion.div>
             );

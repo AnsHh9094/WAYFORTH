@@ -68,13 +68,25 @@ export interface ValidatedQuotePayload {
 }
 
 const ALLOWED_LEVELS = [
+  'Undergraduate Advisory',
+  'Postgraduate Advisory',
+  'Quantitative Modeling & Data Analytics',
+  'Thesis & Dissertation Support',
   'Undergraduate',
   'Postgraduate & MBA',
   'Data Analysis & Excel',
   'Research Thesis',
 ];
 
-const ALLOWED_URGENCIES = ['flexible', 'standard', 'express', 'urgent', 'emergency'];
+const ALLOWED_URGENCIES = [
+  'extended',
+  'flexible',
+  'standard',
+  'express',
+  'urgent',
+  'critical',
+  'emergency',
+];
 
 export function validateQuoteInput(data: Record<string, unknown> | null | undefined): { valid: boolean; error?: string; data?: ValidatedQuotePayload } {
   if (!data || typeof data !== 'object') {

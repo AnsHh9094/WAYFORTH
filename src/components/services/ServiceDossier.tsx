@@ -59,7 +59,7 @@ export function ServiceDossier({ onRequestQuote }: ServiceDossierProps) {
               <span>Academic Disciplines // Scope</span>
             </p>
             <h2 className="font-serif text-3xl sm:text-4xl lg:text-5xl font-normal text-[#F5F0E8] tracking-tight">
-              Four specialized tiers. One standard of scholarship.
+              Four Calibrated Tiers. Uncompromised Scholarship.
             </h2>
           </div>
         </div>
@@ -84,7 +84,7 @@ export function ServiceDossier({ onRequestQuote }: ServiceDossierProps) {
                 <div className="pt-2 space-y-4">
                   <div>
                     <span className="text-[11px] font-sans tracking-[0.16em] uppercase text-[#B8975A] font-semibold block mb-1">
-                      {service.badge} • {service.targetAudience}
+                      {service.targetAudience}
                     </span>
                     <h3 className="text-2xl sm:text-3xl font-serif font-normal text-[#F5F0E8] tracking-tight group-hover:text-[#B8975A] transition-colors">
                       {service.title}
@@ -154,7 +154,7 @@ export function ServiceDossier({ onRequestQuote }: ServiceDossierProps) {
 
         {/* ── Secondary School Boards Notice ── */}
         <div className="mt-16 p-6 sm:p-8 bg-[#101A2B] border border-[#2A3548] flex flex-col md:flex-row items-start md:items-center justify-between gap-6 shadow-md rounded-2xl">
-          <div className="space-y-1.5">
+          <div className="space-y-3">
             <div className="flex items-center gap-2">
               <span className="inline-flex items-center gap-1 px-2.5 py-0.5 bg-[#B8975A]/20 text-[#B8975A] border border-[#B8975A]/40 text-[10.5px] font-sans uppercase tracking-wider font-semibold rounded-full">
                 <Clock className="w-3 h-3" />
@@ -164,12 +164,28 @@ export function ServiceDossier({ onRequestQuote }: ServiceDossierProps) {
                 CBSE • CISCE (ICSE/ISC) • State Boards
               </span>
             </div>
-            <h4 className="font-serif text-lg text-[#F5F0E8] font-normal">
-              Class 10, 11 & 12 Secondary School Project Advisory
+            <h4 className="font-serif text-xl text-[#F5F0E8] font-normal">
+              Secondary School Project Advisory
             </h4>
-            <p className="text-[13px] text-[#8A9BB0] leading-relaxed max-w-2xl font-normal">
-              Board-related practical files, subject-specific reports, and handwritten document structuring aligned with individual school guidelines will launch in an upcoming cohort.
+            <p className="text-[13.5px] text-[#8A9BB0] leading-relaxed max-w-2xl font-normal">
+              Board-aligned practical files, subject-specific research reports, and verified handwritten documentation calibrated to institutional curriculum standards.
             </p>
+            {/* Scope Tags */}
+            <div className="flex flex-wrap gap-2 pt-1">
+              {[
+                'Board Practical Files & Portfolios',
+                'Internal Assessment Documentation',
+                'Structured Handwritten Drafting',
+                'School-Specific Rubric Alignment',
+              ].map((tag, tIdx) => (
+                <span
+                  key={tIdx}
+                  className="text-[12px] font-sans px-3 py-0.5 bg-[#0C1220] border border-[#2A3548] text-[#CBD8E6] rounded-full"
+                >
+                  {tag}
+                </span>
+              ))}
+            </div>
           </div>
           <span className="text-xs font-sans text-[#8A9BB0] shrink-0 border border-[#2A3548] bg-[#0E1726] px-3.5 py-1.5 font-medium rounded-full">
             Cohort Allocation Pending

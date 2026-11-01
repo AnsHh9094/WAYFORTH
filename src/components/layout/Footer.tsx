@@ -31,8 +31,7 @@ export function Footer({ onRequestQuote }: FooterProps) {
             </p>
             
             <p className="text-[13.5px] sm:text-[14px] text-[#8A9BB0] leading-relaxed max-w-xl font-sans">
-              Dedicated academic project, research, and report-writing advisory across undergraduate, postgraduate, and doctoral levels.
-              100% genuine human research, mathematical pricing transparency, and milestone preview safeguards.
+              Elite research and academic advisory spanning undergraduate through doctoral studies. Backed by verified human scholarship, fixed transparent rates, and guaranteed preview approvals before final payment.
             </p>
 
             <div className="pt-2 flex flex-wrap gap-x-6 gap-y-2 text-[12.5px] font-sans text-[#CBD8E6]">
@@ -102,12 +101,9 @@ export function Footer({ onRequestQuote }: FooterProps) {
         {/* Ethical Notice Disclaimer */}
         <div className="py-6 border-b border-[#2A3548] text-[12px] sm:text-[12.5px] text-[#8A9BB0] leading-relaxed font-sans">
           <strong className="text-[#FFFFFF] block mb-1 font-sans uppercase text-[10.5px] tracking-wider font-semibold">
-            Institutional Compliance & Academic Ethics Notice:
+            Statement of Academic Integrity & Compliance:
           </strong>
-          {BRAND_CONFIG.name} provides research support, reference frameworks, editorial assistance, and quantitative models.
-          We do not guarantee academic grades or examination outcomes. Deliverables are intended to serve as comprehensive reference materials
-          to assist students in mastering complex requirements while managing demanding career schedules. Customers are responsible for verifying
-          compliance with their institutional codes of conduct.
+          Wayforth delivers research frameworks, quantitative models, and editorial guidance designed strictly for reference and instructional support. We do not guarantee grades or examination outcomes. All materials are engineered to assist clients in navigating complex academic requirements alongside demanding professional commitments. Clients remain solely responsible for ensuring that the use of our services complies with their respective institutional policies and honor codes.
         </div>
 
         {/* Oversized Subtle Brand Watermark */}
