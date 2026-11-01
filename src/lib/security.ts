@@ -76,7 +76,7 @@ const ALLOWED_LEVELS = [
 
 const ALLOWED_URGENCIES = ['flexible', 'standard', 'express', 'urgent', 'emergency'];
 
-export function validateQuoteInput(data: any): { valid: boolean; error?: string; data?: ValidatedQuotePayload } {
+export function validateQuoteInput(data: Record<string, unknown> | null | undefined): { valid: boolean; error?: string; data?: ValidatedQuotePayload } {
   if (!data || typeof data !== 'object') {
     return { valid: false, error: 'Invalid request payload.' };
   }

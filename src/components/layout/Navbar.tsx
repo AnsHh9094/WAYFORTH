@@ -1,9 +1,8 @@
 'use client';
 
 import React, { useState, useEffect } from 'react';
-import { BRAND_CONFIG } from '@/config/brand.config';
 import { WayforthLogo } from '@/components/brand/WayforthLogo';
-import { ArrowUpRight, Menu, X, Mail } from 'lucide-react';
+import { ArrowUpRight, Menu, X } from 'lucide-react';
 
 interface NavbarProps {
   onRequestQuote: () => void;

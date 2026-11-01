@@ -85,6 +85,16 @@ export function Footer({ onRequestQuote }: FooterProps) {
                   <span className="text-[#B8975A]">/</span> Human-Written Standard
                 </Link>
               </li>
+              {onRequestQuote && (
+                <li>
+                  <button
+                    onClick={onRequestQuote}
+                    className="hover:text-white transition-colors flex items-center gap-1.5 text-left cursor-pointer text-[#B8975A] font-semibold"
+                  >
+                    <span>/</span> Calculate Project Quote
+                  </button>
+                </li>
+              )}
             </ul>
           </div>
         </div>
