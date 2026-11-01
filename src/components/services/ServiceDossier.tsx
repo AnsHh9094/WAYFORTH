@@ -48,11 +48,11 @@ export function ServiceDossier({ onRequestQuote }: ServiceDossierProps) {
   }, [selectedSample]);
 
   return (
-    <section id="disciplines" className="py-24 sm:py-36 bg-[#0C1220] border-b border-[#B8975A]/40 text-[#F5F0E8]">
+    <section id="disciplines" className="py-14 sm:py-20 bg-[#0C1220] border-b border-[#B8975A]/40 text-[#F5F0E8]">
       <div className="max-w-[1400px] mx-auto px-6 sm:px-10 lg:px-12">
         
         {/* Section Header — Broadsheet style */}
-        <div className="flex flex-col sm:flex-row sm:items-baseline justify-between gap-4 mb-20 border-b border-[#B8975A]/40 pb-8">
+        <div className="flex flex-col sm:flex-row sm:items-baseline justify-between gap-4 mb-10 border-b border-[#B8975A]/40 pb-6">
           <div>
             <p className="text-[11px] font-sans tracking-[0.2em] uppercase text-[#B8975A] font-semibold mb-2 flex items-center gap-2">
               <span className="w-1.5 h-1.5 rounded-full bg-[#B8975A]" />
@@ -69,7 +69,7 @@ export function ServiceDossier({ onRequestQuote }: ServiceDossierProps) {
           {BRAND_CONFIG.services.map((service, idx) => (
             <div
               key={service.id}
-              className="group grid grid-cols-1 lg:grid-cols-12 gap-8 py-16 items-start transition-colors hover:bg-[#101A2B]/70 px-4 -mx-4 rounded-[2px]"
+              className="group grid grid-cols-1 lg:grid-cols-12 gap-8 py-10 items-start transition-colors hover:bg-[#101A2B]/70 px-4 -mx-4 rounded-[2px]"
             >
               {/* LEFT COLUMN: Large Ghost Ordinal + Narrative Scope */}
               <div className="lg:col-span-8 flex flex-col sm:flex-row gap-6 sm:gap-10 items-start">
@@ -153,7 +153,7 @@ export function ServiceDossier({ onRequestQuote }: ServiceDossierProps) {
         </div>
 
         {/* ── Secondary School Boards Notice ── */}
-        <div className="mt-16 p-6 sm:p-8 bg-[#101A2B] border border-[#2A3548] flex flex-col md:flex-row items-start md:items-center justify-between gap-6 shadow-md rounded-2xl">
+        <div className="mt-10 p-6 sm:p-8 bg-[#101A2B] border border-[#2A3548] flex flex-col md:flex-row items-start md:items-center justify-between gap-6 shadow-md rounded-2xl">
           <div className="space-y-3">
             <div className="flex items-center gap-2">
               <span className="inline-flex items-center gap-1 px-2.5 py-0.5 bg-[#B8975A]/20 text-[#B8975A] border border-[#B8975A]/40 text-[10.5px] font-sans uppercase tracking-wider font-semibold rounded-full">

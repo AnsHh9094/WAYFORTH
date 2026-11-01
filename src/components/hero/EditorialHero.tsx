@@ -114,7 +114,7 @@ export function EditorialHero({ brandName, onRequestQuote }: EditorialHeroProps)
 
           {/* Quick Scope Chip Matrix */}
           <motion.div
-            className="flex flex-wrap items-center gap-2.5 text-[11.5px] font-sans font-medium uppercase tracking-wider text-[#8A9BB0] mb-16"
+            className="flex flex-wrap items-center gap-2.5 text-[11.5px] font-sans font-medium uppercase tracking-wider text-[#8A9BB0] mb-8"
             variants={revealItem(0.38)}
           >
             <span className="px-4 py-1.5 bg-[#101A2B] border border-[#2A3548] text-[#CBD8E6] rounded-full">UNDERGRADUATES</span>
@@ -125,17 +125,17 @@ export function EditorialHero({ brandName, onRequestQuote }: EditorialHeroProps)
 
           {/* ── Student Workload Statistics Section (Item 2 in Release Spec) ── */}
           <motion.div
-            className="pt-12 border-t border-[#2A3548]"
+            className="pt-8 border-t border-[#B8975A]/40"
             variants={revealItem(0.46)}
           >
-            <div className="flex flex-col sm:flex-row sm:items-baseline justify-between gap-2 mb-8">
+            <div className="flex flex-col sm:flex-row sm:items-baseline justify-between gap-2 mb-6">
               <div className="flex items-center gap-2">
-                <span className="w-1.5 h-1.5 rounded-full bg-[#CBD8E6]" />
-                <span className="text-xs font-sans font-semibold uppercase tracking-[0.18em] text-[#CBD8E6]">
+                <span className="w-1.5 h-1.5 rounded-full bg-[#B8975A]" />
+                <span className="text-xs font-sans font-semibold uppercase tracking-[0.18em] text-[#B8975A]">
                   Overwhelming Workload // Surveyed Reality
                 </span>
               </div>
-              <span className="text-xs font-sans uppercase tracking-[0.18em] text-[#CBD8E6] font-semibold">
+              <span className="text-xs font-sans uppercase tracking-[0.18em] text-[#FFFFFF] font-semibold">
                 Empirical Cohort Study
               </span>
             </div>
@@ -147,7 +147,7 @@ export function EditorialHero({ brandName, onRequestQuote }: EditorialHeroProps)
                     56.3%
                   </span>
                   <p className="text-[14px] sm:text-[14.5px] text-[#8A9BB0] leading-relaxed font-sans min-h-[44px]">
-                    Struggled to balance academics with their personal lives.
+                    Struggled to balance core academics with personal commitments.
                   </p>
                 </div>
               </div>
@@ -158,7 +158,7 @@ export function EditorialHero({ brandName, onRequestQuote }: EditorialHeroProps)
                     56.6%
                   </span>
                   <p className="text-[14px] sm:text-[14.5px] text-[#8A9BB0] leading-relaxed font-sans min-h-[44px]">
-                    Found their workload manageable yet heavy.
+                    Found their ongoing academic demands manageable yet burdensome.
                   </p>
                 </div>
               </div>
@@ -169,7 +169,7 @@ export function EditorialHero({ brandName, onRequestQuote }: EditorialHeroProps)
                     20.7%
                   </span>
                   <p className="text-[14px] sm:text-[14.5px] text-[#8A9BB0] leading-relaxed font-sans min-h-[44px]">
-                    Viewed it as excessive and unsustainable.
+                    Considered their institutional workload excessive and unsustainable.
                   </p>
                 </div>
               </div>

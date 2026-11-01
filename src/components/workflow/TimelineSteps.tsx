@@ -9,11 +9,11 @@ export function TimelineSteps() {
   const [activeStep, setActiveStep] = useState<number | null>(null);
 
   return (
-    <section id="workflow" className="py-20 sm:py-28 bg-[#0C1220] border-b border-[#B8975A]/40 text-[#F5F0E8] relative overflow-hidden">
+    <section id="workflow" className="py-14 sm:py-20 bg-[#0C1220] border-b border-[#B8975A]/40 text-[#F5F0E8] relative overflow-hidden">
       <div className="max-w-[1400px] mx-auto px-4 sm:px-6 lg:px-10 relative z-10">
         
         {/* Section Header */}
-        <div className="flex items-center justify-between border-b border-[#B8975A]/40 pb-4 mb-16 text-[11px] font-sans font-medium uppercase tracking-[0.16em] text-[#8A9BB0]">
+        <div className="flex items-center justify-between border-b border-[#B8975A]/40 pb-4 mb-10 text-[11px] font-sans font-medium uppercase tracking-[0.16em] text-[#8A9BB0]">
           <div className="flex items-center gap-2">
             <span className="w-1.5 h-1.5 rounded-full bg-[#B8975A]" />
             <span className="uppercase tracking-widest text-[#B8975A] font-semibold">
@@ -25,7 +25,7 @@ export function TimelineSteps() {
           </span>
         </div>
 
-        <div className="max-w-3xl mb-12 sm:mb-16">
+        <div className="max-w-3xl mb-8 sm:mb-10">
           <span className="text-xs font-sans uppercase tracking-[0.14em] text-[#B8975A] block mb-2 font-semibold">
             Structured Engagement Process
           </span>

@@ -6,11 +6,11 @@ import { Mail, MessageSquare, Clock, ArrowUpRight, ShieldCheck } from 'lucide-re
 
 export function ContactSection() {
   return (
-    <section id="contact" className="py-20 sm:py-28 bg-[#0C1220] border-b border-[#B8975A]/40 text-[#F5F0E8] relative">
+    <section id="contact" className="py-14 sm:py-20 bg-[#0C1220] border-b border-[#B8975A]/40 text-[#F5F0E8] relative">
       <div className="max-w-[1400px] mx-auto px-4 sm:px-6 lg:px-10">
         
         {/* Section Heading */}
-        <div className="max-w-3xl mb-14">
+        <div className="max-w-3xl mb-8">
           <span className="text-xs font-sans uppercase tracking-[0.14em] text-[#B8975A] block mb-2 font-semibold">
             Direct Communications Desk
           </span>

@@ -345,8 +345,8 @@ export const BRAND_CONFIG: BrandConfig = {
       description:
         'Comprehensive term papers, capstone deliverables, discipline-specific case analyses, and technical lab documentation.',
       idealFor: 'BBA, B.Com, B.Tech, BA, B.Sc & College Programs',
-      startingBase: 1200,
-      perPageRate: 280,
+      startingBase: 399,
+      perPageRate: 49,
       turnaround: '3–7 Days',
       features: [
         '100% genuine human-researched scholarship',
@@ -363,8 +363,8 @@ export const BRAND_CONFIG: BrandConfig = {
       description:
         'Advanced applied research, industry case studies, structured literature surveys, and strategic frameworks.',
       idealFor: 'MBA, PGDM, M.Sc, M.Com & Master’s Programs',
-      startingBase: 2200,
-      perPageRate: 450,
+      startingBase: 599,
+      perPageRate: 79,
       turnaround: '4–10 Days',
       features: [
         'Senior domain-specialist researchers',
@@ -376,31 +376,13 @@ export const BRAND_CONFIG: BrandConfig = {
       ],
     },
     {
-      level: 'Quantitative Modeling & Data Analytics',
-      label: 'Applied Analytics & Valuation Models',
-      description:
-        'Dynamic analytical workbooks, statistical testing, multivariate regressions, structured visualization charts, and research data appendices.',
-      idealFor: 'Finance, Operations, Data Analytics & Economics',
-      startingBase: 2500,
-      perPageRate: 380,
-      turnaround: '2–6 Days',
-      features: [
-        'Dynamic Excel files with live formulas (no hardcodes)',
-        'Data cleaning & outlier treatment notes',
-        'Statistical testing & regression models',
-        'Milestone preview safeguard (50% deposit to begin, balance on preview)',
-        'Formula audit & explanatory walkthrough notes',
-        'Full raw dataset (.xlsx/.csv) handover',
-      ],
-    },
-    {
       level: 'Thesis & Dissertation Support',
       label: 'Advanced Research & Theses',
       description:
         'Formal research proposals, systematic literature reviews, multi-chapter manuscript structuring, and defense-ready bibliography management.',
       idealFor: 'Doctoral Candidates & Independent Scholars',
-      startingBase: 4200,
-      perPageRate: 620,
+      startingBase: 899,
+      perPageRate: 119,
       turnaround: '7–21 Days',
       features: [
         'Peer-reviewed journal paper synthesis (100+ sources)',
@@ -409,6 +391,24 @@ export const BRAND_CONFIG: BrandConfig = {
         'Milestone preview safeguard (50% deposit to begin, balance on preview)',
         'Dedicated research milestone checkpoints',
         'Methodology & defense preparation',
+      ],
+    },
+    {
+      level: 'Quantitative Modeling & Data Analytics',
+      label: 'Applied Analytics & Valuation Models',
+      description:
+        'Dynamic analytical workbooks, statistical testing, multivariate regressions, structured visualization charts, and research data appendices.',
+      idealFor: 'Finance, Operations, Data Analytics & Economics',
+      startingBase: 699,
+      perPageRate: 0,
+      turnaround: '2–6 Days',
+      features: [
+        'Dynamic Excel files with live formulas (no hardcodes)',
+        'Data cleaning & outlier treatment notes',
+        'Statistical testing & regression models',
+        'Milestone preview safeguard (50% deposit to begin, balance on preview)',
+        'Formula audit & explanatory walkthrough notes',
+        'Full raw dataset (.xlsx/.csv) handover',
       ],
     },
   ],

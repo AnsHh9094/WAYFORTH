@@ -14,7 +14,7 @@ export function ManifestoSection({ onRequestQuote }: ManifestoSectionProps) {
       {/* Editorial Hairline Top Rule in Antique Brass */}
       <div className="absolute top-0 left-0 right-0 h-px bg-[#B8975A]/40" />
 
-      <div className="relative z-10 max-w-[1400px] mx-auto px-6 sm:px-10 lg:px-12 py-24 sm:py-32 lg:py-40">
+      <div className="relative z-10 max-w-[1400px] mx-auto px-6 sm:px-10 lg:px-12 py-14 sm:py-20 lg:py-24">
         
         {/* Kicker — Small caps, tracked, institutional label */}
         <div className="flex items-center gap-3 mb-10">
