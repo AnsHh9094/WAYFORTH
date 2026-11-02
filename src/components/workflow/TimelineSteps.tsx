@@ -60,20 +60,6 @@ export function TimelineSteps() {
                     : 'border border-[#2A3548] bg-[#101A2B] hover:border-[#8A9BB0]'
                 }`}
               >
-                {/* Milestone Ribbon for Key Gates — Rounded-full Capsule */}
-                {isGate4 && (
-                  <div className="absolute top-4 right-4 bg-[#B8975A]/20 border border-[#B8975A]/40 text-[#B8975A] text-[10px] font-sans uppercase tracking-wider px-3 py-1 flex items-center gap-1.5 shadow-xs font-semibold rounded-full">
-                    <ShieldCheck className="w-3.5 h-3.5 text-[#B8975A]" />
-                    <span>Safeguard Milestone</span>
-                  </div>
-                )}
-                {isGate6 && (
-                  <div className="absolute top-4 right-4 bg-[#B8975A] text-[#0C1220] text-[10px] font-sans uppercase tracking-wider px-3 py-1 flex items-center gap-1.5 shadow-xs font-bold rounded-full">
-                    <KeyRound className="w-3.5 h-3.5 text-[#0C1220]" />
-                    <span>Complete Handover</span>
-                  </div>
-                )}
-
                 <div>
                   <h3 className="font-serif text-xl text-[#F5F0E8] font-medium leading-snug mb-2 mt-1">
                     {step.title}
@@ -88,7 +74,21 @@ export function TimelineSteps() {
                   </p>
                 </div>
 
-                <div className="pt-4 mt-6 border-t border-[#1C2C42] flex items-center justify-end text-[11px] font-sans text-[#8A9BB0]">
+                <div className="pt-4 mt-6 border-t border-[#1C2C42] flex items-center justify-between text-[11px] font-sans text-[#8A9BB0]">
+                  <div className="flex items-center">
+                    {isGate4 && (
+                      <span className="bg-[#B8975A]/20 border border-[#B8975A]/40 text-[#B8975A] text-[10px] font-sans uppercase tracking-wider px-2.5 py-1 inline-flex items-center gap-1 shadow-xs font-semibold rounded-full">
+                        <ShieldCheck className="w-3 h-3 text-[#B8975A]" />
+                        <span>Safeguard Milestone</span>
+                      </span>
+                    )}
+                    {isGate6 && (
+                      <span className="bg-[#B8975A] text-[#0C1220] text-[10px] font-sans uppercase tracking-wider px-2.5 py-1 inline-flex items-center gap-1 shadow-xs font-bold rounded-full">
+                        <KeyRound className="w-3 h-3 text-[#0C1220]" />
+                        <span>Complete Handover</span>
+                      </span>
+                    )}
+                  </div>
                   <span className="text-[#CBD8E6] font-semibold">{step.counter || `Step ${step.step} of 06`}</span>
                 </div>
               </motion.div>

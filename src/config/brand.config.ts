@@ -393,6 +393,24 @@ export const BRAND_CONFIG: BrandConfig = {
         'Methodology & defense preparation',
       ],
     },
+    {
+      level: 'Modeling & Data Analytics',
+      label: 'Applied Analytics & Valuation Models',
+      description:
+        'Dynamic analytical workbooks, statistical testing, multivariate regressions, structured visualization charts, and research data appendices.',
+      idealFor: 'Finance, Operations, Data Analytics & Economics',
+      startingBase: 699,
+      perPageRate: 0,
+      turnaround: '2–6 Days',
+      features: [
+        'Dynamic Excel files with live formulas (no hardcodes)',
+        'Data cleaning & outlier treatment notes',
+        'Statistical testing & regression models',
+        'Milestone preview safeguard (50% deposit to begin, balance on preview)',
+        'Formula audit & explanatory walkthrough notes',
+        'Full raw dataset (.xlsx/.csv) handover',
+      ],
+    },
   ],
   customAddOns: [
     {

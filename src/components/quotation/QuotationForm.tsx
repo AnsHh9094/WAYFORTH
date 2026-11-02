@@ -45,8 +45,12 @@ export function QuotationForm() {
     );
   }, [urgencyId]);
 
+  const isModeling = level.includes('Modeling');
+
   // Pricing calculations
-  const baseSubtotal = currentTier.startingBase + pages * currentTier.perPageRate;
+  const baseSubtotal = isModeling
+    ? currentTier.startingBase
+    : currentTier.startingBase + pages * currentTier.perPageRate;
   const urgencyFee = Math.round(baseSubtotal * (currentUrgency.multiplier / 100));
 
   const addOnsTotal = useMemo(() => {
@@ -82,7 +86,7 @@ export function QuotationForm() {
 *Institution:* ${institution || 'Unspecified'}
 *Discipline / Area:* ${discipline || 'General Academic'}
 *Academic Level:* ${level}
-*Selected Scope:* ${pages} Pages (~${totalWords} Words at 275w/page)
+*Selected Scope:* ${isModeling ? 'Modeling & Analytics Framework (From ₹699)' : `${pages} Pages (~${totalWords} Words at 275w/page)`}
 *Delivery Target:* ${currentUrgency.label} (${currentUrgency.sublabel})
 *Special Add-ons:* ${selectedAddonLabels || 'Standard Delivery Scope'}
 
@@ -105,6 +109,7 @@ _Initiated via wayforth.in official quotation calculator_`;
     institution,
     discipline,
     level,
+    isModeling,
     pages,
     totalWords,
     currentUrgency,
@@ -195,22 +200,31 @@ _Initiated via wayforth.in official quotation calculator_`;
               </div>
 
               <div className="space-y-2.5 text-[13px] sm:text-[13.5px] font-sans">
-                <div className="flex justify-between items-center text-[#8A9BB0]">
-                  <span>Base Fee Floor:</span>
-                  <span className="text-[#F5F0E8] font-semibold">₹{currentTier.startingBase.toLocaleString()}</span>
-                </div>
-                <div className="flex justify-between items-center text-[#8A9BB0]">
-                  <span>
-                    Volume ({pages} Pages × ₹{currentTier.perPageRate}/pg):
-                  </span>
-                  <span className="text-[#F5F0E8] font-semibold">
-                    ₹{(pages * currentTier.perPageRate).toLocaleString()}
-                  </span>
-                </div>
-                <div className="flex justify-between items-center text-[#8A9BB0] text-[12px]">
-                  <span>Standard Page Metric:</span>
-                  <span>~{totalWords.toLocaleString()} Words (275 w/page)</span>
-                </div>
+                {isModeling ? (
+                  <div className="flex justify-between items-center text-[#8A9BB0]">
+                    <span>Scope Retainer (Modeling & Analytics):</span>
+                    <span className="text-[#F5F0E8] font-semibold">From ₹{currentTier.startingBase.toLocaleString()}</span>
+                  </div>
+                ) : (
+                  <>
+                    <div className="flex justify-between items-center text-[#8A9BB0]">
+                      <span>Base Fee Floor:</span>
+                      <span className="text-[#F5F0E8] font-semibold">₹{currentTier.startingBase.toLocaleString()}</span>
+                    </div>
+                    <div className="flex justify-between items-center text-[#8A9BB0]">
+                      <span>
+                        Volume ({pages} Pages × ₹{currentTier.perPageRate}/pg):
+                      </span>
+                      <span className="text-[#F5F0E8] font-semibold">
+                        ₹{(pages * currentTier.perPageRate).toLocaleString()}
+                      </span>
+                    </div>
+                    <div className="flex justify-between items-center text-[#8A9BB0] text-[12px]">
+                      <span>Standard Page Metric:</span>
+                      <span>~{totalWords.toLocaleString()} Words (275 w/page)</span>
+                    </div>
+                  </>
+                )}
 
                 {/* Urgency Surcharge */}
                 <div className="flex justify-between items-center text-[#8A9BB0] pt-1">
@@ -328,7 +342,7 @@ _Initiated via wayforth.in official quotation calculator_`;
                   <label className="block text-xs font-sans uppercase tracking-wider text-[#F5F0E8] mb-3 font-semibold">
                     1. Select Academic Category *
                   </label>
-                  <div className="grid grid-cols-1 sm:grid-cols-3 gap-3">
+                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
                     {BRAND_CONFIG.pricingTiers.map((tier) => {
                       const isSelected = level === tier.level;
                       return (
@@ -347,7 +361,7 @@ _Initiated via wayforth.in official quotation calculator_`;
                               {tier.level}
                             </span>
                             <span className="text-[11px] font-sans text-[#B8975A] font-bold">
-                              ₹{tier.perPageRate}/pg
+                              {tier.perPageRate > 0 ? `₹${tier.perPageRate}/pg` : `₹${tier.startingBase}+`}
                             </span>
                           </div>
                           <span className="text-[11.5px] text-[#8A9BB0] block leading-tight font-sans">
@@ -359,33 +373,35 @@ _Initiated via wayforth.in official quotation calculator_`;
                   </div>
                 </div>
 
-                {/* 2. Page Volume Slider */}
-                <div>
-                  <div className="flex justify-between items-center mb-2">
-                    <label htmlFor="page-volume-slider" className="text-xs font-sans uppercase tracking-wider text-[#F5F0E8] font-semibold">
-                      2. Required Volume: <strong>{pages} Content Pages</strong>
-                    </label>
-                    <span className="text-xs font-sans text-[#B8975A] font-semibold">
-                      (~{totalWords.toLocaleString()} Words at 275w/pg)
-                    </span>
+                {/* 2. Page Volume Slider (Disappears for Modeling & Analytics) */}
+                {!isModeling && (
+                  <div>
+                    <div className="flex justify-between items-center mb-2">
+                      <label htmlFor="page-volume-slider" className="text-xs font-sans uppercase tracking-wider text-[#F5F0E8] font-semibold">
+                        2. Required Volume: <strong>{pages} Content Pages</strong>
+                      </label>
+                      <span className="text-xs font-sans text-[#B8975A] font-semibold">
+                        (~{totalWords.toLocaleString()} Words at 275w/pg)
+                      </span>
+                    </div>
+                    <input
+                      id="page-volume-slider"
+                      name="pages"
+                      aria-label="Required Content Pages Slider"
+                      type="range"
+                      min="3"
+                      max="80"
+                      value={pages}
+                      onChange={(e) => setPages(parseInt(e.target.value))}
+                      className="w-full h-2 bg-[#2A3548] appearance-none cursor-pointer accent-[#B8975A] rounded-full"
+                    />
+                    <div className="flex justify-between text-[11px] font-sans text-[#8A9BB0] mt-1.5">
+                      <span>3 pgs (Short Essay)</span>
+                      <span>15–20 pgs (Standard Term Project)</span>
+                      <span>80+ pgs (Dissertation)</span>
+                    </div>
                   </div>
-                  <input
-                    id="page-volume-slider"
-                    name="pages"
-                    aria-label="Required Content Pages Slider"
-                    type="range"
-                    min="3"
-                    max="80"
-                    value={pages}
-                    onChange={(e) => setPages(parseInt(e.target.value))}
-                    className="w-full h-2 bg-[#2A3548] appearance-none cursor-pointer accent-[#B8975A] rounded-full"
-                  />
-                  <div className="flex justify-between text-[11px] font-sans text-[#8A9BB0] mt-1.5">
-                    <span>3 pgs (Short Essay)</span>
-                    <span>15–20 pgs (Standard Term Project)</span>
-                    <span>80+ pgs (Dissertation)</span>
-                  </div>
-                </div>
+                )}
 
                 {/* 3. Turnaround Deadline */}
                 <div>
