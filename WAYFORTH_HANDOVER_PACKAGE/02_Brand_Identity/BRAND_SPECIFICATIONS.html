@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Wayforth — Official Brand Identity Specifications</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg-dark: #0C1220;
+      --card-bg: #101A2B;
+      --card-border: #2A3548;
+      --gold: #B8975A;
+      --cream: #F5F0E8;
+      --slate: #8A9BB0;
+      --slate-light: #CBD8E6;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      background-color: var(--bg-dark);
+      color: var(--cream);
+      font-family: 'Inter', -apple-system, sans-serif;
+      line-height: 1.6;
+      padding: 40px 20px;
+    }
+    .container {
+      max-width: 960px;
+      margin: 0 auto;
+    }
+    header {
+      border-bottom: 1px solid rgba(255,255,255,0.1);
+      padding-bottom: 24px;
+      margin-bottom: 40px;
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+    }
+    h1 {
+      font-family: 'Cormorant Garamond', Georgia, serif;
+      font-size: 3rem;
+      font-weight: 700;
+      letter-spacing: 0.04em;
+      color: var(--cream);
+    }
+    .badge {
+      font-size: 11px;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--gold);
+      font-weight: 600;
+    }
+    h2 {
+      font-family: 'Cormorant Garamond', Georgia, serif;
+      font-size: 2rem;
+      margin: 40px 0 20px;
+      color: var(--cream);
+      border-left: 3px solid var(--gold);
+      padding-left: 14px;
+    }
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 20px;
+      margin-bottom: 30px;
+    }
+    .swatch-card {
+      background: var(--card-bg);
+      border: 1px solid var(--card-border);
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.3);
+    }
+    .swatch-preview {
+      height: 90px;
+      width: 100%;
+    }
+    .swatch-info {
+      padding: 16px;
+    }
+    .swatch-name {
+      font-weight: 600;
+      font-size: 15px;
+      color: #FFFFFF;
+      margin-bottom: 4px;
+    }
+    .swatch-hex {
+      font-family: monospace;
+      font-size: 13px;
+      color: var(--gold);
+      background: rgba(184, 151, 90, 0.1);
+      padding: 2px 8px;
+      border-radius: 4px;
+      display: inline-block;
+      margin-bottom: 6px;
+    }
+    .swatch-desc {
+      font-size: 12px;
+      color: var(--slate);
+    }
+    .type-spec {
+      background: var(--card-bg);
+      border: 1px solid var(--card-border);
+      border-radius: 12px;
+      padding: 24px;
+      margin-bottom: 20px;
+    }
+    .type-spec h3 {
+      color: var(--gold);
+      font-size: 14px;
+      text-transform: uppercase;
+      letter-spacing: 0.15em;
+      margin-bottom: 10px;
+    }
+    .font-cormorant {
+      font-family: 'Cormorant Garamond', Georgia, serif;
+      font-size: 28px;
+      color: var(--cream);
+      margin-bottom: 8px;
+    }
+    .font-inter {
+      font-family: 'Inter', sans-serif;
+      font-size: 15px;
+      color: var(--slate-light);
+    }
+    .footer-note {
+      margin-top: 60px;
+      padding-top: 20px;
+      border-top: 1px solid rgba(255,255,255,0.1);
+      font-size: 12px;
+      color: var(--slate);
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <div>
+        <div class="badge">Official Brand Standards</div>
+        <h1>Wayforth</h1>
+      </div>
+      <div style="text-align: right;">
+        <span style="color: var(--slate); font-size: 13px;">Academic &amp; Research Advisory</span><br>
+        <span style="color: var(--gold); font-size: 12px; font-weight: 600;">wayforth.in</span>
+      </div>
+    </header>
+
+    <h2>Primary Color Palette Codes</h2>
+    <div class="grid">
+      <div class="swatch-card">
+        <div class="swatch-preview" style="background-color: #0C1220;"></div>
+        <div class="swatch-info">
+          <div class="swatch-name">Midnight Navy (Foundation)</div>
+          <div class="swatch-hex">#0C1220</div>
+          <div class="swatch-desc">Primary page background, footer, and deep solid canvas.</div>
+        </div>
+      </div>
+
+      <div class="swatch-card">
+        <div class="swatch-preview" style="background-color: #B8975A;"></div>
+        <div class="swatch-info">
+          <div class="swatch-name">Antique Gold (Signature)</div>
+          <div class="swatch-hex">#B8975A</div>
+          <div class="swatch-desc">Accents, active states, star marks, pricing tags, and CTAs.</div>
+        </div>
+      </div>
+
+      <div class="swatch-card">
+        <div class="swatch-preview" style="background-color: #F5F0E8;"></div>
+        <div class="swatch-info">
+          <div class="swatch-name">Academic Parchment</div>
+          <div class="swatch-hex">#F5F0E8</div>
+          <div class="swatch-desc">Primary display typography and high-contrast titles.</div>
+        </div>
+      </div>
+
+      <div class="swatch-card">
+        <div class="swatch-preview" style="background-color: #101A2B;"></div>
+        <div class="swatch-info">
+          <div class="swatch-name">Surface Elevation Navy</div>
+          <div class="swatch-hex">#101A2B</div>
+          <div class="swatch-desc">Card containers, metric boxes, and modal surfaces.</div>
+        </div>
+      </div>
+
+      <div class="swatch-card">
+        <div class="swatch-preview" style="background-color: #8A9BB0;"></div>
+        <div class="swatch-info">
+          <div class="swatch-name">Muted Academic Slate</div>
+          <div class="swatch-hex">#8A9BB0</div>
+          <div class="swatch-desc">Supporting paragraphs, subtitles, and rubric labels.</div>
+        </div>
+      </div>
+
+      <div class="swatch-card">
+        <div class="swatch-preview" style="background-color: #2A3548;"></div>
+        <div class="swatch-info">
+          <div class="swatch-name">Hairline Border Rule</div>
+          <div class="swatch-hex">#2A3548</div>
+          <div class="swatch-desc">Subtle card outlines, dividers, and ledger borders.</div>
+        </div>
+      </div>
+    </div>
+
+    <h2>Typography Specifications</h2>
+    <div class="type-spec">
+      <h3>Display &amp; Headings Font</h3>
+      <div class="font-cormorant">Cormorant Garamond (Serif)</div>
+      <p style="color: var(--slate); font-size: 13.5px;">Weights: Regular (400), SemiBold (600), Bold (700), Italic (400). Used for all grand headlines, quotes, pull statements, and metric digits.</p>
+    </div>
+
+    <div class="type-spec">
+      <h3>Interface &amp; Numerical Body Font</h3>
+      <div class="font-inter">Inter Sans (Neutral Modern Sans)</div>
+      <p style="color: var(--slate); font-size: 13.5px;">Weights: Regular (400), Medium (500), SemiBold (600), Bold (700). Used for body descriptions, calculator ledger, buttons, and navigation.</p>
+    </div>
+
+    <h2>Digital Assets Inventory</h2>
+    <div class="type-spec">
+      <ul style="padding-left: 20px; color: var(--slate-light); font-size: 14px; line-height: 1.8;">
+        <li><strong>Primary Wordmark (Vector SVG &amp; Transparent PNG):</strong> High-resolution scalable vector for print and digital.</li>
+        <li><strong>Light &amp; Dark Theme Variants:</strong> Optimized for white and midnight backgrounds.</li>
+        <li><strong>Brand Monogram 'W':</strong> Isolated serif 'W' with gold star for app icons and social media profiles.</li>
+        <li><strong>Favicon &amp; App Icons:</strong> 16x16, 32x32, 48x48, 180x180 (Apple Touch), and 512x512 PWA formats.</li>
+        <li><strong>Website Source Code:</strong> Production-grade Next.js 15 repository with TypeScript and Tailwind CSS.</li>
+      </ul>
+    </div>
+
+    <div class="footer-note">
+      &copy; 2026 Wayforth Advisory (wayforth.in). All rights reserved.
+    </div>
+  </div>
+</body>
+</html>
