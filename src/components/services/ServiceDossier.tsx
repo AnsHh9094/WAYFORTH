@@ -287,16 +287,18 @@ export function ServiceDossier({ onRequestQuote }: ServiceDossierProps) {
                     >
                       Close Specimen
                     </button>
-                    <button
-                      onClick={() => {
-                        setSelectedSample(null);
-                        onRequestQuote();
-                      }}
+                    <a
+                      href={`https://wa.me/${BRAND_CONFIG.whatsappRawNumber}?text=${encodeURIComponent(
+                        `Hello Wayforth Advisory, I am reviewing the "${selectedSample.category}" specimen ("${selectedSample.title}") and would like to inquire about similar advisory.`
+                      )}`}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      onClick={() => setSelectedSample(null)}
                       className="px-5 py-2.5 bg-[#B8975A] text-[#0C1220] text-xs font-sans uppercase tracking-[0.14em] hover:bg-[#c9a767] transition-colors cursor-pointer w-1/2 sm:w-auto flex items-center justify-center gap-1.5 rounded-xl font-bold border border-[#B8975A]"
                     >
                       <span>Inquire Now</span>
                       <ArrowUpRight className="w-3.5 h-3.5 text-[#0C1220]" />
-                    </button>
+                    </a>
                   </div>
                 </div>
               </motion.div>

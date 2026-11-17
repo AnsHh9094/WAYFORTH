@@ -21,8 +21,9 @@ export default function HomePage() {
     const el = document.getElementById('quote-console');
     if (el) {
       // Use Lenis if available, or native smooth scroll fallback
-      const lenis = (window as unknown as { __lenis?: { scrollTo: (target: HTMLElement, options: object) => void } }).__lenis;
+      const lenis = (window as unknown as { __lenis?: { scrollTo: (target: HTMLElement, options: object) => void; start?: () => void; isStopped?: boolean } }).__lenis;
       if (lenis) {
+        if (lenis.isStopped) lenis.start?.();
         lenis.scrollTo(el, { offset: -60, duration: 1.3 });
       } else {
         el.scrollIntoView({ behavior: 'smooth' });
