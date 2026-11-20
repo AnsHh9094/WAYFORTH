@@ -64,9 +64,9 @@ export function EditorialHero({ brandName, onRequestQuote }: EditorialHeroProps)
         <div className="max-w-6xl xl:max-w-7xl mb-10 text-left">
           {/* Main Headline — Grand Scale Matching Original Editorial Specimen */}
           <motion.div className="mb-8" variants={revealItem(0.08)}>
-            <h1 className="font-serif text-5xl sm:text-7xl md:text-[88px] lg:text-[102px] xl:text-[112px] font-normal tracking-[-0.03em] text-[#F5F0E8] leading-[1.04]">
+            <h1 className="font-serif text-[32px] sm:text-7xl md:text-[88px] lg:text-[102px] xl:text-[112px] font-normal tracking-[-0.03em] text-[#F5F0E8] leading-[1.08] sm:leading-[1.04]">
               <span className="block">Make Room for</span>
-              <span className="relative block h-[1.18em] overflow-hidden text-[#B8975A] italic font-serif font-light">
+              <span className="relative block h-[1.22em] overflow-hidden text-[#B8975A] italic font-serif font-light">
                 <AnimatePresence mode="popLayout" initial={false}>
                   <motion.span
                     key={wordIndex}
